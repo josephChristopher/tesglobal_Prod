@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Vacancy__c.Cases__r.Call_Logs__r$Stage__c</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c$Name</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c.Cases__r$CaseNumber</field>
+    </columns>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Vacancy__c.Cases__r$Customer_Care_Call_Date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Vacancy__c.Cases__r$Owner</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Vacancy__c.Cases__r$Status</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>A3.  Customer Care calls made</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Vacancies_with_Cases_with_Call_Logs__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Vacancy__c.Cases__r$Customer_Care_Call_Date__c</dateColumn>
+        <interval>INTERVAL_NEXT120</interval>
+    </timeFrameFilter>
+</Report>

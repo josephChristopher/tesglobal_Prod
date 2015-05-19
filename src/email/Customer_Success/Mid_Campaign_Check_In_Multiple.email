@@ -1,0 +1,95 @@
+<messaging:emailTemplate subject="Feedback on your Recruitment Advert so far" recipientType="Contact" relatedToType="Case">
+<messaging:htmlEmailBody >
+<html>
+       <center><apex:image id="Logo" url="http://www.tesglobal.com/sites/tesglobal.com/themes/tesg/logo.png" width="200" height="92"/></center>
+      <br></br><center><b><font face="Verdana" size="4px">TES Global Two Minute Survey</font></b></center>
+      
+      <body>
+        <STYLE type="text/css">
+          .m {margin: 50px 50px 50px 50px;
+          }
+          
+         
+         
+        </STYLE>
+        
+        <m>
+        <font face="Verdana" size="2px">
+
+          <p>Dear {!recipient.name},</p>
+           
+          
+          <p>Thank you for choosing TES Global for your recruitment advertising, we really do appreciate your business.</p>
+          
+          <p>It is now a few days since your recruitment adverts was published online at https://www.tes.co.uk/jobs/.</p>
+        
+          <p>Whilst some candidates may have contacted you direct to express interest in, or to apply for, the role, I would like to inform you of the online statistics for each role so far.</p>
+          
+          <p>In addition, I would really like to understand how well you feel the advert is working and if you think there is anything TES Global can do to help you ahead of the closing date.  
+          Therefore, I would like to invite you to tell us about your experience of TES Global so far by completing our <b>Two Minute Survey</b>. </p>
+          
+          <p>The table below shows the online statistics for each of your recruitment adverts, as well as a link to our <b>Two Minute Survey</b>. </p>
+          
+         
+          <br></br>         
+         
+          
+           
+            
+        <apex:dataTable value="{!relatedto}" var="cs" cellpadding="4" border="1px" bgcolor="#115da8" style="font-family: Verdana; font-size: 13px; border: 1px solid white; text-align: center; color: white" align="center">
+ 
+        <apex:column style="background-color:#e6e6e6; color: black; border: 1px solid white;">
+        <apex:facet name="header">Date of Stats</apex:facet>
+            <apex:outputText value="{0,date,dd MMMM, yyyy}">
+                 <apex:param value="{!cs.Date__c}" />
+            </apex:outputText>
+        </apex:column>
+        
+        <apex:column style="background-color:#e6e6e6; color: black; border: 1px solid white;">
+        <apex:facet name="header">Role</apex:facet>
+        <apex:outputLink style="text-align: center; color: #115da8;" value="{!cs.vacancy__r.Link_on_TES_website__c}">{!cs.Vacancy__r.Vacancy_Job_Title__c}</apex:outputLink>
+        </apex:column>
+        
+        <apex:column style="background-color:#e6e6e6; color: black; border: 1px solid white;">
+        <apex:facet name="header">Job Views Online</apex:facet>
+        {!FLOOR(cs.Job_Views__c)}
+        </apex:column>
+        
+        <apex:column style="background-color:#e6e6e6; color: black; border: 1px solid white;">
+        <apex:facet name="header">Clicks to Apply</apex:facet>
+        {!FLOOR(cs.Job_Apply_Clicks__c)}
+        </apex:column>
+        
+        <apex:column style="background-color:#e6e6e6; color: black; border: 1px solid #e6e6e6;">
+             <apex:facet name="header">Survey Link</apex:facet>
+                <apex:dataTable cellpadding="10" style="border: 10px solid #e6e6e6" value="{!relatedto}" var="ad" align="center">
+                <apex:column style="background-color:#23a850; color: white; text-align: center;">
+                    <apex:outputLink style="text-align: center; font-weight: bold; font-family: Verdana; font-size: 13px;color: white; text-decoration: none;" value="{!ad.Check_In_Survey_Link__c}">COMPLETE SURVEY</apex:outputLink>
+                </apex:column> 
+            </apex:dataTable>
+        </apex:column>
+        
+    </apex:dataTable>
+  
+         <br></br>
+           
+
+   
+          <p>Your feedback is very important to us because it will support the continuous improvement of our service to you.</p>
+        
+           <p>We look forward to your response.</p>
+          
+          <br></br>
+              
+          <p>Yours sincerely,</p>
+
+        <b><p>Becky Simpson</p>
+         <p> Customer Success Director</p></b>
+
+    
+</font>
+</m>
+</body>
+</html>
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

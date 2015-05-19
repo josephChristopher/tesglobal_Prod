@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Avg_Rating_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OR(Sum_of_Ratings__c=0,
+      Count_of_Ratings__c=0
+     ),
+  0,
+  Sum_of_Ratings__c /  Count_of_Ratings__c
+)</formula>
+        <label>Avg Rating Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case__c</fullName>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Surveys</relationshipLabel>
+        <relationshipName>Surveys</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Count_of_Ratings__c</fullName>
+        <externalId>false</externalId>
+        <label>Count of Ratings</label>
+        <summaryFilterItems>
+            <field>Metrics_Data__c.Rating__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </summaryFilterItems>
+        <summaryForeignKey>Metrics_Data__c.Survey_Number__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Effort_Score__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Effort Score</label>
+        <summarizedField>Metrics_Data__c.Customer_Effort_Score__c</summarizedField>
+        <summaryFilterItems>
+            <field>Metrics_Data__c.Customer_Effort_Score__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </summaryFilterItems>
+        <summaryForeignKey>Metrics_Data__c.Survey_Number__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Lowest_Rating_Score__c</fullName>
+        <externalId>false</externalId>
+        <label>Lowest Rating Score</label>
+        <summarizedField>Metrics_Data__c.Rating__c</summarizedField>
+        <summaryForeignKey>Metrics_Data__c.Survey_Number__c</summaryForeignKey>
+        <summaryOperation>min</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Mid_Campaign__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Mid Campaign</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Net_Promoter_Score__c</fullName>
+        <externalId>false</externalId>
+        <label>Net Promoter Score</label>
+        <summarizedField>Metrics_Data__c.Net_Promoter_Score__c</summarizedField>
+        <summaryFilterItems>
+            <field>Metrics_Data__c.Net_Promoter_Score__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </summaryFilterItems>
+        <summaryForeignKey>Metrics_Data__c.Survey_Number__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Promoter_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Net_Promoter_Score__c &gt;=9, &quot;Promoter&quot;, 
+IF( OR(Net_Promoter_Score__c = 7, Net_Promoter_Score__c = 8) , &quot;Passive&quot;, 
+IF( AND(Net_Promoter_Score__c &lt;=6,Net_Promoter_Score__c &gt;=0), &quot;Detractor&quot;, 
+&quot;&quot;)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Promoter Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Send_Thank_You_Email__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Send Thank You Email</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sum_of_Ratings__c</fullName>
+        <externalId>false</externalId>
+        <label>Sum of Ratings</label>
+        <summarizedField>Metrics_Data__c.Rating__c</summarizedField>
+        <summaryFilterItems>
+            <field>Metrics_Data__c.Rating__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </summaryFilterItems>
+        <summaryForeignKey>Metrics_Data__c.Survey_Number__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Survey_Feedback_Grade_Icon__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( Survey_Feedback_Grade__c = &quot;Satisfied&quot;,  IMAGE(&quot;/resource/1419940789000/Happy_Face&quot;, &quot;Satisfied&quot;, 40, 40),
+IF ( Survey_Feedback_Grade__c = &quot;Unsatisfied&quot;,  IMAGE(&quot;/resource/1419940825000/Sad_Face&quot;, &quot;Unsatisfied&quot;, 40, 40),
+&quot;&quot;
+))</formula>
+        <label>Survey Feedback Grade</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Survey_Feedback_Grade__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Lowest_Rating_Score__c &lt;= 6, &quot;Unsatisfied&quot;, 
+IF( Lowest_Rating_Score__c &gt; 6, &quot;Satisfied&quot;, 
+&quot;&quot;))</formula>
+        <label>Survey Feedback Grade</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Survey_Taker_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Survey Taker Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Survey_Taker__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>The contact person for the particular vacancy advert taking the survey.</inlineHelpText>
+        <label>Survey Taker</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Surveys</relationshipLabel>
+        <relationshipName>Surveys</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Survey_Template__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Survey Template</label>
+        <referenceTo>Survey_Template__c</referenceTo>
+        <relationshipLabel>Surveys</relationshipLabel>
+        <relationshipName>Surveys</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Survey</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Survey_Template__c</columns>
+        <columns>Case__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>S-{0000000000}</displayFormat>
+        <label>Survey Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Surveys</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>Email</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Email</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
+ 
+  sforce.apex.execute(&quot;sendSurveyEmailController&quot;,&quot;sendEmail&quot;, 
+         {surveyId: Survey__c.Id,
+          surveyTaker: Survey__c.Survey_Taker__c});
+    
+  alert(&quot;Email Sent&quot;);</url>
+    </webLinks>
+</CustomObject>

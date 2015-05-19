@@ -1,0 +1,15 @@
+<apex:page standardController="Opportunity" title="Booking {!opportunity.Name}">
+    
+    <chatter:feedWithFollowers entityId="{!opportunity.id}"/>
+    
+    <apex:includeScript value="/support/console/20.0/integration.js"/>
+    <script type="text/javascript">
+    sforce.console.setTabTitle('Booking: {!opportunity.Name}');
+    </script>
+    <apex:include pageName="Sort_Booking_Priority_Page" 
+                  rendered="{!IF(opportunity.email_status__c == 'Unread', 
+                            True,False)
+                            }"/>
+    <apex:detail rendered="{!IF(opportunity.email_status__c != 'Unread',
+                           True,False)}" inlineEdit="True"/>
+</apex:page>

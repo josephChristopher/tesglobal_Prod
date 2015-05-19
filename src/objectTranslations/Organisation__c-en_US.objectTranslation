@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Organisation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Organisations</value>
+    </caseValues>
+    <fields>
+        <label><!-- Address 1 --></label>
+        <name>Address_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address 2 --></label>
+        <name>Address_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address 3 --></label>
+        <name>Address_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Age From --></label>
+        <name>Age_From__c</name>
+    </fields>
+    <fields>
+        <label><!-- Age To --></label>
+        <name>Age_To__c</name>
+    </fields>
+    <fields>
+        <label><!-- Also Known As --></label>
+        <name>Also_known_as__c</name>
+    </fields>
+    <fields>
+        <label><!-- Complete Address --></label>
+        <name>Complete_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Collection finished --></label>
+        <name>Contact_Collection_finished__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>Country_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+        <relationshipLabel><!-- Organisations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- County --></label>
+        <name>County__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Movement Category --></label>
+        <name>Current_Movement_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Closed --></label>
+        <name>Date_Closed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Opened --></label>
+        <name>Date_Opened__c</name>
+    </fields>
+    <fields>
+        <help><!-- Actual date the Ambassador has completed the visit to a school. --></help>
+        <label><!-- Actual Visit Date --></label>
+        <name>Date_Visited_by_Ambassador__c</name>
+    </fields>
+    <fields>
+        <help><!-- The most current visit status for this school. --></help>
+        <label><!-- Visit Status --></label>
+        <name>Days_Since_Last_Visit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Department/Campus --></label>
+        <name>Department_Campus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description gathering --></label>
+        <name>Description_gathering__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Faculty --></label>
+        <name>Faculty__c</name>
+    </fields>
+    <fields>
+        <label><!-- Footer Image --></label>
+        <name>Footer_Image__c</name>
+        <relationshipLabel><!-- Organisations (Footer Image) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Funding Group --></label>
+        <name>Funding_Group__c</name>
+        <picklistValues>
+            <masterLabel>Independent</masterLabel>
+            <translation><!-- Independent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>State</masterLabel>
+            <translation><!-- State --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Funding Type --></label>
+        <name>Funding_Type__c</name>
+        <picklistValues>
+            <masterLabel>Academy</masterLabel>
+            <translation><!-- Academy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>City Technology Colleges (CTCs)</masterLabel>
+            <translation><!-- City Technology Colleges (CTCs) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community</masterLabel>
+            <translation><!-- Community --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Controlled</masterLabel>
+            <translation><!-- Controlled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Controlled Integrated</masterLabel>
+            <translation><!-- Controlled Integrated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Foundation</masterLabel>
+            <translation><!-- Foundation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Free School</masterLabel>
+            <translation><!-- Free School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grant Aided</masterLabel>
+            <translation><!-- Grant Aided --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grant Maintained Integrated</masterLabel>
+            <translation><!-- Grant Maintained Integrated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LEA Nursery</masterLabel>
+            <translation><!-- LEA Nursery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Local Authority</masterLabel>
+            <translation><!-- Local Authority --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maintained</masterLabel>
+            <translation><!-- Maintained --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Academy</masterLabel>
+            <translation><!-- New Academy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Maintained</masterLabel>
+            <translation><!-- Non-Maintained --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Roman Catholic Maintained</masterLabel>
+            <translation><!-- Roman Catholic Maintained --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Work</masterLabel>
+            <translation><!-- Social Work --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Studio School</masterLabel>
+            <translation><!-- Studio School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Traditional Academy</masterLabel>
+            <translation><!-- Traditional Academy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>University Technical College (UTC)</masterLabel>
+            <translation><!-- University Technical College (UTC) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Voluntary</masterLabel>
+            <translation><!-- Voluntary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Voluntary Aided</masterLabel>
+            <translation><!-- Voluntary Aided --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Voluntary Controlled</masterLabel>
+            <translation><!-- Voluntary Controlled --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- GOR --></label>
+        <name>GOR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gender --></label>
+        <name>Gender__c</name>
+        <picklistValues>
+            <masterLabel>Boys</masterLabel>
+            <translation><!-- Boys --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Girls</masterLabel>
+            <translation><!-- Girls --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mixed</masterLabel>
+            <translation><!-- Mixed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Region of the Local Authority. --></help>
+        <label><!-- GOR --></label>
+        <name>Government_Office_Region__c</name>
+    </fields>
+    <fields>
+        <label><!-- Header Image --></label>
+        <name>Header_Image__c</name>
+        <relationshipLabel><!-- Organisations (Header Image) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Hex colour --></label>
+        <name>Hex_colour__c</name>
+    </fields>
+    <fields>
+        <label><!-- Latitude --></label>
+        <name>Latitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Logo Image --></label>
+        <name>Logo_Image__c</name>
+        <relationshipLabel><!-- Organisations (Logo Image) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Longitude --></label>
+        <name>Longitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Market Share Log Count --></label>
+        <name>Market_Share_Log_Count__c</name>
+    </fields>
+    <fields>
+        <help><!-- Region to be used to allocated Ambassadors, based on the GOR and/or the Local Authority. --></help>
+        <label><!-- Allocated Region --></label>
+        <name>Mkt_Share_Allocated_Region__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phase Formula --></label>
+        <name>Phase_Formula__c</name>
+    </fields>
+    <fields>
+        <help><!-- The text version of the Phase multi-select picklist. --></help>
+        <label><!-- Phase Text --></label>
+        <name>Phase_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phase --></label>
+        <name>Phase__c</name>
+        <picklistValues>
+            <masterLabel>Early years</masterLabel>
+            <translation><!-- Early years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Further (Other)</masterLabel>
+            <translation><!-- Further (Other) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Further 16+</masterLabel>
+            <translation><!-- Further 16+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Higher</masterLabel>
+            <translation><!-- Higher --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Middle</masterLabel>
+            <translation><!-- Middle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multi-Phase</masterLabel>
+            <translation><!-- Multi-Phase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary</masterLabel>
+            <translation><!-- Primary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secondary</masterLabel>
+            <translation><!-- Secondary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sixth Form</masterLabel>
+            <translation><!-- Sixth Form --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Phase and Funding Group --></label>
+        <name>Phase_and_Funding_Group__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Postcode --></label>
+        <name>Postcode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+        <picklistValues>
+            <masterLabel>1 - Very High</masterLabel>
+            <translation><!-- 1 - Very High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 - High</masterLabel>
+            <translation><!-- 2 - High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 - Medium</masterLabel>
+            <translation><!-- 3 - Medium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 - Low</masterLabel>
+            <translation><!-- 4 - Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 - Very Low</masterLabel>
+            <translation><!-- 5 - Very Low --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Religious Denomination --></label>
+        <name>Religious_Denominiation__c</name>
+        <picklistValues>
+            <masterLabel>Anglican</masterLabel>
+            <translation><!-- Anglican --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Baptist</masterLabel>
+            <translation><!-- Baptist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Christian</masterLabel>
+            <translation><!-- Christian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Church in Wales</masterLabel>
+            <translation><!-- Church in Wales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Church of England</masterLabel>
+            <translation><!-- Church of England --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Does not apply</masterLabel>
+            <translation><!-- Does not apply --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Episcopalian</masterLabel>
+            <translation><!-- Episcopalian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Free Church</masterLabel>
+            <translation><!-- Free Church --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greek</masterLabel>
+            <translation><!-- Greek --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inter-denominational</masterLabel>
+            <translation><!-- Inter-denominational --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jewish</masterLabel>
+            <translation><!-- Jewish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Methodist</masterLabel>
+            <translation><!-- Methodist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Muslim</masterLabel>
+            <translation><!-- Muslim --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-denominational</masterLabel>
+            <translation><!-- Non-denominational --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quaker</masterLabel>
+            <translation><!-- Quaker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Roman Catholic</masterLabel>
+            <translation><!-- Roman Catholic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seventh Day Adventist</masterLabel>
+            <translation><!-- Seventh Day Adventist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sikh</masterLabel>
+            <translation><!-- Sikh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United Reformed Church</masterLabel>
+            <translation><!-- United Reformed Church --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Scheduled Date End Time --></label>
+        <name>Scheduled_Date_End_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scheduled Date Start Time --></label>
+        <name>Scheduled_Date_Start_Time__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the Ambassador is Scheduled to Visit the School. --></help>
+        <label><!-- Scheduled Visit Date --></label>
+        <name>Scheduled_Visit_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scheduled to Visit --></label>
+        <name>Scheduled_to_Visit__c</name>
+    </fields>
+    <fields>
+        <label><!-- School Id --></label>
+        <name>School_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- School Type --></label>
+        <name>School_Type__c</name>
+        <picklistValues>
+            <masterLabel>Alternative Provision</masterLabel>
+            <translation><!-- Alternative Provision --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mainstream School</masterLabel>
+            <translation><!-- Mainstream School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Maintained</masterLabel>
+            <translation><!-- Non-Maintained --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pupil Referral Unit(PRU)</masterLabel>
+            <translation><!-- Pupil Referral Unit(PRU) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secure Unit</masterLabel>
+            <translation><!-- Secure Unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special Needs School</masterLabel>
+            <translation><!-- Special Needs School --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposed to close</masterLabel>
+            <translation><!-- Proposed to close --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposed to open</masterLabel>
+            <translation><!-- Proposed to open --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Strapline --></label>
+        <name>Strapline__c</name>
+    </fields>
+    <fields>
+        <label><!-- Town --></label>
+        <name>Town__c</name>
+    </fields>
+    <fields>
+        <help><!-- The End Date/Time of the latest visit to this school. --></help>
+        <label><!-- Visit End Date/Time --></label>
+        <name>Visit_End_Date_Time__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Start Date/Time of the latest visit to this school. --></help>
+        <label><!-- Visit Start Date/Time --></label>
+        <name>Visit_Start_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Visited by Ambassador --></label>
+        <name>Visited_by_Ambassador__c</name>
+    </fields>
+    <fields>
+        <label><!-- Volumes YTD --></label>
+        <name>Volumes_YTD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Display Local Authority --></label>
+        <name>display_local_authority__c</name>
+        <relationshipLabel><!-- Organisations (display local authority) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Lat/Long --></label>
+        <name>lat_long__c</name>
+    </fields>
+    <fields>
+        <label><!-- Local Authority --></label>
+        <name>local_authority__c</name>
+        <relationshipLabel><!-- Organisations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Primary Contact --></label>
+        <name>primary_contact__c</name>
+        <relationshipLabel><!-- Organisations --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Contact Data Collection Team Layout</layout>
+        <sections>
+            <label><!-- Additional Details --></label>
+            <section>Additional Details</section>
+        </sections>
+        <sections>
+            <label><!-- Branding --></label>
+            <section>Branding</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- History/Status --></label>
+            <section>History/Status</section>
+        </sections>
+        <sections>
+            <label><!-- Map --></label>
+            <section>Map</section>
+        </sections>
+        <sections>
+            <label><!-- School Information --></label>
+            <section>School Information</section>
+        </sections>
+        <sections>
+            <label><!-- Strapline --></label>
+            <section>Strapline</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>organisation Layout</layout>
+        <sections>
+            <label><!-- Additional Details --></label>
+            <section>Additional Details</section>
+        </sections>
+        <sections>
+            <label><!-- Branding --></label>
+            <section>Branding</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- History/Status --></label>
+            <section>History/Status</section>
+        </sections>
+        <sections>
+            <label><!-- Map --></label>
+            <section>Map</section>
+        </sections>
+        <sections>
+            <label><!-- School Information --></label>
+            <section>School Information</section>
+        </sections>
+        <sections>
+            <label><!-- Strapline --></label>
+            <section>Strapline</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Charity --></label>
+        <name>charity</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Company --></label>
+        <name>company</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Educational Body --></label>
+        <name>educational_body</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- LA --></label>
+        <name>la</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Library --></label>
+        <name>library</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Private Individual --></label>
+        <name>private_individual</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- School --></label>
+        <name>school</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Create_or_edit_contacts --></label>
+        <name>Create_or_edit_contacts</name>
+    </webLinks>
+</CustomObjectTranslation>

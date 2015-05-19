@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email sent to the client who sent the email booking to confirm that the email has been received. For emails to TES International.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>TES International: Email Received Alert</name>
+    <style>freeForm</style>
+    <subject>We have received your email</subject>
+    <textOnly>Dear {!Opportunity.Order_By__c},
+
+Thank you for your email and for your interest in recruiting with TES.  One of our recruitment specialists will contact you shortly.
+
+
+If you have any further questions about your recruitment campaign, please don’t hesitate to call the team on 020 3194 3080, Monday to Friday, 9am to 5pm (excluding bank holidays).
+
+
+
+Thank you for choosing TES. We look forward to helping you recruit the best.
+
+Best regards
+
+
+Michelle Reid
+
+Commercial Director – TES International</textOnly>
+    <type>custom</type>
+</EmailTemplate>

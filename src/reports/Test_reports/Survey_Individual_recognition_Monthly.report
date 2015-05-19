@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Case$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Case.Surveys__r$Name</field>
+    </columns>
+    <columns>
+        <field>Case$Owner</field>
+    </columns>
+    <columns>
+        <field>Case$Vacancy__c</field>
+    </columns>
+    <columns>
+        <field>Case.Surveys__r.Survey_Number__r$Survey_Taker__c</field>
+    </columns>
+    <columns>
+        <field>Case.Surveys__r.Survey_Number__r$Metrics__c.Question__c</field>
+    </columns>
+    <columns>
+        <field>Case.Surveys__r.Survey_Number__r$Response__c</field>
+    </columns>
+    <description>Text response by survey taker about the consultant who went over and beyond to help. (Send to stakeholders-Monthly)</description>
+    <filter>
+        <criteriaItems>
+            <column>Case.Surveys__r.Survey_Number__r$Survey_Template__c</column>
+            <operator>contains</operator>
+            <value>customer care call</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Surveys__r.Survey_Number__r$Metrics__c.Question_Format__c</column>
+            <operator>equals</operator>
+            <value>Free Textbox</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Surveys__r.Survey_Number__r$Metrics__c.Question__c</column>
+            <operator>equals</operator>
+            <value>[Only if there is a positive outcome to the survey] Is there anyone at TES who you believe has gone the extra mile to help you and therefore deserves recognition?</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Surveys__r.Survey_Number__r$Response__c</column>
+            <operator>notEqual</operator>
+            <value>N/A,No.,No</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Surveys__r.Survey_Number__r$Survey_Taker__c</column>
+            <operator>notEqual</operator>
+            <value>Jamie morris</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>Case.Surveys__r$CreatedDate</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsDown>
+    <name>Survey-Individual recognition-Monthly</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cases_with_Surveys_with_Metrics_Data__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Case.Surveys__r.Survey_Number__r$CreatedDate</dateColumn>
+        <interval>INTERVAL_LASTMONTH</interval>
+    </timeFrameFilter>
+</Report>

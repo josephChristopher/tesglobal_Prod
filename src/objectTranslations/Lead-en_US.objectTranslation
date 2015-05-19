@@ -1,0 +1,4544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Company/School Name</value>
+        </caseValues>
+        <name>company_lead</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Contact Email</value>
+        </caseValues>
+        <name>email_lead</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Do Not Email</value>
+        </caseValues>
+        <name>email_opt_out_lead</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Do Not Fax</value>
+        </caseValues>
+        <name>fax_opt_out_lead</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <help><!-- If lead has decided to book an advert, please specify the ad number from MSL. --></help>
+        <label><!-- Ad Number --></label>
+        <name>Ad_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address 1 --></label>
+        <name>Address_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address 2 --></label>
+        <name>Address_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency --></label>
+        <name>Agency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ages --></label>
+        <name>Ages__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please specify if the school is affiliated with any associations (FOBBISEA, COBIS, etc). --></help>
+        <label><!-- Associations (if applicable) --></label>
+        <name>Associations__c</name>
+    </fields>
+    <fields>
+        <label><!-- City/Town --></label>
+        <name>City_Town__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Type --></label>
+        <name>Client_Type__c</name>
+        <picklistValues>
+            <masterLabel>Ag. Lge non-PPA/NPA 12.5%</masterLabel>
+            <translation><!-- Ag. Lge non-PPA/NPA 12.5% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ag. Med non-PPA/NPA 10%</masterLabel>
+            <translation><!-- Ag. Med non-PPA/NPA 10% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ag. Sml non-PPA/NPA 0%</masterLabel>
+            <translation><!-- Ag. Sml non-PPA/NPA 0% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agency Local Authority 0%</masterLabel>
+            <translation><!-- Agency Local Authority 0% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agency Local Authority 10%</masterLabel>
+            <translation><!-- Agency Local Authority 10% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agency Local Authority 12.5%</masterLabel>
+            <translation><!-- Agency Local Authority 12.5% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agency Local Authority 15%</masterLabel>
+            <translation><!-- Agency Local Authority 15% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agency NPA/PPA 12.5%</masterLabel>
+            <translation><!-- Agency NPA/PPA 12.5% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agency PPA Mem. 10%</masterLabel>
+            <translation><!-- Agency PPA Mem. 10% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agency UK Major 15%</masterLabel>
+            <translation><!-- Agency UK Major 15% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Charity Overseas</masterLabel>
+            <translation><!-- Charity Overseas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Charity Overseas EU</masterLabel>
+            <translation><!-- Charity Overseas EU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Charity UK</masterLabel>
+            <translation><!-- Charity UK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>College Overseas EU</masterLabel>
+            <translation><!-- College Overseas EU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>College Overseas NonEU</masterLabel>
+            <translation><!-- College Overseas NonEU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>College UK</masterLabel>
+            <translation><!-- College UK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Company Overseas EU</masterLabel>
+            <translation><!-- Company Overseas EU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Company Overseas NonEU</masterLabel>
+            <translation><!-- Company Overseas NonEU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Company UK</masterLabel>
+            <translation><!-- Company UK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Government</masterLabel>
+            <translation><!-- Government --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>House</masterLabel>
+            <translation><!-- House --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Local Authority</masterLabel>
+            <translation><!-- Local Authority --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>O/seas Ag. NonEU 0%</masterLabel>
+            <translation><!-- O/seas Ag. NonEU 0% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>O/seas Ag. NonEU 10%</masterLabel>
+            <translation><!-- O/seas Ag. NonEU 10% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>O/seas Ag. NonEU 12.5%</masterLabel>
+            <translation><!-- O/seas Ag. NonEU 12.5% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>O/seas Ag. NonEU 15%</masterLabel>
+            <translation><!-- O/seas Ag. NonEU 15% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>O/seas Ag. NonEU 25%</masterLabel>
+            <translation><!-- O/seas Ag. NonEU 25% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>O/seas Ag. NonEU 27.5%</masterLabel>
+            <translation><!-- O/seas Ag. NonEU 27.5% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>O/seas Ag. NonEU 30%</masterLabel>
+            <translation><!-- O/seas Ag. NonEU 30% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Institution</masterLabel>
+            <translation><!-- Other Institution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Institution Overseas EU</masterLabel>
+            <translation><!-- Other Institution Overseas EU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Institution Overseas NonEU</masterLabel>
+            <translation><!-- Other Institution Overseas NonEU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Overseas Ag. EU 0%</masterLabel>
+            <translation><!-- Overseas Ag. EU 0% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Overseas Ag. EU 10%</masterLabel>
+            <translation><!-- Overseas Ag. EU 10% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Overseas Ag. EU 12.5%</masterLabel>
+            <translation><!-- Overseas Ag. EU 12.5% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Overseas Ag. EU 15%</masterLabel>
+            <translation><!-- Overseas Ag. EU 15% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Overseas Ag. EU 25%</masterLabel>
+            <translation><!-- Overseas Ag. EU 25% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Overseas Ag. EU 27.5%</masterLabel>
+            <translation><!-- Overseas Ag. EU 27.5% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Overseas Ag. EU 30%</masterLabel>
+            <translation><!-- Overseas Ag. EU 30% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partnership</masterLabel>
+            <translation><!-- Partnership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Private Individual</masterLabel>
+            <translation><!-- Private Individual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School Overseas EU</masterLabel>
+            <translation><!-- School Overseas EU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School Overseas NonEU</masterLabel>
+            <translation><!-- School Overseas NonEU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School UK</masterLabel>
+            <translation><!-- School UK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sole Trader</masterLabel>
+            <translation><!-- Sole Trader --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>To Be Analysed</masterLabel>
+            <translation><!-- To Be Analysed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>University Overseas EU</masterLabel>
+            <translation><!-- University Overseas EU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>University Overseas NonEU</masterLabel>
+            <translation><!-- University Overseas NonEU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>University UK</masterLabel>
+            <translation><!-- University UK --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+        <picklistValues>
+            <masterLabel>ABKHAZIA</masterLabel>
+            <translation><!-- ABKHAZIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AFGHANISTAN</masterLabel>
+            <translation><!-- AFGHANISTAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AKROTIRI AND DHEKELIA</masterLabel>
+            <translation><!-- AKROTIRI AND DHEKELIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ALAND ISLANDS</masterLabel>
+            <translation><!-- ALAND ISLANDS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ALBANIA</masterLabel>
+            <translation><!-- ALBANIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ALGERIA</masterLabel>
+            <translation><!-- ALGERIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AMERICAN SAMOA</masterLabel>
+            <translation><!-- AMERICAN SAMOA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ANDORRA</masterLabel>
+            <translation><!-- ANDORRA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ANGOLA</masterLabel>
+            <translation><!-- ANGOLA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ANGUILLA</masterLabel>
+            <translation><!-- ANGUILLA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ANTARCTICA</masterLabel>
+            <translation><!-- ANTARCTICA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ANTIGUA AND BARBUDA</masterLabel>
+            <translation><!-- ANTIGUA AND BARBUDA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ARGENTINA</masterLabel>
+            <translation><!-- ARGENTINA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ARMENIA</masterLabel>
+            <translation><!-- ARMENIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ARUBA</masterLabel>
+            <translation><!-- ARUBA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ASHMORE AND CARTIER ISLANDS</masterLabel>
+            <translation><!-- ASHMORE AND CARTIER ISLANDS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUSTRALIA</masterLabel>
+            <translation><!-- AUSTRALIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUSTRIA</masterLabel>
+            <translation><!-- AUSTRIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AZERBAIJAN</masterLabel>
+            <translation><!-- AZERBAIJAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AZORES, AUTONOMOUS REGION OF THE</masterLabel>
+            <translation><!-- AZORES, AUTONOMOUS REGION OF THE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BAHAMAS</masterLabel>
+            <translation><!-- BAHAMAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BAHRAIN</masterLabel>
+            <translation><!-- BAHRAIN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANGLADESH</masterLabel>
+            <translation><!-- BANGLADESH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BARBADOS</masterLabel>
+            <translation><!-- BARBADOS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BELARUS</masterLabel>
+            <translation><!-- BELARUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BELGIUM</masterLabel>
+            <translation><!-- BELGIUM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BELIZE</masterLabel>
+            <translation><!-- BELIZE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BENIN</masterLabel>
+            <translation><!-- BENIN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BERMUDA</masterLabel>
+            <translation><!-- BERMUDA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BHUTAN</masterLabel>
+            <translation><!-- BHUTAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BOLIVIA, PLURINATIONAL STATE OF</masterLabel>
+            <translation><!-- BOLIVIA, PLURINATIONAL STATE OF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BONAIRE, SINT EUSTATIUS AND SABA</masterLabel>
+            <translation><!-- BONAIRE, SINT EUSTATIUS AND SABA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BOSNIA AND HERZEGOVINA</masterLabel>
+            <translation><!-- BOSNIA AND HERZEGOVINA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BOTSWANA</masterLabel>
+            <translation><!-- BOTSWANA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BOUVET ISLAND</masterLabel>
+            <translation><!-- BOUVET ISLAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BRAZIL</masterLabel>
+            <translation><!-- BRAZIL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BRITISH INDIAN OCEAN TERRITORY</masterLabel>
+            <translation><!-- BRITISH INDIAN OCEAN TERRITORY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BRUNEI DARUSSALAM</masterLabel>
+            <translation><!-- BRUNEI DARUSSALAM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BULGARIA</masterLabel>
+            <translation><!-- BULGARIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BURKINA FASO</masterLabel>
+            <translation><!-- BURKINA FASO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BURUNDI</masterLabel>
+            <translation><!-- BURUNDI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BUSINGEN AM HOCHRHEIN</masterLabel>
+            <translation><!-- BUSINGEN AM HOCHRHEIN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAMBODIA</masterLabel>
+            <translation><!-- CAMBODIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAMEROON</masterLabel>
+            <translation><!-- CAMEROON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAMPIONE D&apos;ITALIA</masterLabel>
+            <translation><!-- CAMPIONE D&apos;ITALIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CANADA</masterLabel>
+            <translation><!-- CANADA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CANARY ISLANDS</masterLabel>
+            <translation><!-- CANARY ISLANDS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAPE VERDE</masterLabel>
+            <translation><!-- CAPE VERDE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAYMAN ISLANDS</masterLabel>
+            <translation><!-- CAYMAN ISLANDS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CENTRAL AFRICAN REPUBLIC</masterLabel>
+            <translation><!-- CENTRAL AFRICAN REPUBLIC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CEUTA</masterLabel>
+            <translation><!-- CEUTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHAD</masterLabel>
+            <translation><!-- CHAD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHILE</masterLabel>
+            <translation><!-- CHILE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHINA</masterLabel>
+            <translation><!-- CHINA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHRISTMAS ISLAND</masterLabel>
+            <translation><!-- CHRISTMAS ISLAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLIPPERTON ISLAND</masterLabel>
+            <translation><!-- CLIPPERTON ISLAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COCOS (KEELING) ISLANDS</masterLabel>
+            <translation><!-- COCOS (KEELING) ISLANDS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COLOMBIA</masterLabel>
+            <translation><!-- COLOMBIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COMOROS</masterLabel>
+            <translation><!-- COMOROS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CONGO</masterLabel>
+            <translation><!-- CONGO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CONGO, THE DEMOCRATIC REPUBLIC O</masterLabel>
+            <translation><!-- CONGO, THE DEMOCRATIC REPUBLIC O --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COOK ISLANDS</masterLabel>
+            <translation><!-- COOK ISLANDS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CORAL SEA ISLANDS TERRITORY</masterLabel>
+            <translation><!-- CORAL SEA ISLANDS TERRITORY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COSTA RICA</masterLabel>
+            <translation><!-- COSTA RICA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COTE D&apos;IVOIRE</masterLabel>
+            <translation><!-- COTE D&apos;IVOIRE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CROATIA</masterLabel>
+            <translation><!-- CROATIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CUBA</masterLabel>
+            <translation><!-- CUBA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CURACAO</masterLabel>
+            <translation><!-- CURACAO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CYPRUS</masterLabel>
+            <translation><!-- CYPRUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CZECH REPUBLIC</masterLabel>
+            <translation><!-- CZECH REPUBLIC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DENMARK</masterLabel>
+            <translation><!-- DENMARK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DJIBOUTI</masterLabel>
+            <translation><!-- DJIBOUTI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DOMINICA</masterLabel>
+            <translation><!-- DOMINICA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DOMINICAN REPUBLIC</masterLabel>
+            <translation><!-- DOMINICAN REPUBLIC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EASTER ISLAND</masterLabel>
+            <translation><!-- EASTER ISLAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ECUADOR</masterLabel>
+            <translation><!-- ECUADOR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EGYPT</masterLabel>
+            <translation><!-- EGYPT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EL SALVADOR</masterLabel>
+            <translation><!-- EL SALVADOR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EQUATORIAL GUINEA</masterLabel>
+            <translation><!-- EQUATORIAL GUINEA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ERITREA</masterLabel>
+            <translation><!-- ERITREA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESTONIA</masterLabel>
+            <translation><!-- ESTONIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ETHIOPIA</masterLabel>
+            <translation><!-- ETHIOPIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FALKLAND ISLANDS</masterLabel>
+            <translation><!-- FALKLAND ISLANDS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FAROE ISLANDS</masterLabel>
+            <translation><!-- FAROE ISLANDS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FEDERAL DEPENDENCIES OF VENEZUEL</masterLabel>
+            <translation><!-- FEDERAL DEPENDENCIES OF VENEZUEL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FIJI</masterLabel>
+            <translation><!-- FIJI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FINLAND</masterLabel>
+            <translation><!-- FINLAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FRANCE</masterLabel>
+            <translation><!-- FRANCE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FRENCH GUIANA</masterLabel>
+            <translation><!-- FRENCH GUIANA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FRENCH POLYNESIA</masterLabel>
+            <translation><!-- FRENCH POLYNESIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FRENCH SOUTHERN TERRITORIES</masterLabel>
+            <translation><!-- FRENCH SOUTHERN TERRITORIES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GABON</masterLabel>
+            <translation><!-- GABON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GAMBIA</masterLabel>
+            <translation><!-- GAMBIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GEORGIA</masterLabel>
+            <translation><!-- GEORGIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GERMANY</masterLabel>
+            <translation><!-- GERMANY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GHANA</masterLabel>
+            <translation><!-- GHANA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GIBRALTAR</masterLabel>
+            <translation><!-- GIBRALTAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GREECE</masterLabel>
+            <translation><!-- GREECE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GREENLAND</masterLabel>
+            <translation><!-- GREENLAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRENADA</masterLabel>
+            <translation><!-- GRENADA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GUADELOUPE</masterLabel>
+            <translation><!-- GUADELOUPE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GUAM</masterLabel>
+            <translation><!-- GUAM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GUATEMALA</masterLabel>
+            <translation><!-- GUATEMALA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GUERNSEY</masterLabel>
+            <translation><!-- GUERNSEY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GUINEA</masterLabel>
+            <translation><!-- GUINEA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GUINEA-BISSAU</masterLabel>
+            <translation><!-- GUINEA-BISSAU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GUYANA</masterLabel>
+            <translation><!-- GUYANA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HAITI</masterLabel>
+            <translation><!-- HAITI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HEARD ISLAND AND MCDONALD ISLAND</masterLabel>
+            <translation><!-- HEARD ISLAND AND MCDONALD ISLAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HELIGOLAND</masterLabel>
+            <translation><!-- HELIGOLAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HOLY SEE (VATICAN CITY STATE)</masterLabel>
+            <translation><!-- HOLY SEE (VATICAN CITY STATE) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HONDURAS</masterLabel>
+            <translation><!-- HONDURAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HONG KONG</masterLabel>
+            <translation><!-- HONG KONG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HUNGARY</masterLabel>
+            <translation><!-- HUNGARY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ICELAND</masterLabel>
+            <translation><!-- ICELAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INDIA</masterLabel>
+            <translation><!-- INDIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INDONESIA</masterLabel>
+            <translation><!-- INDONESIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IRAN, ISLAMIC REPUBLIC OF</masterLabel>
+            <translation><!-- IRAN, ISLAMIC REPUBLIC OF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IRAQ</masterLabel>
+            <translation><!-- IRAQ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IRELAND</masterLabel>
+            <translation><!-- IRELAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ISLE OF MAN</masterLabel>
+            <translation><!-- ISLE OF MAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ISRAEL</masterLabel>
+            <translation><!-- ISRAEL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ITALY</masterLabel>
+            <translation><!-- ITALY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JAMAICA</masterLabel>
+            <translation><!-- JAMAICA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JAPAN</masterLabel>
+            <translation><!-- JAPAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JERSEY</masterLabel>
+            <translation><!-- JERSEY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JORDAN</masterLabel>
+            <translation><!-- JORDAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KAZAKHSTAN</masterLabel>
+            <translation><!-- KAZAKHSTAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KENYA</masterLabel>
+            <translation><!-- KENYA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KIRIBATI</masterLabel>
+            <translation><!-- KIRIBATI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KOREA, DEMOCRATIC PEOPLE&apos;S REPUB</masterLabel>
+            <translation><!-- KOREA, DEMOCRATIC PEOPLE&apos;S REPUB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KOREA, REPUBLIC OF</masterLabel>
+            <translation><!-- KOREA, REPUBLIC OF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KOSOVO</masterLabel>
+            <translation><!-- KOSOVO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KUWAIT</masterLabel>
+            <translation><!-- KUWAIT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KYRGYZSTAN</masterLabel>
+            <translation><!-- KYRGYZSTAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LAO PEOPLE&apos;S DEMOCRATIC REPUBLIC</masterLabel>
+            <translation><!-- LAO PEOPLE&apos;S DEMOCRATIC REPUBLIC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LATVIA</masterLabel>
+            <translation><!-- LATVIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LEBANON</masterLabel>
+            <translation><!-- LEBANON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LESOTHO</masterLabel>
+            <translation><!-- LESOTHO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LIBERIA</masterLabel>
+            <translation><!-- LIBERIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LIBYA</masterLabel>
+            <translation><!-- LIBYA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LIECHTENSTEIN</masterLabel>
+            <translation><!-- LIECHTENSTEIN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LITHUANIA</masterLabel>
+            <translation><!-- LITHUANIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LIVIGNO</masterLabel>
+            <translation><!-- LIVIGNO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LUXEMBOURG</masterLabel>
+            <translation><!-- LUXEMBOURG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MACAO</masterLabel>
+            <translation><!-- MACAO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MACEDONIA, THE FORMER YUGOSLAV R</masterLabel>
+            <translation><!-- MACEDONIA, THE FORMER YUGOSLAV R --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MADAGASCAR</masterLabel>
+            <translation><!-- MADAGASCAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MADEIRA, AUTONOMOUS REGION OF</masterLabel>
+            <translation><!-- MADEIRA, AUTONOMOUS REGION OF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MALAWI</masterLabel>
+            <translation><!-- MALAWI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MALAYSIA</masterLabel>
+            <translation><!-- MALAYSIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MALDIVES</masterLabel>
+            <translation><!-- MALDIVES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MALI</masterLabel>
+            <translation><!-- MALI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MALTA</masterLabel>
+            <translation><!-- MALTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MARSHALL ISLANDS</masterLabel>
+            <translation><!-- MARSHALL ISLANDS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MARTINIQUE</masterLabel>
+            <translation><!-- MARTINIQUE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAURITANIA</masterLabel>
+            <translation><!-- MAURITANIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAURITIUS</masterLabel>
+            <translation><!-- MAURITIUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAYOTTE</masterLabel>
+            <translation><!-- MAYOTTE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MELILLA</masterLabel>
+            <translation><!-- MELILLA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MEXICO</masterLabel>
+            <translation><!-- MEXICO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MICRONESIA, FEDERATED STATES OF</masterLabel>
+            <translation><!-- MICRONESIA, FEDERATED STATES OF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MOLDOVA, REPUBLIC OF</masterLabel>
+            <translation><!-- MOLDOVA, REPUBLIC OF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MONACO</masterLabel>
+            <translation><!-- MONACO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MONGOLIA</masterLabel>
+            <translation><!-- MONGOLIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MONTENEGRO</masterLabel>
+            <translation><!-- MONTENEGRO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MONTSERRAT</masterLabel>
+            <translation><!-- MONTSERRAT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MOROCCO</masterLabel>
+            <translation><!-- MOROCCO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MOUNT ATHOS</masterLabel>
+            <translation><!-- MOUNT ATHOS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MOZAMBIQUE</masterLabel>
+            <translation><!-- MOZAMBIQUE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MYANMAR</masterLabel>
+            <translation><!-- MYANMAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NAGORNO-KARABAKH</masterLabel>
+            <translation><!-- NAGORNO-KARABAKH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NAKHCHIVAN AUTONOMOUS REPUBLIC</masterLabel>
+            <translation><!-- NAKHCHIVAN AUTONOMOUS REPUBLIC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NAMIBIA</masterLabel>
+            <translation><!-- NAMIBIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NAURU</masterLabel>
+            <translation><!-- NAURU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NEPAL</masterLabel>
+            <translation><!-- NEPAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NETHERLANDS</masterLabel>
+            <translation><!-- NETHERLANDS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NEW CALEDONIA</masterLabel>
+            <translation><!-- NEW CALEDONIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NEW ZEALAND</masterLabel>
+            <translation><!-- NEW ZEALAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NICARAGUA</masterLabel>
+            <translation><!-- NICARAGUA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NIGER</masterLabel>
+            <translation><!-- NIGER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NIGERIA</masterLabel>
+            <translation><!-- NIGERIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NIUE</masterLabel>
+            <translation><!-- NIUE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NORFOLK ISLAND</masterLabel>
+            <translation><!-- NORFOLK ISLAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NORTHERN CYPRUS</masterLabel>
+            <translation><!-- NORTHERN CYPRUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NORTHERN MARIANA ISLANDS</masterLabel>
+            <translation><!-- NORTHERN MARIANA ISLANDS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NORWAY</masterLabel>
+            <translation><!-- NORWAY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OECUSSE DISTRICT</masterLabel>
+            <translation><!-- OECUSSE DISTRICT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OMAN</masterLabel>
+            <translation><!-- OMAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAKISTAN</masterLabel>
+            <translation><!-- PAKISTAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PALAU</masterLabel>
+            <translation><!-- PALAU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PALESTINIAN TERRITORY, OCCUPIED</masterLabel>
+            <translation><!-- PALESTINIAN TERRITORY, OCCUPIED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PANAMA</masterLabel>
+            <translation><!-- PANAMA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAPUA NEW GUINEA</masterLabel>
+            <translation><!-- PAPUA NEW GUINEA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PARAGUAY</masterLabel>
+            <translation><!-- PARAGUAY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PERU</masterLabel>
+            <translation><!-- PERU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PHILIPPINES</masterLabel>
+            <translation><!-- PHILIPPINES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PITCAIRN</masterLabel>
+            <translation><!-- PITCAIRN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POLAND</masterLabel>
+            <translation><!-- POLAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PORTUGAL</masterLabel>
+            <translation><!-- PORTUGAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PUERTO RICO</masterLabel>
+            <translation><!-- PUERTO RICO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QATAR</masterLabel>
+            <translation><!-- QATAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REUNION</masterLabel>
+            <translation><!-- REUNION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ROMANIA</masterLabel>
+            <translation><!-- ROMANIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RUSSIAN FEDERATION</masterLabel>
+            <translation><!-- RUSSIAN FEDERATION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RWANDA</masterLabel>
+            <translation><!-- RWANDA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAHRAWI ARAB DEMOCRATIC REPUBLIC</masterLabel>
+            <translation><!-- SAHRAWI ARAB DEMOCRATIC REPUBLIC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAINT BARTHELEMY</masterLabel>
+            <translation><!-- SAINT BARTHELEMY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAINT HELENA, ASCENSION AND TRIS</masterLabel>
+            <translation><!-- SAINT HELENA, ASCENSION AND TRIS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAINT KITTS AND NEVIS</masterLabel>
+            <translation><!-- SAINT KITTS AND NEVIS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAINT LUCIA</masterLabel>
+            <translation><!-- SAINT LUCIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAINT MARTIN (FRENCH PART)</masterLabel>
+            <translation><!-- SAINT MARTIN (FRENCH PART) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAINT PIERRE AND MIQUELON</masterLabel>
+            <translation><!-- SAINT PIERRE AND MIQUELON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAINT VINCENT AND THE GRENADINES</masterLabel>
+            <translation><!-- SAINT VINCENT AND THE GRENADINES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAMOA</masterLabel>
+            <translation><!-- SAMOA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAN ANDRES AND PROVIDENCIA</masterLabel>
+            <translation><!-- SAN ANDRES AND PROVIDENCIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAN MARINO</masterLabel>
+            <translation><!-- SAN MARINO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAO TOME AND PRINCIPE</masterLabel>
+            <translation><!-- SAO TOME AND PRINCIPE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAUDI ARABIA</masterLabel>
+            <translation><!-- SAUDI ARABIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SENEGAL</masterLabel>
+            <translation><!-- SENEGAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SERBIA</masterLabel>
+            <translation><!-- SERBIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SEYCHELLES</masterLabel>
+            <translation><!-- SEYCHELLES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SIERRA LEONE</masterLabel>
+            <translation><!-- SIERRA LEONE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SINGAPORE</masterLabel>
+            <translation><!-- SINGAPORE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SINT MAARTEN (DUTCH PART)</masterLabel>
+            <translation><!-- SINT MAARTEN (DUTCH PART) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SLOVAKIA</masterLabel>
+            <translation><!-- SLOVAKIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SLOVENIA</masterLabel>
+            <translation><!-- SLOVENIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOLOMON ISLANDS</masterLabel>
+            <translation><!-- SOLOMON ISLANDS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOMALIA</masterLabel>
+            <translation><!-- SOMALIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOMALILAND</masterLabel>
+            <translation><!-- SOMALILAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOUTH AFRICA</masterLabel>
+            <translation><!-- SOUTH AFRICA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOUTH GEORGIA AND THE SOUTH SAND</masterLabel>
+            <translation><!-- SOUTH GEORGIA AND THE SOUTH SAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOUTH OSSETIA</masterLabel>
+            <translation><!-- SOUTH OSSETIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOUTH SUDAN</masterLabel>
+            <translation><!-- SOUTH SUDAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOVEREIGN TERRITORIES, SPANISH</masterLabel>
+            <translation><!-- SOVEREIGN TERRITORIES, SPANISH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPAIN</masterLabel>
+            <translation><!-- SPAIN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SRI LANKA</masterLabel>
+            <translation><!-- SRI LANKA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUDAN</masterLabel>
+            <translation><!-- SUDAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SURINAME</masterLabel>
+            <translation><!-- SURINAME --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SVALBARD AND JAN MAYEN</masterLabel>
+            <translation><!-- SVALBARD AND JAN MAYEN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SWAZILAND</masterLabel>
+            <translation><!-- SWAZILAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SWEDEN</masterLabel>
+            <translation><!-- SWEDEN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SWITZERLAND</masterLabel>
+            <translation><!-- SWITZERLAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYRIAN ARAB REPUBLIC</masterLabel>
+            <translation><!-- SYRIAN ARAB REPUBLIC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TAIWAN</masterLabel>
+            <translation><!-- TAIWAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TAJIKISTAN</masterLabel>
+            <translation><!-- TAJIKISTAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TANZANIA, UNITED REPUBLIC OF</masterLabel>
+            <translation><!-- TANZANIA, UNITED REPUBLIC OF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THAILAND</masterLabel>
+            <translation><!-- THAILAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TIMOR-LESTE</masterLabel>
+            <translation><!-- TIMOR-LESTE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TOGO</masterLabel>
+            <translation><!-- TOGO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TOKELAU</masterLabel>
+            <translation><!-- TOKELAU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TONGA</masterLabel>
+            <translation><!-- TONGA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRANSNISTRIA</masterLabel>
+            <translation><!-- TRANSNISTRIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRINIDAD AND TOBAGO</masterLabel>
+            <translation><!-- TRINIDAD AND TOBAGO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TUNISIA</masterLabel>
+            <translation><!-- TUNISIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TURKEY</masterLabel>
+            <translation><!-- TURKEY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TURKMENISTAN</masterLabel>
+            <translation><!-- TURKMENISTAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TURKS AND CAICOS ISLANDS</masterLabel>
+            <translation><!-- TURKS AND CAICOS ISLANDS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TUVALU</masterLabel>
+            <translation><!-- TUVALU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UGANDA</masterLabel>
+            <translation><!-- UGANDA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UKRAINE</masterLabel>
+            <translation><!-- UKRAINE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UNITED ARAB EMIRATES</masterLabel>
+            <translation><!-- UNITED ARAB EMIRATES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UNITED KINGDOM</masterLabel>
+            <translation><!-- UNITED KINGDOM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UNITED STATES</masterLabel>
+            <translation><!-- UNITED STATES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UNITED STATES MINOR OUTLYING ISL</masterLabel>
+            <translation><!-- UNITED STATES MINOR OUTLYING ISL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>URUGUAY</masterLabel>
+            <translation><!-- URUGUAY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UZBEKISTAN</masterLabel>
+            <translation><!-- UZBEKISTAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VANUATU</masterLabel>
+            <translation><!-- VANUATU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VENEZUELA, BOLIVARIAN REPUBLIC O</masterLabel>
+            <translation><!-- VENEZUELA, BOLIVARIAN REPUBLIC O --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIETNAM</masterLabel>
+            <translation><!-- VIETNAM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIRGIN ISLANDS, BRITISH</masterLabel>
+            <translation><!-- VIRGIN ISLANDS, BRITISH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIRGIN ISLANDS, U.S.</masterLabel>
+            <translation><!-- VIRGIN ISLANDS, U.S. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WALLIS AND FUTUNA</masterLabel>
+            <translation><!-- WALLIS AND FUTUNA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WESTERN SAHARA</masterLabel>
+            <translation><!-- WESTERN SAHARA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YEMEN</masterLabel>
+            <translation><!-- YEMEN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZAMBIA</masterLabel>
+            <translation><!-- ZAMBIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZIMBABWE</masterLabel>
+            <translation><!-- ZIMBABWE --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- County/State --></label>
+        <name>County_State__c</name>
+        <picklistValues>
+            <masterLabel>Aberdeen</masterLabel>
+            <translation><!-- Aberdeen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aberdeenshire</masterLabel>
+            <translation><!-- Aberdeenshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alabama</masterLabel>
+            <translation><!-- Alabama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alaska</masterLabel>
+            <translation><!-- Alaska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alba</masterLabel>
+            <translation><!-- Alba --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alberta</masterLabel>
+            <translation><!-- Alberta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alderney</masterLabel>
+            <translation><!-- Alderney --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alloa</masterLabel>
+            <translation><!-- Alloa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Anglesey</masterLabel>
+            <translation><!-- Anglesey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Angus</masterLabel>
+            <translation><!-- Angus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Antrim</masterLabel>
+            <translation><!-- Antrim --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Argyll</masterLabel>
+            <translation><!-- Argyll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arizona</masterLabel>
+            <translation><!-- Arizona --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arkansas</masterLabel>
+            <translation><!-- Arkansas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Armagh</masterLabel>
+            <translation><!-- Armagh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Australian Capital Territory</masterLabel>
+            <translation><!-- Australian Capital Territory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Avon</masterLabel>
+            <translation><!-- Avon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ayrshire</masterLabel>
+            <translation><!-- Ayrshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banffshire</masterLabel>
+            <translation><!-- Banffshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bedfordshire</masterLabel>
+            <translation><!-- Bedfordshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Belfast</masterLabel>
+            <translation><!-- Belfast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benbecula</masterLabel>
+            <translation><!-- Benbecula --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Berkshire</masterLabel>
+            <translation><!-- Berkshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Berwickshire</masterLabel>
+            <translation><!-- Berwickshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blaenau Gwent</masterLabel>
+            <translation><!-- Blaenau Gwent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bristol</masterLabel>
+            <translation><!-- Bristol --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>British Columbia</masterLabel>
+            <translation><!-- British Columbia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Buckinghamshire</masterLabel>
+            <translation><!-- Buckinghamshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bute</masterLabel>
+            <translation><!-- Bute --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Caernarfonshire</masterLabel>
+            <translation><!-- Caernarfonshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Caerphilly</masterLabel>
+            <translation><!-- Caerphilly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Caithness</masterLabel>
+            <translation><!-- Caithness --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California</masterLabel>
+            <translation><!-- California --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cambridgeshire</masterLabel>
+            <translation><!-- Cambridgeshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carmarthenshire</masterLabel>
+            <translation><!-- Carmarthenshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ceredigion</masterLabel>
+            <translation><!-- Ceredigion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cheshire</masterLabel>
+            <translation><!-- Cheshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clackmannanshire</masterLabel>
+            <translation><!-- Clackmannanshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cleveland</masterLabel>
+            <translation><!-- Cleveland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clwyd</masterLabel>
+            <translation><!-- Clwyd --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Colorado</masterLabel>
+            <translation><!-- Colorado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connecticut</masterLabel>
+            <translation><!-- Connecticut --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conwy</masterLabel>
+            <translation><!-- Conwy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cornwall</masterLabel>
+            <translation><!-- Cornwall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>County Antrim</masterLabel>
+            <translation><!-- County Antrim --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>County Armagh</masterLabel>
+            <translation><!-- County Armagh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>County Derry</masterLabel>
+            <translation><!-- County Derry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>County Down</masterLabel>
+            <translation><!-- County Down --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>County Durham</masterLabel>
+            <translation><!-- County Durham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>County Fermanagh</masterLabel>
+            <translation><!-- County Fermanagh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>County Londonderry</masterLabel>
+            <translation><!-- County Londonderry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>County Tyrone</masterLabel>
+            <translation><!-- County Tyrone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cumbria</masterLabel>
+            <translation><!-- Cumbria --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delaware</masterLabel>
+            <translation><!-- Delaware --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Denbighshire</masterLabel>
+            <translation><!-- Denbighshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Derbyshire</masterLabel>
+            <translation><!-- Derbyshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Devon</masterLabel>
+            <translation><!-- Devon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>District Of Columbia</masterLabel>
+            <translation><!-- District Of Columbia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dorset</masterLabel>
+            <translation><!-- Dorset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dumfriesshire</masterLabel>
+            <translation><!-- Dumfriesshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dunbartonshire</masterLabel>
+            <translation><!-- Dunbartonshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Durham</masterLabel>
+            <translation><!-- Durham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dyfed</masterLabel>
+            <translation><!-- Dyfed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East Dunbartonshire</masterLabel>
+            <translation><!-- East Dunbartonshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East Lincolnshire</masterLabel>
+            <translation><!-- East Lincolnshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East Lothian</masterLabel>
+            <translation><!-- East Lothian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East Renfrewshire</masterLabel>
+            <translation><!-- East Renfrewshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East Riding Of</masterLabel>
+            <translation><!-- East Riding Of --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East Somerset</masterLabel>
+            <translation><!-- East Somerset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East Sussex</masterLabel>
+            <translation><!-- East Sussex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East Yorkshire</masterLabel>
+            <translation><!-- East Yorkshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Edinburgh</masterLabel>
+            <translation><!-- Edinburgh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Essex</masterLabel>
+            <translation><!-- Essex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fife</masterLabel>
+            <translation><!-- Fife --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flintshire</masterLabel>
+            <translation><!-- Flintshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida</masterLabel>
+            <translation><!-- Florida --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Galloway</masterLabel>
+            <translation><!-- Galloway --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Georgia</masterLabel>
+            <translation><!-- Georgia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Glasgow</masterLabel>
+            <translation><!-- Glasgow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gloucestershire</masterLabel>
+            <translation><!-- Gloucestershire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grampian</masterLabel>
+            <translation><!-- Grampian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greater Manchester</masterLabel>
+            <translation><!-- Greater Manchester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gwent</masterLabel>
+            <translation><!-- Gwent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gwynedd</masterLabel>
+            <translation><!-- Gwynedd --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hampshire</masterLabel>
+            <translation><!-- Hampshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hawaii</masterLabel>
+            <translation><!-- Hawaii --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Herefordshire</masterLabel>
+            <translation><!-- Herefordshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hertfordshire</masterLabel>
+            <translation><!-- Hertfordshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Humberside</masterLabel>
+            <translation><!-- Humberside --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hyde</masterLabel>
+            <translation><!-- Hyde --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Idaho</masterLabel>
+            <translation><!-- Idaho --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Illinois</masterLabel>
+            <translation><!-- Illinois --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indiana</masterLabel>
+            <translation><!-- Indiana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inverclyde</masterLabel>
+            <translation><!-- Inverclyde --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inverness-shire</masterLabel>
+            <translation><!-- Inverness-shire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Iowa</masterLabel>
+            <translation><!-- Iowa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Isle Of Arran</masterLabel>
+            <translation><!-- Isle Of Arran --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Isle Of Barra</masterLabel>
+            <translation><!-- Isle Of Barra --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Isle Of Harris</masterLabel>
+            <translation><!-- Isle Of Harris --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Isle Of Islay</masterLabel>
+            <translation><!-- Isle Of Islay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Isle Of Jura</masterLabel>
+            <translation><!-- Isle Of Jura --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Isle Of Lewis</masterLabel>
+            <translation><!-- Isle Of Lewis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Isle Of North</masterLabel>
+            <translation><!-- Isle Of North --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Isle Of Shetland</masterLabel>
+            <translation><!-- Isle Of Shetland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Isle Of Skye</masterLabel>
+            <translation><!-- Isle Of Skye --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Isle Of South</masterLabel>
+            <translation><!-- Isle Of South --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Isle Of Tiree</masterLabel>
+            <translation><!-- Isle Of Tiree --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Isle Of Wight</masterLabel>
+            <translation><!-- Isle Of Wight --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Isles Of Scilly</masterLabel>
+            <translation><!-- Isles Of Scilly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kansas</masterLabel>
+            <translation><!-- Kansas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kent</masterLabel>
+            <translation><!-- Kent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kentucky</masterLabel>
+            <translation><!-- Kentucky --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kincardineshire</masterLabel>
+            <translation><!-- Kincardineshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kinross-shire</masterLabel>
+            <translation><!-- Kinross-shire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kirkcudbrightshire</masterLabel>
+            <translation><!-- Kirkcudbrightshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lanarkshire</masterLabel>
+            <translation><!-- Lanarkshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lancashire</masterLabel>
+            <translation><!-- Lancashire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leicestershire</masterLabel>
+            <translation><!-- Leicestershire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lincolnshire</masterLabel>
+            <translation><!-- Lincolnshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>London</masterLabel>
+            <translation><!-- London --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Londonderry</masterLabel>
+            <translation><!-- Londonderry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lothian</masterLabel>
+            <translation><!-- Lothian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Louisiana</masterLabel>
+            <translation><!-- Louisiana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maine</masterLabel>
+            <translation><!-- Maine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manchester</masterLabel>
+            <translation><!-- Manchester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manitoba</masterLabel>
+            <translation><!-- Manitoba --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maryland</masterLabel>
+            <translation><!-- Maryland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Massachusetts</masterLabel>
+            <translation><!-- Massachusetts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merseyside</masterLabel>
+            <translation><!-- Merseyside --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michigan</masterLabel>
+            <translation><!-- Michigan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mid Glamorgan</masterLabel>
+            <translation><!-- Mid Glamorgan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Middlesex</masterLabel>
+            <translation><!-- Middlesex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Midlothian</masterLabel>
+            <translation><!-- Midlothian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minnesota</masterLabel>
+            <translation><!-- Minnesota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mississippi</masterLabel>
+            <translation><!-- Mississippi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missouri</masterLabel>
+            <translation><!-- Missouri --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monmouthshire</masterLabel>
+            <translation><!-- Monmouthshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Montana</masterLabel>
+            <translation><!-- Montana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moray</masterLabel>
+            <translation><!-- Moray --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Morayshire</masterLabel>
+            <translation><!-- Morayshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nairnshire</masterLabel>
+            <translation><!-- Nairnshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nebraska</masterLabel>
+            <translation><!-- Nebraska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nevada</masterLabel>
+            <translation><!-- Nevada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Brunswick</masterLabel>
+            <translation><!-- New Brunswick --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Hampshire</masterLabel>
+            <translation><!-- New Hampshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Jersey</masterLabel>
+            <translation><!-- New Jersey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Mexico</masterLabel>
+            <translation><!-- New Mexico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New South Wales</masterLabel>
+            <translation><!-- New South Wales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York</masterLabel>
+            <translation><!-- New York --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Newfoundland And Labrador</masterLabel>
+            <translation><!-- Newfoundland And Labrador --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Norfolk</masterLabel>
+            <translation><!-- Norfolk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Ayrshire</masterLabel>
+            <translation><!-- North Ayrshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina</masterLabel>
+            <translation><!-- North Carolina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Dakota</masterLabel>
+            <translation><!-- North Dakota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North East Lincolnshire</masterLabel>
+            <translation><!-- North East Lincolnshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North East Somerset</masterLabel>
+            <translation><!-- North East Somerset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Humberside</masterLabel>
+            <translation><!-- North Humberside --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Lanarkshire</masterLabel>
+            <translation><!-- North Lanarkshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Lincolnshire</masterLabel>
+            <translation><!-- North Lincolnshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Somerset</masterLabel>
+            <translation><!-- North Somerset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Tyneside</masterLabel>
+            <translation><!-- North Tyneside --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Yorkshire</masterLabel>
+            <translation><!-- North Yorkshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northamptonshire</masterLabel>
+            <translation><!-- Northamptonshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northern Territory</masterLabel>
+            <translation><!-- Northern Territory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northumberland</masterLabel>
+            <translation><!-- Northumberland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northwest Territories</masterLabel>
+            <translation><!-- Northwest Territories --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nottinghamshire</masterLabel>
+            <translation><!-- Nottinghamshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nova Scotia</masterLabel>
+            <translation><!-- Nova Scotia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nunavut</masterLabel>
+            <translation><!-- Nunavut --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohio</masterLabel>
+            <translation><!-- Ohio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oklahoma</masterLabel>
+            <translation><!-- Oklahoma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ontario</masterLabel>
+            <translation><!-- Ontario --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oregon</masterLabel>
+            <translation><!-- Oregon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Orkney</masterLabel>
+            <translation><!-- Orkney --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outer Hebridies</masterLabel>
+            <translation><!-- Outer Hebridies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oxfordshire</masterLabel>
+            <translation><!-- Oxfordshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peeblesshire</masterLabel>
+            <translation><!-- Peeblesshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pembrokeshire</masterLabel>
+            <translation><!-- Pembrokeshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pennsylvania</masterLabel>
+            <translation><!-- Pennsylvania --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perthshire</masterLabel>
+            <translation><!-- Perthshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pont</masterLabel>
+            <translation><!-- Pont --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Powys</masterLabel>
+            <translation><!-- Powys --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prince Edward Island</masterLabel>
+            <translation><!-- Prince Edward Island --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quebec</masterLabel>
+            <translation><!-- Quebec --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queensland</masterLabel>
+            <translation><!-- Queensland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renfrewshire</masterLabel>
+            <translation><!-- Renfrewshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rhode Island</masterLabel>
+            <translation><!-- Rhode Island --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rhondda Cynon Taff</masterLabel>
+            <translation><!-- Rhondda Cynon Taff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ross-shire</masterLabel>
+            <translation><!-- Ross-shire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Roxburghshire</masterLabel>
+            <translation><!-- Roxburghshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rutland</masterLabel>
+            <translation><!-- Rutland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saskatchewan</masterLabel>
+            <translation><!-- Saskatchewan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scottish Isles</masterLabel>
+            <translation><!-- Scottish Isles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Selkirkshire</masterLabel>
+            <translation><!-- Selkirkshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shetland</masterLabel>
+            <translation><!-- Shetland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shetland Islands</masterLabel>
+            <translation><!-- Shetland Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shropshire</masterLabel>
+            <translation><!-- Shropshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Somerset</masterLabel>
+            <translation><!-- Somerset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Australia</masterLabel>
+            <translation><!-- South Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Ayrshire</masterLabel>
+            <translation><!-- South Ayrshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Carolina</masterLabel>
+            <translation><!-- South Carolina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Dakota</masterLabel>
+            <translation><!-- South Dakota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Glamorgan</masterLabel>
+            <translation><!-- South Glamorgan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Gloucestershire</masterLabel>
+            <translation><!-- South Gloucestershire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Humberside</masterLabel>
+            <translation><!-- South Humberside --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Lanarkshire</masterLabel>
+            <translation><!-- South Lanarkshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Uist</masterLabel>
+            <translation><!-- South Uist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Wales</masterLabel>
+            <translation><!-- South Wales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Yorkshire</masterLabel>
+            <translation><!-- South Yorkshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Staffordshire</masterLabel>
+            <translation><!-- Staffordshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stirlingshire</masterLabel>
+            <translation><!-- Stirlingshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Strathclyde</masterLabel>
+            <translation><!-- Strathclyde --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Suffolk</masterLabel>
+            <translation><!-- Suffolk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surrey</masterLabel>
+            <translation><!-- Surrey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sussex</masterLabel>
+            <translation><!-- Sussex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sutherland</masterLabel>
+            <translation><!-- Sutherland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tasmania</masterLabel>
+            <translation><!-- Tasmania --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tayside</masterLabel>
+            <translation><!-- Tayside --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Teesside</masterLabel>
+            <translation><!-- Teesside --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennessee</masterLabel>
+            <translation><!-- Tennessee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas</masterLabel>
+            <translation><!-- Texas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Torfaen</masterLabel>
+            <translation><!-- Torfaen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tyne &amp; Wear</masterLabel>
+            <translation><!-- Tyne &amp; Wear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tyne And Wear</masterLabel>
+            <translation><!-- Tyne And Wear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tyrone</masterLabel>
+            <translation><!-- Tyrone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utah</masterLabel>
+            <translation><!-- Utah --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vale Of Glamorgan</masterLabel>
+            <translation><!-- Vale Of Glamorgan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vermont</masterLabel>
+            <translation><!-- Vermont --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Victoria</masterLabel>
+            <translation><!-- Victoria --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virginia</masterLabel>
+            <translation><!-- Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warwickshire</masterLabel>
+            <translation><!-- Warwickshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Washington</masterLabel>
+            <translation><!-- Washington --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Berkshire</masterLabel>
+            <translation><!-- West Berkshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Calder</masterLabel>
+            <translation><!-- West Calder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Dunbartonshire</masterLabel>
+            <translation><!-- West Dunbartonshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Glamorgan</masterLabel>
+            <translation><!-- West Glamorgan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Lothian</masterLabel>
+            <translation><!-- West Lothian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Midlands</masterLabel>
+            <translation><!-- West Midlands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Sussex</masterLabel>
+            <translation><!-- West Sussex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Virginia</masterLabel>
+            <translation><!-- West Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Yorkshire</masterLabel>
+            <translation><!-- West Yorkshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Western Australia</masterLabel>
+            <translation><!-- Western Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Western Dunbarton</masterLabel>
+            <translation><!-- Western Dunbarton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Western Isles</masterLabel>
+            <translation><!-- Western Isles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wigtownshire</masterLabel>
+            <translation><!-- Wigtownshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wiltshire</masterLabel>
+            <translation><!-- Wiltshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wisconsin</masterLabel>
+            <translation><!-- Wisconsin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Worcestershire</masterLabel>
+            <translation><!-- Worcestershire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wyoming</masterLabel>
+            <translation><!-- Wyoming --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yorkshire</masterLabel>
+            <translation><!-- Yorkshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yukon Territory</masterLabel>
+            <translation><!-- Yukon Territory --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Curriculum(s) --></label>
+        <name>Curriculum_s__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Group --></label>
+        <name>Customer_Group__c</name>
+        <picklistValues>
+            <masterLabel>Academy</masterLabel>
+            <translation><!-- Academy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Academy Sponsor</masterLabel>
+            <translation><!-- Academy Sponsor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Federation</masterLabel>
+            <translation><!-- Federation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Further</masterLabel>
+            <translation><!-- Further --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Further Education</masterLabel>
+            <translation><!-- Further Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Further/Higher Ed</masterLabel>
+            <translation><!-- Further/Higher Ed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Government</masterLabel>
+            <translation><!-- Government --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head Office</masterLabel>
+            <translation><!-- Head Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Higher</masterLabel>
+            <translation><!-- Higher --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Higher Education</masterLabel>
+            <translation><!-- Higher Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ind. Prepatory</masterLabel>
+            <translation><!-- Ind. Prepatory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Independent MultiPhase</masterLabel>
+            <translation><!-- Independent MultiPhase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Independent PrePrep</masterLabel>
+            <translation><!-- Independent PrePrep --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Independent Prep</masterLabel>
+            <translation><!-- Independent Prep --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Independent Senior</masterLabel>
+            <translation><!-- Independent Senior --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Independent Special</masterLabel>
+            <translation><!-- Independent Special --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intra Company</masterLabel>
+            <translation><!-- Intra Company --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limited Company</masterLabel>
+            <translation><!-- Limited Company --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Local Education Authority</masterLabel>
+            <translation><!-- Local Education Authority --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Middle</masterLabel>
+            <translation><!-- Middle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multi-Phase</masterLabel>
+            <translation><!-- Multi-Phase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non Limited Company</masterLabel>
+            <translation><!-- Non Limited Company --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non Reg. Charity</masterLabel>
+            <translation><!-- Non Reg. Charity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nursery</masterLabel>
+            <translation><!-- Nursery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Department</masterLabel>
+            <translation><!-- Other Department --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PLC Company</masterLabel>
+            <translation><!-- PLC Company --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary</masterLabel>
+            <translation><!-- Primary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Private Individual</masterLabel>
+            <translation><!-- Private Individual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pupil Referral Unit</masterLabel>
+            <translation><!-- Pupil Referral Unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Registered Charity</masterLabel>
+            <translation><!-- Registered Charity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Religious Org.</masterLabel>
+            <translation><!-- Religious Org. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Religious Organisation</masterLabel>
+            <translation><!-- Religious Organisation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secondary</masterLabel>
+            <translation><!-- Secondary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secure Unit</masterLabel>
+            <translation><!-- Secure Unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sixth Form</masterLabel>
+            <translation><!-- Sixth Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special Needs</masterLabel>
+            <translation><!-- Special Needs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special Schools</masterLabel>
+            <translation><!-- Special Schools --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trust</masterLabel>
+            <translation><!-- Trust --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Union</masterLabel>
+            <translation><!-- Union --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Do Not Call --></label>
+        <name>Do_Not_Call__c</name>
+    </fields>
+    <fields>
+        <label><!-- Do Not Email --></label>
+        <name>Do_Not_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Do Not Fax --></label>
+        <name>Do_Not_Fax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Do Not Mail --></label>
+        <name>Do_Not_Mail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Funding Type --></label>
+        <name>Funding_Type__c</name>
+        <picklistValues>
+            <masterLabel>Independent</masterLabel>
+            <translation><!-- Independent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>State</masterLabel>
+            <translation><!-- State --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Gender --></label>
+        <name>Gender__c</name>
+        <picklistValues>
+            <masterLabel>Boys</masterLabel>
+            <translation><!-- Boys --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Girls</masterLabel>
+            <translation><!-- Girls --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mixed</masterLabel>
+            <translation><!-- Mixed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>Industry</name>
+        <picklistValues>
+            <masterLabel>Agriculture</masterLabel>
+            <translation><!-- Agriculture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Apparel</masterLabel>
+            <translation><!-- Apparel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banking</masterLabel>
+            <translation><!-- Banking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Biotechnology</masterLabel>
+            <translation><!-- Biotechnology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chemicals</masterLabel>
+            <translation><!-- Chemicals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Communications</masterLabel>
+            <translation><!-- Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction</masterLabel>
+            <translation><!-- Construction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consulting</masterLabel>
+            <translation><!-- Consulting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation><!-- Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electronics</masterLabel>
+            <translation><!-- Electronics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Energy</masterLabel>
+            <translation><!-- Energy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engineering</masterLabel>
+            <translation><!-- Engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Entertainment</masterLabel>
+            <translation><!-- Entertainment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Environmental</masterLabel>
+            <translation><!-- Environmental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food &amp; Beverage</masterLabel>
+            <translation><!-- Food &amp; Beverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Government</masterLabel>
+            <translation><!-- Government --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Healthcare</masterLabel>
+            <translation><!-- Healthcare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hospitality</masterLabel>
+            <translation><!-- Hospitality --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance</masterLabel>
+            <translation><!-- Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Machinery</masterLabel>
+            <translation><!-- Machinery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manufacturing</masterLabel>
+            <translation><!-- Manufacturing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media</masterLabel>
+            <translation><!-- Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not For Profit</masterLabel>
+            <translation><!-- Not For Profit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recreation</masterLabel>
+            <translation><!-- Recreation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shipping</masterLabel>
+            <translation><!-- Shipping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technology</masterLabel>
+            <translation><!-- Technology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telecommunications</masterLabel>
+            <translation><!-- Telecommunications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transportation</masterLabel>
+            <translation><!-- Transportation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities</masterLabel>
+            <translation><!-- Utilities --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is a school --></label>
+        <name>Is_a_school__c</name>
+    </fields>
+    <fields>
+        <name>LeadSource</name>
+        <picklistValues>
+            <masterLabel>Advertisement</masterLabel>
+            <translation><!-- Advertisement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conference</masterLabel>
+            <translation><!-- Conference --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee Referral</masterLabel>
+            <translation><!-- Employee Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>External Referral</masterLabel>
+            <translation><!-- External Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation><!-- Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Relations</masterLabel>
+            <translation><!-- Public Relations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Internal</masterLabel>
+            <translation><!-- Seminar - Internal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Partner</masterLabel>
+            <translation><!-- Seminar - Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Show</masterLabel>
+            <translation><!-- Trade Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Word of mouth</masterLabel>
+            <translation><!-- Word of mouth --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lead Type --></label>
+        <name>Lead_Type__c</name>
+        <picklistValues>
+            <masterLabel>Bill To</masterLabel>
+            <translation><!-- Bill To --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bill To and Employer</masterLabel>
+            <translation><!-- Bill To and Employer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employer</masterLabel>
+            <translation><!-- Employer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lock When Converted --></label>
+        <name>Lock_When_Converted__c</name>
+    </fields>
+    <fields>
+        <help><!-- The email that gets populated on the client record in MSL. Generally, the Finance/Billing email of the client. --></help>
+        <label><!-- School/Company Email --></label>
+        <name>MSL_Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specify if the School/Institution exists in MSL. --></help>
+        <label><!-- MSL Id --></label>
+        <name>MSL_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- NOR --></label>
+        <name>NOR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phase --></label>
+        <name>Phase__c</name>
+        <picklistValues>
+            <masterLabel>Early years</masterLabel>
+            <translation><!-- Early years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Further (Other)</masterLabel>
+            <translation><!-- Further (Other) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Further 16+</masterLabel>
+            <translation><!-- Further 16+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Higher</masterLabel>
+            <translation><!-- Higher --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Middle</masterLabel>
+            <translation><!-- Middle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multi-phase</masterLabel>
+            <translation><!-- Multi-phase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary</masterLabel>
+            <translation><!-- Primary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secondary</masterLabel>
+            <translation><!-- Secondary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sixth Form</masterLabel>
+            <translation><!-- Sixth Form --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Post Code --></label>
+        <name>Post_Code__c</name>
+    </fields>
+    <fields>
+        <name>Rating</name>
+        <picklistValues>
+            <masterLabel>Cold</masterLabel>
+            <translation><!-- Cold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hot</masterLabel>
+            <translation><!-- Hot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warm</masterLabel>
+            <translation><!-- Warm --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Region 1 --></label>
+        <name>Region_1__c</name>
+        <picklistValues>
+            <masterLabel>Classified</masterLabel>
+            <translation><!-- Classified --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Region 2 --></label>
+        <name>Region_2__c</name>
+        <picklistValues>
+            <masterLabel>International</masterLabel>
+            <translation><!-- International --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United Kingdom</masterLabel>
+            <translation><!-- United Kingdom --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Region 3 --></label>
+        <name>Region_3__c</name>
+        <picklistValues>
+            <masterLabel>England</masterLabel>
+            <translation><!-- England --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northern Ireland</masterLabel>
+            <translation><!-- Northern Ireland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scotland</masterLabel>
+            <translation><!-- Scotland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wales</masterLabel>
+            <translation><!-- Wales --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Region 4 --></label>
+        <name>Region_4__c</name>
+        <picklistValues>
+            <masterLabel>Aberdeen City</masterLabel>
+            <translation><!-- Aberdeen City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aberdeenshire</masterLabel>
+            <translation><!-- Aberdeenshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Angus</masterLabel>
+            <translation><!-- Angus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Antrim</masterLabel>
+            <translation><!-- Antrim --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ards</masterLabel>
+            <translation><!-- Ards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Argyll and Bute</masterLabel>
+            <translation><!-- Argyll and Bute --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Armagh</masterLabel>
+            <translation><!-- Armagh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ballymena</masterLabel>
+            <translation><!-- Ballymena --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ballymoney</masterLabel>
+            <translation><!-- Ballymoney --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banbridge</masterLabel>
+            <translation><!-- Banbridge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Belfast</masterLabel>
+            <translation><!-- Belfast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blaenau Gwent</masterLabel>
+            <translation><!-- Blaenau Gwent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bridgend</masterLabel>
+            <translation><!-- Bridgend --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Caerphilly</masterLabel>
+            <translation><!-- Caerphilly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cardiff</masterLabel>
+            <translation><!-- Cardiff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carmarthenshire</masterLabel>
+            <translation><!-- Carmarthenshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carrickfergus</masterLabel>
+            <translation><!-- Carrickfergus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Castlereagh</masterLabel>
+            <translation><!-- Castlereagh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ceredigion</masterLabel>
+            <translation><!-- Ceredigion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clackmannanshire</masterLabel>
+            <translation><!-- Clackmannanshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coleraine</masterLabel>
+            <translation><!-- Coleraine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conwy</masterLabel>
+            <translation><!-- Conwy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cookstown</masterLabel>
+            <translation><!-- Cookstown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Craigavon</masterLabel>
+            <translation><!-- Craigavon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Denbighshire</masterLabel>
+            <translation><!-- Denbighshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Derry</masterLabel>
+            <translation><!-- Derry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Down</masterLabel>
+            <translation><!-- Down --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dumfries and Galloway</masterLabel>
+            <translation><!-- Dumfries and Galloway --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dundee City</masterLabel>
+            <translation><!-- Dundee City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dungannon</masterLabel>
+            <translation><!-- Dungannon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East Ayrshire</masterLabel>
+            <translation><!-- East Ayrshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East Dunbartonshire</masterLabel>
+            <translation><!-- East Dunbartonshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East Lothian</masterLabel>
+            <translation><!-- East Lothian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East Midlands</masterLabel>
+            <translation><!-- East Midlands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East Renfrewshire</masterLabel>
+            <translation><!-- East Renfrewshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East of England</masterLabel>
+            <translation><!-- East of England --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Edinburgh, City of</masterLabel>
+            <translation><!-- Edinburgh, City of --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Eilean Siar</masterLabel>
+            <translation><!-- Eilean Siar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Falkirk</masterLabel>
+            <translation><!-- Falkirk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fermanagh</masterLabel>
+            <translation><!-- Fermanagh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fife</masterLabel>
+            <translation><!-- Fife --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flintshire</masterLabel>
+            <translation><!-- Flintshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Glasgow City</masterLabel>
+            <translation><!-- Glasgow City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gwynedd</masterLabel>
+            <translation><!-- Gwynedd --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Highland</masterLabel>
+            <translation><!-- Highland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inverclyde</masterLabel>
+            <translation><!-- Inverclyde --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Isle of Anglesey</masterLabel>
+            <translation><!-- Isle of Anglesey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Larne</masterLabel>
+            <translation><!-- Larne --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limavady</masterLabel>
+            <translation><!-- Limavady --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lisburn</masterLabel>
+            <translation><!-- Lisburn --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>London</masterLabel>
+            <translation><!-- London --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Magherafelt</masterLabel>
+            <translation><!-- Magherafelt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merthyr Tydfil</masterLabel>
+            <translation><!-- Merthyr Tydfil --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Midlothian</masterLabel>
+            <translation><!-- Midlothian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monmouthshire</masterLabel>
+            <translation><!-- Monmouthshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moray</masterLabel>
+            <translation><!-- Moray --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moyle</masterLabel>
+            <translation><!-- Moyle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neath Port Talbot</masterLabel>
+            <translation><!-- Neath Port Talbot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Newport</masterLabel>
+            <translation><!-- Newport --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Newry and Mourne</masterLabel>
+            <translation><!-- Newry and Mourne --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Newtownabbey</masterLabel>
+            <translation><!-- Newtownabbey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Ayrshire</masterLabel>
+            <translation><!-- North Ayrshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Down</masterLabel>
+            <translation><!-- North Down --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North East England</masterLabel>
+            <translation><!-- North East England --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Lanarkshire</masterLabel>
+            <translation><!-- North Lanarkshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North West England</masterLabel>
+            <translation><!-- North West England --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Omagh</masterLabel>
+            <translation><!-- Omagh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Orkney Islands</masterLabel>
+            <translation><!-- Orkney Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pembrokeshire</masterLabel>
+            <translation><!-- Pembrokeshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perth and Kinross</masterLabel>
+            <translation><!-- Perth and Kinross --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Powys</masterLabel>
+            <translation><!-- Powys --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renfrewshire</masterLabel>
+            <translation><!-- Renfrewshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rhondda, Cynon, Taff</masterLabel>
+            <translation><!-- Rhondda, Cynon, Taff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scottish Borders, The</masterLabel>
+            <translation><!-- Scottish Borders, The --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shetland Islands</masterLabel>
+            <translation><!-- Shetland Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Ayrshire</masterLabel>
+            <translation><!-- South Ayrshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South East England</masterLabel>
+            <translation><!-- South East England --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Lanarkshire</masterLabel>
+            <translation><!-- South Lanarkshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South West England</masterLabel>
+            <translation><!-- South West England --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stirling</masterLabel>
+            <translation><!-- Stirling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Strabane</masterLabel>
+            <translation><!-- Strabane --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Swansea</masterLabel>
+            <translation><!-- Swansea --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Torfaen</masterLabel>
+            <translation><!-- Torfaen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vale of Glamorgan, The</masterLabel>
+            <translation><!-- Vale of Glamorgan, The --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Dunbartonshire</masterLabel>
+            <translation><!-- West Dunbartonshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Lothian</masterLabel>
+            <translation><!-- West Lothian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Midlands</masterLabel>
+            <translation><!-- West Midlands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrexham</masterLabel>
+            <translation><!-- Wrexham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yorkshire and the Humber</masterLabel>
+            <translation><!-- Yorkshire and the Humber --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Region 5 --></label>
+        <name>Region_5__c</name>
+        <picklistValues>
+            <masterLabel>Barking and Dagenham</masterLabel>
+            <translation><!-- Barking and Dagenham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Barnet</masterLabel>
+            <translation><!-- Barnet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Barnsley</masterLabel>
+            <translation><!-- Barnsley --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bath and North East Somerset</masterLabel>
+            <translation><!-- Bath and North East Somerset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bedford</masterLabel>
+            <translation><!-- Bedford --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bexley</masterLabel>
+            <translation><!-- Bexley --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Birmingham</masterLabel>
+            <translation><!-- Birmingham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blackburn with Darwen</masterLabel>
+            <translation><!-- Blackburn with Darwen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blackpool</masterLabel>
+            <translation><!-- Blackpool --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bolton</masterLabel>
+            <translation><!-- Bolton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bournemouth</masterLabel>
+            <translation><!-- Bournemouth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bracknell Forest</masterLabel>
+            <translation><!-- Bracknell Forest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bradford</masterLabel>
+            <translation><!-- Bradford --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brent</masterLabel>
+            <translation><!-- Brent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brighton and Hove</masterLabel>
+            <translation><!-- Brighton and Hove --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bristol, City of</masterLabel>
+            <translation><!-- Bristol, City of --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bromley</masterLabel>
+            <translation><!-- Bromley --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Buckinghamshire</masterLabel>
+            <translation><!-- Buckinghamshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bury</masterLabel>
+            <translation><!-- Bury --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Calderdale</masterLabel>
+            <translation><!-- Calderdale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cambridgeshire</masterLabel>
+            <translation><!-- Cambridgeshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Camden</masterLabel>
+            <translation><!-- Camden --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Central Bedfordshire</masterLabel>
+            <translation><!-- Central Bedfordshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cheshire East</masterLabel>
+            <translation><!-- Cheshire East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cheshire West and Chester</masterLabel>
+            <translation><!-- Cheshire West and Chester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cornwall</masterLabel>
+            <translation><!-- Cornwall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coventry</masterLabel>
+            <translation><!-- Coventry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Croydon</masterLabel>
+            <translation><!-- Croydon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cumbria</masterLabel>
+            <translation><!-- Cumbria --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Darlington</masterLabel>
+            <translation><!-- Darlington --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Derby</masterLabel>
+            <translation><!-- Derby --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Derbyshire</masterLabel>
+            <translation><!-- Derbyshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Devon</masterLabel>
+            <translation><!-- Devon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doncaster</masterLabel>
+            <translation><!-- Doncaster --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dorset</masterLabel>
+            <translation><!-- Dorset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dudley</masterLabel>
+            <translation><!-- Dudley --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Durham</masterLabel>
+            <translation><!-- Durham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ealing</masterLabel>
+            <translation><!-- Ealing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East Riding of Yorkshire</masterLabel>
+            <translation><!-- East Riding of Yorkshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East Sussex</masterLabel>
+            <translation><!-- East Sussex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enfield</masterLabel>
+            <translation><!-- Enfield --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Essex</masterLabel>
+            <translation><!-- Essex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gateshead</masterLabel>
+            <translation><!-- Gateshead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gloucestershire</masterLabel>
+            <translation><!-- Gloucestershire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greenwich</masterLabel>
+            <translation><!-- Greenwich --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hackney</masterLabel>
+            <translation><!-- Hackney --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Halton</masterLabel>
+            <translation><!-- Halton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hammersmith and Fulham</masterLabel>
+            <translation><!-- Hammersmith and Fulham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hampshire</masterLabel>
+            <translation><!-- Hampshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Haringey</masterLabel>
+            <translation><!-- Haringey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Harrow</masterLabel>
+            <translation><!-- Harrow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hartlepool</masterLabel>
+            <translation><!-- Hartlepool --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Havering</masterLabel>
+            <translation><!-- Havering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Herefordshire</masterLabel>
+            <translation><!-- Herefordshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hertfordshire</masterLabel>
+            <translation><!-- Hertfordshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hillingdon</masterLabel>
+            <translation><!-- Hillingdon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hounslow</masterLabel>
+            <translation><!-- Hounslow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Isle of Wight</masterLabel>
+            <translation><!-- Isle of Wight --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Isles of Scilly</masterLabel>
+            <translation><!-- Isles of Scilly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Islington</masterLabel>
+            <translation><!-- Islington --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kensington and Chelsea</masterLabel>
+            <translation><!-- Kensington and Chelsea --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kent</masterLabel>
+            <translation><!-- Kent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kingston upon Hull</masterLabel>
+            <translation><!-- Kingston upon Hull --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kingston upon Thames</masterLabel>
+            <translation><!-- Kingston upon Thames --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kirklees</masterLabel>
+            <translation><!-- Kirklees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Knowsley</masterLabel>
+            <translation><!-- Knowsley --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lambeth</masterLabel>
+            <translation><!-- Lambeth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lancashire</masterLabel>
+            <translation><!-- Lancashire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leeds</masterLabel>
+            <translation><!-- Leeds --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leicester</masterLabel>
+            <translation><!-- Leicester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leicestershire</masterLabel>
+            <translation><!-- Leicestershire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lewisham</masterLabel>
+            <translation><!-- Lewisham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lincolnshire</masterLabel>
+            <translation><!-- Lincolnshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liverpool</masterLabel>
+            <translation><!-- Liverpool --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>London, City of</masterLabel>
+            <translation><!-- London, City of --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Luton</masterLabel>
+            <translation><!-- Luton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manchester</masterLabel>
+            <translation><!-- Manchester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medway</masterLabel>
+            <translation><!-- Medway --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merton</masterLabel>
+            <translation><!-- Merton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Middlesbrough</masterLabel>
+            <translation><!-- Middlesbrough --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Milton Keynes</masterLabel>
+            <translation><!-- Milton Keynes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Newcastle upon Tyne</masterLabel>
+            <translation><!-- Newcastle upon Tyne --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Newham</masterLabel>
+            <translation><!-- Newham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Norfolk</masterLabel>
+            <translation><!-- Norfolk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North East Lincolnshire</masterLabel>
+            <translation><!-- North East Lincolnshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Lincolnshire</masterLabel>
+            <translation><!-- North Lincolnshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Somerset</masterLabel>
+            <translation><!-- North Somerset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Tyneside</masterLabel>
+            <translation><!-- North Tyneside --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Yorkshire</masterLabel>
+            <translation><!-- North Yorkshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northamptonshire</masterLabel>
+            <translation><!-- Northamptonshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northumberland</masterLabel>
+            <translation><!-- Northumberland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nottingham</masterLabel>
+            <translation><!-- Nottingham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nottinghamshire</masterLabel>
+            <translation><!-- Nottinghamshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oldham</masterLabel>
+            <translation><!-- Oldham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oxfordshire</masterLabel>
+            <translation><!-- Oxfordshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peterborough</masterLabel>
+            <translation><!-- Peterborough --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plymouth</masterLabel>
+            <translation><!-- Plymouth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Poole</masterLabel>
+            <translation><!-- Poole --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portsmouth</masterLabel>
+            <translation><!-- Portsmouth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reading</masterLabel>
+            <translation><!-- Reading --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Redbridge</masterLabel>
+            <translation><!-- Redbridge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Redcar and Cleveland</masterLabel>
+            <translation><!-- Redcar and Cleveland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Richmond upon Thames</masterLabel>
+            <translation><!-- Richmond upon Thames --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rochdale</masterLabel>
+            <translation><!-- Rochdale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rotherham</masterLabel>
+            <translation><!-- Rotherham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rutland</masterLabel>
+            <translation><!-- Rutland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salford</masterLabel>
+            <translation><!-- Salford --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sandwell</masterLabel>
+            <translation><!-- Sandwell --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sefton</masterLabel>
+            <translation><!-- Sefton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sheffield</masterLabel>
+            <translation><!-- Sheffield --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shropshire</masterLabel>
+            <translation><!-- Shropshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Slough</masterLabel>
+            <translation><!-- Slough --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solihull</masterLabel>
+            <translation><!-- Solihull --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Somerset</masterLabel>
+            <translation><!-- Somerset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Gloucestershire</masterLabel>
+            <translation><!-- South Gloucestershire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Tyneside</masterLabel>
+            <translation><!-- South Tyneside --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Southampton</masterLabel>
+            <translation><!-- Southampton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Southend-on-Sea</masterLabel>
+            <translation><!-- Southend-on-Sea --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Southwark</masterLabel>
+            <translation><!-- Southwark --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>St. Helens</masterLabel>
+            <translation><!-- St. Helens --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Staffordshire</masterLabel>
+            <translation><!-- Staffordshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stockport</masterLabel>
+            <translation><!-- Stockport --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stockton-on-Tees</masterLabel>
+            <translation><!-- Stockton-on-Tees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stoke-on-Trent</masterLabel>
+            <translation><!-- Stoke-on-Trent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Suffolk</masterLabel>
+            <translation><!-- Suffolk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sunderland</masterLabel>
+            <translation><!-- Sunderland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surrey</masterLabel>
+            <translation><!-- Surrey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sutton</masterLabel>
+            <translation><!-- Sutton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Swindon</masterLabel>
+            <translation><!-- Swindon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tameside</masterLabel>
+            <translation><!-- Tameside --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telford and Wrekin</masterLabel>
+            <translation><!-- Telford and Wrekin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thurrock</masterLabel>
+            <translation><!-- Thurrock --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Torbay</masterLabel>
+            <translation><!-- Torbay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tower Hamlets</masterLabel>
+            <translation><!-- Tower Hamlets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trafford</masterLabel>
+            <translation><!-- Trafford --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wakefield</masterLabel>
+            <translation><!-- Wakefield --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Walsall</masterLabel>
+            <translation><!-- Walsall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waltham Forest</masterLabel>
+            <translation><!-- Waltham Forest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wandsworth</masterLabel>
+            <translation><!-- Wandsworth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warrington</masterLabel>
+            <translation><!-- Warrington --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warwickshire</masterLabel>
+            <translation><!-- Warwickshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Berkshire</masterLabel>
+            <translation><!-- West Berkshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Sussex</masterLabel>
+            <translation><!-- West Sussex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Westminster</masterLabel>
+            <translation><!-- Westminster --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wigan</masterLabel>
+            <translation><!-- Wigan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wiltshire</masterLabel>
+            <translation><!-- Wiltshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Windsor and Maidenhead</masterLabel>
+            <translation><!-- Windsor and Maidenhead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wirral</masterLabel>
+            <translation><!-- Wirral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wokingham</masterLabel>
+            <translation><!-- Wokingham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wolverhampton</masterLabel>
+            <translation><!-- Wolverhampton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Worcestershire</masterLabel>
+            <translation><!-- Worcestershire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>York</masterLabel>
+            <translation><!-- York --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please specify the school group if the school if part of a group i.e. GEMS education. --></help>
+        <label><!-- School Group (if applicable) --></label>
+        <name>School_Group_if_applicable__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specify if the School exists in SD3. --></help>
+        <label><!-- School Id --></label>
+        <name>School_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- School Type --></label>
+        <name>School_Type__c</name>
+        <picklistValues>
+            <masterLabel>Mainstream</masterLabel>
+            <translation><!-- Mainstream --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pupil Referral Unit</masterLabel>
+            <translation><!-- Pupil Referral Unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secure Unit</masterLabel>
+            <translation><!-- Secure Unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special Needs</masterLabel>
+            <translation><!-- Special Needs --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>Status</name>
+        <picklistValues>
+            <masterLabel>Already in MSL</masterLabel>
+            <translation><!-- Already in MSL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Already in SD3</masterLabel>
+            <translation><!-- Already in SD3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Awaiting Verification</masterLabel>
+            <translation><!-- Awaiting Verification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contacted</masterLabel>
+            <translation><!-- Contacted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Needs More Information</masterLabel>
+            <translation><!-- Needs More Information --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Qualified</masterLabel>
+            <translation><!-- Qualified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unqualified</masterLabel>
+            <translation><!-- Unqualified --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Street --></label>
+        <name>Street__c</name>
+    </fields>
+    <fields>
+        <label><!-- Title --></label>
+        <name>Title__c</name>
+        <picklistValues>
+            <masterLabel>Account Co-Coordinator</masterLabel>
+            <translation><!-- Account Co-Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Co-ordinator</masterLabel>
+            <translation><!-- Account Co-ordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Controller</masterLabel>
+            <translation><!-- Account Controller --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Executive</masterLabel>
+            <translation><!-- Account Executive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Admin Manager</masterLabel>
+            <translation><!-- Admin Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assessm. Coordinator</masterLabel>
+            <translation><!-- Assessm. Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assistant Head</masterLabel>
+            <translation><!-- Assistant Head --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assistant Principal</masterLabel>
+            <translation><!-- Assistant Principal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bursar</masterLabel>
+            <translation><!-- Bursar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Director</masterLabel>
+            <translation><!-- Business Director --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Manager</masterLabel>
+            <translation><!-- Business Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Catering Mgr/Superv.</masterLabel>
+            <translation><!-- Catering Mgr/Superv. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chair of Governors</masterLabel>
+            <translation><!-- Chair of Governors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chancellor</masterLabel>
+            <translation><!-- Chancellor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chief Sci. Lab. Tech</masterLabel>
+            <translation><!-- Chief Sci. Lab. Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Child protection</masterLabel>
+            <translation><!-- Child protection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dean</masterLabel>
+            <translation><!-- Dean --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dep Vice Chancellor</masterLabel>
+            <translation><!-- Dep Vice Chancellor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deputy Director of Education</masterLabel>
+            <translation><!-- Deputy Director of Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deputy Head</masterLabel>
+            <translation><!-- Deputy Head --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Director Development</masterLabel>
+            <translation><!-- Director Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Director HR</masterLabel>
+            <translation><!-- Director HR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Director of Education</masterLabel>
+            <translation><!-- Director of Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Director of Finance</masterLabel>
+            <translation><!-- Director of Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education Director</masterLabel>
+            <translation><!-- Education Director --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education Manager</masterLabel>
+            <translation><!-- Education Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fund Raising Officer</masterLabel>
+            <translation><!-- Fund Raising Officer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold / Silver Contact</masterLabel>
+            <translation><!-- Gold / Silver Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR Director</masterLabel>
+            <translation><!-- HR Director --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR Manager</masterLabel>
+            <translation><!-- HR Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR Officer</masterLabel>
+            <translation><!-- HR Officer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Art</masterLabel>
+            <translation><!-- Head of Art --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Biology</masterLabel>
+            <translation><!-- Head of Biology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Boys PE</masterLabel>
+            <translation><!-- Head of Boys PE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Bus. Studies</masterLabel>
+            <translation><!-- Head of Bus. Studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Business</masterLabel>
+            <translation><!-- Head of Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Careers</masterLabel>
+            <translation><!-- Head of Careers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Chemistry</masterLabel>
+            <translation><!-- Head of Chemistry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Citizenship</masterLabel>
+            <translation><!-- Head of Citizenship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Classics</masterLabel>
+            <translation><!-- Head of Classics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Drama</masterLabel>
+            <translation><!-- Head of Drama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Economics</masterLabel>
+            <translation><!-- Head of Economics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of English</masterLabel>
+            <translation><!-- Head of English --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Geography</masterLabel>
+            <translation><!-- Head of Geography --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Girls PE</masterLabel>
+            <translation><!-- Head of Girls PE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of HR</masterLabel>
+            <translation><!-- Head of HR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of History</masterLabel>
+            <translation><!-- Head of History --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Humanities</masterLabel>
+            <translation><!-- Head of Humanities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of IT</masterLabel>
+            <translation><!-- Head of IT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Journalism</masterLabel>
+            <translation><!-- Head of Journalism --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Law</masterLabel>
+            <translation><!-- Head of Law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Maths</masterLabel>
+            <translation><!-- Head of Maths --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Media Studs</masterLabel>
+            <translation><!-- Head of Media Studs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Media Study</masterLabel>
+            <translation><!-- Head of Media Study --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Mod.Language</masterLabel>
+            <translation><!-- Head of Mod.Language --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Music</masterLabel>
+            <translation><!-- Head of Music --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Nursery</masterLabel>
+            <translation><!-- Head of Nursery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Nursery/PreS</masterLabel>
+            <translation><!-- Head of Nursery/PreS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of PE</masterLabel>
+            <translation><!-- Head of PE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of PSE</masterLabel>
+            <translation><!-- Head of PSE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of PTA</masterLabel>
+            <translation><!-- Head of PTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Personnel</masterLabel>
+            <translation><!-- Head of Personnel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Philosophy</masterLabel>
+            <translation><!-- Head of Philosophy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Physics</masterLabel>
+            <translation><!-- Head of Physics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Politics</masterLabel>
+            <translation><!-- Head of Politics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Psychology</masterLabel>
+            <translation><!-- Head of Psychology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Recept.Class</masterLabel>
+            <translation><!-- Head of Recept.Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Rel. Studies</masterLabel>
+            <translation><!-- Head of Rel. Studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of SPS</masterLabel>
+            <translation><!-- Head of SPS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of School</masterLabel>
+            <translation><!-- Head of School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Science</masterLabel>
+            <translation><!-- Head of Science --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Sixth Form</masterLabel>
+            <translation><!-- Head of Sixth Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Sociology</masterLabel>
+            <translation><!-- Head of Sociology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Special Need</masterLabel>
+            <translation><!-- Head of Special Need --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Technology</masterLabel>
+            <translation><!-- Head of Technology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Vocat. Edu.</masterLabel>
+            <translation><!-- Head of Vocat. Edu. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 1</masterLabel>
+            <translation><!-- Head of Year 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 10</masterLabel>
+            <translation><!-- Head of Year 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 11</masterLabel>
+            <translation><!-- Head of Year 11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 2</masterLabel>
+            <translation><!-- Head of Year 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 3</masterLabel>
+            <translation><!-- Head of Year 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 4</masterLabel>
+            <translation><!-- Head of Year 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 5</masterLabel>
+            <translation><!-- Head of Year 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 6</masterLabel>
+            <translation><!-- Head of Year 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 7</masterLabel>
+            <translation><!-- Head of Year 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 8</masterLabel>
+            <translation><!-- Head of Year 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 9</masterLabel>
+            <translation><!-- Head of Year 9 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of assessment</masterLabel>
+            <translation><!-- Head of assessment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Headteacher</masterLabel>
+            <translation><!-- Headteacher --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health/Safety Offic.</masterLabel>
+            <translation><!-- Health/Safety Offic. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ICT Coordinator</masterLabel>
+            <translation><!-- ICT Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INSET Co-ordinator</masterLabel>
+            <translation><!-- INSET Co-ordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Keystage 1 Co-ordin.</masterLabel>
+            <translation><!-- Keystage 1 Co-ordin. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Keystage 2 Co-ordin.</masterLabel>
+            <translation><!-- Keystage 2 Co-ordin. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Keystage 3 Co-ordin.</masterLabel>
+            <translation><!-- Keystage 3 Co-ordin. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Keystage 4 Co-ordin.</masterLabel>
+            <translation><!-- Keystage 4 Co-ordin. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Librarian</masterLabel>
+            <translation><!-- Librarian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Market.&amp; Dev. Dir.</masterLabel>
+            <translation><!-- Market.&amp; Dev. Dir. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing Manager</masterLabel>
+            <translation><!-- Marketing Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media Assistant</masterLabel>
+            <translation><!-- Media Assistant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media Buyer</masterLabel>
+            <translation><!-- Media Buyer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media Planner</masterLabel>
+            <translation><!-- Media Planner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NQT Co-ordinator</masterLabel>
+            <translation><!-- NQT Co-ordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office Manager</masterLabel>
+            <translation><!-- Office Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Operations Manager</masterLabel>
+            <translation><!-- Operations Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PA to Headteacher</masterLabel>
+            <translation><!-- PA to Headteacher --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personnel Director</masterLabel>
+            <translation><!-- Personnel Director --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personnel Manager</masterLabel>
+            <translation><!-- Personnel Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personnel Officer</masterLabel>
+            <translation><!-- Personnel Officer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Press Comm. Manager</masterLabel>
+            <translation><!-- Press Comm. Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Principal</masterLabel>
+            <translation><!-- Principal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recrtmnt Secretary</masterLabel>
+            <translation><!-- Recrtmnt Secretary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recruitment Manager</masterLabel>
+            <translation><!-- Recruitment Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recruitment Officer</masterLabel>
+            <translation><!-- Recruitment Officer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rector</masterLabel>
+            <translation><!-- Rector --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resource Manager</masterLabel>
+            <translation><!-- Resource Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School Manager</masterLabel>
+            <translation><!-- School Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School Nurse</masterLabel>
+            <translation><!-- School Nurse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School Secretary</masterLabel>
+            <translation><!-- School Secretary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School Trip Organis.</masterLabel>
+            <translation><!-- School Trip Organis. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Senior Advisor</masterLabel>
+            <translation><!-- Senior Advisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Site Manager</masterLabel>
+            <translation><!-- Site Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vice Chancellor</masterLabel>
+            <translation><!-- Vice Chancellor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vice Principal</masterLabel>
+            <translation><!-- Vice Principal --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Lead - No Convert Button Layout</layout>
+        <sections>
+            <label><!-- Client Type --></label>
+            <section>Client Type</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Preferences --></label>
+            <section>Contact Preferences</section>
+        </sections>
+        <sections>
+            <label><!-- Region --></label>
+            <section>Region</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- TES Direct Leads --></label>
+        <name>TES_Direct_Leads</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- THE Leads --></label>
+        <name>THE_Leads</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Please fill out the lead&apos;s complete address (Street, City/Town, Country and Post Code), phone number and school/company email before setting the lead status as &quot;Awaiting Verification&quot; --></errorMessage>
+        <name>Address_Phone_Email_Req</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select the Region, Client Type and Customer Group of this Lead before marking the Lead Status &quot;Qualified&quot; and converting it into an Account. --></errorMessage>
+        <name>Client_Type_Region_Required_to_Convert</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only Client Managers are allowed to set the Lead Status as Qualified. Please contact your Client Manager for assistance. --></errorMessage>
+        <name>Lead_Qualified_Only_Client_Mgr</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select County/State if the Country is Australia, Canada, US and UK. --></errorMessage>
+        <name>State_Required_for_US_UK_Aus_CA</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- AltavistaNews --></label>
+        <name>AltavistaNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Convert --></label>
+        <name>Convert</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- HooversProfile --></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendGmail --></label>
+        <name>SendGmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+</CustomObjectTranslation>

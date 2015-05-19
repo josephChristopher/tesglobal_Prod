@@ -1,0 +1,307 @@
+<apex:page showHeader="false" standardController="Case" recordSetVar="cases" extensions="ComplaintsFormController">
+    
+    <div id="InnternalDiv" style="width:75%;margin:auto;text-align:center; border-width:20px; border-style:solid;border-color:white;font-family: Calibri;">
+        <apex:image id="logo" url="https://c.cs20.content.force.com/servlet/servlet.ImageServer?id=015m00000009E0i&oid=00Dm00000001c6V" style="text-align:left; margin:auto;max-width: 100%;
+                                                                                                                                               height: auto;width: auto\9;"/>
+                                                                                                                                               <br/><br/>
+        
+        <apex:form id="complaintsForm" >   
+            
+                <div  style="width:75%;margin:auto;text-align:center; border-width:20px; border-style:solid;border-color:white;font-family: Calibri;">
+              
+                
+                <apex:outputPanel layout="none">
+                <apex:pageBlock mode="mainDetail" id="caseTypes">
+                <apex:pageBlockSection columns="1" collapsible="false">     
+                <p>Submit a Case
+                            </p><br/>
+                Please select the type of case you would like to submit.<br/>
+                </apex:pageBlockSection>
+                <div  style="text-align: left">
+                <apex:outputPanel layout="none">  
+                <br/><br/>                
+                <apex:commandLink value="Report an Issue" action="{!setCaseTypetoComplaint}" style="color:white"  styleClass="link"> 
+                <apex:actionSupport event="onclick" rerender="complaint, booking, contact" />
+                </apex:commandLink>
+                
+                <apex:commandLink value="Ask a Question" action="{!setCaseTypetoQuery}" style="color:white"  styleClass="link"> 
+                <apex:actionSupport event="onclick" rerender="query, booking, contact" />
+                </apex:commandLink>
+                
+                <apex:commandLink value="Submit a Comment/Suggestion" action="{!setCaseTypetoComment}" style="color:white"  styleClass="link"> 
+                <apex:actionSupport event="onclick" rerender="comment, booking, contact" />
+                </apex:commandLink>
+                </apex:outputPanel>
+                    </div>
+                    </apex:pageBlock>
+                </apex:outputPanel>    
+               
+                
+                <apex:outputPanel style="background-color:#f5f5f5;text-align: left;" >    
+                    <apex:pageBlock mode="mainDetail" id="complaint" rendered="{!complaintCase}">
+                        <apex:pageBlockSection columns="1" collapsible="false">     
+                            <p>Report an Issue
+                            </p><br/>
+                        </apex:pageBlockSection>
+                        
+                        <apex:pageBlockSection >
+                            <apex:pageBlockSectionItem >
+                                <apex:outputPanel layout="none" style="font-family: Calibri;">  
+                                    <div style= "font-family: Calibri;"> 
+                                        <apex:outputLabel value="Subject" for="complaint" styleClass="label"></apex:outputLabel><br/> 
+                                        <apex:inputField id="complaint" value="{!cs.Reason_for_Complaint__c}"  styleClass="style-4"/><br/> <br/> 
+                                        <apex:outputLabel value="Issue" for="issue" styleClass="label"></apex:outputLabel><br/> 
+                                        <apex:inputTextarea id="issue" value="{!cs.Description }" label="Issue" cols="100" rows="8" styleClass="style-1"/>  
+                                    </div>
+                                </apex:outputPanel>
+                            </apex:pageBlockSectionItem>
+                        </apex:pageBlockSection> 
+                    </apex:pageBlock>
+                </apex:outputPanel>
+                
+                 <apex:outputPanel style="background-color:#f5f5f5;text-align: left;" >    
+                    <apex:pageBlock mode="mainDetail" id="query" rendered="{!queryCase}">
+                        <apex:pageBlockSection id="querySection" columns="1" collapsible="false">     
+                            <p>Ask a Question
+                            </p><br/>
+                        </apex:pageBlockSection>
+                        
+                        <apex:pageBlockSection >
+                            <apex:pageBlockSectionItem >
+                                <apex:outputPanel layout="none" style="font-family: Calibri;">  
+                                    <div style= "font-family: Calibri;"> 
+                                        <apex:outputLabel value="Subject" for="subject" styleClass="label"></apex:outputLabel><br/> 
+                                        <apex:inputField id="subject" value="{!cs.Subject_of_Enquiry__c  }" styleClass="style-4"/><br/> <br/> 
+                                        <apex:outputLabel value="Question" for="ques" styleClass="label"></apex:outputLabel><br/> 
+                                        <apex:inputTextarea id="ques" value="{!cs.Description }" cols="100" rows="8" styleClass="style-1"/>  
+                                    </div>
+                                </apex:outputPanel>
+                            </apex:pageBlockSectionItem>
+                        </apex:pageBlockSection> 
+                    </apex:pageBlock>
+                </apex:outputPanel>
+                
+                 <apex:outputPanel style="background-color:#f5f5f5;text-align: left;" >    
+                    <apex:pageBlock mode="mainDetail" id="comment" rendered="{!commentCase}">
+                        <apex:pageBlockSection columns="1" collapsible="false">     
+                            <p>Comments or Suggestions
+                            </p><br/>
+                        </apex:pageBlockSection>
+                        
+                        <apex:pageBlockSection >
+                            <apex:pageBlockSectionItem >
+                                <apex:outputPanel layout="none" style="font-family: Calibri;">  
+                                    <div style= "font-family: Calibri;"> 
+                                        <apex:inputTextarea id="comm" value="{!cs.Description }" cols="100" rows="8" styleClass="style-1"/>  
+                                    </div>
+                                </apex:outputPanel>
+                            </apex:pageBlockSectionItem>
+                        </apex:pageBlockSection> 
+                    </apex:pageBlock>
+                </apex:outputPanel>
+                
+                 <apex:outputPanel layout="none" >    
+                    <apex:pageBlock id="contact" mode="mainDetail" rendered="{!customer}">    
+                        <div style="font-family: Calibri">   
+                            <apex:pageBlockSection columns="1" collapsible="false" >
+                                <apex:pageBlockSectionItem >
+                                    <div style= "font-family: Calibri;"> 
+                                        <p>Contact Details 
+                                        </p><br />
+                                        Please input your contact information below so we can better respond to your request.<br />
+                                        </div>
+                                </apex:pageBlockSectionItem>
+                            </apex:pageBlockSection> 
+                            
+                            <apex:pageBlockSection columns="1" collapsible="false">
+                                <apex:pageBlockSectionItem >
+                                    
+                                    <apex:outputPanel layout="none" style="font-family: Calibri;">  
+
+                                        <apex:panelGrid columns="2" width="60%" style="font-family: Calibri">
+                                            <apex:outputLabel value="School/Institution Name" for="school" styleClass="label"></apex:outputLabel>
+                                            <apex:outputLabel value="Job Title" for="jobTitleOther" styleClass="label"></apex:outputLabel>
+                                            <apex:inputField id="school" value="{!cs.School_Institution__c}" styleClass="style-1" />
+                                            <apex:inputField id="jobTitleOther" value="{!cs.Contact_Title_If_Other__c }" styleClass="style-1"/>
+                                        </apex:panelGrid>
+                                        <br/>
+                                        
+                                        <apex:panelGrid columns="3" width="60%" style="font-family: Calibri">
+                                            <apex:outputLabel value="Salutation" for="salutation" styleClass="label"></apex:outputLabel>
+                                            <apex:outputLabel value="First Name" for="firstName" styleClass="label"></apex:outputLabel>
+                                            <apex:outputLabel value="Last Name" for="lastName" styleClass="label"></apex:outputLabel>
+                                            <apex:inputField id="salutation" value="{!cs.Salutation__c }" styleClass="style-3"/>
+                                            <apex:inputField id="firstName" value="{!cs.Contact_First_Name__c }" styleClass="style-2"/>
+                                            <apex:inputField id="lastName" value="{!cs.Contact_Last_Name__c }" styleClass="style-1"/>
+                                            
+                                        </apex:panelGrid>
+                                        <br/>
+                                        
+                                        <apex:panelGrid columns="2" width="60%" style="font-family: Calibri">
+                                            <apex:outputLabel value="Email" for="email" styleClass="label"></apex:outputLabel>
+                                            <apex:outputLabel value="Phone" for="phone" styleClass="label"></apex:outputLabel>
+                                            <apex:inputField id="email" value="{!cs.Contact_Email__c }" styleClass="style-1"/>
+                                            <apex:inputField id="phone" value="{!cs.Contact_Phone__c }" styleClass="style-1"/>
+                                        </apex:panelGrid>
+                                        
+                                        
+                                    </apex:outputPanel> 
+                                </apex:pageBlockSectionItem>
+                            </apex:pageBlockSection> 
+                        </div>
+                    </apex:pageBlock>   
+                </apex:outputPanel>
+                
+                
+                <apex:outputPanel style="background-color:#f5f5f5;text-align: left;">    
+                    <apex:pageBlock id="advert" mode="mainDetail" rendered="{!booking}">
+                        <apex:pageBlockSection id="booking" columns="1" collapsible="false">     
+                            <div style= "font-family: Calibri;"> 
+                                <p>Booking or Advert Details
+                                </p><br/>
+                                Please fill out any of the following information about your booking or advert so we can more quickly respond to the issue or enquiry being reported.<br/> 
+                            </div>
+                        </apex:pageBlockSection>   
+                        <apex:pageBlockSection >
+                            <apex:pageBlockSectionItem >
+                                <apex:outputPanel layout="none" style="font-family: Calibri;">  
+                                    
+                                    <div style= "font-family: Calibri;"> 
+                                        <apex:outputLabel value="Ad Number (if known)" for="adNum" styleClass="label"></apex:outputLabel><br/> 
+                                        <apex:inputField value="{!cs.Ad_Number__c  }" id="adNum" styleClass="style-1"/>   <br/> <br/> 
+                                        <apex:outputLabel value="Publication Name (if known)" for="pubName" styleClass="label"></apex:outputLabel><br/> 
+                                        <apex:inputField value="{!cs.Publication__c   }" id="pubName" styleClass="style-4"/> <br/> <br/> 
+                                        <apex:outputLabel value="Publication Date (if known)" for="pubName" styleClass="label"></apex:outputLabel><br/> 
+                                        <apex:inputField value="{!cs.Publication_Date__c    }" id="pubDate" styleClass="style-1"/> <br/> <br/> 
+                                    </div>
+                                </apex:outputPanel>
+                            </apex:pageBlockSectionItem>
+                        </apex:pageBlockSection>
+                        <br/> <br/>   
+                        <apex:commandLink value="Submit" action="{!saveComplaint}" style="color:white" styleClass="link"/> 
+                        <br/> <br/> 
+                    </apex:pageBlock>
+                </apex:outputPanel> 
+        </div>        
+        
+        </apex:form>
+   </div>
+    
+    <style type="text/css">
+        .style-1  {
+        padding: 12px;
+        border: solid 1px #dcdcdc;
+        transition: box-shadow 0.3s, border 0.3s;
+        width: 350px;
+        font-family: Calibri;
+        font-size: 12px;
+        }
+        
+        .style-2  {
+        padding: 12px;
+        border: solid 1px #dcdcdc;
+        transition: box-shadow 0.3s, border 0.3s;
+        width: 260px;
+        font-family: Calibri;
+        font-size: 12px;
+        }
+        
+        .style-3  {
+        padding: 12px;
+        border: solid 1px #dcdcdc;
+        transition: box-shadow 0.3s, border 0.3s;
+        width: 85px;
+        font-family: Calibri;
+        font-size: 12px;
+        height: 40px;
+        }
+        
+         .style-4  {
+        padding: 12px;
+        border: solid 1px #dcdcdc;
+        transition: box-shadow 0.3s, border 0.3s;
+        width: 377px;
+        font-family: Calibri;
+        font-size: 12px;
+        height: 40px;
+        }
+        
+        .link {
+        text-align: center; 
+        padding: 0.25cm; 
+        background-color:#23a850; 
+        margin: 5px 5px 5px 5px; 
+        font-weight: bold; 
+        font-family: Verdana; 
+        font-size: 12px;
+        color: white; 
+        text-decoration: none;
+        font-color: white;
+        }
+        
+        .link:hover {
+          text-align: center; 
+        padding: 0.25cm; 
+        background-color:#115da8; 
+        margin: 5px 5px 5px 5px; 
+        font-weight: bold; 
+        font-family: Verdana; 
+        font-size: 12px;
+        color: white; 
+        text-decoration: none;
+        }
+        
+        .link:active {
+        text-align: center; 
+        padding: 0.25cm; 
+        background-color: #115da8; 
+        margin: 5px 5px 5px 5px;
+        font-weight: bold; 
+        font-family: Verdana; 
+        font-size: 12px;
+        color: white; 
+        text-decoration: none;
+        }
+        
+        .link:visited {
+        text-align: center; 
+        padding: 0.25cm; 
+        background-color: #115da8; 
+        margin: 5px 5px 5px 5px;
+        font-weight: bold; 
+        font-family: Verdana; 
+        font-size: 12px;
+        color: white; 
+        text-decoration: none;
+        }
+        
+        
+        .label {
+        color:grey;
+        text-transform: uppercase;
+        font-family: Calibri;
+        font-size: 10px;
+        
+        
+        }
+        
+        .pageStyle {
+        style="width:75%;
+        margin:auto;
+        text-align:center; 
+        font-family: Calibri;
+        border-width:8px;
+        border-style:solid;
+        border-color:white;
+        }
+        
+        
+        p { font-size: 200%; font-weight: bold;color: #115da8;font-family: Calibri; }
+        
+        
+        
+    </style>
+    
+    
+    
+</apex:page>

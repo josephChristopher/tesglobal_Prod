@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Product</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Products</value>
+    </caseValues>
+    <fields>
+        <label><!-- Ad Height --></label>
+        <name>Ad_Height__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ad Width --></label>
+        <name>Ad_Width__c</name>
+    </fields>
+    <fields>
+        <label><!-- Booking --></label>
+        <name>Booking__c</name>
+        <relationshipLabel><!-- Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Color Type --></label>
+        <name>Color_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Date --></label>
+        <name>Invoice_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Premium Print Position --></label>
+        <name>Premium_Print_Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- Price (excl. VAT) --></label>
+        <name>Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product MSL Id --></label>
+        <name>Product_MSL_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Type --></label>
+        <name>Product_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Publication --></label>
+        <name>Publication__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Flag --></label>
+        <name>Quote_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subscription --></label>
+        <name>Subscription_Lookup__c</name>
+        <relationshipLabel><!-- Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Subscription Price --></label>
+        <name>Subscription_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subscription --></label>
+        <name>Subscription__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vacancy --></label>
+        <name>Vacancy__c</name>
+        <relationshipLabel><!-- Products --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Classified Online Premium Product Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Product Information --></label>
+            <section>Product Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Classified Online Product Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Price --></label>
+            <section>Price</section>
+        </sections>
+        <sections>
+            <label><!-- Product Information --></label>
+            <section>Product Information</section>
+        </sections>
+        <sections>
+            <label><!-- Subscription --></label>
+            <section>Subscription</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Classified Print Product Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Price --></label>
+            <section>Price</section>
+        </sections>
+        <sections>
+            <label><!-- Print Product Information --></label>
+            <section>Print Product Information</section>
+        </sections>
+        <sections>
+            <label><!-- Product Information --></label>
+            <section>Product Information</section>
+        </sections>
+        <sections>
+            <label><!-- Subscription --></label>
+            <section>Subscription</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

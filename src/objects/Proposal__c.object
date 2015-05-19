@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object used to store proposals that the Agency Sales team sends to their agencies.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Agency_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Agency_Name__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Agency ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agency_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Agency Name</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.Agency__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Agency Proposals</relationshipLabel>
+        <relationshipName>Proposals1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Booked_Amount_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>Booked_Premium_Amount__c + Booked_Standard_Amount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Booked Amount - Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Booked_Premium_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Booked Premium Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Booked_Premium_Products__c</fullName>
+        <externalId>false</externalId>
+        <label>Booked Premium Products</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Additional Category</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contextual Ad</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Featured Employer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Featured Job</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Job of the week</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sponsored Email Alert</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sponsored Job</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Booked_Print_Ad_Size__c</fullName>
+        <externalId>false</externalId>
+        <label>Booked Print Ad Size</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Booked_Standard_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Booked Standard Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Booked_Standard_Products__c</fullName>
+        <externalId>false</externalId>
+        <label>Booked Standard Products</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Print</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Client_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of the school establishment that needs a vacancy advertised.</inlineHelpText>
+        <label>Client Name</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Proposals</relationshipLabel>
+        <relationshipName>Proposals</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Close_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Date the Proposal is closed.</inlineHelpText>
+        <label>Close Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Current_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(Proposal_Status__c, &quot;Open&quot;),
+   Proposed_Amount_Total__c,
+Booked_Amount_Total__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Current Amount of the Proposal. Open Proposals will show Total Proposed Amount, while Closed Proposals will show Total Booked Amount.</inlineHelpText>
+        <label>Current Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Pre_Booking_or_Post_Booking__c</fullName>
+        <externalId>false</externalId>
+        <label>Pre-Booking or Post-Booking?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Pre-Booking</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Post-Booking</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Proposal_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Proposal Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Open</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Proposed_Amount_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>Proposed_Premium_Amount__c + Proposed_Standard_Amount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Proposed Amount - Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Proposed_Premium_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Proposed Premium Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Proposed_Premium_Products__c</fullName>
+        <externalId>false</externalId>
+        <label>Proposed Premium Products</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Additional Category</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contextual Ad</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Featured Employer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Featured Job</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Job of the week</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sponsored Email Alert</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sponsored Job</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Proposed_Print_Ad_Size__c</fullName>
+        <externalId>false</externalId>
+        <label>Proposed Print Ad Size</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Proposed_Standard_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Proposed Standard Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Proposed_Standard_Products__c</fullName>
+        <externalId>false</externalId>
+        <label>Proposed Standard Products</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Print</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Related_Booking__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Related Booking</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Opportunity.RecordType.Name</field>
+                <operation>equals</operation>
+                <value>MSL Booking</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Proposals</relationshipLabel>
+        <relationshipName>Proposals</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Stage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Proposal/Price Quote</fullName>
+                <color>#0B6FCE</color>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed Won - Low</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed Won - Medium</fullName>
+                <color>#FF6600</color>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed Won - Premium</fullName>
+                <color>#009900</color>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed</fullName>
+                <color>#CC0000</color>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Proposal</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Agency_Name__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Proposed_Amount_Total__c</columns>
+        <columns>Booked_Amount_Total__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Close_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Proposals</label>
+    </listViews>
+    <listViews>
+        <fullName>Closed_Proposals</fullName>
+        <columns>NAME</columns>
+        <columns>Agency_Name__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Proposed_Amount_Total__c</columns>
+        <columns>Booked_Amount_Total__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Proposal_Status__c</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </filters>
+        <label>All Proposals - Closed</label>
+    </listViews>
+    <listViews>
+        <fullName>MyProposals</fullName>
+        <columns>NAME</columns>
+        <columns>Agency_Name__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Proposed_Amount_Total__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Close_Date__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Proposals</label>
+    </listViews>
+    <listViews>
+        <fullName>MyProposalsClosed</fullName>
+        <columns>NAME</columns>
+        <columns>Agency_Name__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Proposed_Amount_Total__c</columns>
+        <columns>Booked_Amount_Total__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Close_Date__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>Proposal_Status__c</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </filters>
+        <label>My Proposals - Closed</label>
+    </listViews>
+    <listViews>
+        <fullName>MyProposalsOpen</fullName>
+        <columns>NAME</columns>
+        <columns>Agency_Name__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Proposed_Amount_Total__c</columns>
+        <columns>Booked_Amount_Total__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Close_Date__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>Proposal_Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <label>My Proposals - Open</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_Proposals</fullName>
+        <columns>NAME</columns>
+        <columns>Agency_Name__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Proposed_Amount_Total__c</columns>
+        <columns>Booked_Amount_Total__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Proposal_Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <label>All Proposals - Open</label>
+    </listViews>
+    <nameField>
+        <label>Proposal Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Proposals</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Closed_Proposal</fullName>
+        <active>true</active>
+        <description>Choose this proposal record type to create CLOSED proposals.</description>
+        <label>Closed Proposal</label>
+        <picklistValues>
+            <picklist>Booked_Premium_Products__c</picklist>
+            <values>
+                <fullName>Additional Category</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contextual Ad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Featured Employer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Featured Job</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Job of the week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsored Email Alert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsored Job</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Booked_Standard_Products__c</picklist>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Print</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Pre_Booking_or_Post_Booking__c</picklist>
+            <values>
+                <fullName>Post-Booking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-Booking</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Proposal_Status__c</picklist>
+            <values>
+                <fullName>Closed</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Proposed_Premium_Products__c</picklist>
+            <values>
+                <fullName>Additional Category</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contextual Ad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Featured Employer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Featured Job</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Job of the week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsored Email Alert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsored Job</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Proposed_Standard_Products__c</picklist>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Print</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stage__c</picklist>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed Won - Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed Won - Medium</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Closed Won - Premium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proposal%2FPrice Quote</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Proposal_Create</fullName>
+        <active>true</active>
+        <description>Choose this proposal record type to create OPEN proposals.</description>
+        <label>Open Proposal</label>
+        <picklistValues>
+            <picklist>Booked_Premium_Products__c</picklist>
+            <values>
+                <fullName>Additional Category</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contextual Ad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Featured Employer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Featured Job</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Job of the week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsored Email Alert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsored Job</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Booked_Standard_Products__c</picklist>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Print</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Pre_Booking_or_Post_Booking__c</picklist>
+            <values>
+                <fullName>Post-Booking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-Booking</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Proposal_Status__c</picklist>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Proposed_Premium_Products__c</picklist>
+            <values>
+                <fullName>Additional Category</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contextual Ad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Featured Employer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Featured Job</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Job of the week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsored Email Alert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsored Job</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Proposed_Standard_Products__c</picklist>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Print</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stage__c</picklist>
+            <values>
+                <fullName>Proposal%2FPrice Quote</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Proposal_Req_Fields</fullName>
+        <active>true</active>
+        <description>Validation rule that ensures the Proposal&apos;s Premium or Standard Amounts are Populated before it is saved.</description>
+        <errorConditionFormula>AND(ISPICKVAL(Stage__c, &quot;Proposal/Price Quote&quot;),
+ISBLANK(Proposed_Premium_Amount__c),
+ISBLANK(Proposed_Standard_Amount__c)
+)</errorConditionFormula>
+        <errorMessage>Please fill out either the Proposed Premium or Proposed Standard Amount before saving this Proposal.</errorMessage>
+    </validationRules>
+</CustomObject>

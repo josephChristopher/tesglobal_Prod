@@ -1,0 +1,26 @@
+<apex:page controller="SchoolMapExtension">
+    
+    <div style="display: block; margin:auto auto; width: 1000px; font-size: 14px;">
+    <b>Secondary England Schools</b>
+    <apex:outputPanel >
+        <apex:pageBlock mode="mainDetail" id="map">   
+            <br/>
+            <div style="display: table-cell; margin:auto auto; width: 90%;">
+            <c:AllSchoolsMapComponent schoolList="{!listofSchools}"/>
+             <div style="text-align: left"> <b>Map Legend:</b> <br/>
+                        Blue Marker - Current School<br/>
+                        Red Marker - School Not Yet Visited<br/>
+                        Green Marker - Visited School</div>
+            
+            </div>
+        </apex:pageBlock>
+    </apex:outputPanel>
+         <div style="float: left;">
+         <analytics:reportChart reportId="00Ow0000006gIyVEAU" showRefreshButton="true"></analytics:reportChart>
+         </div>
+         <div style="float: right;">
+          <analytics:reportChart reportId="00Ow0000006gJLUEA2" showRefreshButton="true"></analytics:reportChart>
+          </div>
+        </div>
+    
+</apex:page>

@@ -1,0 +1,517 @@
+<apex:page showHeader="false" standardController="Case" extensions="CustomerSuccessSurveyController" tabStyle="Survey__c">
+    <div id="InnternalDiv" style="width:75%;margin:auto;text-align:center; border-width:8px;border-style:solid;border-color:#e6e6e6;font-family: Arial;">
+    <apex:image id="logo" url="https://c.cs20.content.force.com/servlet/servlet.ImageServer?id=015m00000009E0i&oid=00Dm00000001c6V" style="text-align:left; margin:auto;max-width: 100%;
+    height: auto;width: auto\9;"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/ui-lightness/jquery-ui.css"></link>
+    <apex:includeScript value="/soap/ajax/15.0/connection.js"/>
+    <apex:includeScript value="/soap/ajax/15.0/apex.js"/>
+    <apex:includeScript value="/support/console/20.0/integration.js"/>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+    <apex:form id="surveyForm">
+        <script type="text/javascript">
+        if(sforce.console) {
+            sforce.console.setTabTitle('Survey: {!surveyTitle}');
+        }
+        
+        j$ = jQuery.noConflict();
+            
+        var svc = "https://cloudreach-connect-shared.herokuapp.com/ccsvc/tes/survey/save?key=2203ef9c-8c3f-44dd-bfcc-4ba67ae64406";
+        </script>
+       
+        <apex:pageBlock id="surveyTitle"  mode="mainDetail">
+            <p>{!surveyTitle}</p> 
+  
+        </apex:pageBlock>
+        
+        
+        
+        <div style="{!blockStyle}">
+            <apex:outputPanel style="width:75%;margin:auto;">
+            <apex:pageBlock mode="mainDetail" title=" ">
+            If you are on a phone call with the customer, please fill out the survey you select below  and click "Save Survey". 
+            If you want to send it as an email, please click "Email Survey".<br />
+                <br /><apex:outputPanel styleClass="grey" layout="block">
+                   <br /> <apex:pageBlockSection title="Survey Template" columns="1" collapsible="false">
+                        Please select a survey template.
+                        <apex:pageBlockSectionItem >
+                            <apex:selectRadio id="surveyId" value="{!surveyId}">   
+                                <apex:selectOptions value="{!templatesAsOptions}"/>
+                                <apex:actionSupport action="{!populateSurveyMetrics}" event="onchange" reRender="survey, vacancycontact, surveyTitle" />
+                            </apex:selectRadio>
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                </apex:outputPanel>
+            </apex:pageBlock>
+            </apex:outputPanel>
+        </div>
+        <div style="{!blockStyle}">
+            <apex:pageBlock id="vacancycontact" mode="mainDetail">
+                <apex:outputPanel styleClass="grey" layout="block">
+                    <apex:pageBlockSection title="Survey Taker" rendered="{!metricsReady}" columns="1" collapsible="false">
+                        Please select the contact for this vacancy advert who will be taking the survey.
+                        <apex:pageBlockSectionItem >
+                            <apex:selectRadio id="vacancyContactId" value="{!vacancyContactId}">   
+                                <apex:selectOptions value="{!vacancyContacts}"/>
+                            </apex:selectRadio>
+                            <button id="create-contact">Add Contact</button>
+                            <script type="text/javascript">
+                            	j$( "#create-contact" ).button().on( "click", function() {
+									event.preventDefault();
+									j$("#contact-form").dialog( "open" );
+								});
+								var contactListContainerId = j$( "#create-contact" ).parent().parent().get(0).getElementsByTagName("table")[0].getAttribute("id");
+                            </script>
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                </apex:outputPanel>
+                
+            </apex:pageBlock>
+        </div>
+        <apex:pageBlock id="survey" mode="mainDetail">
+            <apex:outputPanel styleClass="grey" style="display:block">
+                
+               <apex:pageBlockSection title="{!surveyTitle}" rendered="{!metricsReady}" collapsible="false" columns="1">
+               
+               <apex:commandButton value="Click for Help" action="{!showHelpPopup}" rerender="helpPopup"/>
+                    
+                    <script type="text/javascript">
+                    if(sforce.console) {
+                        sforce.console.setTabTitle('Survey: {!surveyTitle}');
+                    }
+                    </script>
+                    <input type="hidden" name="surveyId" value="{!surveyId}"/>
+                    <apex:repeat value="{!surveyMetrics}" var="metric"><br />
+                        
+                        <apex:pageBlockSectionItem rendered="{!(metric.questionFormat == 'Numeric Value')}">
+                            <apex:outputLabel value="{!metric.title}" for="{!metric.Name}"/>
+                            <input type="number" id="num" name="{!metric.name}" min="0"/>
+                        </apex:pageBlockSectionItem>
+                                         
+                        <apex:pageBlockSectionItem rendered="{!(metric.questionFormat == 'Date Value')}">
+                            <apex:outputLabel value="{!metric.title}" for="{!metric.Name}"/>
+                            <input type="date" id="{!metric.name}" name="{!metric.name}" min="2014-01-01"/>
+                            <script type="text/javascript">
+                            	
+                            </script>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem rendered="{!(metric.questionFormat == 'Free Textbox')}">
+                            <apex:outputLabel value="{!metric.title}" for="{!metric.Name}"/>
+                            <textarea id="text" name="{!metric.name}" rows="5" cols="35"/>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem rendered="{!(metric.questionFormat == 'Multiple Choice (One Answer)')}">
+                            <apex:outputLabel value="{!metric.title}" for="{!metric.Name}"/>
+                            <apex:repeat value="{!metric.values}" var="val"><br />
+                                <input type="radio" name="{!metric.name}" value="{!val}"/><apex:outputText value="{!val}"/>
+                        </apex:repeat>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem rendered="{!(metric.questionFormat == 'Multiple Choice (Multiple Answers)')}">
+                        <apex:outputLabel value="{!metric.title}" for="{!metric.Name}"/>
+                        <apex:repeat value="{!metric.values}" var="val"><br />
+                            <input type="checkbox" name="{!metric.name}" value="{!val}"/><apex:outputText value="{!val}"/>
+                    </apex:repeat>
+                </apex:pageBlockSectionItem>
+            </apex:repeat>
+        </apex:pageBlockSection>
+    </apex:outputPanel>
+    
+    <apex:pageBlockButtons rendered="{!metricsReady}" location="bottom">
+        <apex:commandButton value="Save Survey" onclick="javascript:saveSurvey(this)" immediate="true"/>
+        <apex:commandButton value="Email Survey" onclick="javascript:emailSurvey(this)" immediate="true" rendered="{!showOtherButtons}"/>
+        <apex:commandButton value="Exit Survey" action="{!showPopup}" rerender="cancelPopup" rendered="{!showOtherButtons}"/>
+         
+    </apex:pageBlockButtons>
+    
+   
+    
+    
+    <apex:outputPanel id="cancelPopup">
+    <apex:outputPanel styleClass="customPopup" layout="block" rendered="{!displayPopUp}">
+        <br/><br/>
+        Would you like to save this survey before exiting?<br/><br/><br/>
+        <apex:commandButton value=" Yes " onclick="javascript:saveSurvey(this)" immediate="true" rerender="cancelPopup"/> &nbsp;
+        <apex:commandButton value=" No " action="{!doCancel}" rerender="cancelPopup"/><br/><br/>
+        <apex:commandButton value="Return to Survey" action="{!closePopup}" rerender="cancelPopup"/><br/><br/>
+       
+        </apex:outputPanel>
+    </apex:outputPanel>
+    
+    <apex:outputPanel id="helpPopup">
+     <apex:outputPanel styleClass="customPopup" layout="block" rendered="{!displayHelpPopUp}">
+     <br/><br/>
+        If you have any questions about this survey, please feel free to contact the Customer Success Team by email to voc@tesglobal.com or by telephone on 0203 194 3443.
+<br/><br/><br/>
+<apex:commandButton value="Return to Survey" action="{!closeHelpPopup}" rerender="helpPopup"/><br/><br/>
+       
+     </apex:outputPanel>
+    </apex:outputPanel>
+    
+    
+</apex:pageBlock>
+
+</apex:form>
+
+<div id="successPanel" style="display: none; text-align: left;">
+
+    <p>Thank You </p>
+    
+    Thank you for all your help in completing this survey.  
+    
+    <br/><br/>Your feedback has now been submitted and will be reviewed by our Customer Success Team so that we can understand how well we are meeting your recruitment needs.
+    <br/><br/>
+If you have any questions about this survey, please feel free to contact the Customer Success Team by email to voc@tesglobal.com or by telephone on 0203 194 3443.
+
+ <br/><br/> 
+</div>
+
+<script type="text/javascript">
+function getInternetExplorerVersion()
+// Returns the version of Internet Explorer or a -1
+// (indicating the use of another browser).
+{
+  var rv = -1; // Return value assumes failure.
+  if (navigator.appName == 'Microsoft Internet Explorer')
+  {
+    var ua = navigator.userAgent;
+    var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+    if (re.exec(ua) != null)
+      rv = parseFloat( RegExp.$1 );
+  }
+  else if (navigator.appName == 'Netscape')
+  {
+    var ua = navigator.userAgent;
+    var re  = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
+    if (re.exec(ua) != null)
+      rv = parseFloat( RegExp.$1 );
+  }
+  return rv; 
+}
+
+if(getInternetExplorerVersion() != -1) {
+	j$(document).ready(function() {
+		j$("input[type = 'date']").each(function(idx,obj) {
+			if(j$.datepicker) {
+				j$("#"+obj.name).datepicker({dateFormat: "dd/mm/yy"});
+			} else {
+				alert("the date picker object has not been loaded");
+			}
+		});
+	});
+}
+
+function getContactId(ref) {
+    var contactRadio = document.getElementById("{!$Component.surveyForm.vacancycontact}");
+    var contactId = null;
+    var contactInputList = contactRadio.getElementsByTagName("input");
+    for(var i = 0; i < contactInputList.length; i++) {
+        var inputElm = contactInputList[i];
+        if(inputElm.type == "radio" && inputElm.checked) {
+            contactId = inputElm.value;
+            break;
+        }
+    }
+    if(contactId == null) {
+        alert("Please select a valid contact");
+        return;
+    }
+    
+    return contactId;
+}
+
+function getSurveyId(ref) {
+    var surveyFormContainer = document.getElementById("{!$Component.surveyForm.survey}");
+    var surveyId = null;
+    var inputElmList = surveyFormContainer.getElementsByTagName("input");
+    for(var i = 0; i < inputElmList.length; i++) {
+        var inputElm = inputElmList[i];
+        if(inputElm.name === "surveyId") {
+            surveyId = inputElm.value;
+        }
+    }
+    
+    return surveyId;
+}
+
+function saveSurvey(ref) {    
+    ref.type = "button"; //this will stop the form from being re-submitted.
+    var surveyFormContainer = document.getElementById("{!$Component.surveyForm.survey}");
+    var contactId = getContactId(ref);
+    if(contactId == null) {
+        return null;
+    }
+    
+    //now loop on all of the form fields found in this object to create a map, which will then
+    //be sent back to a static apex class to effectively save this data
+    var inputElmList = surveyFormContainer.getElementsByTagName("input");
+    var textAreaElmList = surveyFormContainer.getElementsByTagName("textarea");
+    var KeyPair = function(key,value) {
+        this.key = key;
+        this.value = value;
+    };
+    
+    var fieldValues = new Array();
+    var surveyId = null;
+    
+    for(var i = 0; i <textAreaElmList.length; i++) {
+        var textAreaElm = textAreaElmList[i];
+        if(textAreaElm.id === "text") {
+            if(textAreaElm.value.length != 0) {
+                fieldValues[fieldValues.length] = new KeyPair(textAreaElm.name,textAreaElm.value);
+            }
+        }
+    }
+    
+    for(var i = 0; i < inputElmList.length; i++) {
+        var inputElm = inputElmList[i];
+        if(inputElm.name === "surveyId") {
+            surveyId = inputElm.value;
+        } else if(inputElm.type == "text") {
+            if(inputElm.value.length != 0) {
+                fieldValues[fieldValues.length] = new KeyPair(inputElm.name,inputElm.value);
+            }
+         } else if(inputElm.type == "number") {
+            if(inputElm.value.length != 0) {
+                fieldValues[fieldValues.length] = new KeyPair(inputElm.name,inputElm.value);
+            }   
+         } else if(inputElm.type == "date") {
+            if(inputElm.value.length != 0) {
+                fieldValues[fieldValues.length] = new KeyPair(inputElm.name,inputElm.value);
+            }       
+        } else if(inputElm.checked) {
+            //check if a key pair already exists for this element (multi-select)
+            var item = null;
+            for(var j = 0; j < fieldValues.length; j++) {
+                if(fieldValues[j].key === inputElm.name) {
+                    item = fieldValues[j];
+                    break;
+                }
+            }
+            if(item != null) {
+                item.value = item.value+","+inputElm.value;
+            } else {
+                fieldValues[fieldValues.length] = new KeyPair(inputElm.name,inputElm.value);
+            }
+        }
+    }
+    if(fieldValues.length === 0) {
+        alert("Please complete at least one of the survey questions before saving the survey.");
+        return false;
+    }
+    
+    
+    //now use the salesforce ajax framework to post this data back to a visualforce controller method
+    //that will save the data in the correct format back to the correct salesforce sObject structure.
+    if(document.location.href.indexOf("survey") != -1) {
+        var postData = JSON.stringify({
+                    caseId: "{!Id}",
+                    surveyId: surveyId,
+                    surveyData: JSON.stringify({ values: fieldValues }),
+                    contactId: contactId
+                });
+        if(getInternetExplorerVersion() != -1) {
+            //manually implement a CORS POST for internet explorer
+            var ifrm = document.createElement("iframe");
+            ifrm.src = svc+"&JSON="+encodeURIComponent(postData);
+            ifrm.style.width="1px";
+            ifrm.style.height="1px";
+            ifrm.onload = function() {
+                showSuccess();
+            };
+            document.body.appendChild(ifrm);
+        } else {
+            j$.ajax({
+                type: "POST",
+                url: svc,
+                async: true,
+                datatype: "json",
+                data: postData,
+                contentType: "application/json",
+                processData: false,
+                success: function(data,status,xhr) {
+                    var retval = JSON.parse(data);
+                    if(retval.body === "true") {
+                        showSuccess();
+                    }
+                },
+                error: function(xhr,status,error) {
+                    alert("The survey could not be saved because of a fatal server error. Please contact your administrator.");
+                }
+            });
+        }
+    } else {
+        CustomerSuccessSurveyController.saveSurvey("{!Id}",surveyId,JSON.stringify({ values: fieldValues }),contactId,confirm('Would you like to send an e-mail confirmation to the customer?'),function(result,event) {
+            if(result) {
+                alert("Survey saved successfully.");
+                document.location.href="/{!Id}";
+            } else {
+                alert("The survey could not be saved because of a fatal server error. Please contact your administrator.");
+            }
+        });
+    }
+    
+    return false;
+    
+}
+
+function showSuccess() {
+    var form = document.getElementById("{!$Component.surveyForm}");
+    form.style.display = "none";
+    var successMessage = document.getElementById("successPanel");
+    successMessage.style.display = "block";
+}
+
+function emailSurvey(ref) {
+    ref.type = "button"; //this will stop the form from being re-submitted.
+    var contactId = getContactId(ref);
+    if(contactId != null) {
+        var surveyId = getSurveyId(ref);
+        CustomerSuccessSurveyController.sendSurvey("{!Id}",surveyId,contactId,function(result,event) {
+            if(result) {
+                alert("Survey sent successfully.");
+                document.location.href="/{!Id}";
+            } else {
+                alert("The survey could not be sent via email because of a fatal server error. Please contact your administrator.");
+            }
+        });
+    }
+    
+    return false;
+}    
+</script>
+
+<style type="text/css">
+       .customPopup{
+            background-color: white;
+            border-style: solid;
+            border-width: 2px;
+            left: 50%;
+            padding:10px;
+            position: absolute;
+            z-index: 9999;
+            display:table;
+            text-align: center;
+            vertical-align: middle;
+            width: 300px;
+            height: 100px;
+            margin-left: -300px;
+            top:300px;
+        }
+    
+    
+    
+        body .bPageBlock .pbBody .grey .pbSubheader {
+        background-color:#f5f5f5;text-align:left;
+        }
+        
+        p { font-size: 200%;font-weight: bold;color: #115da8; font-family: Arial;  }
+    
+    
+  
+    </style>
+</div>
+<div id="contact-form" title="Add Contact">
+  <p class="validateTips">All form fields are required.</p>
+ 
+  <form>
+    <fieldset>
+      <div>
+	      <label for="contactSalutation">Salutation</label>
+	      <select name="contactSalutation" id="contactSalutation" class="select ui-widget-content ui-corner-all">
+	      	<option value="Dame.">Dame.</option>
+	      	<option value="Dr.">Dr.</option>
+	      	<option value="Miss.">Miss.</option>
+	      	<option value="Mr."  selected="selected">Mr.</option>
+	      	<option value="Mrs.">Mrs.</option>
+	      	<option value="Ms.">Ms.</option>
+	      	<option value="Prof.">Prof.</option>
+	      </select>
+	  </div>
+	  <div>
+	      <label for="contactFirstName">First Name</label>
+	      <input type="text" name="contactFirstName" id="contactFirstName" value="" class="text ui-widget-content ui-corner-all"></input>
+	  </div>
+	  <div>
+	      <label for="contactLastName">Last Name</label>
+	      <input type="text" name="contactLastName" id="contactLastName" value="" class="text ui-widget-content ui-corner-all"></input>
+	  </div>
+	  <div>
+	      <label for="contactEmail">Email</label>
+	      <input type="text" name="contactEmail" id="contactEmail" value="" class="text ui-widget-content ui-corner-all"></input>
+	  </div>
+	  <div>
+	      <label for="contactPhone">Phone</label>
+	      <input type="text" name="contactPhone" id="contactPhone" value="" class="text ui-widget-content ui-corner-all"></input>
+	  </div>
+ 
+      <!-- Allow form submission with keyboard without duplicating the dialog button -->
+      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px"></input>
+    </fieldset>
+  </form>
+</div>
+<script type="text/javascript">
+j$("#contact-form").dialog({
+	autoOpen: false,
+    height: 350,
+   	width: 450,
+    modal: true,
+    buttons: {
+		"Create contact": function() {
+			var contactSalutation = j$("#contactSalutation");
+			var contactFirstName = j$("#contactFirstName");
+			var contactLastName = j$("#contactLastName");
+			var contactEmail = j$("#contactEmail");
+			var contactPhone = j$("#contactPhone");
+			if(contactFirstName.val().length == 0 || contactLastName.val().length == 0 || contactEmail.val().length == 0 || contactPhone.val().length == 0) {
+				alert("all fields are required");
+			} else {
+				if(confirm("are you sure you want to create this contact?")) {
+					CustomerSuccessSurveyController.createContact("{!Id}",contactSalutation.val(),contactFirstName.val(),contactLastName.val(),
+																  contactEmail.val(),contactPhone.val(),
+					function(result,event) {
+						var contactRadioContainer = document.getElementById(contactListContainerId);
+						var tdList = contactRadioContainer.getElementsByTagName("td");
+						if(tdList.length >= 1) {
+							if(tdList[0].innerHTML.length == 0) {
+								//we should inject our data here
+								var input = document.createElement("input");
+								input.setAttribute("type","radio");
+								input.setAttribute("value",result.Id);
+								input.setAttribute("name","surveyContact");
+								input.setAttribute("id","contact_"+result.Id);
+								var lbl = document.createElement("label");
+								lbl.setAttribute("for",input.getAttribute("id"));
+								lbl.innerHTML = result.FirstName+" "+result.LastName+" ("+result.Email+")";
+								tdList[0].appendChild(input);
+								tdList[0].appendChild(lbl);
+								input.checked = true;
+							} else {
+								var fieldName = tdList[0].getElementsByTagName("input")[0].getAttribute("name");
+								var container = tdList[0].parentNode;
+								var td = document.createElement("td");
+								container.appendChild(td);
+								var input = document.createElement("input");
+								input.setAttribute("type","radio");
+								input.setAttribute("value",result.Id);
+								input.setAttribute("name",fieldName);
+								input.setAttribute("id","contact_"+result.Id);
+								var lbl = document.createElement("label");
+								lbl.setAttribute("for",input.getAttribute("id"));
+								lbl.innerHTML = result.FirstName+" "+result.LastName+" ("+result.Email+")";
+								td.appendChild(input);
+								td.appendChild(lbl);
+								input.checked = true;
+							}
+						}
+						//ok now close the dialog
+						j$("#contact-form").dialog( "close" );	           
+			        });
+				}
+			}
+		},
+		Cancel: function() {
+			j$("#contact-form").dialog( "close" );
+		}
+	}
+});
+</script>
+</apex:page>

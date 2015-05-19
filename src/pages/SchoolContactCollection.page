@@ -1,0 +1,106 @@
+<apex:page showHeader="false" sidebar="false" tabStyle="Organisation__c" controller="SchoolContactCollection" docType="html-5.0">
+<apex:includeScript value="/support/console/32.0/integration.js"/>
+<apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" />
+<script type="text/javascript">
+        function CloseTab() 
+        {
+            //First find the ID of the current tab to close it
+            sforce.console.getEnclosingTabId(closeSubtab);
+        }
+        
+        var closeSubtab = function closeSubtab(result) {
+            //Now that we have the tab ID, we can close it
+            var tabId = result.id;
+            sforce.console.closeTab(tabId);
+        };
+
+        function closeandrefreshprimarytab()
+        {
+        	var subtab = sforce.console.getEnclosingTabId();
+        	sforce.console.closeTab(subtab);
+        	var primaryTabId = sforce.console.getEnclosingPrimaryTabId();
+            sforce.console.refreshPrimaryTabById(primaryTabId, true);
+            sforce.console.focusPrimaryTabById(primaryTabId);
+        }
+</script>
+	<apex:form >
+	<apex:pageBlock title="Organisation: {!orgName}">
+		<apex:pageBlockButtons location="both" >
+			<apex:commandButton action="{!saveChanges}" value="Save contacts" oncomplete="closeandrefreshprimarytab();"/>
+			<apex:commandButton value="Cancel" onclick="CloseTab();"/>
+			<apex:commandButton value="Add new contact" onclick="addContactToList(); return false;"/>
+		<apex:actionFunction name="addContactToList" action="{!addContact}" rerender="contact_seccions">
+		</apex:actionFunction>
+		</apex:pageBlockButtons>
+		<apex:outputPanel id="contact_seccions">
+			<apex:repeat value="{!contacts}" var="c">
+				<apex:pageBlockSection collapsible="false" columns="2" title="School contact: {!c.sc_name}">
+
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Title"/>
+						<apex:outputPanel >
+							<div class="requiredInput">
+			       				<div class = "requiredBlock"></div>
+								<apex:selectList value="{!c.Title}" size="1" label="Title" required="true">
+						  			<apex:selectOptions value="{!TitleValues}"/>
+								</apex:selectList>
+							</div>
+						</apex:outputPanel>
+					</apex:pageBlockSectionItem>
+
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Salutation"/>
+						<apex:outputPanel >
+							<div class="requiredInput">
+			       				<div class = "requiredBlock"></div>
+								<apex:selectList value="{!c.Salutation}" size="1" label="Salutation" required="true">
+						  			<apex:selectOptions value="{!SalutationValues}"/>
+								</apex:selectList>
+							</div>
+						</apex:outputPanel>
+					</apex:pageBlockSectionItem>
+
+					<apex:input type="text" label="First Name" value="{!c.FirstName}"/>
+
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Last Name"/>
+						<apex:outputPanel >
+							<div class="requiredInput">
+			       				<div class = "requiredBlock"></div>
+								<apex:input type="text" label="Last Name" value="{!c.LastName}" required="true"/>
+							</div>
+						</apex:outputPanel>
+					</apex:pageBlockSectionItem>
+
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Source"/>
+						<apex:outputPanel >
+							<div class="requiredInput">
+			       				<div class = "requiredBlock"></div>
+								<apex:selectList value="{!c.Source}" size="1" label="Source" required="true">
+						  			<apex:selectOptions value="{!SourceValues}"/>
+								</apex:selectList>
+							</div>
+						</apex:outputPanel>
+					</apex:pageBlockSectionItem>
+
+					<apex:inputCheckbox label="Generated Email?" value="{!c.Gen}"/>
+
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Email"/>
+						<apex:outputPanel >
+							<div class="requiredInput">
+			       				<div class = "requiredBlock"></div>
+								<apex:input type="email" label="Email" value="{!c.Email}" required="true"/>
+							</div>
+						</apex:outputPanel>
+					</apex:pageBlockSectionItem>
+
+					<apex:input label="Comments" value="{!c.Comments}" type="text" style="width: 360px; height: 40px"/>
+
+				</apex:pageBlockSection>
+			</apex:repeat>
+		</apex:outputPanel>
+	</apex:pageBlock>
+	</apex:form>
+</apex:page>

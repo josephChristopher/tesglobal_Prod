@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>RowCount/PARENTGROUPVAL(RowCount, Survey__c.CreatedDate)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>Survey_Template__c.Surveys__r.Survey_Number__r$CreatedBy</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% response by consultant</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>RowCount/PARENTGROUPVAL(RowCount, Metrics_Data__c.CreatedBy.Name)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA2</developerName>
+        <downGroupingContext>Survey_Template__c.Surveys__r.Survey_Number__r$Metrics__c.Question__c</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% response to question</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <field>Survey_Template__c$Name</field>
+    </columns>
+    <columns>
+        <field>Survey_Template__c.Surveys__r.Survey_Number__r$Survey_Number__c</field>
+    </columns>
+    <columns>
+        <field>Survey_Template__c.Surveys__r$Id</field>
+    </columns>
+    <columns>
+        <field>Survey_Template__c.Surveys__r.Survey_Number__r$Metrics__c</field>
+    </columns>
+    <columns>
+        <field>Survey_Template__c.Surveys__r$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>Survey_Template__c.Surveys__r.Survey_Number__r$Metrics__c.Question_Format__c</field>
+    </columns>
+    <columns>
+        <field>Survey_Template__c.Surveys__r.Survey_Number__r$Response__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Survey_Template__c$Name</column>
+            <operator>notContain</operator>
+            <value>two minute</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>Survey_Template__c.Surveys__r$CreatedDate</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Survey_Template__c.Surveys__r.Survey_Number__r$CreatedBy</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Survey_Template__c.Surveys__r.Survey_Number__r$Metrics__c.Question__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>% Response by consultant-Month view</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Surveys_with_Metrics_with_Metrics_Data__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <sortColumn>Survey_Template__c.Surveys__r.Survey_Number__r$Metrics__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Survey_Template__c.Surveys__r$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

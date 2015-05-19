@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Client Financial</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Client Financials</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Prefix --></label>
+        <name>Account_Prefix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount Due --></label>
+        <name>Amount_Due__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount Outstanding --></label>
+        <name>Amount_Out__c</name>
+    </fields>
+    <fields>
+        <label><!-- Balance --></label>
+        <name>Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Chase Group --></label>
+        <name>Chase_Group__c</name>
+        <picklistValues>
+            <masterLabel>AR01</masterLabel>
+            <translation><!-- AR01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AR02</masterLabel>
+            <translation><!-- AR02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EV01</masterLabel>
+            <translation><!-- EV01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SS01</masterLabel>
+            <translation><!-- SS01 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Client Discount --></label>
+        <name>Client_Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Financial Id --></label>
+        <name>Client_Financial_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Commission % --></label>
+        <name>Commission__c</name>
+    </fields>
+    <fields>
+        <label><!-- Controller --></label>
+        <name>Credit_Controller__c</name>
+        <picklistValues>
+            <masterLabel>A10</masterLabel>
+            <translation><!-- A10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A20</masterLabel>
+            <translation><!-- A20 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AR01</masterLabel>
+            <translation><!-- AR01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B10</masterLabel>
+            <translation><!-- B10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B20</masterLabel>
+            <translation><!-- B20 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B30</masterLabel>
+            <translation><!-- B30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BAD</masterLabel>
+            <translation><!-- BAD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>D10</masterLabel>
+            <translation><!-- D10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>L10</masterLabel>
+            <translation><!-- L10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZZZ</masterLabel>
+            <translation><!-- ZZZ --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Credit Limit --></label>
+        <name>Credit_Limit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Financial Account --></label>
+        <name>Financial_Account__c</name>
+        <picklistValues>
+            <masterLabel>AD</masterLabel>
+            <translation><!-- AD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exhibition</masterLabel>
+            <translation><!-- Exhibition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Search &amp; Selection</masterLabel>
+            <translation><!-- Search &amp; Selection --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Has Ever Been Invoiced --></label>
+        <name>Has_Ever_Been_Invoiced__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has Ever Booked --></label>
+        <name>Has_Ever_Booked__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Type --></label>
+        <name>Invoice_Type__c</name>
+        <picklistValues>
+            <masterLabel>14 Days</masterLabel>
+            <translation><!-- 14 Days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30 Days</masterLabel>
+            <translation><!-- 30 Days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30 days from date of invoice</masterLabel>
+            <translation><!-- 30 days from date of invoice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30 days from end of month</masterLabel>
+            <translation><!-- 30 days from end of month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60 days from date of invoice</masterLabel>
+            <translation><!-- 60 days from date of invoice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60 days from end of month</masterLabel>
+            <translation><!-- 60 days from end of month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 Days</masterLabel>
+            <translation><!-- 7 Days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Immediate</masterLabel>
+            <translation><!-- Immediate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>To be analysed</masterLabel>
+            <translation><!-- To be analysed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- On Stop --></label>
+        <name>On_Hold__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Type --></label>
+        <name>Payment_Type__c</name>
+        <picklistValues>
+            <masterLabel>Account</masterLabel>
+            <translation><!-- Account --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Client --></label>
+        <name>account__c</name>
+        <relationshipLabel><!-- Client Financials --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Client Financial Layout</layout>
+        <sections>
+            <label><!-- Credit Details --></label>
+            <section>Credit Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

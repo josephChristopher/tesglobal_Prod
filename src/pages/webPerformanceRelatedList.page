@@ -1,0 +1,5 @@
+<apex:page standardController="Case" >
+    <apex:pageBlock mode="mainDetail" title=" ">
+    <apex:relatedList subject="{!Case.Vacancy__c}" list="Ad_Web_Performance_Data__r" title=" "></apex:relatedList>
+    </apex:pageBlock>
+</apex:page>

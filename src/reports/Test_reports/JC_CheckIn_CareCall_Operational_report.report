@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <acrossGroupingContext>GRAND_SUMMARY</acrossGroupingContext>
+        <calculatedFormula>IF((Call_Log__c.IsCall__c:SUM ==0 &amp;&amp;
+Call_Log__c.IsSurvey__c:SUM ==0) ||
+Call_Log__c.IsSurvey__c:SUM ==0,0,
+Call_Log__c.IsCall__c:SUM /Call_Log__c.IsSurvey__c:SUM)</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA2</developerName>
+        <downGroupingContext>OWNER</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Owner calls:surveys</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_40284914</developerName>
+        <masterLabel>Main Status</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Call_Log__c.CLog_Stage_Status__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Check In-Call Attempt 1</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Check In-Call Attempt 2</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Check In-Call Attempt 3</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Check In-Call Complete</sourceValue>
+            </sourceValues>
+            <value>Check In Calls</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Check In-Email Complete</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Check In-Email Sent</sourceValue>
+            </sourceValues>
+            <value>Check In Emails</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Customer Care Call-Call Attempt 1</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Customer Care Call-Call Attempt 2</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Customer Care Call-Call Attempt 3</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Customer Care Call-Call Complete</sourceValue>
+            </sourceValues>
+            <value>Customer Care Calls</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_68937226</developerName>
+        <masterLabel>Stage-contact</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>STATUS</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Customer Care Call</sourceValue>
+            </sourceValues>
+            <value>Customer care call</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Closed</sourceValue>
+            </sourceValues>
+            <value>closed</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Check In</sourceValue>
+            </sourceValues>
+            <value>check in</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_38028784</developerName>
+        <masterLabel>Status</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Call_Log__c.Status__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Call Complete</sourceValue>
+            </sourceValues>
+            <value>Surveys completed</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Remedial Action Required</sourceValue>
+            </sourceValues>
+            <value>Remedial Actions-Pending</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Email Sent</sourceValue>
+            </sourceValues>
+            <value>Email Sent</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Call Attempt 3</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call Attempt 2</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call Attempt 1</sourceValue>
+            </sourceValues>
+            <value>Calls made</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Email Complete</sourceValue>
+            </sourceValues>
+            <value>Email complete</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Remedial Action Complete</sourceValue>
+            </sourceValues>
+            <value>Remedial actions complete</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>Donut</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>OWNER</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>Call_Log__c.IsSurvey__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Call_Log__c.Stage__c</column>
+            <operator>contains</operator>
+            <value>Customer Care Call,check in</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Call_Log__c.Status__c</column>
+            <operator>contains</operator>
+            <value>Call Attempt,Call Complete,Email sent,email complete</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Call_Log__c.Main_Status__c</column>
+            <operator>notEqual</operator>
+            <value>Not Applicable</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_40284914</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Call_Log__c.Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OWNER</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>JC-CheckIn-CareCall Operational report</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseCustomEntity$Call_Log__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Call_Log__c.Call_Date_Time__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

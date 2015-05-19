@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Organisation__c$Name</field>
+    </columns>
+    <columns>
+        <field>Organisation__c.School_contacts__r$Name</field>
+    </columns>
+    <crossFilters>
+        <operation>without</operation>
+        <primaryTableColumn>Organisation__c$Id</primaryTableColumn>
+        <relatedTable>School_contact__c</relatedTable>
+        <relatedTableJoinColumn>Organisation__c</relatedTableJoinColumn>
+    </crossFilters>
+    <format>Tabular</format>
+    <name>Organisations without SchoolContacts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Organisations_with_or_without_SchoolContacts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Organisation__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

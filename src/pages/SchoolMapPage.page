@@ -1,0 +1,38 @@
+<apex:page standardcontroller="Organisation__c" extensions="SchoolMapExtension">
+    
+    <div style="display: inline;margin-left: auto;margin-right: auto;">
+        <apex:form id="mapForm">
+            <div style="float: left; width: 20%; margin-left: 10%">
+                <apex:outputPanel >    
+                    <b>Find Nearby Schools Using Filters:</b><br/>
+                    <apex:repeat value="{!filterMap}" var="key">  <br/>    
+                        <apex:selectCheckboxes value="{!filterKeys[key]}" layout="pageDirection" borderVisible="true" legendText="{!key}">
+                            <apex:selectOptions value="{!filterMap[key]}"/>
+                            <apex:actionSupport event="onchange" reRender="mapForm"/> 
+                        </apex:selectCheckboxes><br/>
+                    </apex:repeat>
+                    <!--Phases: {!phases}<br/>
+                    Funding Groups: {!fundingGroups}<br/>-->
+                        <b><apex:outputLabel >Distance from Current School: </apex:outputLabel></b>
+                        <apex:outputText value="{!distance} km"> 
+                        </apex:outputText> 
+                        <div style="text-align: left"> <b>Map Legend:</b> <br/>
+                        Blue Marker - Current School<br/>
+                        Red Marker - School Not Yet Visited<br/>
+                        Orange Marker - School Scheduled to be Visited     
+                        Green Marker - Visited School</div> 
+                    </apex:outputPanel>  
+                </div>
+                
+                <div style="float: right;width: 70%">
+                    <apex:outputPanel >
+                        <apex:pageBlock mode="mainDetail" id="map">   
+                            <br/>
+                            <c:SchoolMapComponent schoolList="{!listofSchools}" currentSchool="{!org}"/>
+                        </apex:pageBlock>
+                    </apex:outputPanel>
+                </div>
+            </apex:form>
+            
+        </div>
+    </apex:page>

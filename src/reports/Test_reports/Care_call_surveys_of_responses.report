@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <acrossGroupingContext>GRAND_SUMMARY</acrossGroupingContext>
+        <calculatedFormula>RowCount/PARENTGROUPVAL(RowCount, Metrics__c.Question__c, COLUMN_GRAND_SUMMARY)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA2</developerName>
+        <downGroupingContext>BucketField_76647051</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% Response</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_76647051</developerName>
+        <masterLabel>Survey channel</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>CHILD_CREATED_NAME</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Jamie Morris</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sarah Matthews</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Emma Wilsher</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Antonio Tempesta</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>David Igbinovia</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kushba Rahman</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Shumi Hussain</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Maureen Tittris</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Lauren Roberts</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Nicholas Lawson</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Faust Perez</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Alexander Reigar</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mario de Mesquita</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Leticia Carriere</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Audrey O’Driscoll</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Traci Law</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Hassan Khalid</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Aaron Lacey</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Audrey O&apos;Driscoll</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Maureen Tittiris</sourceValue>
+            </sourceValues>
+            <value>Call</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Chris Stura</sourceValue>
+            </sourceValues>
+            <value>Email</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Metrics_Data__c.Survey_Template__c</column>
+            <operator>contains</operator>
+            <value>care call</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Metrics_Data__c.Survey_Template__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Metrics__c.Question__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_76647051</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Care call surveys-% of responses to Qns</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$Metrics__c$Metrics_Data__c@Metrics_Data__c.Survey_Number__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CHILD_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Vacancies are job placement adverts associated to one booking</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Employer Name</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Vacancies</relationshipLabel>
+        <relationshipName>Vacancies</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Ad_Height__c</fullName>
+        <externalId>false</externalId>
+        <label>Ad Height</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ad_Insert_MSL_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Ad Insert MSL ID</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Ad_Live_Duration_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>Date_of_Ad_Expiry_on_TES_Global_Site__c - Date_of_Ad_Publication_on_TES_Site__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The total number of days the ad is expected to be live on TES website.</inlineHelpText>
+        <label>Expected Ad Live Duration (Days)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ad_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Ad Number</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ad_Width__c</fullName>
+        <externalId>false</externalId>
+        <label>Ad Width</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agency__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF 
+( 
+
+Booking__r.Account.Agency__c = TRUE || Booking__r.Agency__r.Agency__c =TRUE
+
+,TRUE,FALSE
+
+)
+
+/**Old
+
+Booking__r.Account.Agency__c
+**/</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Agency</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Booking__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Booking</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Vacancies</relationshipLabel>
+        <relationshipName>Vacancies</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Case_Created__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Case Created</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Check_In_Call_Email_Date_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( 
+MOD((DATEVALUE(Date_of_Ad_Publication_on_TES_Site__c) + (Ad_Live_Duration_Days__c/2 )) - Date(1900, 1, 7), 7), 
+0, (DATEVALUE(Date_of_Ad_Publication_on_TES_Site__c) + (Ad_Live_Duration_Days__c/2 ))+1, 
+1, (DATEVALUE(Date_of_Ad_Publication_on_TES_Site__c) + (Ad_Live_Duration_Days__c/2 )), 
+2, (DATEVALUE(Date_of_Ad_Publication_on_TES_Site__c) + (Ad_Live_Duration_Days__c/2 )), 
+3, (DATEVALUE(Date_of_Ad_Publication_on_TES_Site__c) + (Ad_Live_Duration_Days__c/2 )), 
+4, (DATEVALUE(Date_of_Ad_Publication_on_TES_Site__c) + (Ad_Live_Duration_Days__c/2 )), 
+5, (DATEVALUE(Date_of_Ad_Publication_on_TES_Site__c) + (Ad_Live_Duration_Days__c/2 )), 
+(DATEVALUE(Date_of_Ad_Publication_on_TES_Site__c) + (Ad_Live_Duration_Days__c/2 ))+2 
+)</formula>
+        <inlineHelpText>Mid-way date when the ad has been live on the TES website. If the date falls on a Saturday or Sunday, the date would be on the Friday before those days.</inlineHelpText>
+        <label>Check In Contact Date (Formula)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Check_In_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Mid-way date when the ad has been live on the TES website. If the date falls on a Saturday or Sunday, the date would be on the Friday before those days.</inlineHelpText>
+        <label>Check In Contact Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Class_Text__c</fullName>
+        <externalId>false</externalId>
+        <label>Classification Text</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Classification__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK(Class_Text__c)), Class_Text__c &amp; &quot; (&quot; &amp; Vacancy_Workplace__c &amp; &quot;)&quot;,
+&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Classification</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Client_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Client Name</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Vacancies (Client Name)</relationshipLabel>
+        <relationshipName>Vacancies1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Client_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Agency__c = TRUE, &quot;Agency&quot;,
+IF( Agency__c = FALSE, &quot;Direct&quot;,
+&quot;&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Client Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Client__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;javascript:if(typeof(srcUp)==&apos;function&apos;) {srcUp(&apos;/&quot; &amp; Booking__r.Account.Id &amp; &quot;?isdtp=vw&apos;);}&quot;+ &quot; else {window.location.href=&apos;/&quot; &amp; Booking__r.Account.Id &amp; &quot;?isdtp=vw&apos;}&quot;, Booking__r.Account.Name, &quot;_self&quot; )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Client</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Color_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Color Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Address_for_Application_Submitio__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Address</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contact_Email_for_Application_Submition__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Email</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Fax_for_Application_Submition__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Fax</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Name_for_Application_Submition__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Phone_for_Application_Submition__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Phone</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current_Ad_Live_Duration_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Date_of_Ad_Expiry_on_TES_Global_Site__c &gt; NOW(),
+NOW() - Date_of_Ad_Publication_on_TES_Site__c,
+Date_of_Ad_Expiry_on_TES_Global_Site__c - Date_of_Ad_Publication_on_TES_Site__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The number of days until now that the advert has been live in the TES website.</inlineHelpText>
+        <label>Current Ad Live Duration (Days)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Care_Call_Date_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( 
+MOD((DATEVALUE( Date_of_Ad_Expiry_on_TES_Global_Site__c ) + 42) - Date(1900, 1, 7), 7), 
+0, (DATEVALUE(Date_of_Ad_Expiry_on_TES_Global_Site__c ) + 42)+1, 
+1, (DATEVALUE(Date_of_Ad_Expiry_on_TES_Global_Site__c ) + 42), 
+2, (DATEVALUE(Date_of_Ad_Expiry_on_TES_Global_Site__c ) + 42), 
+3, (DATEVALUE(Date_of_Ad_Expiry_on_TES_Global_Site__c ) + 42), 
+4, (DATEVALUE(Date_of_Ad_Expiry_on_TES_Global_Site__c ) + 42), 
+5, (DATEVALUE(Date_of_Ad_Expiry_on_TES_Global_Site__c ) + 42), 
+(DATEVALUE(Date_of_Ad_Expiry_on_TES_Global_Site__c ) + 42)+2 
+)</formula>
+        <inlineHelpText>6 weeks after the ad has expired in the TES website. If the date falls on a Saturday or Sunday, the date would be on the Friday before those days.</inlineHelpText>
+        <label>Customer Care Call Date (Formula)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Care_Call_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>6 weeks after the ad has expired in the TES website. If the date falls on a Saturday or Sunday, the date would be on the Friday before those days.</inlineHelpText>
+        <label>Customer Care Call Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_for_Application_Expiry__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Date Application will expire.</inlineHelpText>
+        <label>Application Close Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Ad_Expiry_on_TES_Global_Site__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Date/Time of Ad Expiry on TES Global Site</inlineHelpText>
+        <label>Ad End Date/Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Ad_Publication_on_TES_Site__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Date of Ad Publication on TES Site</inlineHelpText>
+        <label>Ad Start Date/Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Hard_to_Fill__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( OR(CONTAINS( Sub_Class__c, &quot;Science&quot;),
+       CONTAINS( Sub_Class__c, &quot;English&quot;),
+       CONTAINS( Sub_Class__c, &quot;Mathematics&quot;),
+       CONTAINS( Sub_Class__c, &quot;Math&quot;), 
+       Subject_Text__c = &quot;Science&quot;,
+       Subject_Text__c = &quot;English&quot;,
+       Subject_Text__c = &quot;Mathematics&quot;,
+       CONTAINS(Subject_Text__c, &quot;Math&quot;)
+      ),
+TRUE,
+FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hard to Fill</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Id_on_TES_Global_Site__c</fullName>
+        <externalId>false</externalId>
+        <label>ID on TES Global Site</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoice_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Invoice Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Job_Role_Classification__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(AND(BEGINS(Vacancy_Workplace__c, &quot;L&quot;),
+       OR(CONTAINS(TRIM(RIGHT( Vacancy_Workplace__c, 2)), &quot;0&quot;), 
+          CONTAINS(TRIM(RIGHT( Vacancy_Workplace__c, 2)), &quot;1&quot;),
+          CONTAINS(TRIM(RIGHT( Vacancy_Workplace__c, 2)), &quot;2&quot;), 
+          CONTAINS(TRIM(RIGHT( Vacancy_Workplace__c, 2)), &quot;3&quot;),
+          CONTAINS(TRIM(RIGHT( Vacancy_Workplace__c, 2)), &quot;4&quot;), 
+          CONTAINS(TRIM(RIGHT( Vacancy_Workplace__c, 2)), &quot;5&quot;),
+          CONTAINS(TRIM(RIGHT( Vacancy_Workplace__c, 2)), &quot;6&quot;), 
+          CONTAINS(TRIM(RIGHT( Vacancy_Workplace__c, 2)), &quot;7&quot;),
+          CONTAINS(TRIM(RIGHT( Vacancy_Workplace__c, 2)), &quot;8&quot;), 
+          CONTAINS(TRIM(RIGHT( Vacancy_Workplace__c, 2)), &quot;9&quot;)
+         )
+      ),
+  &quot;Leadership&quot;,
+
+/* Added for a bug in the Secondary */
+IF(OR(CONTAINS(Classification__c, &quot;Secondary&quot;), Vacancy_Workplace__c == &quot;00&quot;, Vacancy_Workplace__c== &quot;1&quot;, Vacancy_Workplace__c== &quot;10&quot;, Vacancy_Workplace__c== &quot;1700&quot;, Vacancy_Workplace__c== &quot;22&quot;, Vacancy_Workplace__c== &quot;5&quot;, Vacancy_Workplace__c== &quot;6&quot;, Vacancy_Workplace__c== &quot;6601&quot;, Vacancy_Workplace__c== &quot;7&quot;, Vacancy_Workplace__c== &quot;1&quot;,Vacancy_Workplace__c== &quot;A01&quot;, Vacancy_Workplace__c== &quot;A05&quot;, Vacancy_Workplace__c== &quot;A06&quot;, Vacancy_Workplace__c== &quot;A07&quot;, Vacancy_Workplace__c== &quot;A09&quot;, Vacancy_Workplace__c== &quot;A10&quot;, Vacancy_Workplace__c== &quot;A11&quot;, Vacancy_Workplace__c== &quot;A12&quot;, Vacancy_Workplace__c== &quot;A13&quot;, Vacancy_Workplace__c== &quot;A14&quot;, Vacancy_Workplace__c== &quot;A15&quot;, Vacancy_Workplace__c== &quot;A16&quot;, Vacancy_Workplace__c== &quot;A17&quot;, Vacancy_Workplace__c== &quot;A18&quot;, Vacancy_Workplace__c== &quot;A19&quot;, Vacancy_Workplace__c== &quot;A99&quot;),
+  &quot;Secondary&quot;,
+
+IF(CONTAINS(Classification__c, &quot;Primary&quot;),
+  &quot;Primary&quot;,
+
+&quot;&quot;)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Role Classification</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Job Status</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Job Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Link_on_TES_website__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK(Id_on_TES_Global_Site__c)),
+  &quot;https://www.tes.co.uk/jobs/jobdetail.aspx?jobid=&quot; &amp;  Id_on_TES_Global_Site__c &amp; &quot;&amp;preview=1&quot;,
+&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Link on TES website</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Main_Text__c</fullName>
+        <externalId>false</externalId>
+        <label>Main Text</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>No_Application_Expiry_Date__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>No Application Expiry Date?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Premium_Print_Position__c</fullName>
+        <externalId>false</externalId>
+        <label>Premium Print Position</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 - Very High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 - High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 - Medium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 - Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 - Very Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Publication__c</fullName>
+        <externalId>false</externalId>
+        <label>Publication</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quote_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Quote Flag</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Form__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sales Form</label>
+        <referenceTo>Sales_Form__c</referenceTo>
+        <relationshipLabel>Vacancies</relationshipLabel>
+        <relationshipName>Vacancies</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Notes</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Salesperson__c</fullName>
+        <externalId>false</externalId>
+        <label>Salesperson</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sub_Class_Text__c</fullName>
+        <externalId>false</externalId>
+        <label>Sub Class Text</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sub_Class__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK(Sub_Class_Text__c)), Sub_Class_Text__c &amp; &quot; (&quot; &amp; Vacancy_Position_and_Subject__c &amp; &quot;)&quot;, &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sub Class</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subject_Text__c</fullName>
+        <externalId>false</externalId>
+        <label>Subject Text</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subject__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK(Subject_Text__c)), Subject_Text__c &amp; &quot; (&quot; &amp; Vacancy_Subject__c &amp; &quot;)&quot;, &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Subject</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subscription_Lookup__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Subscription</label>
+        <referenceTo>Subscription__c</referenceTo>
+        <relationshipLabel>Vacancies</relationshipLabel>
+        <relationshipName>Vacancies</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Subscription_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Subscription Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Subscription__c</fullName>
+        <externalId>false</externalId>
+        <label>Subscription</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tier_by_Ad_Spend__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.Tier_by_Ad_Spend__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tier by Ad Spend</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tier_by_Ads_Placed__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.Tier_by_Ads_Placed__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tier by Ads Placed</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vacancy_Complete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Completed</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Vacancy_Contract_Term__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Term</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vacancy_Contract_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Type</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vacancy_Employer__c</fullName>
+        <externalId>false</externalId>
+        <label>Employer School ID</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vacancy_Experience__c</fullName>
+        <externalId>false</externalId>
+        <label>Suitable for NQT</label>
+        <length>6</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vacancy_Grade__c</fullName>
+        <externalId>false</externalId>
+        <label>Grade</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vacancy_Interview_Dates__c</fullName>
+        <externalId>false</externalId>
+        <label>Interview Dates</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vacancy_Job_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Job Start</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vacancy_Job_Title__c</fullName>
+        <externalId>false</externalId>
+        <label>Job Title</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vacancy_London_Weighting_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Vacancy London Weighting Status</label>
+        <length>6</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vacancy_Pay_Scale__c</fullName>
+        <externalId>false</externalId>
+        <label>Vacancy Pay Scale</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vacancy_Position_and_Subject__c</fullName>
+        <externalId>false</externalId>
+        <label>Sub Class Code</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vacancy_Salary_Range__c</fullName>
+        <externalId>false</externalId>
+        <label>Salary Range</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vacancy_Salary__c</fullName>
+        <externalId>false</externalId>
+        <label>Salary</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vacancy_Subject__c</fullName>
+        <externalId>false</externalId>
+        <label>Subject Code</label>
+        <length>64</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vacancy_Workplace__c</fullName>
+        <externalId>false</externalId>
+        <label>Classification Code</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Vacancy</label>
+    <listViews>
+        <fullName>ALLVACANCIES</fullName>
+        <columns>NAME</columns>
+        <columns>Booking__c</columns>
+        <columns>Account__c</columns>
+        <columns>Ad_Insert_MSL_ID__c</columns>
+        <columns>Id_on_TES_Global_Site__c</columns>
+        <columns>Date_of_Ad_Publication_on_TES_Site__c</columns>
+        <columns>Date_of_Ad_Expiry_on_TES_Global_Site__c</columns>
+        <columns>Check_In_Date__c</columns>
+        <columns>Customer_Care_Call_Date__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Account__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Date_of_Ad_Publication_on_TES_Site__c</field>
+            <operation>greaterThan</operation>
+            <value>12/12/2014 12:00 AM</value>
+        </filters>
+        <label>All Vacancies</label>
+    </listViews>
+    <listViews>
+        <fullName>AllLIve</fullName>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Booking__c</columns>
+        <columns>Account__c</columns>
+        <columns>Ad_Insert_MSL_ID__c</columns>
+        <columns>Id_on_TES_Global_Site__c</columns>
+        <columns>Date_of_Ad_Publication_on_TES_Site__c</columns>
+        <columns>Date_of_Ad_Expiry_on_TES_Global_Site__c</columns>
+        <columns>Check_In_Date__c</columns>
+        <columns>Customer_Care_Call_Date__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Date_of_Ad_Publication_on_TES_Site__c</field>
+            <operation>lessOrEqual</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>Date_of_Ad_Expiry_on_TES_Global_Site__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>Date_of_Ad_Publication_on_TES_Site__c</field>
+            <operation>greaterThan</operation>
+            <value>12/13/2014 12:00 AM</value>
+        </filters>
+        <filters>
+            <field>Account__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>All Live Vacancies</label>
+    </listViews>
+    <listViews>
+        <fullName>AllPostLIve</fullName>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Booking__c</columns>
+        <columns>Account__c</columns>
+        <columns>Ad_Insert_MSL_ID__c</columns>
+        <columns>Id_on_TES_Global_Site__c</columns>
+        <columns>Date_of_Ad_Publication_on_TES_Site__c</columns>
+        <columns>Date_of_Ad_Expiry_on_TES_Global_Site__c</columns>
+        <columns>Check_In_Date__c</columns>
+        <columns>Customer_Care_Call_Date__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Date_of_Ad_Publication_on_TES_Site__c</field>
+            <operation>lessThan</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>Date_of_Ad_Expiry_on_TES_Global_Site__c</field>
+            <operation>lessThan</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>Date_of_Ad_Publication_on_TES_Site__c</field>
+            <operation>greaterThan</operation>
+            <value>12/13/2014 12:00 AM</value>
+        </filters>
+        <filters>
+            <field>Account__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>All Post-Live Vacancies</label>
+    </listViews>
+    <nameField>
+        <label>Vacancy Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Vacancies</pluralLabel>
+    <recordTypes>
+        <fullName>Vacancy_Locked</fullName>
+        <active>true</active>
+        <label>Vacancy Locked</label>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>1 - Very High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Medium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 - Very Low</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Call_Date_Only_on_Weekdays</fullName>
+        <active>false</active>
+        <description>Check in and Customer Care Call dates must only be on weekdays.</description>
+        <errorConditionFormula>OR(
+
+OR(
+CASE(MOD( Check_In_Date__c - DATE( 1900, 1, 8 ), 7 ),
+0, &quot;0&quot;,
+1, &quot;1&quot;,
+2, &quot;2&quot;,
+3, &quot;3&quot;,
+4, &quot;4&quot;,
+5, &quot;5&quot;,
+6, &quot;6&quot;,
+&quot;&quot;) = &quot;5&quot;,
+
+CASE(MOD( Check_In_Date__c - DATE( 1900, 1, 8 ), 7 ),
+0, &quot;0&quot;,
+1, &quot;1&quot;,
+2, &quot;2&quot;,
+3, &quot;3&quot;,
+4, &quot;4&quot;,
+5, &quot;5&quot;,
+6, &quot;6&quot;,
+&quot;&quot;) = &quot;6&quot;
+),
+
+OR(
+CASE(MOD(  Customer_Care_Call_Date__c  - DATE( 1900, 1, 8 ), 7 ),
+0, &quot;0&quot;,
+1, &quot;1&quot;,
+2, &quot;2&quot;,
+3, &quot;3&quot;,
+4, &quot;4&quot;,
+5, &quot;5&quot;,
+6, &quot;6&quot;,
+&quot;&quot;) = &quot;5&quot;,
+
+CASE(MOD( Customer_Care_Call_Date__c - DATE( 1900, 1, 8 ), 7 ),
+0, &quot;0&quot;,
+1, &quot;1&quot;,
+2, &quot;2&quot;,
+3, &quot;3&quot;,
+4, &quot;4&quot;,
+5, &quot;5&quot;,
+6, &quot;6&quot;,
+&quot;&quot;) = &quot;6&quot;
+)
+
+)</errorConditionFormula>
+        <errorMessage>Please select a Check In Call Date and/or Customer Care Call Date that falls on a weekday.</errorMessage>
+    </validationRules>
+</CustomObject>

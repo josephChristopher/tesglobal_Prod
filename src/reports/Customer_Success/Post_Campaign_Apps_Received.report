@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Case$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Case$Vacancy__c.Vacancy_Job_Title__c</field>
+    </columns>
+    <columns>
+        <field>Case$Vacancy__c.Account__c.County_State__c</field>
+    </columns>
+    <columns>
+        <field>Case.Surveys__r$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>Case.Surveys__r.Survey_Number__r$Response_Num__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Case.Surveys__r$Survey_Template__c</column>
+            <operator>contains</operator>
+            <value>care call</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Surveys__r.Survey_Number__r$Metrics__c.Question_Format__c</column>
+            <operator>equals</operator>
+            <value>Numeric Value</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case.Surveys__r.Survey_Number__r$Metrics__c.Question__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case$Vacancy__c.Classification__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Post Campaign Apps Received</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cases_with_Surveys_with_Metrics_Data__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Case$Check_In_Call_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

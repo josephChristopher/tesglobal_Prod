@@ -1,0 +1,28 @@
+<apex:page standardController="Case" title="Update Vacancies">
+    
+    <apex:pageBlock mode="mainDetail" title=" ">
+    <apex:pageBlockSection columns="2">
+         <analytics:reportChart reportId="00Ow00000063ibM"></analytics:reportChart>
+          <analytics:reportChart reportId="00Ow00000063ibN"></analytics:reportChart>
+           </apex:pageBlockSection>
+     </apex:pageBlock>
+     
+    
+  
+    <apex:pageBlock id="CIList" mode="mainDetail">
+    <apex:enhancedlist type="Case" height="350" customizable="false" rowsPerPage="25" id="checkInList"/>
+    </apex:pageBlock>    
+    
+    <apex:pageBlock id="CCList" mode="mainDetail">
+    <apex:enhancedlist type="Case" height="350" customizable="false" rowsPerPage="25" id="customerCareCallList"/>
+    </apex:pageBlock>    
+      <style>
+     body .bPageBlock .pbBody .grey .pbSubheader {
+        background-color:#f5f5f5;
+        }
+        
+        p { font-size: 200%; }
+  
+    </style>
+    
+</apex:page>

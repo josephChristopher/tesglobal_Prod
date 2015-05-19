@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Organisation Change Log</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Organisation Change Logs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Advert/Job No --></label>
+        <name>Advert_Job_No__c</name>
+        <relationshipLabel><!-- Organisation Change Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Agency Name --></label>
+        <name>Agency_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Organisation Name --></label>
+        <name>Organisation_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason for Change --></label>
+        <name>Reason_for_change__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requestees Name --></label>
+        <name>Requestees_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Complaint from client</masterLabel>
+            <translation><!-- Complaint from client --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>From an advert</masterLabel>
+            <translation><!-- From an advert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In-house data cleansing</masterLabel>
+            <translation><!-- In-house data cleansing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PRIME</masterLabel>
+            <translation><!-- PRIME --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requested by agency</masterLabel>
+            <translation><!-- Requested by agency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requested by employer</masterLabel>
+            <translation><!-- Requested by employer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Team</masterLabel>
+            <translation><!-- Sales Team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Subscriptions</masterLabel>
+            <translation><!-- Subscriptions --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Organisation --></label>
+        <name>organisation__c</name>
+        <relationshipLabel><!-- Change Log --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

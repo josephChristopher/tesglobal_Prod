@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Sales Form</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Sales Forms</value>
+    </caseValues>
+    <fields>
+        <label><!-- MSL Ad Insert Id --></label>
+        <name>Ad_Insert_MSL_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- MSL Ad Number --></label>
+        <name>MSL_Ad_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recruitment Owner Email --></label>
+        <name>Recruitment_Owner_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recruitment Owner Phone --></label>
+        <name>Recruitment_Owner_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recruitment Owner Title --></label>
+        <name>Recruitment_Owner_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recruitment Owner --></label>
+        <name>Recruitment_Owner__c</name>
+        <relationshipLabel><!-- Sales Forms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sales Notes --></label>
+        <name>Sales_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Salesperson --></label>
+        <name>Salesperson_Name__c</name>
+        <picklistValues>
+            <masterLabel>Adrian Munro</masterLabel>
+            <translation><!-- Adrian Munro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aled Evans</masterLabel>
+            <translation><!-- Aled Evans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alex Hughes</masterLabel>
+            <translation><!-- Alex Hughes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alison Brady</masterLabel>
+            <translation><!-- Alison Brady --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Amar  Dhanjan</masterLabel>
+            <translation><!-- Amar  Dhanjan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ben Rawson</masterLabel>
+            <translation><!-- Ben Rawson --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Claire Neary</masterLabel>
+            <translation><!-- Claire Neary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hannah Dedman</masterLabel>
+            <translation><!-- Hannah Dedman --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jemima Greenacre</masterLabel>
+            <translation><!-- Jemima Greenacre --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jessica Marshall</masterLabel>
+            <translation><!-- Jessica Marshall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jimmy Jobson</masterLabel>
+            <translation><!-- Jimmy Jobson --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kaan Ibrahim</masterLabel>
+            <translation><!-- Kaan Ibrahim --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Martin Bennett</masterLabel>
+            <translation><!-- Martin Bennett --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ross Mitchell</masterLabel>
+            <translation><!-- Ross Mitchell --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sean Marsh</masterLabel>
+            <translation><!-- Sean Marsh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Simon Thurston</masterLabel>
+            <translation><!-- Simon Thurston --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tom Shillabeer</masterLabel>
+            <translation><!-- Tom Shillabeer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tracy  Laverack</masterLabel>
+            <translation><!-- Tracy  Laverack --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Viv Aylward</masterLabel>
+            <translation><!-- Viv Aylward --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Sales Form Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Recruitment Owner Details --></label>
+            <section>Recruitment Owner Details</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Notes --></label>
+            <section>Sales Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Sales Form Locked Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Recruitment Owner Details --></label>
+            <section>Recruitment Owner Details</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Notes --></label>
+            <section>Sales Notes</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Salesform Locked --></label>
+        <name>Salesform_Locked</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please fill out either the MSL Ad Insert Id or the MSL Ad Number. Note that you can only fill out one of each. --></errorMessage>
+        <name>Ad_Insert_Id_OR_MSL_Ad_Number_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out the Salesperson Name. --></errorMessage>
+        <name>Salesperson_Name_Req</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- New --></label>
+        <name>New</name>
+    </webLinks>
+</CustomObjectTranslation>

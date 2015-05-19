@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Do Not Email</value>
+        </caseValues>
+        <name>email_opt_out_contact</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Do Not Fax</value>
+        </caseValues>
+        <name>fax_opt_out_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <help><!-- Dependent on the Account the Contact is attached to. --></help>
+        <label><!-- Agency --></label>
+        <name>Agency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Photo --></label>
+        <name>Contact_Photo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created From Booking --></label>
+        <name>Created_From_Booking__c</name>
+    </fields>
+    <fields>
+        <label><!-- Do Not Mail --></label>
+        <name>Do_Not_Mail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Generated Email? --></label>
+        <name>Gen__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inactive --></label>
+        <name>Inactive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Allocated Sales Rep --></label>
+        <name>Last_Allocated_Sales_Rep__c</name>
+        <relationshipLabel><!-- Contacts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Last Allocation Date --></label>
+        <name>Last_Allocation_Date__c</name>
+    </fields>
+    <fields>
+        <name>LeadSource</name>
+        <picklistValues>
+            <masterLabel>Advertisement</masterLabel>
+            <translation><!-- Advertisement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conference</masterLabel>
+            <translation><!-- Conference --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee Referral</masterLabel>
+            <translation><!-- Employee Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>External Referral</masterLabel>
+            <translation><!-- External Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation><!-- Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Relations</masterLabel>
+            <translation><!-- Public Relations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Internal</masterLabel>
+            <translation><!-- Seminar - Internal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Partner</masterLabel>
+            <translation><!-- Seminar - Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Show</masterLabel>
+            <translation><!-- Trade Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Word of mouth</masterLabel>
+            <translation><!-- Word of mouth --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MSL Contact Id --></label>
+        <name>MSL_Contact_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Contact --></label>
+        <name>Primary_Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- SD ID --></label>
+        <name>SD_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- School Id --></label>
+        <name>School_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source --></label>
+        <name>Source__c</name>
+        <picklistValues>
+            <masterLabel>CALLS</masterLabel>
+            <translation><!-- CALLS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DFE</masterLabel>
+            <translation><!-- DFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MSL</masterLabel>
+            <translation><!-- MSL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NONE</masterLabel>
+            <translation><!-- NONE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PRIME</masterLabel>
+            <translation><!-- PRIME --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WEB</masterLabel>
+            <translation><!-- WEB --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Title, If Other --></label>
+        <name>Title_If_Other__c</name>
+    </fields>
+    <fields>
+        <label><!-- Title --></label>
+        <name>Title__c</name>
+        <picklistValues>
+            <masterLabel>Account Co-Coordinator</masterLabel>
+            <translation><!-- Account Co-Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Co-ordinator</masterLabel>
+            <translation><!-- Account Co-ordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Controller</masterLabel>
+            <translation><!-- Account Controller --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account Executive</masterLabel>
+            <translation><!-- Account Executive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Admin Manager</masterLabel>
+            <translation><!-- Admin Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assessm. Coordinator</masterLabel>
+            <translation><!-- Assessm. Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assistant Head</masterLabel>
+            <translation><!-- Assistant Head --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assistant Principal</masterLabel>
+            <translation><!-- Assistant Principal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bursar</masterLabel>
+            <translation><!-- Bursar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Director</masterLabel>
+            <translation><!-- Business Director --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Manager</masterLabel>
+            <translation><!-- Business Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Catering Mgr/Superv.</masterLabel>
+            <translation><!-- Catering Mgr/Superv. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chair of Governors</masterLabel>
+            <translation><!-- Chair of Governors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chancellor</masterLabel>
+            <translation><!-- Chancellor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chief Executive</masterLabel>
+            <translation><!-- Chief Executive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chief Sci. Lab. Tech</masterLabel>
+            <translation><!-- Chief Sci. Lab. Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Child protection</masterLabel>
+            <translation><!-- Child protection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dean</masterLabel>
+            <translation><!-- Dean --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dep Vice Chancellor</masterLabel>
+            <translation><!-- Dep Vice Chancellor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deputy Director of Education</masterLabel>
+            <translation><!-- Deputy Director of Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deputy Head</masterLabel>
+            <translation><!-- Deputy Head --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Director Development</masterLabel>
+            <translation><!-- Director Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Director HR</masterLabel>
+            <translation><!-- Director HR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Director of Education</masterLabel>
+            <translation><!-- Director of Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Director of Finance</masterLabel>
+            <translation><!-- Director of Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education Director</masterLabel>
+            <translation><!-- Education Director --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education Manager</masterLabel>
+            <translation><!-- Education Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fund Raising Officer</masterLabel>
+            <translation><!-- Fund Raising Officer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold / Silver Contact</masterLabel>
+            <translation><!-- Gold / Silver Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR Director</masterLabel>
+            <translation><!-- HR Director --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR Manager</masterLabel>
+            <translation><!-- HR Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR Officer</masterLabel>
+            <translation><!-- HR Officer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Art</masterLabel>
+            <translation><!-- Head of Art --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Biology</masterLabel>
+            <translation><!-- Head of Biology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Boys PE</masterLabel>
+            <translation><!-- Head of Boys PE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Bus. Studies</masterLabel>
+            <translation><!-- Head of Bus. Studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Business</masterLabel>
+            <translation><!-- Head of Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Careers</masterLabel>
+            <translation><!-- Head of Careers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Chemistry</masterLabel>
+            <translation><!-- Head of Chemistry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Citizenship</masterLabel>
+            <translation><!-- Head of Citizenship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Classics</masterLabel>
+            <translation><!-- Head of Classics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Drama</masterLabel>
+            <translation><!-- Head of Drama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Economics</masterLabel>
+            <translation><!-- Head of Economics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of English</masterLabel>
+            <translation><!-- Head of English --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Geography</masterLabel>
+            <translation><!-- Head of Geography --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Girls PE</masterLabel>
+            <translation><!-- Head of Girls PE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of HR</masterLabel>
+            <translation><!-- Head of HR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of History</masterLabel>
+            <translation><!-- Head of History --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Humanities</masterLabel>
+            <translation><!-- Head of Humanities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of IT</masterLabel>
+            <translation><!-- Head of IT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Journalism</masterLabel>
+            <translation><!-- Head of Journalism --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Law</masterLabel>
+            <translation><!-- Head of Law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Maths</masterLabel>
+            <translation><!-- Head of Maths --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Media Studs</masterLabel>
+            <translation><!-- Head of Media Studs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Media Study</masterLabel>
+            <translation><!-- Head of Media Study --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Mod.Language</masterLabel>
+            <translation><!-- Head of Mod.Language --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Music</masterLabel>
+            <translation><!-- Head of Music --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Nursery</masterLabel>
+            <translation><!-- Head of Nursery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Nursery/PreS</masterLabel>
+            <translation><!-- Head of Nursery/PreS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of PE</masterLabel>
+            <translation><!-- Head of PE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of PSE</masterLabel>
+            <translation><!-- Head of PSE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of PTA</masterLabel>
+            <translation><!-- Head of PTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Personnel</masterLabel>
+            <translation><!-- Head of Personnel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Philosophy</masterLabel>
+            <translation><!-- Head of Philosophy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Physics</masterLabel>
+            <translation><!-- Head of Physics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Politics</masterLabel>
+            <translation><!-- Head of Politics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Psychology</masterLabel>
+            <translation><!-- Head of Psychology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Recept.Class</masterLabel>
+            <translation><!-- Head of Recept.Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Rel. Studies</masterLabel>
+            <translation><!-- Head of Rel. Studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of SPS</masterLabel>
+            <translation><!-- Head of SPS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of School</masterLabel>
+            <translation><!-- Head of School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Science</masterLabel>
+            <translation><!-- Head of Science --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Sixth Form</masterLabel>
+            <translation><!-- Head of Sixth Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Sociology</masterLabel>
+            <translation><!-- Head of Sociology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Special Need</masterLabel>
+            <translation><!-- Head of Special Need --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Technology</masterLabel>
+            <translation><!-- Head of Technology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Vocat. Edu.</masterLabel>
+            <translation><!-- Head of Vocat. Edu. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 1</masterLabel>
+            <translation><!-- Head of Year 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 10</masterLabel>
+            <translation><!-- Head of Year 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 11</masterLabel>
+            <translation><!-- Head of Year 11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 2</masterLabel>
+            <translation><!-- Head of Year 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 3</masterLabel>
+            <translation><!-- Head of Year 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 4</masterLabel>
+            <translation><!-- Head of Year 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 5</masterLabel>
+            <translation><!-- Head of Year 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 6</masterLabel>
+            <translation><!-- Head of Year 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 7</masterLabel>
+            <translation><!-- Head of Year 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 8</masterLabel>
+            <translation><!-- Head of Year 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of Year 9</masterLabel>
+            <translation><!-- Head of Year 9 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of assessment</masterLabel>
+            <translation><!-- Head of assessment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Headteacher</masterLabel>
+            <translation><!-- Headteacher --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health/Safety Offic.</masterLabel>
+            <translation><!-- Health/Safety Offic. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ICT Coordinator</masterLabel>
+            <translation><!-- ICT Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INSET Co-ordinator</masterLabel>
+            <translation><!-- INSET Co-ordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Keystage 1 Co-ordin.</masterLabel>
+            <translation><!-- Keystage 1 Co-ordin. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Keystage 2 Co-ordin.</masterLabel>
+            <translation><!-- Keystage 2 Co-ordin. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Keystage 3 Co-ordin.</masterLabel>
+            <translation><!-- Keystage 3 Co-ordin. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Keystage 4 Co-ordin.</masterLabel>
+            <translation><!-- Keystage 4 Co-ordin. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Librarian</masterLabel>
+            <translation><!-- Librarian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Market.&amp; Dev. Dir.</masterLabel>
+            <translation><!-- Market.&amp; Dev. Dir. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing Manager</masterLabel>
+            <translation><!-- Marketing Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media Assistant</masterLabel>
+            <translation><!-- Media Assistant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media Buyer</masterLabel>
+            <translation><!-- Media Buyer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media Planner</masterLabel>
+            <translation><!-- Media Planner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NQT Co-ordinator</masterLabel>
+            <translation><!-- NQT Co-ordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office Manager</masterLabel>
+            <translation><!-- Office Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Operations Manager</masterLabel>
+            <translation><!-- Operations Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PA to Headteacher</masterLabel>
+            <translation><!-- PA to Headteacher --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personnel Director</masterLabel>
+            <translation><!-- Personnel Director --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personnel Manager</masterLabel>
+            <translation><!-- Personnel Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personnel Officer</masterLabel>
+            <translation><!-- Personnel Officer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Press Comm. Manager</masterLabel>
+            <translation><!-- Press Comm. Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Principal</masterLabel>
+            <translation><!-- Principal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recrtmnt Secretary</masterLabel>
+            <translation><!-- Recrtmnt Secretary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recruitment Manager</masterLabel>
+            <translation><!-- Recruitment Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recruitment Officer</masterLabel>
+            <translation><!-- Recruitment Officer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rector</masterLabel>
+            <translation><!-- Rector --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resource Manager</masterLabel>
+            <translation><!-- Resource Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School Manager</masterLabel>
+            <translation><!-- School Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School Nurse</masterLabel>
+            <translation><!-- School Nurse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School Secretary</masterLabel>
+            <translation><!-- School Secretary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School Trip Organis.</masterLabel>
+            <translation><!-- School Trip Organis. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Senior Advisor</masterLabel>
+            <translation><!-- Senior Advisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Site Manager</masterLabel>
+            <translation><!-- Site Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vice Chancellor</masterLabel>
+            <translation><!-- Vice Chancellor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vice Principal</masterLabel>
+            <translation><!-- Vice Principal --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Contact Layout</layout>
+        <sections>
+            <label><!-- Address --></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Photo --></label>
+            <section>Contact Photo</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Preferences --></label>
+            <section>Contact Preferences</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contact SD3 Standard Profile Layout</layout>
+        <sections>
+            <label><!-- Address --></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Photo --></label>
+            <section>Contact Photo</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Preferences --></label>
+            <section>Contact Preferences</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Success Contact Layout</layout>
+        <sections>
+            <label><!-- Address --></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Preferences --></label>
+            <section>Contact Preferences</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Customer Success --></label>
+        <name>Customer_Success</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- SD3 School contact --></label>
+        <name>SD3_School_contact</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Standard Contact --></label>
+        <name>Standard_Contact</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- You are missing at least one of the following required fields: Employer Name, Salutation, Last Name, Email and Phone. Please complete all required fields. --></errorMessage>
+        <name>Phone_LastName_Account_Required</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendGmail --></label>
+        <name>SendGmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooWeather --></label>
+        <name>YahooWeather</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Ad_Insert_MSL_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>MSL Ad Insert Id</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>MSL_Ad_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>MSL Ad Number</label>
+        <length>6</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recruitment_Owner_Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>Recruitment_Owner__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Recruitment Owner Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recruitment_Owner_Phone__c</fullName>
+        <externalId>false</externalId>
+        <formula>Recruitment_Owner__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Recruitment Owner Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recruitment_Owner_Title__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(Recruitment_Owner__r.Title__c, &quot;Other&quot;),
+ Recruitment_Owner__r.Title_If_Other__c ,
+TEXT(Recruitment_Owner__r.Title__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Recruitment Owner Title</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recruitment_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Recruitment Owner</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Sales Forms</relationshipLabel>
+        <relationshipName>Sales_Forms</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Notes</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Salesperson_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Salesperson</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Adrian Munro</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Aled Evans</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alex Hughes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alison Brady</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Amar  Dhanjan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ben Rawson</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Claire Neary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hannah Dedman</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jemima Greenacre</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jessica Marshall</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jimmy Jobson</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Kaan Ibrahim</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Martin Bennett</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ross Mitchell</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sean Marsh</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Simon Thurston</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tom Shillabeer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tracy  Laverack</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Viv Aylward</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Sales Form</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Salesperson_Name__c</columns>
+        <columns>MSL_Ad_Number__c</columns>
+        <columns>Ad_Insert_MSL_Id__c</columns>
+        <columns>Recruitment_Owner__c</columns>
+        <columns>Recruitment_Owner_Email__c</columns>
+        <columns>Recruitment_Owner_Phone__c</columns>
+        <columns>Recruitment_Owner_Title__c</columns>
+        <columns>Sales_Notes__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>Sales Forms List</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SF-{0000000000}</displayFormat>
+        <label>Sales Form Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Sales Forms</pluralLabel>
+    <recordTypes>
+        <fullName>Salesform_Locked</fullName>
+        <active>true</active>
+        <label>Salesform Locked</label>
+        <picklistValues>
+            <picklist>Salesperson_Name__c</picklist>
+            <values>
+                <fullName>Adrian Munro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aled Evans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alex Hughes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alison Brady</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Amar  Dhanjan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ben Rawson</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claire Neary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hannah Dedman</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jemima Greenacre</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jessica Marshall</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jimmy Jobson</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kaan Ibrahim</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Martin Bennett</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ross Mitchell</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sean Marsh</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Simon Thurston</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tom Shillabeer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tracy  Laverack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Viv Aylward</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <listViewButtons>New</listViewButtons>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Ad_Insert_Id_OR_MSL_Ad_Number_Required</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(AND(ISBLANK( Ad_Insert_MSL_Id__c ),
+       ISBLANK(MSL_Ad_Number__c)
+       ),
+   AND(NOT(ISBLANK( Ad_Insert_MSL_Id__c )),
+       NOT(ISBLANK(MSL_Ad_Number__c))
+       )
+)</errorConditionFormula>
+        <errorMessage>Please fill out either the MSL Ad Insert Id or the MSL Ad Number. Note that you can only fill out one of each.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Salesperson_Name_Req</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK( TEXT(Salesperson_Name__c) )</errorConditionFormula>
+        <errorMessage>Please fill out the Salesperson Name.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>New</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>New Sales Form</masterLabel>
+        <openType>sidebar</openType>
+        <page>sForm</page>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+    </webLinks>
+</CustomObject>

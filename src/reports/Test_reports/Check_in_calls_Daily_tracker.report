@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <acrossGroupingContext>GRAND_SUMMARY</acrossGroupingContext>
+        <calculatedFormula>IF((Call_Log__c.IsCall__c:SUM ==0 &amp;&amp;
+Call_Log__c.IsSurvey__c:SUM ==0) ||
+Call_Log__c.IsSurvey__c:SUM ==0,0,
+Call_Log__c.IsCall__c:SUM /Call_Log__c.IsSurvey__c:SUM)</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>OWNER</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Ratio calls:surveys</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_28425858</developerName>
+        <masterLabel>Care call - Status</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Case.Status_Custom__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Call Complete</sourceValue>
+            </sourceValues>
+            <value>Surveys completed</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Email Sent</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email Complete</sourceValue>
+            </sourceValues>
+            <value>Emails</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Remedial Action Complete</sourceValue>
+            </sourceValues>
+            <value>Remedial actions complete</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Call Attempt 1</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call Attempt 2</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call Attempt 3</sourceValue>
+            </sourceValues>
+            <value>Call attempts</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_20686150</developerName>
+        <masterLabel>Check in status</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Call_Log__c.CLog_Stage_Status__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Check in-call complete</sourceValue>
+            </sourceValues>
+            <value>Survey completed</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Check in-remedial action complete</sourceValue>
+            </sourceValues>
+            <value>Remedial action completed</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Check in-call attempt 1</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Check in-call attempt 2</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Check in-call attempt 3</sourceValue>
+            </sourceValues>
+            <value>Calls made</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>OPEN</field>
+    </columns>
+    <columns>
+        <field>CLOSED</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Call_Log__c.Stage__c</column>
+            <operator>equals</operator>
+            <value>Check in</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Call_Log__c.Status__c</column>
+            <operator>contains</operator>
+            <value>Call complete,remedial action complete,Call attempt</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_20686150</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OWNER</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Check in calls - Daily tracker</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseCustomEntity$Call_Log__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Call_Log__c.Call_Date_Time__c</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

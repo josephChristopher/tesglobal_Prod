@@ -1,0 +1,11 @@
+Hi,
+
+A new case has been created in Salesforce from voc@tesglobal.com and has been assigned to your queue, Customer Success Team.
+
+To access this case, please click on the link below:
+
+Case Number: {!Case.CaseNumber}
+{!Case.Link}
+
+Thank you,
+TES Salesforce Team

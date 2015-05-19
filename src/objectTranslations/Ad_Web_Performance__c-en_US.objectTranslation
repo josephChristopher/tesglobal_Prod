@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ad Web Metrics</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Ad Web Metrics</value>
+    </caseValues>
+    <fields>
+        <label><!-- Campaign Stage --></label>
+        <name>Campaign_Stage__c</name>
+        <picklistValues>
+            <masterLabel>Mid-Campaign</masterLabel>
+            <translation><!-- Mid-Campaign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post-Campaign</masterLabel>
+            <translation><!-- Post-Campaign --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Job Apply Clicks --></label>
+        <name>Job_Apply_Clicks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Job Views --></label>
+        <name>Job_Views__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vacancy --></label>
+        <name>Vacancy__c</name>
+        <relationshipLabel><!-- Ad Web Metrics --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Ad Web Performance Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- New --></label>
+        <name>New</name>
+    </webLinks>
+</CustomObjectTranslation>

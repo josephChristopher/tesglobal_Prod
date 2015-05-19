@@ -1,0 +1,46 @@
+<messaging:emailTemplate subject="Thank You for Your Feedback" recipientType="Contact" relatedToType="Survey__c">
+<messaging:htmlEmailBody >
+<html>
+<body>
+
+<p><font face="Verdana" size="0.25px" color="grey">Survey #: {!relatedTo.Name}</font></p>
+      <br></br>    
+
+<center>
+   
+    <img src="http://s22.postimg.org/5vouqlbg1/tes_logo_email.png"></img>
+    
+      </center><br></br>
+
+<STYLE type="text/css">
+          
+ p {margin-bottom:20; margin:20}
+          
+ </style>
+
+ <font face="Verdana" size="2px">
+
+<p>Dear {!RelatedTo.Survey_Taker__r.Salutation} {!RelatedTo.Survey_Taker__r.FirstName} {!RelatedTo.Survey_Taker__r.LastName},</p>
+
+<p>Thank you very much for taking part in our <b>Two Minute Survey</b> on your experience of using TES as your recruitment partner.</p>
+
+<p>We really appreciate your feedback and we will continue to use this to improve our products and services to you.</p><br></br>
+
+
+<p>Yours sincerely,</p>
+
+<p><img src="http://s18.postimg.org/mb0vvb6f9/Becky_Signature.png"></img></p>
+
+<p><b>Becky Simpson</b></p>
+
+<b><p>Customer Success Director</p></b>
+</font>
+
+</body>
+</html>
+
+
+
+
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

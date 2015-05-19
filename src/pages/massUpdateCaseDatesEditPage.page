@@ -1,0 +1,56 @@
+<apex:page standardController="Case" extensions="MassUpdateCallDates" recordSetVar="cases" showHeader="False" id="massUpdateVacancies">
+    
+    <apex:form id="muvForm">
+
+      <apex:pageBlock mode="mainDetail" title=" ">
+    <apex:pageBlockSection columns="2">
+         <analytics:reportChart reportId="00Ow00000063ibMEAQ"></analytics:reportChart>
+          <analytics:reportChart reportId="00Ow00000063ibNEAQ"></analytics:reportChart>
+           </apex:pageBlockSection>
+     </apex:pageBlock>
+   
+    <apex:pageBlock mode="mainDetail" title=" ">
+    <apex:outputPanel styleClass="grey" layout="block"> 
+    <apex:pageBlockSection title="Update Check-In or Customer Care Call Date" columns="1" collapsible="false">
+        <br />
+            <apex:inputField value="{!Case.Check_In_Call_Date__c}" id="checkInDate">
+            <apex:actionSupport event="onchange" rerender="selectedCases"/>
+            </apex:inputField>
+            <apex:inputField value="{!Case.Customer_Care_Call_Date__c}" id="careCallDate">
+            <apex:actionSupport event="onchange" rerender="selectedCases"/>
+            </apex:inputField>
+        
+        </apex:pageBlockSection>
+        </apex:outputPanel>
+        
+        <apex:pageBlockButtons location="bottom" id="buttons">
+            <apex:commandButton value="Save" action="{!save}" id="saveButton"/>
+            <apex:commandButton value="Cancel" action="{!cancel}" id="cancelButton"/>
+        </apex:pageBlockButtons>
+        
+        </apex:pageBlock>
+        
+        
+        <apex:pageBlock mode="mainDetail" title=" ">
+        <apex:outputPanel styleClass="grey" layout="block"> 
+        <apex:pageBlockSection title="Selected Cases" columns="1" collapsible="False" id="selectedCases">
+            <apex:pageBlockTable value="{!selected}" var="c" id="vacancyTable">
+                <apex:column value="{!c.casenumber}" id="vcName"/>
+                <apex:column value="{!c.Check_In_Call_Date__c}" id="vcCheckInDate"/>
+                <apex:column value="{!c.Customer_Care_Call_Date__c}" id="vcCareCallDate"/>
+            </apex:pageBlockTable>    
+            </apex:pageBlockSection>
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form> 
+
+    <style>
+     body .bPageBlock .pbBody .grey .pbSubheader {
+        background-color:#f5f5f5;
+        }
+        
+        p { font-size: 200%; }
+  
+    </style>
+      
+</apex:page>

@@ -1,0 +1,106 @@
+<apex:page controller="CCAttachmentSearchController">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"></link>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"></link>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<apex:includeScript value="/support/console/22.0/integration.js"/>
+<script type="text/javascript">
+	var prevPage = 1;
+	var nextPage = 1;
+	var currentPage = 1;
+	j$ = jQuery.noConflict();
+	j$(document).ready(function() {
+		j$("#btnSearch").click(function() {
+			//we should connect back to Salesforce and use visual force remoting to 
+			//execute the web service call which will give us merged results to be displayed in a bookstrap table
+			//with paging.
+			searchAttachments(1);
+			
+			return false;
+		});
+		
+		j$("#btnPrev").click(function() {
+			//we should connect back to Salesforce and use visual force remoting to 
+			//execute the web service call which will give us merged results to be displayed in a bookstrap table
+			//with paging.
+			if(currentPage != prevPage) {
+				searchAttachments(prevPage);
+			}
+			
+			return false;
+		});
+		
+		j$("#btnNext").click(function() {
+			//we should connect back to Salesforce and use visual force remoting to 
+			//execute the web service call which will give us merged results to be displayed in a bookstrap table
+			//with paging.
+			if(currentPage != nextPage) {
+				searchAttachments(nextPage);
+			}
+			
+			return false;
+		});
+	});
+	
+	function searchAttachments(page) {
+		CCAttachmentSearchController.searchAttachments(j$("#search").val(),page,function(result,status) {
+			prevPage = result.prevPage;
+			nextPage = result.nextPage;
+			currentPage = result.currentPage;
+			j$("#resultTable").empty();
+			j$("#resultTable").append(j$("<tr>"+
+																	 "<th>Attachment</th>"+
+																	 "<th>Booking Name</th>"+
+																	 "<th>Account Name</th>"+
+																	 "<th>Mailbox</th>"+
+																	 "<th>Folder</th>"+
+																	 "<th>Owner</th>"+
+																	 "<th>Ad Number</th>"+
+																	 "<th>Sales Rep</th>"+
+																	 "<th>Created Date</th>"+
+																	 "</tr>"));
+			//we should now add the necessary table rows for each result
+			for(var i = 0; i < result.results.length; i++) {
+				var row = result.results[i];
+				j$("#resultTable").append(j$("<tr>"+
+													"<td><a href=\"/"+row.attachment.url+"\">"+row.attachment.filename+"</a></td>"+
+													"<td><a href=\"javascript:sforce.console.openPrimaryTab(null,'/"+row.opportunity.Id+"',true)\">"+row.opportunity.Name+"</a></td>"+
+													(row.opportunity.Account != null ? "<td><a href=\"javascript:sforce.console.openPrimaryTab(null,'/"+row.opportunity.Account.Id+"',true)\">"+row.opportunity.Account.Name+"</a></td>" : "<td></td>")+
+													(row.opportunity.Mailbox__r != null ? "<td><a href=\"javascript:sforce.console.openPrimaryTab(null,'/"+row.opportunity.Mailbox__r.Id+"',true)\">"+row.opportunity.Mailbox__r.Name+"</a></td>" : "<td></td>")+
+													(row.opportunity.Folder__r != null ? "<td><a href=\"javascript:sforce.console.openPrimaryTab(null,'/"+row.opportunity.Folder__r.Id+"',true)\">"+row.opportunity.Folder__r.Name+"</a></td>" : "<td></td>")+
+													"<td><a href=\"javascript:sforce.console.openPrimaryTab(null,'/"+row.opportunity.Owner.Id+"',true)\">"+row.opportunity.Owner.Name+"</a></td>"+
+													"<td>"+(row.opportunity.Ad_Number__c != null ? row.opportunity.Ad_Number__c : "")+"</td>"+
+													(row.opportunity.Sales_Rep__r != null ? "<td><a href=\"javascript:sforce.console.openPrimaryTab(null,'/"+row.opportunity.Sales_Rep__r.Id+"',true)\">"+row.opportunity.Sales_Rep__r.Name+"</a></td>" : "<td></td>")+
+													"<td>"+new Date(row.opportunity.CreatedDate).toLocaleDateString("en-US",{ weekday: "short", year: "numeric", month: "short", day: "numeric", 
+                    timeZone: "UTC", timeZoneName: "short", hour: "2-digit", minute: "2-digit", second: "2-digit"})+"</a></td>"+
+													"</tr>"));
+			}
+		});
+	}
+</script>
+
+<div class="container">
+	<h3>Inbox: Attachment Search</h3>
+	<form class="form-inline">
+		<div class="form-group">
+			<label for="search">Attachment Search:</label>
+			<input type="text" class="form-control" id="search" placeholder="Attachment Filename" />
+		</div>
+		<button type="button" class="btn btn-default" id="btnSearch">Search</button>
+	</form>
+	<div class="col-sm-12">
+		<div class="col-sm-12" style="overflow: auto; width: 720px; height: 310px;">
+			<table class="table table-bordered">
+				<tbody class="table-hover" id="resultTable">
+				</tbody>
+			</table>
+		</div>
+		<div class="btn-toolbar" role="toolbar">
+			<div class="btn-group" role="group">
+				<button type="button" class="btn btn-default" id="btnPrev">&lt;&lt; Prev</button>
+				<button type="button" class="btn btn-default" id="btnNext">Next &gt;&gt;</button>
+			</div>
+		</div>
+	</div>
+</div>
+</apex:page>

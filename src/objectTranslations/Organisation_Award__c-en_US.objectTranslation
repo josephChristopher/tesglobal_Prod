@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Organisation Award</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Organisation Awards</value>
+    </caseValues>
+    <fields>
+        <label><!-- Award --></label>
+        <name>Award__c</name>
+        <relationshipLabel><!-- Organisation Awards --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Organisation --></label>
+        <name>organisation__c</name>
+        <relationshipLabel><!-- Organisation Awards --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

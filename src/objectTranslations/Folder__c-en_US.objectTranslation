@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Folder</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Folders</value>
+    </caseValues>
+    <fields>
+        <label><!-- Allocation Group --></label>
+        <name>Allocation_Group__c</name>
+        <picklistValues>
+            <masterLabel>AGENCY</masterLabel>
+            <translation><!-- AGENCY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIRECT</masterLabel>
+            <translation><!-- DIRECT --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- List View URL --></label>
+        <name>List_View_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailbox --></label>
+        <name>Parent_Folder__c</name>
+        <relationshipLabel><!-- Sub Folders --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Folder Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Mailbox Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Folder --></label>
+        <name>Folder</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Mailbox --></label>
+        <name>Mailbox</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>32.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>this visual force page will be embedded in the default opportunity page layout and redirect to a custom visual force page based on the selected stage.</description>
+    <label>OpportunityRedirectBasedOnStage</label>
+</ApexPage>

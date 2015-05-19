@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>javier.ciccarelli@cloudreach.co.uk</contactEmail>
+    <contactPhone>+447475067593</contactPhone>
+    <label>MSL Sync Server</label>
+    <oauthConfig>
+        <callbackUrl>https://www.cloudreach.com</callbackUrl>
+        <consumerKey>3MVG9A_f29uWoVQs1TmTSD.dtEpmWiHwU4XE2M.vAPAkjq_phclL8w_x83nbExGPkkD_P4gw1Bwc9sF8RuzEP</consumerKey>
+        <scopes>Full</scopes>
+    </oauthConfig>
+</ConnectedApp>

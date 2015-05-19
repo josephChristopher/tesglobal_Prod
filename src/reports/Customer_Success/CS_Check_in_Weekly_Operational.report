@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <acrossGroupingContext>GRAND_SUMMARY</acrossGroupingContext>
+        <calculatedFormula>IF((Call_Log__c.IsCall__c:SUM == 0 &amp;&amp; Call_Log__c.IsSurvey__c:SUM == 0) || Call_Log__c.IsSurvey__c:SUM == 0, 0,  Call_Log__c.IsCall__c:SUM/Call_Log__c.IsSurvey__c:SUM)</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>OWNER</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Ratio Calls/Surveys</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_38904518</developerName>
+        <masterLabel>Main Status</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Call_Log__c.Status__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Call Attempt 1</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call Attempt 2</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call Attempt 3</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call Complete</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Remedial Action Required</sourceValue>
+            </sourceValues>
+            <value>Calls Made</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Email Sent</sourceValue>
+            </sourceValues>
+            <value>Email Sent</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_38028784</developerName>
+        <masterLabel>Status</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Call_Log__c.Status__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Call Complete</sourceValue>
+            </sourceValues>
+            <value>Call Surveys</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Remedial Action Required</sourceValue>
+            </sourceValues>
+            <value>Remedial Actions</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Email Sent</sourceValue>
+            </sourceValues>
+            <value>Email Sent</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Call Attempt 3</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call Attempt 2</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call Attempt 1</sourceValue>
+            </sourceValues>
+            <value>Call Attempts</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Call_Log__c.Status__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Call_Log__c.Stage__c</column>
+            <operator>equals</operator>
+            <value>Check In</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Call_Log__c.Status__c</column>
+            <operator>contains</operator>
+            <value>Call Attempt,Call Complete,Remedial Action Required,Email Sent</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_38904518</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_38028784</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Call_Log__c.Call_Date_Time__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OWNER</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>CS Check-in Weekly Operational</name>
+    <params>
+        <name>units</name>
+        <value>h</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseCustomEntity$Call_Log__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Call_Log__c.Call_Date_Time__c</dateColumn>
+        <interval>INTERVAL_THISWEEK</interval>
+    </timeFrameFilter>
+</Report>

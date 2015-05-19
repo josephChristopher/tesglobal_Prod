@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Remedial Action</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Remedial Actions</value>
+    </caseValues>
+    <fields>
+        <label><!-- Approval/Denial Date/Time --></label>
+        <name>Approval_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approver Name --></label>
+        <name>Approver_Name__c</name>
+        <picklistValues>
+            <masterLabel>Becky Simpson</masterLabel>
+            <translation><!-- Becky Simpson --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gareth Thyer-Jones</masterLabel>
+            <translation><!-- Gareth Thyer-Jones --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gavin Power</masterLabel>
+            <translation><!-- Gavin Power --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Julia Rontree</masterLabel>
+            <translation><!-- Julia Rontree --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michelle Reid</masterLabel>
+            <translation><!-- Michelle Reid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>Case__c</name>
+        <relationshipLabel><!-- Remedial Actions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- % Discount --></label>
+        <name>Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Offer Claim Date --></label>
+        <name>Offer_Claim_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Offer Expiry Date --></label>
+        <name>Offer_Expiry_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Offer/Resolution Description --></label>
+        <name>Offer_Resolution_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Offer/Resolution Type --></label>
+        <name>Offer_Resolution__c</name>
+        <picklistValues>
+            <masterLabel>Extend Closure Date</masterLabel>
+            <translation><!-- Extend Closure Date --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOC Additional Classification</masterLabel>
+            <translation><!-- FOC Additional Classification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOC Daily or Weekly Alert</masterLabel>
+            <translation><!-- FOC Daily or Weekly Alert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOC Gold</masterLabel>
+            <translation><!-- FOC Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOC Rerun Online</masterLabel>
+            <translation><!-- FOC Rerun Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOC Rerun Print</masterLabel>
+            <translation><!-- FOC Rerun Print --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOC Silver</masterLabel>
+            <translation><!-- FOC Silver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Free Upgrade</masterLabel>
+            <translation><!-- Free Upgrade --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other (Pre-Approval Required)</masterLabel>
+            <translation><!-- Other (Pre-Approval Required) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Possible Roles to Apply Offer --></label>
+        <name>Possible_Roles_to_Apply_Offer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+        <picklistValues>
+            <masterLabel>1 - Very High</masterLabel>
+            <translation><!-- 1 - Very High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 - High</masterLabel>
+            <translation><!-- 2 - High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 - Medium</masterLabel>
+            <translation><!-- 3 - Medium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 - Low</masterLabel>
+            <translation><!-- 4 - Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 - Very Low</masterLabel>
+            <translation><!-- 5 - Very Low --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- QMS Id --></label>
+        <name>QMS_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason for Credit --></label>
+        <name>Reason_for_Credit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason for Denial --></label>
+        <name>Reason_for_Denial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recharge Value --></label>
+        <name>Recharge_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Awaiting Approval</masterLabel>
+            <translation><!-- Awaiting Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit Given</masterLabel>
+            <translation><!-- Credit Given --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Denied</masterLabel>
+            <translation><!-- Denied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Offer Given</masterLabel>
+            <translation><!-- Offer Given --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TBD</masterLabel>
+            <translation><!-- TBD --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Value of Credit --></label>
+        <name>Value_of_Credit__c</name>
+    </fields>
+    <layouts>
+        <layout>Classified Credit Layout</layout>
+        <sections>
+            <label><!-- Approval Details --></label>
+            <section>Approval Details</section>
+        </sections>
+        <sections>
+            <label><!-- Credit Details --></label>
+            <section>Credit Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Goodwill Offer Page Layout</layout>
+        <sections>
+            <label><!-- Approval Details --></label>
+            <section>Approval Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Offer Details --></label>
+            <section>Offer Details</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Classified Credit --></label>
+        <name>Classified_Credit</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Goodwill Offer --></label>
+        <name>Goodwill_Offer</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please input the reason why this remedial action has been denied. --></errorMessage>
+        <name>Reason_for_Denial_Required</name>
+    </validationRules>
+</CustomObjectTranslation>

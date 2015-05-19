@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Opportunity.Vacancies__r.Cases__r$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Vacancies__r$Name</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Account</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Vacancies__r$Date_of_Ad_Publication_on_TES_Site__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Vacancies__r$Date_of_Ad_Expiry_on_TES_Global_Site__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Vacancies__r$Ad_Insert_MSL_ID__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Vacancies__r.Cases__r$Actual_Customer_Care_Call_Date__c</field>
+    </columns>
+    <description>Save As - To create your own.</description>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity$Bill_To__c.Agency__c</column>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Vacancies__r$Date_of_Ad_Publication_on_TES_Site__c</column>
+            <operator>greaterThan</operator>
+            <value>12/12/2014 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Vacancies__r$Job_Type__c</column>
+            <operator>notContain</operator>
+            <value>Starter</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Vacancies__r.Cases__r$Status</column>
+            <operator>equals</operator>
+            <value>Check In</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Vacancies__r.Cases__r$Status_Custom__c</column>
+            <operator>equals</operator>
+            <value>Awaiting Call,Call Attempt 1,Call Attempt 2,Call Attempt 3,Email Scheduled</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity$Name</column>
+            <operator>notContain</operator>
+            <value>VISION FOR EDUCATION,COUNCIL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Vacancies__r$Classification__c</column>
+            <operator>notContain</operator>
+            <value>Further</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity$Salesperson__c</column>
+            <operator>notContain</operator>
+            <value>FE,Agency</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Vacancies__r.Cases__r$Owner</column>
+            <operator>contains</operator>
+            <value>Jamie</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.Vacancies__r.Cases__r$Status_Custom__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Check In - Filtered</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Bookings_with_cases_and_vacancies__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Opportunity.Vacancies__r.Cases__r$Customer_Care_Call_Date__c</dateColumn>
+        <interval>INTERVAL_LAST90</interval>
+    </timeFrameFilter>
+</Report>

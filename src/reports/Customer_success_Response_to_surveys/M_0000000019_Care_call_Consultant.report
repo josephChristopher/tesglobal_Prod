@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <aggregates>
+        <calculatedFormula>IF(B0#RowCount == 0, 0, (B1#RowCount/B0#RowCount))</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA3</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>true</isCrossBlock>
+        <masterLabel>% Response off surveys</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>B1#RowCount/PARENTGROUPVAL(B0#RowCount, GRAND_SUMMARY)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA4</developerName>
+        <downGroupingContext>Survey__c$CreatedBy</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>true</isCrossBlock>
+        <masterLabel>%Response over all</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>B1#RowCount/PARENTGROUPVAL(B1#RowCount, GRAND_SUMMARY)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA5</developerName>
+        <downGroupingContext>Survey__c$CreatedBy</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>true</isCrossBlock>
+        <masterLabel>% Response off Total responses</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <block>
+        <blockInfo>
+            <blockId>B1</blockId>
+            <joinTable>Survey__c</joinTable>
+        </blockInfo>
+        <columns>
+            <field>Survey__c$Name</field>
+        </columns>
+        <columns>
+            <field>Survey__c.Survey_Number__r$Response__c</field>
+        </columns>
+        <filter>
+            <criteriaItems>
+                <column>Survey__c.Survey_Number__r$Metrics__c</column>
+                <operator>equals</operator>
+                <value>M-0000000019</value>
+            </criteriaItems>
+            <criteriaItems>
+                <column>Survey__c$CreatedBy</column>
+                <operator>notContain</operator>
+                <value>chris stura</value>
+            </criteriaItems>
+        </filter>
+        <format>Summary</format>
+        <name>Surveys with metrics and metrics block 1</name>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>Surveys_with_metrics_and_metrics_data__c</reportType>
+        <scope>organization</scope>
+        <timeFrameFilter>
+            <dateColumn>Survey__c$CreatedDate</dateColumn>
+            <interval>INTERVAL_CUSTOM</interval>
+        </timeFrameFilter>
+    </block>
+    <block>
+        <blockInfo>
+            <aggregateReferences>
+                <aggregate>FORMULA3</aggregate>
+            </aggregateReferences>
+            <aggregateReferences>
+                <aggregate>FORMULA5</aggregate>
+            </aggregateReferences>
+            <blockId>B0</blockId>
+            <joinTable>Survey__c</joinTable>
+        </blockInfo>
+        <columns>
+            <field>Survey__c$Name</field>
+        </columns>
+        <filter>
+            <criteriaItems>
+                <column>Survey__c$CreatedBy</column>
+                <operator>notContain</operator>
+                <value>chris stura</value>
+            </criteriaItems>
+            <criteriaItems>
+                <column>Survey__c$Survey_Template__c</column>
+                <operator>contains</operator>
+                <value>care call</value>
+            </criteriaItems>
+        </filter>
+        <format>Summary</format>
+        <name>Surveys block 2</name>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>Surveys__c</reportType>
+        <scope>organization</scope>
+        <timeFrameFilter>
+            <dateColumn>Survey__c$CreatedDate</dateColumn>
+            <interval>INTERVAL_CUSTOM</interval>
+        </timeFrameFilter>
+    </block>
+    <blockInfo>
+        <blockId xsi:nil="true"/>
+        <joinTable>Survey__c</joinTable>
+    </blockInfo>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFCCCC</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>B0#FORMULA3</column>
+        </chartSummaries>
+        <chartSummaries>
+            <axisBinding>y2</axisBinding>
+            <column>B0#RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumnLine</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>Survey__c$CreatedBy</groupingColumn>
+        <legendPosition>Bottom</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Large</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <title>M-0000000019-Care call-consultant</title>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <description>Was this a new vacancy or a re-advertised position?</description>
+    <format>MultiBlock</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Survey__c$CreatedBy</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>M-0000000019-Care call-Consultant</name>
+    <reportType>Surveys_with_metrics_and_metrics_data__c</reportType>
+    <showDetails>false</showDetails>
+</Report>

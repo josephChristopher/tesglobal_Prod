@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Organisation Document</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Organisation Documents</value>
+    </caseValues>
+    <fields>
+        <label><!-- Alternative Text --></label>
+        <name>Alternative_Test__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attachment Type --></label>
+        <name>Attachment_Type__c</name>
+        <picklistValues>
+            <masterLabel>Brochure</masterLabel>
+            <translation><!-- Brochure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ethos</masterLabel>
+            <translation><!-- Ethos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General details</masterLabel>
+            <translation><!-- General details --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Letter</masterLabel>
+            <translation><!-- Letter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Map/Location</masterLabel>
+            <translation><!-- Map/Location --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Principle Message</masterLabel>
+            <translation><!-- Principle Message --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospectus</masterLabel>
+            <translation><!-- Prospectus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vision</masterLabel>
+            <translation><!-- Vision --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Expiry Date --></label>
+        <name>Expiry_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Quote --></label>
+        <name>Is_Quote__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Job Title --></label>
+        <name>Quote_Job_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Name --></label>
+        <name>Quote_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote --></label>
+        <name>Quote__c</name>
+    </fields>
+    <fields>
+        <label><!-- Title --></label>
+        <name>Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Organisation --></label>
+        <name>organisation__c</name>
+        <relationshipLabel><!-- Organisation Pictures/Quotes/Attachments --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Attachment Layout</layout>
+        <sections>
+            <label><!-- Attachment Details --></label>
+            <section>Attachment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Document Details --></label>
+            <section>Document Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Photo Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Document Details --></label>
+            <section>Document Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Quote Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Document Details --></label>
+            <section>Document Details</section>
+        </sections>
+        <sections>
+            <label><!-- Quote Details --></label>
+            <section>Quote Details</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Attachment --></label>
+        <name>Attachment</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Photo --></label>
+        <name>Photo</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Quote --></label>
+        <name>Quote</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

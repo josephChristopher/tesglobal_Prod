@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Organisation Link</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Organisation Links</value>
+    </caseValues>
+    <fields>
+        <label><!-- Expiry Date --></label>
+        <name>Expiry_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Organisation --></label>
+        <name>Organisation__c</name>
+        <relationshipLabel><!-- Organisation Links --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- URL --></label>
+        <name>URL__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

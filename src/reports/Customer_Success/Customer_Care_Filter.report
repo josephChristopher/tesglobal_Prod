@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>FK_$Vacancy__c.Contact_Name_for_Application_Submition__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_PHONE1</field>
+    </columns>
+    <columns>
+        <field>Case.Ad_Start_Date_Time__c</field>
+    </columns>
+    <columns>
+        <field>Case.Ad_End_Date_Time__c</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$Vacancy__c.Id_on_TES_Global_Site__c</field>
+    </columns>
+    <columns>
+        <field>Case.Actual_Customer_Care_Call_Date__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>OWNER</column>
+            <operator>contains</operator>
+            <value>Jamie</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STATUS</column>
+            <operator>equals</operator>
+            <value>Customer Care Call</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT.NAME</column>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Ad_Start_Date_Time__c</column>
+            <operator>greaterThan</operator>
+            <value>12/12/2014 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$Vacancy__c.Job_Type__c</column>
+            <operator>notContain</operator>
+            <value>Starter</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$Vacancy__c.Booking__c</column>
+            <operator>notContain</operator>
+            <value>CUSTOMER,COUNCIL,BOROUGH OF,ADVERTISING</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Status_Custom__c</column>
+            <operator>equals</operator>
+            <value>Awaiting Call</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$Vacancy__c.Classification__c</column>
+            <operator>notContain</operator>
+            <value>Further,Other,Local Authority</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$Vacancy__c.Sub_Class__c</column>
+            <operator>notContain</operator>
+            <value>Business Manager/Bursar,Other Support,Teaching Assistant</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCOUNT.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Customer Care Filter</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList@Case.Vacancy__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Case.Actual_Customer_Care_Call_Date__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Case.Customer_Care_Call_Date__c</dateColumn>
+        <interval>INTERVAL_LAST90</interval>
+    </timeFrameFilter>
+</Report>

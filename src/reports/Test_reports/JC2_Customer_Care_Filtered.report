@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>Case.Job_Type__c</field>
+    </columns>
+    <columns>
+        <field>Case.Classification__c</field>
+    </columns>
+    <columns>
+        <field>FK_$Vacancy__c.Booking__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Case.Sales_Person_Txt__c</field>
+    </columns>
+    <columns>
+        <field>Case.Bill_To_Name_txt__c</field>
+    </columns>
+    <columns>
+        <field>Case.Agency_Name_txt__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Case.Status_Custom__c</column>
+            <operator>equals</operator>
+            <value>Awaiting Call,Call Attempt 1,Call Attempt 2,Call Attempt 3</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Ad_Start_Date_Time__c</column>
+            <operator>greaterThan</operator>
+            <value>12/12/2014 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$Vacancy__c.Job_Type__c</column>
+            <operator>notContain</operator>
+            <value>Starter</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STATUS</column>
+            <operator>equals</operator>
+            <value>Customer Care Call</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <operator>notContain</operator>
+            <value>VISION FOR EDUCATION,COUNCIL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Classification__c</column>
+            <operator>notContain</operator>
+            <value>Further</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <operator>contains</operator>
+            <value>Jamie Morris</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Agency_Name_txt__c</column>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$Vacancy__c.Booking__c</column>
+            <operator>notContain</operator>
+            <value>VISION FOR EDUCATION,COUNCIL</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case.Status_Custom__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>JC2-Customer Care - Filtered</name>
+    <params>
+        <name>units</name>
+        <value>h</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList@Case.Vacancy__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

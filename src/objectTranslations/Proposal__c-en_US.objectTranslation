@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Proposal</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Proposals</value>
+    </caseValues>
+    <fields>
+        <label><!-- Agency ID --></label>
+        <name>Agency_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency Name --></label>
+        <name>Agency_Name__c</name>
+        <relationshipLabel><!-- Agency Proposals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Booked Amount - Total --></label>
+        <name>Booked_Amount_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Booked Premium Amount --></label>
+        <name>Booked_Premium_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Booked Premium Products --></label>
+        <name>Booked_Premium_Products__c</name>
+        <picklistValues>
+            <masterLabel>Additional Category</masterLabel>
+            <translation><!-- Additional Category --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contextual Ad</masterLabel>
+            <translation><!-- Contextual Ad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Featured Employer</masterLabel>
+            <translation><!-- Featured Employer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Featured Job</masterLabel>
+            <translation><!-- Featured Job --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Job of the week</masterLabel>
+            <translation><!-- Job of the week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sponsored Email Alert</masterLabel>
+            <translation><!-- Sponsored Email Alert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sponsored Job</masterLabel>
+            <translation><!-- Sponsored Job --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Booked Print Ad Size --></label>
+        <name>Booked_Print_Ad_Size__c</name>
+    </fields>
+    <fields>
+        <label><!-- Booked Standard Amount --></label>
+        <name>Booked_Standard_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Booked Standard Products --></label>
+        <name>Booked_Standard_Products__c</name>
+        <picklistValues>
+            <masterLabel>Bronze</masterLabel>
+            <translation><!-- Bronze --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation><!-- Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Print</masterLabel>
+            <translation><!-- Print --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver</masterLabel>
+            <translation><!-- Silver --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Name of the school establishment that needs a vacancy advertised. --></help>
+        <label><!-- Client Name --></label>
+        <name>Client_Name__c</name>
+        <relationshipLabel><!-- Proposals --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Date the Proposal is closed. --></help>
+        <label><!-- Close Date --></label>
+        <name>Close_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Current Amount of the Proposal. Open Proposals will show Total Proposed Amount, while Closed Proposals will show Total Booked Amount. --></help>
+        <label><!-- Current Amount --></label>
+        <name>Current_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pre-Booking or Post-Booking? --></label>
+        <name>Pre_Booking_or_Post_Booking__c</name>
+        <picklistValues>
+            <masterLabel>Post-Booking</masterLabel>
+            <translation><!-- Post-Booking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Booking</masterLabel>
+            <translation><!-- Pre-Booking --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Proposal Status --></label>
+        <name>Proposal_Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Proposed Amount - Total --></label>
+        <name>Proposed_Amount_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Proposed Premium Amount --></label>
+        <name>Proposed_Premium_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Proposed Premium Products --></label>
+        <name>Proposed_Premium_Products__c</name>
+        <picklistValues>
+            <masterLabel>Additional Category</masterLabel>
+            <translation><!-- Additional Category --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contextual Ad</masterLabel>
+            <translation><!-- Contextual Ad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Featured Employer</masterLabel>
+            <translation><!-- Featured Employer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Featured Job</masterLabel>
+            <translation><!-- Featured Job --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Job of the week</masterLabel>
+            <translation><!-- Job of the week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sponsored Email Alert</masterLabel>
+            <translation><!-- Sponsored Email Alert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sponsored Job</masterLabel>
+            <translation><!-- Sponsored Job --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Proposed Print Ad Size --></label>
+        <name>Proposed_Print_Ad_Size__c</name>
+    </fields>
+    <fields>
+        <label><!-- Proposed Standard Amount --></label>
+        <name>Proposed_Standard_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Proposed Standard Products --></label>
+        <name>Proposed_Standard_Products__c</name>
+        <picklistValues>
+            <masterLabel>Bronze</masterLabel>
+            <translation><!-- Bronze --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation><!-- Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Print</masterLabel>
+            <translation><!-- Print --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver</masterLabel>
+            <translation><!-- Silver --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Related Booking --></label>
+        <name>Related_Booking__c</name>
+        <relationshipLabel><!-- Proposals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Stage --></label>
+        <name>Stage__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed Won - Low</masterLabel>
+            <translation><!-- Closed Won - Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed Won - Medium</masterLabel>
+            <translation><!-- Closed Won - Medium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed Won - Premium</masterLabel>
+            <translation><!-- Closed Won - Premium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposal/Price Quote</masterLabel>
+            <translation><!-- Proposal/Price Quote --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Proposal Create Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Proposal Details --></label>
+            <section>Proposal Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Proposal Edit Layout</layout>
+        <sections>
+            <label><!-- Booking Details --></label>
+            <section>Booking Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Proposal Details --></label>
+            <section>Proposal Details</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Closed Proposal --></label>
+        <name>Closed_Proposal</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Open Proposal --></label>
+        <name>Proposal_Create</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please fill out either the Proposed Premium or Proposed Standard Amount before saving this Proposal. --></errorMessage>
+        <name>Proposal_Req_Fields</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>Donut</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>false</expandOthers>
+        <groupingColumn>Vacancy__c.Cases__r$Owner</groupingColumn>
+        <legendPosition>Bottom</legendPosition>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>true</showPercentage>
+        <showTotal>true</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <title>Outbound Customer Care Calls Made Today</title>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>Vacancy__c$Name</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c.Cases__r$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c.Cases__r.Call_Logs__r$Stage__c</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c.Cases__r.Call_Logs__r$Status__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Vacancy__c.Cases__r.Call_Logs__r$Status__c</column>
+            <operator>contains</operator>
+            <value>Call Complete,Remedial Action Required,Call Attempt</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Vacancy__c.Cases__r.Call_Logs__r$Stage__c</column>
+            <operator>equals</operator>
+            <value>Customer Care Call</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Vacancy__c.Cases__r.Call_Logs__r$Call_Date_Time__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Vacancy__c.Cases__r$Owner</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Outbound Customer Care Calls Made Today</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Vacancies_with_Cases_with_Call_Logs__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Vacancy__c.Cases__r.Call_Logs__r$Call_Date_Time__c</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

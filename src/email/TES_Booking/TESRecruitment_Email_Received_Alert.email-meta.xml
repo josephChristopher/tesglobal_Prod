@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email sent to the client who sent the email booking to confirm that the email has been received. For emails to Direct Recruitment.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>TES Recruitment: Email Received Alert</name>
+    <style>freeForm</style>
+    <subject>We have received your email</subject>
+    <textOnly>Recruit the best
+
+Exceptional candidates, every time
+
+
+
+
+
+Dear {!Opportunity.Order_By__c},
+
+
+
+Thank you for your email and for your interest in recruiting with TES. For general queries, one of our specialists will contact you as soon as possible. For specific print advertising requests, we will contact you prior to the deadline of the edition in which you have chosen to advertise.
+
+
+
+If you have any further questions about your recruitment campaign, please don’t hesitate to email or call the team on 020 3194 3050, Monday to Friday, 9am to 5pm (excluding bank holidays). If you are from an agency, please call 020 3194 3232 to speak to your account manager.
+
+
+
+Print advertising information:
+
+The deadline for booking print adverts in TES is 4pm on the Monday of that week’s edition, or 2pm if you would like a free proof of your advert. The deadline for artwork is 10am on the Tuesday.
+
+
+
+Thank you for choosing TES. We look forward to helping you recruit the best.
+
+
+
+Gavin Power
+
+Customer Service Director
+
+
+
+View the TES Recruitment Guide and our terms and conditions at http://www.tes.co.uk/recruit
+
+did you know?  You can advertise all your support roles FREE online*
+
+simply call 020 3194 3050 or email your vacancy today at tessupport@tesglobal.com
+
+* Excludes any teaching, teaching leadership and business manager/bursar roles.</textOnly>
+    <type>custom</type>
+</EmailTemplate>

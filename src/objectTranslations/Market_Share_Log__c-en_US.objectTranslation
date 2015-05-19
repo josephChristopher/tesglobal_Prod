@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Market Share Log</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Market Share Logs</value>
+    </caseValues>
+    <fields>
+        <help><!-- Checks if the current movement category is different from the original movement category for this current week. --></help>
+        <label><!-- Changed since first reported --></label>
+        <name>Changed_since_first_reported__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Movement Category --></label>
+        <name>Current_Movement_Category__c</name>
+        <picklistValues>
+            <masterLabel>100% TES both years</masterLabel>
+            <translation><!-- 100% TES both years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>100% TES to left TES</masterLabel>
+            <translation><!-- 100% TES to left TES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advertised TY only - Lost TES share WoW</masterLabel>
+            <translation><!-- Advertised TY only - Lost TES share WoW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advertised this year but not last</masterLabel>
+            <translation><!-- Advertised this year but not last --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advertised this year but not last-new this week</masterLabel>
+            <translation><!-- Advertised this year but not last-new this week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Increased TES Share</masterLabel>
+            <translation><!-- Increased TES Share --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No advert YTD</masterLabel>
+            <translation><!-- No advert YTD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-TES both years</masterLabel>
+            <translation><!-- Non-TES both years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reduced TES Share</masterLabel>
+            <translation><!-- Reduced TES Share --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Start share with others</masterLabel>
+            <translation><!-- Start share with others --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stopped using TES</masterLabel>
+            <translation><!-- Stopped using TES --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- % Guardian Volume TY --></label>
+        <name>Guardian_Volume_TY__c</name>
+    </fields>
+    <fields>
+        <label><!-- Headbase --></label>
+        <name>Headbase__c</name>
+    </fields>
+    <fields>
+        <label><!-- Original Movement Category --></label>
+        <name>Original_Movement_Category__c</name>
+        <picklistValues>
+            <masterLabel>100% TES both years</masterLabel>
+            <translation><!-- 100% TES both years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>100% TES to left TES</masterLabel>
+            <translation><!-- 100% TES to left TES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advertised TY only - Lost TES share WoW</masterLabel>
+            <translation><!-- Advertised TY only - Lost TES share WoW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advertised this year but not last</masterLabel>
+            <translation><!-- Advertised this year but not last --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advertised this year but not last-new this week</masterLabel>
+            <translation><!-- Advertised this year but not last-new this week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Increased TES Share</masterLabel>
+            <translation><!-- Increased TES Share --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No advert YTD</masterLabel>
+            <translation><!-- No advert YTD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-TES both years</masterLabel>
+            <translation><!-- Non-TES both years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reduced TES Share</masterLabel>
+            <translation><!-- Reduced TES Share --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Start share with others</masterLabel>
+            <translation><!-- Start share with others --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stopped using TES</masterLabel>
+            <translation><!-- Stopped using TES --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SD Name --></label>
+        <name>SD_Name__c</name>
+        <relationshipLabel><!-- Market Share Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- School Id --></label>
+        <name>School_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- % TES Volume LY --></label>
+        <name>TES_Volume_LY__c</name>
+    </fields>
+    <fields>
+        <label><!-- % TES Volume YTD --></label>
+        <name>TES_Volume_YTD__c</name>
+    </fields>
+    <fields>
+        <label><!-- %TES Volume YTD (for week added) --></label>
+        <name>TES_Volume_YTD_for_week_added__c</name>
+    </fields>
+    <fields>
+        <label><!-- Volumes YTD --></label>
+        <name>Volumes_YTD__c</name>
+    </fields>
+    <fields>
+        <help><!-- Week the client first changed behaviour. --></help>
+        <label><!-- Week First Added --></label>
+        <name>Week_Added__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week of Report --></label>
+        <name>Week_of_Report__c</name>
+    </fields>
+    <fields>
+        <label><!-- YOY (ppt diff) --></label>
+        <name>YOY_ppt_diff__c</name>
+    </fields>
+    <fields>
+        <label><!-- % eTeach Volume TY --></label>
+        <name>eTeach_Volume_TY__c</name>
+    </fields>
+    <layouts>
+        <layout>Market Share Log Layout</layout>
+        <sections>
+            <label><!-- Competition Share --></label>
+            <section>Competition Share</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- TES Share --></label>
+            <section>TES Share</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

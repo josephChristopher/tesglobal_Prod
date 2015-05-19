@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Opportunity.Vacancies__r.Cases__r$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Vacancies__r$Name</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Name</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Vacancies__r.Cases__r$Owner</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Bill_To__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Bill_To__c.Agency__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Cases with booking details</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Bookings_with_cases_and_vacancies__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Opportunity$CloseDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

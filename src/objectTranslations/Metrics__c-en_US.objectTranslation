@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Metrics</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Metrics</value>
+    </caseValues>
+    <fields>
+        <help><!-- Available values for a particular metric that users can choose from. Please have each value in a separate line. --></help>
+        <label><!-- Available Values --></label>
+        <name>Available_Values__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Competition</masterLabel>
+            <translation><!-- Competition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Satisfaction</masterLabel>
+            <translation><!-- Customer Satisfaction --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Customer Care Call Date --></label>
+        <name>Customer_Care_Call_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Metrics Question --></label>
+        <name>Metrics_Question__c</name>
+    </fields>
+    <fields>
+        <label><!-- Old Id --></label>
+        <name>Old_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- The type of question format the user wants to have in the survey (e.g. Free Textbox, Multiple Choice, Rating, etc.). --></help>
+        <label><!-- Question Format --></label>
+        <name>Question_Format__c</name>
+        <picklistValues>
+            <masterLabel>Date Value</masterLabel>
+            <translation><!-- Date Value --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Free Textbox</masterLabel>
+            <translation><!-- Free Textbox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multiple Choice (Multiple Answers)</masterLabel>
+            <translation><!-- Multiple Choice (Multiple Answers) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multiple Choice (One Answer)</masterLabel>
+            <translation><!-- Multiple Choice (One Answer) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Numeric Value</masterLabel>
+            <translation><!-- Numeric Value --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Question --></label>
+        <name>Question__c</name>
+    </fields>
+    <fields>
+        <help><!-- The number associate to the specific answer associated with this question. Please have each value in a separate line. --></help>
+        <label><!-- Response Weight --></label>
+        <name>Response_Weight__c</name>
+    </fields>
+    <layouts>
+        <layout>Metrics Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

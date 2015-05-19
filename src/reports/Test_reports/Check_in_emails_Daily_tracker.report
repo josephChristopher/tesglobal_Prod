@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_28425858</developerName>
+        <masterLabel>Check in - Status</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Case.Status_Custom__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Call Complete</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Remedial Action Complete</sourceValue>
+            </sourceValues>
+            <value>Calls</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Email Sent</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email Complete</sourceValue>
+            </sourceValues>
+            <value>Emails</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_12153767</developerName>
+        <masterLabel>Main status</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Call_Log__c.CLog_Stage_Status__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Check In-Email complete</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Check in-email sent</sourceValue>
+            </sourceValues>
+            <value>Check in emails</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Closed-email complete</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Closed-email sent</sourceValue>
+            </sourceValues>
+            <value>Closed check in emails</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>OPEN</field>
+    </columns>
+    <columns>
+        <field>CLOSED</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>BucketField_28425858</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Call_Log__c.Stage__c</column>
+            <operator>equals</operator>
+            <value>Check in,closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Call_Log__c.Status__c</column>
+            <operator>equals</operator>
+            <value>Email sent,email complete</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_12153767</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Call_Log__c.Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OWNER</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Check in emails- Daily tracker</name>
+    <params>
+        <name>units</name>
+        <value>h</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseCustomEntity$Call_Log__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Call_Log__c.Call_Date_Time__c</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

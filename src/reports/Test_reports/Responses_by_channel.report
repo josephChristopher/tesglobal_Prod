@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <acrossGroupingContext>GRAND_SUMMARY</acrossGroupingContext>
+        <calculatedFormula>RowCount/PARENTGROUPVAL(RowCount, ROW_GRAND_SUMMARY, COLUMN_GRAND_SUMMARY)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>Survey_Template__c.Surveys__r.Survey_Number__r$Metrics__c.Question__c</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% of responses</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <acrossGroupingContext>BucketField_3549112</acrossGroupingContext>
+        <calculatedFormula>RowCount/PARENTGROUPVAL(RowCount, ROW_GRAND_SUMMARY, COLUMN_GRAND_SUMMARY)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA2</developerName>
+        <downGroupingContext>GRAND_SUMMARY</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Total %</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <acrossGroupingContext>BucketField_3549112</acrossGroupingContext>
+        <calculatedFormula>RowCount/PARENTGROUPVAL(RowCount, ROW_GRAND_SUMMARY, COLUMN_GRAND_SUMMARY)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA3</developerName>
+        <downGroupingContext>Survey_Template__c.Surveys__r.Survey_Number__r$Metrics__c.Question__c</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>%</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_3549112</developerName>
+        <masterLabel>Channel</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Survey_Template__c.Surveys__r.Survey_Number__r$CreatedBy</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Jamie Morris</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Alexander Reigar</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sarah Matthews</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Emma Wilsher</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Antonio Tempesta</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Audrey O&apos;Driscoll</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Aaron Lacey</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>David Igbinovia</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kushba Rahman</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Lauren Roberts</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Leticia Carriere</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mario de Mesquita</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Nicholas Lawson</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Shumi Hussain</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Faust Perez</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Hassan Khalid</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Maureen Tittiris</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Traci Law</sourceValue>
+            </sourceValues>
+            <value>Call</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Chris Stura</sourceValue>
+            </sourceValues>
+            <value>Email</value>
+        </values>
+    </buckets>
+    <colorRanges>
+        <columnName>FORMULA3</columnName>
+        <highBreakpoint>10.0</highBreakpoint>
+        <highColor>#54C254</highColor>
+        <lowBreakpoint>3.0</lowBreakpoint>
+        <lowColor>#FFFFFF</lowColor>
+        <midColor>#C2C254</midColor>
+    </colorRanges>
+    <colorRanges>
+        <columnName>FORMULA2</columnName>
+        <highBreakpoint>100.0</highBreakpoint>
+        <highColor>#54C254</highColor>
+        <lowBreakpoint>50.0</lowBreakpoint>
+        <lowColor>#C25454</lowColor>
+        <midColor>#C2C254</midColor>
+    </colorRanges>
+    <columns>
+        <field>Survey_Template__c$Name</field>
+    </columns>
+    <columns>
+        <field>Survey_Template__c.Surveys__r.Survey_Number__r$Survey_Number__c</field>
+    </columns>
+    <columns>
+        <field>Survey_Template__c.Surveys__r$Id</field>
+    </columns>
+    <columns>
+        <field>Survey_Template__c.Surveys__r.Survey_Number__r$Metrics__c</field>
+    </columns>
+    <columns>
+        <field>Survey_Template__c.Surveys__r$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>Survey_Template__c.Surveys__r.Survey_Number__r$Metrics__c.Question_Format__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Survey_Template__c$Name</column>
+            <operator>contains</operator>
+            <value>two minute</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_3549112</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Survey_Template__c.Surveys__r.Survey_Number__r$Metrics__c.Question__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>% Responses by channel</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Surveys_with_Metrics_with_Metrics_Data__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Survey_Template__c.Surveys__r$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

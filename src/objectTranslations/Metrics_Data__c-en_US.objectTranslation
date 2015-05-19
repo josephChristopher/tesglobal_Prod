@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Metrics Data</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Metrics Data</value>
+    </caseValues>
+    <fields>
+        <label><!-- Case Contact ID --></label>
+        <name>Case_Contact_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>Case__c</name>
+        <relationshipLabel><!-- Metrics Data --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Customer Care Call Date --></label>
+        <name>Customer_Care_Call_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Effort Score --></label>
+        <name>Customer_Effort_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Metrics Name --></label>
+        <name>Metrics_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Metrics --></label>
+        <name>Metrics__c</name>
+        <relationshipLabel><!-- Metrics Data --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Net Promoter Score --></label>
+        <name>Net_Promoter_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Promoter Type --></label>
+        <name>Promoter_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rating --></label>
+        <name>Rating__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response (Num) --></label>
+        <name>Response_Num__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response --></label>
+        <name>Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- Survey --></label>
+        <name>Survey_Number__c</name>
+        <relationshipLabel><!-- Metrics Data --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Survey Taker --></label>
+        <name>Survey_Taker__c</name>
+        <relationshipLabel><!-- Metrics Data --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Survey Template --></label>
+        <name>Survey_Template__c</name>
+        <relationshipLabel><!-- Metrics Data --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Metrics Data Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Question and Answer --></label>
+            <section>Question and Answer</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Available_Values__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Available values for a particular metric that users can choose from. Please have each value in a separate line.</inlineHelpText>
+        <label>Available Values</label>
+        <length>100000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Customer Satisfaction</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Competition</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Care_Call_Date__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Customer Care Call Date</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Metrics_Question__c</fullName>
+        <externalId>false</externalId>
+        <label>Metrics Question</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Old Id</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question_Format__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The type of question format the user wants to have in the survey (e.g. Free Textbox, Multiple Choice, Rating, etc.).</inlineHelpText>
+        <label>Question Format</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Free Textbox</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Multiple Choice (One Answer)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Multiple Choice (Multiple Answers)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Numeric Value</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Date Value</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Question__c</fullName>
+        <externalId>false</externalId>
+        <label>Question</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Response_Weight__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The number associate to the specific answer associated with this question. Please have each value in a separate line.</inlineHelpText>
+        <label>Response Weight</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>Metrics</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Question_Format__c</columns>
+        <columns>Question__c</columns>
+        <columns>Available_Values__c</columns>
+        <columns>Response_Weight__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Metrics</fullName>
+        <columns>NAME</columns>
+        <columns>Question_Format__c</columns>
+        <columns>Question__c</columns>
+        <columns>Available_Values__c</columns>
+        <columns>Response_Weight__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Metrics</label>
+    </listViews>
+    <nameField>
+        <displayFormat>M-{0000000000}</displayFormat>
+        <label>Metrics Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Metrics</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Question_Format__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Metrics_Question__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Available_Values__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Question_Format__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Metrics_Question__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Available_Values__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Question_Format__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Metrics_Question__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Available_Values__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

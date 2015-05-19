@@ -1,0 +1,70 @@
+<apex:page showHeader="false" standardController="Sales_Form__c" extensions="SFormController">
+<div id="InnternalDiv" style="width:75%;margin:auto;text-align:center; border-width:8px;border-style:solid;border-color:#e6e6e6;font-family: Arial;">
+    <apex:image id="logo" url="https://c.cs20.content.force.com/servlet/servlet.ImageServer?id=015m00000009E0i&oid=00Dm00000001c6V" style="text-align:left; margin:auto;max-width: 100%;
+    height: auto;width: auto\9;"/>
+    <apex:form >
+        
+        <p>Recruitment Owner and Sales Notes Form
+            </p><br />
+      
+        Please fill out the <b>Recruitment Owner</b> details and <b>Sales Notes</b> for the advert specified in the form below. <br />
+        <apex:pageMessages /> 
+            
+       
+        <apex:outputpanel >
+       <pageblock>
+        <apex:pageblock title=" " mode="mainDetail">
+            <apex:outputPanel style="background-color:#f5f5f5;">
+            <apex:pageBlockSection title="Advert Details" columns="1" collapsible="False" > 
+                <br/>Please fill out the Salesperson name, and either the <b>MSL Ad Number</b> if the Advert is a composite advert and the adverts have the same Recruitment Owner, 
+                or the <b>MSL Ad Insert Id</b> if the advert has a unique Recruitment Owner.<br/>
+                <br/><apex:inputField value="{!sForm.Salesperson_Name__c}"/>
+                <apex:inputField value="{!sForm.MSL_Ad_Number__c}"/>
+                <apex:inputField value="{!sForm.Ad_Insert_MSL_Id__c}"/>
+            </apex:pageBlockSection>
+            </apex:outputPanel>
+            
+            <apex:outputPanel style="background-color:#f5f5f5;">    
+            <apex:pageBlockSection title="Recruitment Owner Details - Existing" columns="1" collapsible="false">    
+                <br/>Please check if the Recruitment Owner already exists in the system. If the Recruitment Owner already exists, you do not need to fill out the New Recruitment Owner details below.  <br />
+                <br/><apex:inputField label="Lookup Existing Recruitment Owner" value="{!sForm.Recruitment_Owner__c}"/>
+            </apex:pageBlockSection>
+            </apex:outputPanel>
+            
+             <apex:outputPanel style="background-color:#f5f5f5;">    
+            <apex:pageBlockSection title="Recruitment Owner Details - New" columns="1" collapsible="false">     
+                If the Recruitment Owner doesn't exist in the system, please fill out the details below.<br />
+                <br/>
+                <apex:inputField value="{!contact.AccountId}" label="Employer Name"/>
+                <apex:inputField value="{!contact.Salutation}"/>
+                <apex:inputField value="{!contact.FirstName}"/>
+                <apex:inputField value="{!contact.LastName}" required="False"/>
+                <apex:inputField value="{!contact.Title__c}"/>
+                <apex:inputField value="{!contact.Title_If_Other__c}"/>
+                <apex:inputField value="{!contact.Email}"/>
+                <apex:inputField value="{!contact.Phone}" id="phone"/>
+            </apex:pageBlockSection> 
+            </apex:outputPanel>
+             <apex:outputPanel style="background-color:#f5f5f5;">  
+            <apex:pageBlockSection title="Sales Notes" columns="1" collapsible="false">
+                <apex:inputField value="{!sForm.Sales_Notes__c}"/><br/><br/>
+            </apex:pageBlockSection>  
+           </apex:outputPanel>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Save" action="{!saveandRedirect}" /> 
+            </apex:pageBlockButtons>  
+        </apex:pageblock> 
+        </pageBlock> 
+        </apex:outputpanel>
+         
+    </apex:form>  
+    
+     <style>
+     p { font-size: 200%; font-weight: bold;color: #115da8; font-family: Arial; }
+     b { font-style: bold;}
+       pageBlock {
+        background-color:#f5f5f5;text-align:left;
+        }
+    </style>
+</div>
+</apex:page>

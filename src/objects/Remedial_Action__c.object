@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Approval_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval/Denial Date/Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Approver_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Approver Name</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Julia Rontree</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gavin Power</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gareth Thyer-Jones</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Michelle Reid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Becky Simpson</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>N/A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Case__c</fullName>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Remedial Actions</relationshipLabel>
+        <relationshipName>Remedial_Actions</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Discount__c</fullName>
+        <externalId>false</externalId>
+        <label>% Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Offer_Claim_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Offer Claim Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Offer_Expiry_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Offer Expiry Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Offer_Resolution_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Offer/Resolution Description</label>
+        <length>10000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Offer_Resolution__c</fullName>
+        <externalId>false</externalId>
+        <label>Offer/Resolution Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Extend Closure Date</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FOC Additional Classification</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FOC Daily or Weekly Alert</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FOC Gold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FOC Rerun Online</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FOC Rerun Print</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FOC Silver</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Free Upgrade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other (Pre-Approval Required)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Possible_Roles_to_Apply_Offer__c</fullName>
+        <externalId>false</externalId>
+        <label>Possible Roles to Apply Offer</label>
+        <length>10000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 - Very High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 - High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 - Medium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 - Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 - Very Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>QMS_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>QMS Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reason_for_Credit__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason for Credit</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reason_for_Denial__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason for Denial</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Recharge_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Recharge Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>TBD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Awaiting Approval</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Credit Given</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Offer Given</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Value_of_Credit__c</fullName>
+        <externalId>false</externalId>
+        <label>Value of Credit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Remedial Action</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Case__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Approver_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Reason_for_Credit__c</columns>
+        <columns>Reason_for_Denial__c</columns>
+        <columns>Value_of_Credit__c</columns>
+        <columns>Approval_Date_Time__c</columns>
+        <columns>Offer_Resolution__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Remedial Actions</label>
+        <sharedTo>
+            <group>Customer_Success_Team</group>
+            <roleAndSubordinates>Customer_Services_Manager</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>AllCC</fullName>
+        <columns>NAME</columns>
+        <columns>Case__c</columns>
+        <columns>Approver_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Reason_for_Credit__c</columns>
+        <columns>Reason_for_Denial__c</columns>
+        <columns>Value_of_Credit__c</columns>
+        <columns>Recharge_Value__c</columns>
+        <columns>QMS_Id__c</columns>
+        <columns>Approval_Date_Time__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Remedial_Action__c.Classified_Credit</value>
+        </filters>
+        <label>Classified Credits - All</label>
+        <sharedTo>
+            <group>Customer_Success_Team</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>AllCCClosed</fullName>
+        <columns>NAME</columns>
+        <columns>Case__c</columns>
+        <columns>Approver_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Reason_for_Credit__c</columns>
+        <columns>Reason_for_Denial__c</columns>
+        <columns>Value_of_Credit__c</columns>
+        <columns>Recharge_Value__c</columns>
+        <columns>QMS_Id__c</columns>
+        <columns>Approval_Date_Time__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Remedial_Action__c.Classified_Credit</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Approved,Denied,Credit Given</value>
+        </filters>
+        <label>Classified Credits - Closed</label>
+        <sharedTo>
+            <group>Customer_Success_Team</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>AllCCOpen</fullName>
+        <columns>NAME</columns>
+        <columns>Case__c</columns>
+        <columns>Approver_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Reason_for_Credit__c</columns>
+        <columns>Reason_for_Denial__c</columns>
+        <columns>Value_of_Credit__c</columns>
+        <columns>Recharge_Value__c</columns>
+        <columns>QMS_Id__c</columns>
+        <columns>Approval_Date_Time__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Remedial_Action__c.Classified_Credit</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>TBD,Awaiting Approval</value>
+        </filters>
+        <label>Classified Credits - Open</label>
+        <sharedTo>
+            <group>Customer_Success_Team</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>GoodwillOffersAll</fullName>
+        <columns>NAME</columns>
+        <columns>Case__c</columns>
+        <columns>Approver_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Offer_Resolution__c</columns>
+        <columns>Offer_Resolution_Description__c</columns>
+        <columns>Offer_Claim_Date__c</columns>
+        <columns>Offer_Expiry_Date__c</columns>
+        <columns>Possible_Roles_to_Apply_Offer__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Remedial_Action__c.Goodwill_Offer</value>
+        </filters>
+        <label>Goodwill Offers - All</label>
+        <sharedTo>
+            <group>Customer_Success_Team</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>GoodwillOffersAllClosed</fullName>
+        <columns>NAME</columns>
+        <columns>Case__c</columns>
+        <columns>Approver_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Offer_Resolution__c</columns>
+        <columns>Offer_Resolution_Description__c</columns>
+        <columns>Offer_Claim_Date__c</columns>
+        <columns>Offer_Expiry_Date__c</columns>
+        <columns>Possible_Roles_to_Apply_Offer__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Remedial_Action__c.Goodwill_Offer</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Approved,Denied,Offer Given</value>
+        </filters>
+        <label>Goodwill Offers - Closed</label>
+        <sharedTo>
+            <group>Customer_Success_Team</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>GoodwillOffersAllOpen</fullName>
+        <columns>NAME</columns>
+        <columns>Case__c</columns>
+        <columns>Approver_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Offer_Resolution__c</columns>
+        <columns>Offer_Resolution_Description__c</columns>
+        <columns>Offer_Claim_Date__c</columns>
+        <columns>Offer_Expiry_Date__c</columns>
+        <columns>Possible_Roles_to_Apply_Offer__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Remedial_Action__c.Goodwill_Offer</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>TBD,Awaiting Approval</value>
+        </filters>
+        <label>Goodwill Offers - Open</label>
+        <sharedTo>
+            <group>Customer_Success_Team</group>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>R-{0000000000}</displayFormat>
+        <label>Remedial Action Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Remedial Actions</pluralLabel>
+    <recordTypes>
+        <fullName>Classified_Credit</fullName>
+        <active>true</active>
+        <description>Remedial Action that requires a credit to be given to the customer</description>
+        <label>Classified Credit</label>
+        <picklistValues>
+            <picklist>Approver_Name__c</picklist>
+            <values>
+                <fullName>Becky Simpson</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gareth Thyer-Jones</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gavin Power</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Julia Rontree</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Michelle Reid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offer_Resolution__c</picklist>
+            <values>
+                <fullName>Extend Closure Date</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FOC Additional Classification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FOC Daily or Weekly Alert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FOC Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FOC Rerun Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FOC Rerun Print</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FOC Silver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Free Upgrade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %28Pre-Approval Required%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>1 - Very High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Medium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 - Very Low</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Given</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TBD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Goodwill_Offer</fullName>
+        <active>true</active>
+        <description>Remedial Action given to a customer that is more of a &quot;goodwill&quot; gesture</description>
+        <label>Goodwill Offer</label>
+        <picklistValues>
+            <picklist>Approver_Name__c</picklist>
+            <values>
+                <fullName>Becky Simpson</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gareth Thyer-Jones</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gavin Power</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Julia Rontree</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Michelle Reid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offer_Resolution__c</picklist>
+            <values>
+                <fullName>Extend Closure Date</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FOC Additional Classification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FOC Daily or Weekly Alert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FOC Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FOC Rerun Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FOC Rerun Print</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FOC Silver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Free Upgrade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %28Pre-Approval Required%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>1 - Very High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Medium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 - Very Low</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Offer Given</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TBD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Reason_for_Denial_Required</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISBLANK(Reason_for_Denial__c ),
+  TEXT(Status__c ) = &quot;Denied&quot;
+   )</errorConditionFormula>
+        <errorDisplayField>Reason_for_Denial__c</errorDisplayField>
+        <errorMessage>Please input the reason why this remedial action has been denied.</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,473 @@
+<apex:page standardController="opportunity" extensions="CCEmailListController" tabStyle="opportunity">
+    <script src="//cdn.ckeditor.com/4.4.6/basic/ckeditor.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <apex:includeScript value="/support/console/22.0/integration.js"/>
+    
+    <apex:pageBlock title="" mode="mainDetail">
+        <apex:form >
+            <!-- <apex:commandButton value="Save" action="{!customSave}"/> --><!-- This is the Custom Save Button -->
+            <apex:pageBlockTable value="{!messages}" var="index" id="outlookMessageList">    <!-- The pageBlockTable iterates through the list of the custom Class -->
+                <apex:column headerValue="" width="90">
+                     <a style="cursor: pointer; cursor: hand; text-decoration: underline;" onclick="javascript:showMessage('{!index.uuid}',this)">View</a> | 
+                     <a style="cursor: pointer; cursor: hand; text-decoration: underline;" onclick="javascript:showReply('{!index.uuid}','{!index.subject}',this,'{!index.account_email_address}')">Reply</a>
+                </apex:column>    <!-- Stores the input value from the user -->
+                <apex:column value="{!index.subject}" headerValue="Subject"/>    <!--Display the CaseComments information --> 
+                <apex:column value="{!index.date}" headerValue="Date" width="180"/>    <!--Display the CaseComments information --> 
+            </apex:pageblocktable>
+        </apex:form>
+        
+        <script type="text/javascript">
+            j$ = jQuery.noConflict();
+            
+            var svc = "https://cloudreach-connect-shared.herokuapp.com/ccsvc/tes/email/list?key=2203ef9c-8c3f-44dd-bfcc-4ba67ae64406";
+            var res = "https://cloudreach-connect-shared.herokuapp.com/ccsvc/tes/email/resource?key=2203ef9c-8c3f-44dd-bfcc-4ba67ae64406";
+            var svcAttach = "https://cloudreach-connect-shared.herokuapp.com/ccsvc/tes/email/attach?key=2203ef9c-8c3f-44dd-bfcc-4ba67ae64406";
+            var currentMessageBody = null;
+            
+            function removeCurrentBody() {
+                if(currentMessageBody) {
+                    currentMessageBody.parentNode.removeChild(currentMessageBody);
+                    currentMessageBody = null;
+                }
+            }
+            
+            function getIconURL(contentType,filename) {
+                if(contentType === "application/msword" 
+                    || contentType === "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                    || filename.indexOf("doc") != -1 || filename.indexOf("docx") != -1) {
+                    return "/servlet/servlet.FileDownload?file=015m000000099GP";
+                } else if(contentType.indexOf("image/") != -1 || filename.indexOf(".gif") != -1
+                          || filename.indexOf(".jpg") != -1 || filename.indexOf(".png") != -1) {
+                    return "/servlet/servlet.FileDownload?file=015m000000099DA";
+                } else if(contentType.indexOf("application/pdf") != -1 || filename.indexOf(".pdf") != -1) {
+                    return "//www.adobe.com/images/pdficon_small.png";
+                } else if(contentType.indexOf("application/zip") != -1 || filename.indexOf(".zip") != -1) {
+                    return "/servlet/servlet.FileDownload?file=015m000000099Vg";
+                } else {
+                    return "/servlet/servlet.FileDownload?file=015m000000099EZ";
+                }
+            }
+            
+            var jsonMessageList = {!messagesAsJSON};
+            
+            function showMessage(uuid,element) {
+            		window.replyStarted = true;
+                //we should retrieve the message body via visualforce remoting.
+                var msgList = jsonMessageList;
+                CCEmailListController.toggleReadFlag("{!Id}",function(result,status) {});
+                CCEmailListController.getMessageBody(uuid,JSON.stringify(msgList),function(result,status) {
+                    removeCurrentBody();
+                    var anchorElm = element.parentNode.parentNode.parentNode;
+                    var beforeNode = element.parentNode.parentNode;
+                    var bodyRowElm = anchorElm.insertBefore(document.createElement("tr"),beforeNode);
+                    anchorElm.removeChild(beforeNode);
+                    anchorElm.insertBefore(beforeNode,bodyRowElm);
+                    currentMessageBody = bodyRowElm;
+                    var bodyContainerElm = bodyRowElm.appendChild(document.createElement("td"));
+                    bodyContainerElm.setAttribute("colspan","3");
+                    bodyContainerElm.className = "dataCell";
+                    
+                    var topAttachmentBarElm = bodyContainerElm.appendChild(document.createElement("div"));
+                    topAttachmentBarElm.style.textAlign = "right";
+                    topAttachmentBarElm.style.backgroundColor = "#dddddd";
+                    topAttachmentBarElm.style.paddingTop = "0.3em";
+                    topAttachmentBarElm.style.paddingBottom = "0.3em";
+                    
+                    var bodyElm = bodyContainerElm.appendChild(document.createElement("div"));
+                    bodyElm.style.overflow = "auto";
+                    bodyElm.style.height = "500px";
+                    bodyElm.style.borderColor = "#dddddd";
+                    bodyElm.style.borderWidth = "2px";
+                    bodyElm.style.borderStyle = "solid";
+                    bodyElm.style.backgroundColor = "#ffffff";
+                    bodyElm.style.fontFamily = "Monospace";
+                    bodyElm.style.padding = "0.5em";
+                    bodyElm.style.fontSize = "9pt";
+                    bodyElm.innerHTML = j$("<textarea/>").html(result).text();
+                    
+                    var attachmentBarElm = bodyContainerElm.appendChild(document.createElement("div"));
+                    attachmentBarElm.style.textAlign = "right";
+                    attachmentBarElm.style.backgroundColor = "#dddddd";
+                    attachmentBarElm.style.paddingTop = "0.3em";
+                    attachmentBarElm.style.paddingBottom = "0.3em";
+                    
+                    //we should now retrieve a list of all the attachments pined on this email.
+                    attachmentBarElm.innerHTML = "<b>Loading attachments... Please wait</b>";
+                    j$.ajax({
+                        type: "GET",
+                        url: svc+"&msgId="+uuid,
+                        async: true,
+                        success: function(data,status,xhr) {
+                            this.attachmentBar.innerHTML = "";
+                            this.topAttachmentBarElm.innerHTML = "";
+                            var attachmentList = JSON.parse(data);
+                            for(var i = 0; i < attachmentList.length; i++) {
+                                var attachment = attachmentList[i];
+                                var attachmentItem = this.attachmentBar.appendChild(document.createElement("a"));
+                                attachmentItem.style.cssfloat = "right";
+                                attachmentItem.href=svc+"&atcId="+attachment.id;
+                                attachmentItem.title = attachment.filename+" ("+Math.ceil(attachment.file_length/1024)+"kb)";
+                                attachmentItem.alt = attachmentItem.title;
+                                attachmentItem.display = "inline";
+                                j$(attachmentItem).text(attachment.filename);
+                                //attachmentItem.innerHTML("test");
+                                var attachmentIcon = attachmentItem.appendChild(document.createElement("img"));
+                                attachmentIcon.alt = attachmentItem.title;
+                                attachmentIcon.title = attachmentItem.title;
+                                attachmentIcon.style.paddingLeft = "0.3em";
+                                attachmentIcon.src = getIconURL(attachment.contentType,attachment.filename);
+                                
+                                topAttachmentBarElm.appendChild(attachmentItem.cloneNode(true));
+                            }
+                        },
+                        error: function() {
+                            this.attachmentBar.innerHTML = "<b style=\"color: red;\">Error retrieving attachments for this message.</b>";
+                        },
+                        attachmentBar: attachmentBarElm,
+                        topAttachmentBarElm: topAttachmentBarElm
+                    });
+                });
+                window.viewTimeout = window.setTimeout(function() {
+                	window.replyStarted = false;
+                },1000*60);
+            }
+            
+            function clearRefreshTimeout() {
+            	if(window.viewTimeout) {
+           	  	window.clearTimeout(window.viewTimeout);
+           	  	window.viewTimeout = null;
+            	}
+            }
+            
+            function showReply(uuid,subject,element,fromAddress) {
+            	  clearRefreshTimeout();
+            		window.replyStarted = true;
+                removeCurrentBody();
+                var anchorElm = element.parentNode.parentNode.parentNode;
+                var beforeNode = element.parentNode.parentNode;
+                var bodyRowElm = anchorElm.insertBefore(document.createElement("tr"),beforeNode);
+                anchorElm.removeChild(beforeNode);
+                anchorElm.insertBefore(beforeNode,bodyRowElm);
+                currentMessageBody = bodyRowElm;
+                var bodyElm = bodyRowElm.appendChild(document.createElement("td"));
+                bodyElm.setAttribute("colspan","3");
+                bodyElm.className = "dataCell";
+                //here we have to dynamically add a form which we can use to reply back to an e-mail
+                var fromField = bodyElm.appendChild(document.createElement("div"));
+                fromField.style.width = "100%";
+                fromField.style.paddingBottom = "0.3em";
+                var fromTitle = fromField.appendChild(document.createElement("span"));
+                fromTitle.innerHTML = "<b>To</b>";
+                fromTitle.style.width = "20%";
+                var fromTitle = fromField.appendChild(document.createElement("span"));
+                var fromSelect = fromTitle.appendChild(document.createElement("select"));
+                fromSelect.setAttribute("id","reply_to");
+                fromSelect.setAttribute("name","reply_to");
+                var ccField = bodyElm.appendChild(document.createElement("div"));
+                ccField.style.width = "100%";
+                ccField.style.paddingBottom = "0.3em";
+                var ccTitle = ccField.appendChild(document.createElement("span"));
+                ccTitle.innerHTML = "<b>CC</b>";
+                ccTitle.style.width = "20%";
+                var ccFieldContainer = ccField.appendChild(document.createElement("span"));
+                ccFieldContainer.setAttribute("id","reply_cc_container");
+                //we need a list of all the opportunity contact roles which we could send e-mail messages to.
+                CCEmailListController.getOpportunityContacts("{!Id}",function(result,status) {
+                	for(var i = 0; i < result.length; i++) {
+                		var emailString = result[i].Contact.FirstName+" "+result[i].Contact.LastName+" &lt;"+result[i].Contact.Email+"&gt;";
+                		var fromOption = fromSelect.appendChild(document.createElement("option"));
+                		fromOption.setAttribute("contact",result[i].Contact.Id);
+                		fromOption.setAttribute("account",result[i].Contact.AccountId);
+		                fromOption.setAttribute("value",result[i].Contact.Email);
+		                fromOption.innerHTML = emailString;
+		                var ccItemContainer = ccFieldContainer.appendChild(document.createElement("div"));
+		                ccItemContainer.style.display = "inline-block";
+		                ccItemContainer.style.whiteSpace = "nowrap";
+		                if(i != 0) {
+		               	 ccItemContainer.style.paddingLeft = "0.3em";
+		               	}
+		                var ccItem = ccItemContainer.appendChild(document.createElement("input"));
+		                ccItem.setAttribute("type","checkbox");
+		                ccItem.setAttribute("name","reply_cc");
+		                ccItem.setAttribute("value",result[i].Contact.Email);
+		                ccItem.setAttribute("contact",result[i].Contact.Id);
+                		ccItem.setAttribute("account",result[i].Contact.AccountId);
+		                var ccItemText = ccItemContainer.appendChild(document.createElement("span"));
+		                ccItemText.innerHTML = emailString;
+                	}
+                	document.getElementById("reply_button").removeAttribute("disabled");
+                });
+                fromTitle.style.width = "80%";
+                fromTitle.style.paddingLeft = "0.5em";
+                var subjectField = bodyElm.appendChild(document.createElement("div"));
+                subjectField.style.width = "100%";
+                subjectField.style.paddingBottom = "0.3em";
+                var subjectTitle = subjectField.appendChild(document.createElement("span"));
+                subjectTitle.innerHTML = "<b>Subject</b>";
+                subjectTitle.style.width = "20%";
+                var subjectInput = subjectField.appendChild(document.createElement("input"));
+                subjectInput.setAttribute("name","reply_subject");
+                subjectInput.style.width = "70%";
+                subjectInput.style.marginLeft = "1em";
+                subjectInput.setAttribute("value","RE: "+subject);
+                var btnReply = subjectField.appendChild(document.createElement("input"));
+                btnReply.setAttribute("type","button");
+                btnReply.setAttribute("value","Reply");
+                btnReply.setAttribute("disabled","yes");
+                btnReply.setAttribute("id","reply_button");
+                btnReply.style.marginLeft = "1em";
+                btnReply.style.marginTop = "5px";
+                btnReply.style.width = "6em";
+                btnReply.onclick = function() {
+                		var primaryContact = document.getElementById("reply_to").options[document.getElementById("reply_to").selectedIndex];
+                    var msg = {
+                        message_id: "{!Id}x"+(Math.floor((Math.random() * 1000) + 1))+"@tesglobal.salesforce.ajax",
+                        references_header: this.payload.uuid,
+                        subject: this.payload.subject.value,
+                        body: this.payload.bodyEditor.getData(),
+                        primaryContact: {
+                        	id: primaryContact.getAttribute("contact"),
+                        	accountid: primaryContact.getAttribute("account"),
+                        	email: primaryContact.getAttribute("value")
+                        }
+                    };
+                    msg.ccAddressList = new Array();
+                    var ccList = document.getElementById("reply_cc_container").getElementsByTagName("input");
+                    for(var i = 0; i < ccList.length; i++) {
+                    	var ccItem = ccList[i];
+                    	if(ccItem.type == "checkbox" && ccItem.checked) {
+                    		msg.ccAddressList.push({
+                    			id: ccItem.getAttribute("contact"),
+                    			accountid: ccItem.getAttribute("account"),
+                    			email: ccItem.getAttribute("value")
+                    		});
+                    	}
+                    }
+                    //ok now that we have built this we can post it back to our server
+                    j$.ajax({
+                        type: "POST",
+                        url: svc+"&act=REPLY",
+                        datatype: "json",
+                        async: true,
+                        data: JSON.stringify(msg),
+                        contentType: "application/json",
+                        processData: false,
+                        success: function(data,status,xhr) {
+                            var rsp = JSON.parse(data);
+                            if(rsp.code) {
+                                alert("There was a problem sending the message the error was: "+rsp.message);
+                            } else {
+                                alert("Message was sent successfully");
+                                //add they message was replied to flag.
+                                CCEmailListController.toggleReplied("{!Id}",function(result,status) {});
+                                //remove all of the existing messages in this container.
+                                var container = currentMessageBody.parentNode;
+                                container.innerHTML = ""; //clear everything inside of the tbody node.
+                                currentMessageBody = null;
+                                //we need to run an ajax GET request towards our service
+                                refreshMessageList(true);
+                            }
+                        },
+                        error: function(xhr,status,error) {
+                            alert("There was an error sending the reply: the error was "+error+" the status was "+status);
+                        },
+                        applicationData: this.payload
+                    });
+                }
+                var btnCancel = subjectField.appendChild(document.createElement("input"));
+                btnCancel.setAttribute("type","button");
+                btnCancel.setAttribute("value","Close");
+                btnCancel.style.marginLeft = "1em";
+                btnCancel.style.marginTop = "5px";
+                btnCancel.style.width = "6em";
+                btnCancel.onclick = function() {
+                    if(confirm("Cancel reply. Are you sure?")) {
+                        removeCurrentBody();
+                        window.replyStarted = false;
+                    }
+                };
+                var bodyField = bodyElm.appendChild(document.createElement("div"));
+                bodyField.setAttribute("id","emailReplyBody");
+                var editor = CKEDITOR.replace(bodyField);
+                editor.ui.addButton("addAttachment",{ label: 'Add Attachment', command: 'add_attachment', toolbar: 'links,300', icon: res });
+                
+                btnReply.payload = {
+                    uuid: uuid,
+                    bodyEditor: editor,
+                    subject: subjectInput
+                };
+                
+                //we should also load the body and place it into the fckeditor
+                var msgList = jsonMessageList;
+                CCEmailListController.getMessageBody(uuid,JSON.stringify(msgList),function(result,status) {
+                    var emailBody = j$("<textarea/>").html(result).text();
+                    editor.insertHtml("<p></p><div style=\"padding: 0.7em; border-left: 1px solid blue; border-top: 1px solid blue; margin-left: 0.3em; background-color: #eeeeee;\">"+emailBody+"</div>","unfiltered_html");
+                    //position the cursor inside of the paragraph selection at the top.
+                    var startRange = editor.createRange();
+                    startRange.selectNodeContents(editor.editable());
+                    var dataNode = editor.document.getBody().findOne("p");
+                    startRange.moveToPosition(dataNode,CKEDITOR.POSITION_AFTER_START);
+                    editor.getSelection().selectRanges([startRange]);
+                    
+                    //it would be a good idea to add an element after the data node which will contain attachments that can be added to the editor.
+                    var attachmentContainer = new CKEDITOR.dom.element("div");
+                    var attachmentTitle = new CKEDITOR.dom.element("div");
+                    attachmentTitle.$.innerHTML = "<b>Attachments</b>";
+                    attachmentTitle.appendTo(attachmentContainer);
+                    var attachmentBar = new CKEDITOR.dom.element("div");
+                    attachmentContainer.append(attachmentBar);
+                    attachmentContainer.insertAfter(dataNode);
+                    editor.attachmentBar = attachmentBar;
+                    attachmentBar.$.style.textAlign = "right";
+                    attachmentBar.$.style.borderTop = "1px solid #000000";
+                    attachmentBar.$.style.paddingTop = "0.3em";
+                    
+                    
+                    //lets register a dialog with a single page to allow users to upload attachments
+                    CKEDITOR.dialog.add("add_attachment_dialog",function(editor) {
+                        return {
+                            title: "Add Attachment",
+                            minWidth: 400,
+                            minHeight: 80,
+                            
+                            contents: [
+                                {
+                                    id: "attachment",
+                                    label: "Attachment Details",
+                                    elements: [
+                                        {
+                                            type: "file",
+                                            id: "attachment_file",
+                                            label: "Attachment"
+                                        }
+                                    ]
+                                }
+                            ],
+                            
+                            onOk: function() {
+                                var dialog = this;
+                                var attachmentBar = dialog.getParentEditor().attachmentBar; 
+                                var file = dialog.getContentElement("attachment","attachment_file").getInputElement();
+                                var formData = new FormData();
+                                formData.append("opportunity_id","{!Id}");
+                                formData.append("file",file.$.files[0]);
+                                j$.ajax({
+                                    url: svcAttach,
+                                    data: formData,
+                                    cache: false,
+                                    contentType: false,
+                                    processData: false,
+                                    type: 'POST',
+                                    success: function(data,status,xhr){
+                                        var uploadData = JSON.parse(data);
+                                        var attachmentObject = new CKEDITOR.dom.element("div");
+                                        attachmentObject.$.style.display = "inline";
+                                        attachmentObject.$.style.marginLeft = "0.3em";
+                                        var attachmentIcon = new CKEDITOR.dom.element("img");
+                                        attachmentIcon.$.src = getIconURL(uploadData.contentType,uploadData.filename);
+                                        attachmentIcon.$.title = uploadData.filename;
+                                        attachmentIcon.$.alt = uploadData.filename;
+                                        attachmentIcon.$.style.paddingRight = "0.3em";
+                                        attachmentIcon.appendTo(attachmentObject);
+                                        var attachmentLink = new CKEDITOR.dom.element("a");
+                                        attachmentLink.$.href = svcAttach+"&id="+uploadData.id;
+                                        attachmentLink.$.title = uploadData.filename;
+                                        attachmentLink.$.alt = uploadData.filename;
+                                        attachmentLink.$.innerHTML = uploadData.filename;
+                                        attachmentLink.$.style.textDecoration = "none";
+                                        attachmentLink.appendTo(attachmentObject);
+                                        attachmentObject.appendTo(attachmentBar);
+                                    },
+                                    error: function(xhr,status,error) {
+                                        alert("there was an error upload the attachment. Please try your upload again and if the problem persists contact an administrator");
+                                    }
+                                });
+                            }
+                        }
+                    });
+                    //now we should add a dialog that will allow a user to upload an attachment
+                    editor.addCommand('add_attachment',{
+                        exec: function(editor) {
+                            editor.openDialog("add_attachment_dialog");
+                        }
+                    });
+                });
+            }
+            
+            function buildMessageEntry(container,uuid,subject,createDate,fromAddress) {
+                var messageEntry = document.createElement("tr");
+                var messageOps = messageEntry.appendChild(document.createElement("td"));
+                var detailLink = messageOps.appendChild(document.createElement("a"));
+                detailLink.style.cursor = "pointer";
+                detailLink.style.textDecoration = "underline";
+                detailLink.innerHTML = "View";
+                detailLink.payload = {
+                    uuid: uuid,
+                    fromAddress: fromAddress
+                };
+                detailLink.onclick = function() {
+                    showMessage(this.payload.uuid,this);
+                };
+                var spn = messageOps.appendChild(document.createElement("span"));
+                spn.innerHTML = " | ";
+                var replyLink = messageOps.appendChild(document.createElement("a"));
+                replyLink.style.cursor = "pointer";
+                replyLink.style.textDecoration = "underline";
+                replyLink.innerHTML = "Reply";
+                replyLink.payload = {
+                    uuid: uuid,
+                    subject: subject,
+                    fromAddress: fromAddress
+                };
+                replyLink.onclick = function() {
+                    showReply(this.payload.uuid,this.payload.subject,this,this.payload.fromAddress);
+                };
+                var messageSubject = messageEntry.appendChild(document.createElement("td"));
+                messageSubject.innerHTML = subject;
+                var messageDate = messageEntry.appendChild(document.createElement("td"));
+                messageDate.innerHTML = createDate.toLocaleDateString("en-US",{ weekday: "short", year: "numeric", month: "short", day: "numeric", 
+                    timeZone: "UTC", timeZoneName: "short", hour: "2-digit", minute: "2-digit", second: "2-digit"});
+                container.appendChild(messageEntry);
+            }
+            
+            function refreshMessageList(showError) {
+            	 if(!window.replyStarted) {
+	            	 j$.ajax({
+		                 type: "GET",
+		                 url: svc+"&oppId={!Id}",
+		                 async: true,
+		                 success: function(data,status,xhr) {
+		                 		 var tbodyList = document.body.getElementsByTagName("tbody");
+		                 		 var container = null;
+		                 		 for(var i = 0; i < tbodyList.length; i++) {
+		                 		 	var tbody = tbodyList[i];
+		                 		 	if(tbody.getAttribute("id") != null && tbody.getAttribute("id").indexOf("outlookMessageList") != -1) {
+		                 		 		container = tbody;
+		                 		 		container.innerHTML = "";
+		                 		 		break;
+		                 		 	}
+		                 		 }
+		                     var msgList = JSON.parse(data);
+		                     jsonMessageList = { messages: msgList };
+		                     for(var i = 0; i < msgList.length; i++) {
+		                         var msg = msgList[i];
+		                         buildMessageEntry(container,msg.uuid,msg.subject,new Date(msg.recieveDate),msg.account_email_address);
+		                     }
+		                     window.replyStarted = false;
+		                     clearRefreshTimeout();
+		                     console.log("message list refreshed");
+		                 },
+		                 error: function() {
+		                 		if(showError) {
+		                      alert("there was an error refreshing the list please close your tab and re-open it.");
+		                    }
+		                 }
+		             });
+		           }
+            }
+            
+            window.setInterval("refreshMessageList(false)",1000*60*2); //refresh every 2 minutes
+            //window.setInterval("refreshMessageList(false)",1000*10);
+        </script>
+    </apex:pageBlock> 
+</apex:page>

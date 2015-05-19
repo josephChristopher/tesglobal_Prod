@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Premium Product</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Premium Products</value>
+    </caseValues>
+    <fields>
+        <label><!-- Ad Position on Page --></label>
+        <name>Ad_Position_on_Page__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency --></label>
+        <name>Agency__c</name>
+        <relationshipLabel><!-- Premium Products (Agency) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Bill To --></label>
+        <name>Bill_To__c</name>
+        <relationshipLabel><!-- Premium Products (Bill To) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Booking__c</name>
+        <relationshipLabel><!-- Premium Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Charge Type --></label>
+        <name>Charge_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client --></label>
+        <name>Client__c</name>
+        <relationshipLabel><!-- Premium Products (Client) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>Expiry_Date_of_Premium_Product__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Date --></label>
+        <name>Invoice_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Units charged --></label>
+        <name>Number_of_Units_charged__c</name>
+    </fields>
+    <fields>
+        <label><!-- Package Id --></label>
+        <name>Package_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Package --></label>
+        <name>Package_Lookup__c</name>
+        <relationshipLabel><!-- Premium Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Package --></label>
+        <name>Package__c</name>
+    </fields>
+    <fields>
+        <label><!-- Page Name --></label>
+        <name>Page_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Premium Product Name --></label>
+        <name>Premium_Product_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Price (excl. VAT) --></label>
+        <name>Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Flag --></label>
+        <name>Quote_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Salesperson --></label>
+        <name>Salesperson__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date_of_Premium_Product__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Size --></label>
+        <name>Unit_Size__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vacancy --></label>
+        <name>Vacancy__c</name>
+        <relationshipLabel><!-- Premium Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Web Ad Id --></label>
+        <name>Web_Ad_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Website --></label>
+        <name>Website__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wed Ad Site Number --></label>
+        <name>Wed_Ad_Site_Number__c</name>
+    </fields>
+    <layouts>
+        <layout>Premium Product Layout</layout>
+        <sections>
+            <label><!-- Client Information --></label>
+            <section>Client Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Package Information --></label>
+            <section>Package Information</section>
+        </sections>
+        <sections>
+            <label><!-- Price Information --></label>
+            <section>Price Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

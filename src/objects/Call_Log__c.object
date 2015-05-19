@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>CLog_Stage_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>Stage__c &amp;&quot;-&quot;&amp; Status__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CLog Stage&amp;Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Call_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Date/Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Case__c</fullName>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipName>Call_Logs</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>IsCall__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Status__c == &apos;Call Attempt 1&apos; || Status__c == &apos;Call Attempt 2&apos; || Status__c == &apos;Call Attempt 3&apos; || Status__c == &apos;Call Complete&apos;, true, false)
+
+
+/** Old version 
+IF( Status__c == &apos;Call Attempt 1&apos; || Status__c == &apos;Call Attempt 2&apos; || Status__c == &apos;Call Attempt 3&apos; || Status__c == &apos;Call Complete&apos; || Status__c == &apos;Remedial Action Required&apos;, true, false)
+
+**/</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>IsCall</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsSurvey__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Status__c = &apos;Call Complete&apos;,true,false)
+
+/** Old version
+IF(Status__c = &apos;Call Complete&apos; || Status__c == &apos;Remedial Action Required&apos;,true,false)
+**/</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>IsSurvey</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Main_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF  
+(Stage__c =&quot;Check In&quot; 
+  &amp;&amp;  
+    (
+         Status__c =&quot;Email Complete&quot; 
+         || Status__c =&quot;Email Sent&quot;
+     ),&quot;Check In Emails&quot;,
+   
+  IF 
+    (Stage__c = &quot;Customer Care Call&quot; 
+      &amp;&amp; 
+       (
+           Status__c =&quot;Call Attempt 1&quot; 
+        || Status__c =&quot;Call Attempt 2&quot; 
+        || Status__c =&quot;Call Attempt 3&quot;
+        || Status__c =&quot;Call Complete&quot;
+        || Status__c =&quot;Remedial Action Complete&quot;
+       ), &quot;Customer Care Calls&quot;,
+    
+
+     IF 
+       (Stage__c = &quot;Check In&quot; 
+        &amp;&amp; 
+         (
+           Status__c =&quot;Call Attempt 1&quot; 
+           || Status__c =&quot;Call Attempt 2&quot; 
+           || Status__c =&quot;Call Attempt 3&quot;
+           || Status__c =&quot;Call Complete&quot;
+           || Status__c =&quot;Remedial Action Complete&quot;
+         ), &quot;Check In Calls&quot;, &quot;Not Applicable&quot;
+    
+      ) 
+   )
+
+)</formula>
+        <label>Main Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Old Stage</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Old Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Stage</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Contact Log</label>
+    <nameField>
+        <displayFormat>CL{0000000000}</displayFormat>
+        <label>Contact Log Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Contact Logs</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

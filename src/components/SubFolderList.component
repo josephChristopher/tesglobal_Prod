@@ -1,0 +1,19 @@
+<apex:component controller="SubFolderListController" layout="none">
+     <apex:attribute name="subfolderId" description="The sub folder id" type="Id" required="true" assignTo="{!elementId}"/>
+    <ul>
+    
+    <apex:includeScript value="/support/console/20.0/integration.js"/>
+    <script type="text/javascript">
+    function openPrimaryTab(relatedListUrl, name) {
+              sforce.console.openPrimaryTab(null, relatedListUrl, true, name);            
+          }
+     </script>    
+        
+    <apex:repeat value="{!subFolderList}" var="subfolder">
+      <li><a href="#" onClick="openPrimaryTab('{!subfolder.Id}', '{!subfolder.name}');return false">{!subfolder.Name}</a></li>
+    
+    </apex:repeat>
+    </ul>
+
+    
+</apex:component>

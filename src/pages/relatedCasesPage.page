@@ -1,0 +1,72 @@
+<apex:page standardController="Case" extensions="RelatedCasesController" readonly="true">
+    
+   <apex:form > 
+    <apex:pageBlock rendered="{!relatedCases.size > 0}" mode="mainDetail">
+       <apex:outputPanel id="panel">
+        
+        <apex:pageBlockTable id="pb" value="{!relatedCases}" var="cs"  styleclass="floatingHeaderTable">
+            <apex:outputText value="{!Case.ContactId}" rendered="false"/>
+            <apex:outputText value="{!Case.Vacancy__c}" rendered="false"/>
+            
+           
+            <apex:column headervalue="Case #">
+                <apex:outputLink value="{!$Site.prefix}/{!cs.Id}" onClick="openPrimaryTab('{!cs.Id}', '{!cs.CaseNumber}');return false">{!cs.CaseNumber}</apex:outputLink>
+           
+            </apex:column>
+            
+            <apex:column headervalue="Account Name">
+                <apex:outputLink value="{!$Site.prefix}/{!cs.AccountId}" onClick="openPrimaryTab('{!cs.AccountId}', '{!cs.Account.Name}');return false">{!cs.Account.Name}</apex:outputLink>
+            </apex:column>
+            
+            <apex:column headervalue="Vacancy Name">
+                <apex:outputLink value="{!$Site.prefix}/{!cs.Vacancy__c}" onClick="openPrimaryTab('{!cs.Vacancy__c}', '{!cs.Vacancy__r.Name}');return false">{!cs.Vacancy__r.Name}</apex:outputLink>
+            </apex:column>
+                
+            <apex:column headervalue="Contact Name">
+                <apex:outputLink value="{!$Site.prefix}/{!cs.ContactId}" onClick="openPrimaryTab('{!cs.ContactId}', '{!cs.Contact.FirstName} {!cs.Contact.LastName}');return false">{!cs.Contact.FirstName} {!cs.Contact.LastName}</apex:outputLink>
+            </apex:column>
+
+            <apex:column value="{!cs.Check_In_Call_Date__c}"/>
+            <apex:column value="{!cs.Customer_Care_Call_Date__c}"/>
+            <apex:column value="{!cs.Priority}"/>
+            
+            <apex:column headervalue="Stage">
+                <apex:outputfield value="{!cs.Status}">
+                
+                        </apex:outputfield>
+            </apex:column>
+            
+             <apex:column headervalue="Status">
+                <apex:outputfield value="{!cs.Status_Custom__c}"/> 
+                
+            </apex:column>
+            
+       
+             <apex:column headervalue="Owner Name">
+                <apex:outputLink value="{!$Site.prefix}/{!cs.OwnerId}" onClick="openPrimaryTab('{!cs.OwnerId}', '{!cs.Owner.FirstName} {!cs.Owner.LastName}');return false">{!cs.Owner.FirstName} {!cs.Owner.LastName}</apex:outputLink>
+            </apex:column>
+            
+            
+            
+        </apex:pageBlockTable>
+        
+        </apex:outputPanel>
+        
+      
+    </apex:pageBlock>
+    </apex:form>
+  
+    <apex:includeScript value="/support/console/20.0/integration.js"/>
+    <script type="text/javascript">
+            function openPrimaryTab(relatedListUrl, name) {
+                      sforce.console.openPrimaryTab(null, 
+                        relatedListUrl, true, name);    
+                  }
+     </script>
+     
+    
+
+   
+   
+   
+</apex:page>

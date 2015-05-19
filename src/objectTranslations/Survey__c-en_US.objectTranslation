@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Survey</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Surveys</value>
+    </caseValues>
+    <fields>
+        <label><!-- Avg Rating Score --></label>
+        <name>Avg_Rating_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>Case__c</name>
+        <relationshipLabel><!-- Surveys --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Count of Ratings --></label>
+        <name>Count_of_Ratings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Effort Score --></label>
+        <name>Customer_Effort_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lowest Rating Score --></label>
+        <name>Lowest_Rating_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mid Campaign --></label>
+        <name>Mid_Campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Promoter Score --></label>
+        <name>Net_Promoter_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Promoter Type --></label>
+        <name>Promoter_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Thank You Email --></label>
+        <name>Send_Thank_You_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sum of Ratings --></label>
+        <name>Sum_of_Ratings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Survey Feedback Grade --></label>
+        <name>Survey_Feedback_Grade_Icon__c</name>
+    </fields>
+    <fields>
+        <label><!-- Survey Feedback Grade --></label>
+        <name>Survey_Feedback_Grade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Survey Taker Email --></label>
+        <name>Survey_Taker_Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- The contact person for the particular vacancy advert taking the survey. --></help>
+        <label><!-- Survey Taker --></label>
+        <name>Survey_Taker__c</name>
+        <relationshipLabel><!-- Surveys --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Survey Template --></label>
+        <name>Survey_Template__c</name>
+        <relationshipLabel><!-- Surveys --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Survey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Scores --></label>
+            <section>Scores</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Email --></label>
+        <name>Email</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <aggregates>
+        <calculatedFormula>B1#RowCount/PARENTGROUPVAL(B0#RowCount, GRAND_SUMMARY)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>Survey__c$CreatedDate</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>true</isCrossBlock>
+        <masterLabel>% response off all surveys</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>RowCount/PARENTGROUPVAL(RowCount, GRAND_SUMMARY)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA2</developerName>
+        <downGroupingContext>Survey__c$CreatedDate</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% response/total</masterLabel>
+        <reportType>Surveys_with_metrics_and_metrics_data__c</reportType>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>(B1#RowCount/B0#RowCount)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA3</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>true</isCrossBlock>
+        <masterLabel>% Response month</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <block>
+        <blockInfo>
+            <blockId>B1</blockId>
+            <joinTable>Survey__c</joinTable>
+        </blockInfo>
+        <columns>
+            <field>Survey__c$Name</field>
+        </columns>
+        <columns>
+            <field>Survey__c.Survey_Number__r$Response__c</field>
+        </columns>
+        <filter>
+            <criteriaItems>
+                <column>Survey__c.Survey_Number__r$Metrics__c</column>
+                <operator>equals</operator>
+                <value>M-0000000012,M-0000000011</value>
+            </criteriaItems>
+            <criteriaItems>
+                <column>Survey__c.Survey_Number__r$Response__c</column>
+                <operator>contains</operator>
+                <value>upsell,hard sell,sales calls,aggressive sales,upsale,up sale,constant calls,miss-sale,Up sell,hard sales</value>
+            </criteriaItems>
+        </filter>
+        <format>Summary</format>
+        <name>Surveys with metrics and metrics block 1</name>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>Surveys_with_metrics_and_metrics_data__c</reportType>
+        <scope>organization</scope>
+        <timeFrameFilter>
+            <dateColumn>Survey__c$CreatedDate</dateColumn>
+            <interval>INTERVAL_CUSTOM</interval>
+        </timeFrameFilter>
+    </block>
+    <block>
+        <blockInfo>
+            <aggregateReferences>
+                <aggregate>FORMULA1</aggregate>
+            </aggregateReferences>
+            <aggregateReferences>
+                <aggregate>FORMULA3</aggregate>
+            </aggregateReferences>
+            <blockId>B0</blockId>
+            <joinTable>Survey__c</joinTable>
+        </blockInfo>
+        <columns>
+            <field>Survey__c$Name</field>
+        </columns>
+        <format>Summary</format>
+        <name>Surveys block 2</name>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>Surveys__c</reportType>
+        <scope>organization</scope>
+        <timeFrameFilter>
+            <dateColumn>Survey__c$CreatedDate</dateColumn>
+            <interval>INTERVAL_CUSTOM</interval>
+        </timeFrameFilter>
+    </block>
+    <blockInfo>
+        <blockId xsi:nil="true"/>
+        <joinTable>Survey__c</joinTable>
+    </blockInfo>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFCCCC</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>B0#RowCount</column>
+        </chartSummaries>
+        <chartSummaries>
+            <axisBinding>y2</axisBinding>
+            <column>B0#FORMULA3</column>
+        </chartSummaries>
+        <chartType>VerticalColumnLine</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>Survey__c$CreatedDate</groupingColumn>
+        <legendPosition>Bottom</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Large</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <title>Too much of sales</title>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <description>Percentage of customers reporting that there is too much of sales in the service.</description>
+    <format>MultiBlock</format>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>Survey__c$CreatedDate</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Too much of sales-Surveys</name>
+    <reportType>Surveys_with_metrics_and_metrics_data__c</reportType>
+    <showDetails>false</showDetails>
+</Report>

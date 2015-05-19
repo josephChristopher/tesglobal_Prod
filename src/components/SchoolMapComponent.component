@@ -1,0 +1,116 @@
+<apex:component >
+    
+    <apex:attribute name="schoolList" type="Organisation__c[]" description="list of school coordinates and marketshare information"/>
+    <apex:attribute name="currentSchool" type="Organisation__c" description="current school"/>
+    
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    
+    <script type="text/javascript"> 
+    
+    $(document).ready(function() {
+        
+        var myOptions = {
+            zoom: 12,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            mapTypeControl: true
+        };
+        
+        var map;
+        var marker;
+        
+        
+        //create map
+        map = new google.maps.Map(document.getElementById("map"), myOptions);
+        
+        //center map
+        var currentLatLng = new google.maps.LatLng("{!currentSchool.lat_long__Latitude__s}","{!currentSchool.lat_long__Longitude__s}");
+        map.setCenter(currentLatLng);
+        
+        var infoWindowArray = new Array();
+        
+        var blueMarker = new google.maps.MarkerImage("http://maps.google.com/mapfiles/ms/icons/blue-dot.png");
+        var greenMarker = new google.maps.MarkerImage("http://maps.google.com/mapfiles/ms/icons/green-dot.png");
+        var redMarker = new google.maps.MarkerImage("http://maps.google.com/mapfiles/ms/icons/red-dot.png");
+        var orangeMarker = new google.maps.MarkerImage("http://www.google.com/intl/en_us/mapfiles/ms/micons/orange-dot.png");
+        
+        <apex:repeat var="school" value="{!schoolList}">  
+            
+        var myLatlng = new google.maps.LatLng("{!school.lat_long__Latitude__s}","{!school.lat_long__Longitude__s}");
+        
+        var infowindow = new google.maps.InfoWindow({
+            content: "<a onClick=\"openPrimaryTab('{!school.Id}', '{!school.Name}');return false;\" style=\"text-decoration: underline; color:#115da8;\">{!school.Name}</a><br/>" + "{!school.Complete_Address__c}" + "<br/>{!school.Phone_Number__c}<br/>" + "{!school.Phase_and_Funding_Group__c}<br/>" + "<div style=\"color:red\">{!school.Current_Movement_Category__c}</div><br/>" + "<i>{!school.Days_Since_Last_Visit__c}</i>"
+        });
+        
+        var schoolName = "{!school.Name}";
+        
+        var visited = {!school.Visited_by_Ambassador__c};
+        var scheduledToVisit = {!school.Scheduled_to_Visit__c}; 
+        
+        infoWindowArray[schoolName] = infowindow;        
+        
+        //create marker
+        if("{!school.School_Id__c}" == "{!currentSchool.School_Id__c}") {
+            marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: schoolName,
+                icon: blueMarker
+            });
+        } else if(visited == true) {
+            marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: schoolName,
+                icon: greenMarker
+            });
+        } else if(scheduledToVisit == true) {
+            marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: schoolName,
+                icon: orangeMarker
+            });
+         } else {
+            marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: schoolName,
+                icon: redMarker
+            });   
+        }
+            
+            //add listeners
+            google.maps.event.addListener(marker, 'click', function() {
+                infoWindowArray[this.getTitle()].open(map,this);
+            });
+            
+            </apex:repeat>
+            
+        });
+    
+    <apex:includeScript value="/support/console/20.0/integration.js"/>
+    
+            function openPrimaryTab(relatedListUrl, name) {
+                      sforce.console.openPrimaryTab(null, 
+                        relatedListUrl, true, name);    
+                  }
+    
+    </script>
+    <style>
+        #map {
+        font-family: Arial;
+        font-size:12px;
+        line-height:normal !important;
+        height:400px;
+        width: 700px;
+        background:transparent;
+        margin:auto;
+        }
+    </style>
+    
+    
+    
+    <div id="map"></div> 
+    
+</apex:component>

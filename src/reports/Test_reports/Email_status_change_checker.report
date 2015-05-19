@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_57400737</developerName>
+        <masterLabel>Status Update</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>CUST_CREATED_NAME</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Chris stura</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Daisy recto</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Julia Rontree</sourceValue>
+            </sourceValues>
+            <value>System updated</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Jamie Morris</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sarah Matthews</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Emma Wilsher</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Antonio Tempesta</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>David Igbinovia</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kushba Rahman</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Shumi Hussain</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Shazia Ahmad</sourceValue>
+            </sourceValues>
+            <value>By Consultants</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Maureen Tittris</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Lauren Roberts</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Nicholas Lawson</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Faust Perez</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Alexander Reigar</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mario de Mesquita</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Leticia Carriere</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Audrey O’Driscoll</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Traci Law</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Hassan Khalid</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Aaron Lacey</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Audrey O&apos;Driscoll</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Maureen Tittiris</sourceValue>
+            </sourceValues>
+            <value>By temp consultants</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_57588859</developerName>
+        <masterLabel>Survey status</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>CUST_CREATED_NAME</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Daisy Recto</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Chris Stura</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Julia Rontree</sourceValue>
+            </sourceValues>
+            <value>Actual surveys completed</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Jamie Morris</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sarah Matthews</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Emma Wilsher</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Antonio Tempesta</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>David Igbinovia</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kushba Rahman</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Shumi Hussain</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Maureen Tittris</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Lauren Roberts</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Nicholas Lawson</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Faust Perez</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Alexander Reigar</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mario de Mesquita</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Leticia Carriere</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Traci Law</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Hassan Khalid</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Aaron Lacey</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Maureen Tittiris</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Shazia Ahmad</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Audrey O&apos;Driscoll</sourceValue>
+            </sourceValues>
+            <value>Consultant updated</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>OPEN</field>
+    </columns>
+    <columns>
+        <field>CLOSED</field>
+    </columns>
+    <columns>
+        <field>Call_Log__c.Stage__c</field>
+    </columns>
+    <columns>
+        <field>Call_Log__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <description>Report to track status change by consultants to identify actual number of surveys completed</description>
+    <filter>
+        <criteriaItems>
+            <column>Call_Log__c.Stage__c</column>
+            <operator>equals</operator>
+            <value>check in</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Call_Log__c.Status__c</column>
+            <operator>equals</operator>
+            <value>email complete</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_57588859</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_57400737</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_CREATED_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Email status change checker</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseCustomEntity$Call_Log__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Call_Log__c.Call_Date_Time__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

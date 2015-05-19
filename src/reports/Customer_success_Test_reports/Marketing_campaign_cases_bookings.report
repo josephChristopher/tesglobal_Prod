@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Opportunity.Vacancies__r.Cases__r$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Vacancies__r$Name</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Vacancies__r.Cases__r$Status</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Vacancies__r.Cases__r$Status_Custom__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Vacancies__r$Ad_Number__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Vacancies__r$Publication__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Vacancies__r$Date_of_Ad_Publication_on_TES_Site__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Vacancies__r$Date_of_Ad_Expiry_on_TES_Global_Site__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Vacancies__r$Ad_Insert_MSL_ID__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Salesperson__c</field>
+    </columns>
+    <description>List of bookings with the £500 off advert offer applied (secondary schools in south east, south west and west midlands )</description>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity.Vacancies__r$Ad_Number__c</column>
+            <operator>contains</operator>
+            <value>52357,0521F1,053h96,053hg4,0544H1,54471,0543FF,0543F9,05418F,05410D,05408E,053H44,053H0B,053G2E,053F55,053AFA,053A58,053A51,053A3C,0539HH,0539HA,53918,05389B,0537DA,53653,05302d,53488,0533CH,05333E,53331,0532C2,052HE0,05333D,052HF6,052GG6,052GF4,052G4C,052g49,052C5B,052fb4,052G2A,052F69,052EH7,0530BA,052C9C,052BHG,052BHF,052AH2,052AHC,0529A2,0529CD,05298C,52959,05294F,05285F,0528CB,0528AF,52803,0527BF,052HE9,05275E,05274F,0525G2,0526D1,05271G,0521B5,52629,052 8D0,052A7B,52540,52518,0523BA,0524FE,0524F9,0522g9,52324,52338,05235B,05211A,052BA9,52263,05220H,0521B9,52184,0521H8,52264,051HB7,051H89,051H12,051H01,051GGE,051GHC,051GHA,051GF4,051GBH,051G98,051G50,051H0A,051H40,051H59,051G13,051F35,051F01,05267G,051ECG,051EB6,051D45,051E27,051CH8,0524BB,051D13,51880,051cb9,051a63,051B0H,52488,05242E,051EH2</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Vacancies__r$Classification__c</column>
+            <operator>contains</operator>
+            <value>secondary</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Vacancies__r.Cases__r$Ad_Start_Date_Time__c</column>
+            <operator>greaterThan</operator>
+            <value>3/15/2015 12:00 AM</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.Vacancies__r.Cases__r$Owner</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Marketing campaign cases/bookings</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Bookings_with_cases_and_vacancies__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Opportunity$CreatedDate</dateColumn>
+        <endDate>2015-04-21</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-03-15</startDate>
+    </timeFrameFilter>
+</Report>

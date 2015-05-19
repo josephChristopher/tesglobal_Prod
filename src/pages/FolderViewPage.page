@@ -1,0 +1,42 @@
+<apex:page controller="FolderViewPageController" sidebar="true" showHeader="true">
+    
+    <style>
+        .bPageBlock 
+        {
+            background-color: white !important;
+         }  
+     </style>
+    <apex:sectionHeader title="Please Select a Folder"/>
+
+    <apex:includeScript value="//code.jquery.com/jquery-1.11.1.min.js"/>
+    <apex:includeScript value="{!URLFOR($Resource.jstree, 'vakata-jstree-841eee8/dist/jstree.min.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.jstree, 'vakata-jstree-841eee8/dist/themes/default/style.min.css')}"/>
+    <script>
+        var $j = jQuery.noConflict();
+    $j(document).ready(function() {
+        $j("#treeFolderDiv").jstree();
+      });
+    </script>
+   
+    <apex:includeScript value="/support/console/20.0/integration.js"/>
+    <script type="text/javascript">
+            function openPrimaryTab(relatedListUrl, name) {
+                      sforce.console.openPrimaryTab(null, 
+                        relatedListUrl, true, name);    
+                  }
+     </script>
+    
+     <apex:pageBlock mode="mainDetail">
+            <div id="treeFolderDiv">
+             <ul>
+                 <apex:repeat value="{!folderList}" var="folder">
+                     <li><a href="#" onClick="openPrimaryTab('{!folder.Id}', '{!folder.name}');return false">{!folder.name}</a>                
+                        <c:SubFolderList subfolderId="{!folder.Id}"/>
+                     </li>
+                     
+                 </apex:repeat>
+             </ul>
+         </div>   
+    
+     </apex:pageBlock>
+</apex:page>

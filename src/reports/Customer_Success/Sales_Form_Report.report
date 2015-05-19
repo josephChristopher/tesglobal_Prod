@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Sales_Form__c$MSL_Ad_Number__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Form__c$Ad_Insert_MSL_Id__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Form__c$Name</field>
+    </columns>
+    <columns>
+        <field>Sales_Form__c$Salesperson_Name__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Form__c$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Sales_Form__c$Recruitment_Owner__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Form__c$Recruitment_Owner_Title__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Form__c$Recruitment_Owner_Email__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Form__c$Recruitment_Owner_Phone__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Form__c$Sales_Notes__c</field>
+    </columns>
+    <description>Report showing all the Sales Forms completed by Sales team</description>
+    <format>Tabular</format>
+    <name>Sales Form Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Sales_Forms__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Sales_Form__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

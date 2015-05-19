@@ -1,0 +1,26 @@
+<apex:page standardController="Sales_Form__c" extensions="SFormController">
+    <apex:form >
+        
+        <apex:pageblock title=" " mode="mainDetail">
+            <p>Recruitment Owner and Sales Notes Form
+            </p><br />
+        </apex:pageblock>    
+        
+        <apex:pageBlock mode="mainDetail">
+            <h>Thank you for filling out the Recruitment Owner and Sales Notes form. <br /><br />
+                If you would like to fill out another form, please click "New Sales Form" below. </h>
+            <br />
+            <apex:pageBlockButtons location="bottom"><br />
+                <apex:commandButton value="New Sales Form" action="{!returnToForm}"/> 
+            </apex:pageBlockButtons>
+            
+        </apex:pageBlock>
+    </apex:form>	
+    
+    
+    
+    <style>
+        p { font-size: 200%; }
+        h { font-size: 105% }
+    </style>
+</apex:page>

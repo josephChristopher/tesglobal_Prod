@@ -1,0 +1,105 @@
+<apex:component controller="AgenciesReportCompController" access="global">
+  <apex:attribute name="contId" description="Id of the Contact"
+                  type="Id" required="required" assignTo="{!contactId}"/>
+  <apex:attribute name="accId" description="Id of the Agency"
+                  type="Id" required="required" assignTo="{!accountId}"/>
+
+        <!--h1 style="font: bold 15px Arial, sans-serif;">{!reportLines[0].vacancy.Booking__r.Account.Name}</h1-->
+         <apex:outputPanel rendered="{!reportLines.size == null || reportLines.size == 0}">
+         	<span style="font: italic 13px Arial, sans-serif;">There are no vacancies</span>
+         </apex:outputPanel>
+
+
+        <apex:outputPanel rendered="{!reportLines.size != null && reportLines.size > 0}">
+        <table style="border: solid 1px #DDEEEE;
+                border-collapse: collapse;
+                border-spacing: 0;
+                font: normal 13px Arial, sans-serif;">
+        <thead style="background-color: #DDEFEF;
+                border: solid 1px #DDEEEE;
+                color: #336B6B;
+                padding: 10px;
+                text-align: left;
+                text-shadow: 1px 1px 1px #fff;">
+            <tr>
+                <th>School Name</th>
+                <th>Ad Number</th>
+                <th>Vacancy Name</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Date of Stats</th>
+
+                <th>Job Views</th>
+                <th>Apply Clicks</th>
+                <th>Contact</th>
+
+
+            </tr>
+        </thead>
+        <tbody style="border: solid 1px #DDEEEE;
+                color: #333;
+                padding: 5px;
+                text-shadow: 1px 1px 1px #fff;">
+        <apex:repeat value="{!reportLines}" var="rl">
+            <tr>
+                <td style="border: solid 1px #DDEEEE;
+                color: #333;
+                padding: 5px;
+                text-shadow: 1px 1px 1px #fff;"><apex:outputText value="{!rl.vacancy.Account__r.Name}"/></td>
+                <td style="border: solid 1px #DDEEEE;
+                color: #333;
+                padding: 5px;
+                text-shadow: 1px 1px 1px #fff;"><apex:outputField value="{!rl.vacancy.Ad_Number__c}"/></td>
+                <td style="border: solid 1px #DDEEEE;
+                color: #333;
+                padding: 5px;
+                text-shadow: 1px 1px 1px #fff;"><apex:outputField value="{!rl.vacancy.Name}"/></td>
+
+                <td style="border: solid 1px #DDEEEE;
+                color: #333;
+                padding: 5px;
+                text-shadow: 1px 1px 1px #fff;">
+                    <apex:outputText value="{0,date,dd'/'MM'/'yyyy}">
+                    <apex:param value="{!rl.vacancy.Date_of_Ad_Publication_on_TES_Site__c}" /> 
+                    </apex:outputText>
+                    </td>
+                <td style="border: solid 1px #DDEEEE;
+                color: #333;
+                padding: 5px;
+                text-shadow: 1px 1px 1px #fff;">
+                    <apex:outputText value="{0,date,dd'/'MM'/'yyyy}">
+                        <apex:param value="{!rl.vacancy.Date_of_Ad_Expiry_on_TES_Global_Site__c}" /> 
+                    </apex:outputText> 
+                </td>
+                <td style="border: solid 1px #DDEEEE;
+                color: #333;
+                padding: 5px;
+                text-shadow: 1px 1px 1px #fff;">
+                    <apex:outputText rendered="{!rl.vacancy.Ad_Web_Performance_Data__r != null && rl.vacancy.Ad_Web_Performance_Data__r.size > 0}" value="{0,date,dd'/'MM'/'yyyy}">
+                        <apex:param value="{!rl.vacancy.Ad_Web_Performance_Data__r[0].Date__c}" /> 
+                    </apex:outputText> 
+                </td>
+                
+                <td style="border: solid 1px #DDEEEE;
+                color: #333;
+                padding: 5px;
+                text-shadow: 1px 1px 1px #fff;"><apex:outputField rendered="{!rl.vacancy.Ad_Web_Performance_Data__r != null && rl.vacancy.Ad_Web_Performance_Data__r.size > 0}" value="{!rl.vacancy.Ad_Web_Performance_Data__r[0].Job_Views__c}"/></td>
+                
+                <td style="border: solid 1px #DDEEEE;
+                color: #333;
+                padding: 5px;
+                text-shadow: 1px 1px 1px #fff;"><apex:outputField rendered="{!rl.vacancy.Ad_Web_Performance_Data__r != null && rl.vacancy.Ad_Web_Performance_Data__r.size > 0}" value="{!rl.vacancy.Ad_Web_Performance_Data__r[0].Job_Apply_Clicks__c}"/></td>
+                <td style="border: solid 1px #DDEEEE;
+                color: #333;
+                padding: 5px;
+                text-shadow: 1px 1px 1px #fff;"><apex:outputField rendered="{!rl.contactRole != null}" value="{!rl.contactRole.Contact.Name}"/></td>
+               
+               
+                
+            </tr>
+        </apex:repeat>
+        </tbody>
+        </table>
+        </apex:outputPanel>
+
+</apex:component>

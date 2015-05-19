@@ -1,0 +1,122 @@
+<messaging:emailTemplate subject="Feedback on your Recruitment Solution so far" recipientType="Contact" relatedToType="Case">
+<messaging:htmlEmailBody >
+<html>
+
+  <p><font face="Verdana" size="0.25px" color="grey">Case #: {!relatedTo.CaseNumber}</font></p>
+  <br></br>       
+
+
+      <center>
+   
+    <img src="http://s22.postimg.org/5vouqlbg1/tes_logo_email.png"></img>
+    
+      </center><br></br>
+      <center><b><font face="Verdana" size="4px">Two Minute Survey</font></b></center>
+      
+      <body>
+        <STYLE type="text/css">
+          .m {margin: 50px 50px 50px 50px;
+          }
+          
+          
+        p {margin-bottom:20; margin:20}
+          
+       </style>
+    
+        
+        <m>
+        <font face="Verdana" size="2px">
+
+          <p>Dear {!relatedTo.Contact.Salutation} {!relatedTo.Contact.Name},</p>
+           
+          
+          <p>Thank you for choosing TES as your recruitment partner. We really do appreciate your business and we are looking forward to connecting you with the very best candidates.</p>
+          
+          <p>It is now a few days since the recruitment advert for your <b>{!relatedTo.Vacancy__r.Vacancy_Job_Title__c } </b> position was published online at https://www.tes.co.uk/jobs/.</p>
+        
+          <p>Whilst some candidates may have contacted you direct to express interest in, or to apply for, the role, here are the online statistics for the role so far:</p>
+          
+         
+          <br></br>         
+         
+  
+            
+        <center><apex:dataTable value="{!relatedto}" var="cs" cellpadding="8" border="1px" bgcolor="#115da8" style="font-family: Verdana; font-size: 13px; border: 1px solid white; text-align: center; color: white; " align="center">
+ 
+        <apex:column style="background-color:#e6e6e6; color: black; border: 1px solid white;">
+        <apex:facet name="header">Date of Stats</apex:facet>
+            <apex:outputText value="{0,date,dd MMMM, yyyy}">
+                 <apex:param value="{!cs.Date__c}" />
+            </apex:outputText>
+        </apex:column>
+        
+        <apex:column style="background-color:#e6e6e6; color: black; border: 1px solid white;">
+        <apex:facet name="header">Role</apex:facet>
+       
+       <a href="{!cs.vacancy__r.Link_on_TES_website__c}"  style="text-align: center; color: #115da8;">{!cs.Vacancy__r.Vacancy_Job_Title__c}</a>
+        </apex:column>
+        
+        <apex:column style="background-color:#e6e6e6; color: black; border: 1px solid white;">
+        <apex:facet name="header">Job Views Online*</apex:facet>
+        {!FLOOR(cs.Job_Views__c)}
+        </apex:column>
+        
+        <apex:column style="background-color:#e6e6e6; color: black; border: 1px solid white;">
+        <apex:facet name="header">Clicks to Apply*</apex:facet>
+        {!FLOOR(cs.Job_Apply_Clicks__c)}
+        </apex:column>
+        
+        
+        
+    </apex:dataTable></center>
+        
+           <br></br>
+           
+          <p>I would really like to understand how well you feel our recruitment solution is working for you because we want to understand 
+          if we can provide any additional help in finding the very best teaching talent ahead of the closing date.  
+          Therefore, I would like to invite you to tell us about your experience of TES so far by completing our 
+ <b>Two Minute Survey</b>. </p> 
+          
+   
+          <p>Your feedback is very important to us because it will support the continuous improvement of our products and services to you.</p>
+        
+          <p>To provide your feedback, please click on the link below – it will only take <b>2 minutes</b>.</p>
+             
+          <br></br>
+         <center> 
+         <table cellpadding="0" cellspacing="0" border="0" style="padding-top: 15px; padding-bottom: 15px; padding-left: 15px; padding-right: 15px;background-color:#23a850; ">
+        <tr>
+        <td > 
+         <center><a href="{!relatedTo.Survey_Site_Main_Link__c}/surveyIntroPage?id={!relatedTo.Id}" style="width: 200; text-align: center; font-weight: bold; font-family: Verdana; font-size: 16px;color: white; link: white; vlink: white; alink: white; text-decoration: none;" >COMPLETE SURVEY</a></center>
+        </td>
+        </tr>
+        </table>   
+           </center>
+          <br></br>
+          
+          <p>Thank you for taking the time to tell us how well we are meeting your needs so far.  
+</p>
+          
+           <br></br>
+              
+          <p>Yours sincerely,</p>
+
+       
+        <img src="http://s18.postimg.org/mb0vvb6f9/Becky_Signature.png"></img>
+         <b><p>Becky Simpson</p>
+         <p> Customer Success Director</p></b>
+         <br></br>
+         <hr></hr>
+         <font face="Verdana" size="0.5px" color="grey"><i><b>*Job Views</b> refers to the number of unique views to your advert page, while <b>Clicks to Apply</b> is the number of unique clicks to the "Apply for this Role" button in your advert page.
+         It is unique if the view or click is specific to the domain, browser and computer of the potential applicant. Note that a click to the "Apply for this Role" button does not necessarily mean that the person completed the application.</i>
+         <br></br></font>
+         
+         
+
+    
+</font>
+</m>
+</body>
+</html>
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

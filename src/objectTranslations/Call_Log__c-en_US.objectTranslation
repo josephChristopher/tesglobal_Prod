@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Contact Log</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Contact Logs</value>
+    </caseValues>
+    <fields>
+        <label><!-- CLog Stage&amp;Status --></label>
+        <name>CLog_Stage_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date/Time --></label>
+        <name>Call_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>Case__c</name>
+        <relationshipLabel><!-- Contact Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- IsCall --></label>
+        <name>IsCall__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsSurvey --></label>
+        <name>IsSurvey__c</name>
+    </fields>
+    <fields>
+        <label><!-- Main Status --></label>
+        <name>Main_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Old Stage --></label>
+        <name>Old_Stage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Old Status --></label>
+        <name>Old_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stage --></label>
+        <name>Stage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Subscription</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Subscription</value>
+    </caseValues>
+    <fields>
+        <label><!-- Agency --></label>
+        <name>Agency__c</name>
+        <relationshipLabel><!-- Subscription --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Bill To --></label>
+        <name>Bill_To__c</name>
+        <relationshipLabel><!-- Subscription (Bill To) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Client --></label>
+        <name>Client__c</name>
+        <relationshipLabel><!-- Subscription (Client) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Expire Date --></label>
+        <name>Expire_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Msl Subscription Id --></label>
+        <name>Msl_Subscription_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Price --></label>
+        <name>Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <layouts>
+        <layout>Subscription Layout</layout>
+        <sections>
+            <label><!-- Client Information --></label>
+            <section>Client Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

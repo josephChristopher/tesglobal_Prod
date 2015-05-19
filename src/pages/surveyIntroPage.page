@@ -1,0 +1,59 @@
+<apex:page standardController="Case" showHeader="false">
+  <div id="InnternalDiv" style="width:75%;margin:auto;text-align:center; border-width:8px;border-style:solid;border-color:#e6e6e6;font-family: Arial;">
+    <apex:image id="logo" url="https://c.cs20.content.force.com/servlet/servlet.ImageServer?id=015m00000009E0i&oid=00Dm00000001c6V" style="text-align:left; margin:auto;max-width: 100%;
+    height: auto;width: auto\9;"/>
+    <apex:form >
+        
+        <p>TES Recruitment Two Minute Survey
+            </p><br />
+      
+       
+       <div style="text-align: left; font-size: 120%;">
+        
+        <apex:outputpanel >
+
+        <apex:pageblock title=" " mode="mainDetail">
+       
+        Dear {!case.Contact.Salutation} {!case.Contact.Name},
+        <br/><br />
+        I would like to invite you to complete our <bold>Two Minute Survey</bold> so that you can tell us about your experience of our recruitment solution for your role, <bold>{!case.Vacancy__r.Vacancy_Job_Title__c}</bold>. 
+        We want to understand if we can provide any additional help in finding the very best teaching talent ahead of the closing date. 
+        
+        <br /> <br />
+        Your feedback is vital to us and will support the continuous improvement of our products and service to you.  
+        
+        <br/><br />
+        To provide your feedback, please click <bold>NEXT</bold> and the survey will be available for you to complete.
+        <br/><br /><br/><br />
+        Yours sincerely,
+        <br/><br />
+
+       <bold> Becky Simpson<br />
+        Customer Success Director </bold>
+        
+        <br/><br /><br/><br />
+        <center> <apex:outputLink style="padding: 0.25cm; background-color:#23a850; margin: 10px 10px 10px 10px; font-weight: bold; font-family: Verdana; font-size: 16px;color: white; text-decoration: none;" value="{!case.Check_In_Survey_Link__c}">NEXT</apex:outputLink>
+           </center>
+        <br/><br /><br/><br />
+       </apex:pageBlock>     
+       </apex:outputpanel>
+       </div>
+       </apex:form>
+       </div>
+            
+       <style type="text/css">
+       
+    
+        body {
+        text-align:left;
+        }
+        
+        p { font-size: 200%;font-weight: bold;color: #115da8; font-family: Arial;  }
+        
+        bold {font-weight: bold;}
+    
+    
+  
+    </style>
+            
+</apex:page>

@@ -1,0 +1,1687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Stage</value>
+        </caseValues>
+        <name>status_case</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <label><!-- Account Name (txt) --></label>
+        <name>Account_Name_txt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Check In Contact Date --></label>
+        <name>Actual_Check_In_Contact_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Customer Care Call Date --></label>
+        <name>Actual_Customer_Care_Call_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ad End Date/Time --></label>
+        <name>Ad_End_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ad Insert Id --></label>
+        <name>Ad_Insert_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ad Number --></label>
+        <name>Ad_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ad Web Performance Grade --></label>
+        <name>Ad_Performance_Grade__c</name>
+        <picklistValues>
+            <masterLabel>Acceptable</masterLabel>
+            <translation><!-- Acceptable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sub-Optimal</masterLabel>
+            <translation><!-- Sub-Optimal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ad Start Date/Time --></label>
+        <name>Ad_Start_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ad Web Metrics Complete? --></label>
+        <name>Ad_Web_Metrics_Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency --></label>
+        <name>Agency_CustSuccess__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency Name (txt) --></label>
+        <name>Agency_Name_txt__c</name>
+    </fields>
+    <fields>
+        <help><!-- Region used to allocate cases to Ambassadors. --></help>
+        <label><!-- Allocated Region --></label>
+        <name>Allocated_Region__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the Ambassador is Scheduled to Visit --></help>
+        <label><!-- Ambassador Scheduled Visit Date --></label>
+        <name>Ambassador_Scheduled_Visit_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Answer/Resolution --></label>
+        <name>Answer_Resolution__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bill To Name (txt) --></label>
+        <name>Bill_To_Name_txt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Booking Name (txt) --></label>
+        <name>Booking_Name_txt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Booking --></label>
+        <name>Booking__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Calculated Check In Contact Date --></label>
+        <name>Calculated_Check_In_Contact_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Calculated Customer Care Call Date --></label>
+        <name>Calculated_Customer_Care_Call_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is used by Engagement Executives to keep track of the second call attempt --></help>
+        <label><!-- Callback Date - Attempt 2 --></label>
+        <name>Callback_Date_2_Mkt_Share__c</name>
+    </fields>
+    <fields>
+        <label><!-- Check In - Call Attempt Date 2 --></label>
+        <name>Callback_Date_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is used by Engagement Executives to keep track of the final call attempt. --></help>
+        <label><!-- Callback Date - Attempt 3 --></label>
+        <name>Callback_Date_3_Mkt_Share__c</name>
+    </fields>
+    <fields>
+        <label><!-- Check In - Call Attempt Date 3 --></label>
+        <name>Callback_Date_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Callback Date - Attempt 4 --></label>
+        <name>Callback_Date_4_Mkt_Share__c</name>
+    </fields>
+    <fields>
+        <label><!-- Callback Date - Attempt 5 --></label>
+        <name>Callback_Date_5_Mkt_Share__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is used by Engagement Executives to keep track of the first call attempt. --></help>
+        <label><!-- Callback Date - Attempt 1 --></label>
+        <name>Callback_Date_Mkt_Share__c</name>
+    </fields>
+    <fields>
+        <label><!-- Callback Date/Time --></label>
+        <name>Callback_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Check In - Call Attempt Date 1 --></label>
+        <name>Callback_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Care Call Date Chosen by Contact --></label>
+        <name>Care_Call_Date_Chosen_By_Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Owner Profile --></label>
+        <name>Case_Owner_Profile__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Stage/Statue --></label>
+        <name>Case_Stage_Statue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Check In Contact Date --></label>
+        <name>Check_In_Call_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- The time the Call/Email has been completed for the Mid-Campaign Check In. --></help>
+        <label><!-- Check In Contact Completed Date/Time --></label>
+        <name>Check_In_Date_Time_Closed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Check In Resolution Time (Hrs) --></label>
+        <name>Check_In_Resolution_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Check In Survey Link --></label>
+        <name>Check_In_Survey_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Classification --></label>
+        <name>Classification__c</name>
+    </fields>
+    <fields>
+        <label><!-- Competitor-Other --></label>
+        <name>Competitor_Other__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Email --></label>
+        <name>Contact_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact First Name --></label>
+        <name>Contact_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Job Title --></label>
+        <name>Contact_Job_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Last Name --></label>
+        <name>Contact_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Phone --></label>
+        <name>Contact_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Title --></label>
+        <name>Contact_Title_If_Other__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Callback Date --></label>
+        <name>Current_Callback_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Care - Call Attempt Date 1 --></label>
+        <name>Customer_Care_Call_Attempt_Date_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Care - Call Attempt Date 2 --></label>
+        <name>Customer_Care_Call_Attempt_Date_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Care - Call Attempt Date 3 --></label>
+        <name>Customer_Care_Call_Attempt_Date_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Care Call Date --></label>
+        <name>Customer_Care_Call_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date/Time Closed --></label>
+        <name>DateTime_Closed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Email Sent --></label>
+        <name>Date_Email_Sent__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date/Time the Customer Care Call is completed. --></help>
+        <label><!-- Customer Care Call Completed Date/Time --></label>
+        <name>Date_Time_Closed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date/Time Remedial Action Complete --></label>
+        <name>Date_Time_Remedial_Action_Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- The number of days it takes the customer to complete the survey emailed to them. --></help>
+        <label><!-- Email Response Time (Days) --></label>
+        <name>Email_Response_Time__c</name>
+    </fields>
+    <fields>
+        <help><!-- Government Office Region; Also the Region in the Local Authority related to the School/Organisation. --></help>
+        <label><!-- GOR --></label>
+        <name>GOR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Guardian Additional Info --></label>
+        <name>Guardian_Additional_Info__c</name>
+    </fields>
+    <fields>
+        <label><!-- Guardian - Subscription End Date --></label>
+        <name>Guardian_Subscription_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hays Additional Info --></label>
+        <name>Hays_Additional_Info__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hays - Subscription End Date --></label>
+        <name>Hays_Subscription_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Job Apply Clicks --></label>
+        <name>Job_Apply_Clicks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Job Title --></label>
+        <name>Job_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Job Type --></label>
+        <name>Job_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Job Views --></label>
+        <name>Job_Views__c</name>
+    </fields>
+    <fields>
+        <label><!-- Latest Call Attempt Date/Time --></label>
+        <name>Latest_Call_Attempt_Date1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Local Auth Additional Info --></label>
+        <name>Local_Auth_Additional_Info__c</name>
+    </fields>
+    <fields>
+        <label><!-- Local Auth Site - Subscription End Date --></label>
+        <name>Local_Auth_Site_Subscription_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Local Authority --></label>
+        <name>Local_Authority__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Lowest Rating Score --></label>
+        <name>Lowest_Rating_Score__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determines whether the school for this case is in the &apos;North&apos; or &apos;South&apos; region of England based on the Local Authority&apos;s Region. --></help>
+        <label><!-- Main Allocated Region --></label>
+        <name>Main_Allocated_Region__c</name>
+    </fields>
+    <fields>
+        <label><!-- Main Reason for Complaint --></label>
+        <name>Main_Reason_for_Complaint__c</name>
+        <picklistValues>
+            <masterLabel>Advert Cancelled</masterLabel>
+            <translation><!-- Advert Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advert Error</masterLabel>
+            <translation><!-- Advert Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Booking Error</masterLabel>
+            <translation><!-- Booking Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Communication Issue</masterLabel>
+            <translation><!-- Communication Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discount/Upgrade Issue</masterLabel>
+            <translation><!-- Discount/Upgrade Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duplicate Advert/Subscription</masterLabel>
+            <translation><!-- Duplicate Advert/Subscription --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invoice/Billing Issue</masterLabel>
+            <translation><!-- Invoice/Billing Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pricing/Rating Issue</masterLabel>
+            <translation><!-- Pricing/Rating Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Related to Customer Success Survey</masterLabel>
+            <translation><!-- Related to Customer Success Survey --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Mid Campaign Rating Score --></label>
+        <name>Mid_Campaign_Rating_Score__c</name>
+    </fields>
+    <fields>
+        <name>Origin</name>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Face-to-Face</masterLabel>
+            <translation><!-- Face-to-Face --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketshare Database</masterLabel>
+            <translation><!-- Marketshare Database --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone</masterLabel>
+            <translation><!-- Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QMS</masterLabel>
+            <translation><!-- QMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Media</masterLabel>
+            <translation><!-- Social Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web Form</masterLabel>
+            <translation><!-- Web Form --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Person Responsible --></label>
+        <name>Person_Responsible__c</name>
+    </fields>
+    <fields>
+        <label><!-- Post Campaign Rating Score --></label>
+        <name>Post_Campaign_Rating_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Premium Products --></label>
+        <name>Premium_Product__c</name>
+        <picklistValues>
+            <masterLabel>Additional Category</masterLabel>
+            <translation><!-- Additional Category --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contextual Ad</masterLabel>
+            <translation><!-- Contextual Ad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Featured Employer</masterLabel>
+            <translation><!-- Featured Employer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Featured Job</masterLabel>
+            <translation><!-- Featured Job --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Job of the week</masterLabel>
+            <translation><!-- Job of the week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sponsored Email Alert</masterLabel>
+            <translation><!-- Sponsored Email Alert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sponsored Job</masterLabel>
+            <translation><!-- Sponsored Job --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>Priority</name>
+        <picklistValues>
+            <masterLabel>1 - Very High</masterLabel>
+            <translation><!-- 1 - Very High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 - High</masterLabel>
+            <translation><!-- 2 - High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 - Medium</masterLabel>
+            <translation><!-- 3 - Medium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 - Low</masterLabel>
+            <translation><!-- 4 - Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 - Very Low</masterLabel>
+            <translation><!-- 5 - Very Low --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Priority - Account Name --></label>
+        <name>Priority_Account_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+        <picklistValues>
+            <masterLabel>Bronze</masterLabel>
+            <translation><!-- Bronze --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation><!-- Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary +</masterLabel>
+            <translation><!-- Primary + --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Print</masterLabel>
+            <translation><!-- Print --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver</masterLabel>
+            <translation><!-- Silver --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Publication Date --></label>
+        <name>Publication_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Publication --></label>
+        <name>Publication__c</name>
+        <picklistValues>
+            <masterLabel>TES</masterLabel>
+            <translation><!-- TES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TES Australia</masterLabel>
+            <translation><!-- TES Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TES Further Jobs</masterLabel>
+            <translation><!-- TES Further Jobs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TES Leadership</masterLabel>
+            <translation><!-- TES Leadership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TES Online</masterLabel>
+            <translation><!-- TES Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TES Scotland</masterLabel>
+            <translation><!-- TES Scotland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TES Special Supplements</masterLabel>
+            <translation><!-- TES Special Supplements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TESS</masterLabel>
+            <translation><!-- TESS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THE</masterLabel>
+            <translation><!-- THE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THE Online</masterLabel>
+            <translation><!-- THE Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THE Special Supplements</masterLabel>
+            <translation><!-- THE Special Supplements --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>Reason</name>
+        <picklistValues>
+            <masterLabel>Complex functionality</masterLabel>
+            <translation><!-- Complex functionality --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Existing problem</masterLabel>
+            <translation><!-- Existing problem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Instructions not clear</masterLabel>
+            <translation><!-- Instructions not clear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New problem</masterLabel>
+            <translation><!-- New problem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User didn&apos;t attend training</masterLabel>
+            <translation><!-- User didn&apos;t attend training --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reason for Complaint --></label>
+        <name>Reason_for_Complaint__c</name>
+        <picklistValues>
+            <masterLabel>100% Run to Fill</masterLabel>
+            <translation><!-- 100% Run to Fill --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15% Repeat Discount</masterLabel>
+            <translation><!-- 15% Repeat Discount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15% Repeat Discount (Print)</masterLabel>
+            <translation><!-- 15% Repeat Discount (Print) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15% Repeat Discount (Web)</masterLabel>
+            <translation><!-- 15% Repeat Discount (Web) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advert Appeared Early</masterLabel>
+            <translation><!-- Advert Appeared Early --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advert Appeared Late</masterLabel>
+            <translation><!-- Advert Appeared Late --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advert Cancelled (Additional Module)</masterLabel>
+            <translation><!-- Advert Cancelled (Additional Module) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advert Cancelled (Print)</masterLabel>
+            <translation><!-- Advert Cancelled (Print) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advert Cancelled (Web)</masterLabel>
+            <translation><!-- Advert Cancelled (Web) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advert Did Not Appear</masterLabel>
+            <translation><!-- Advert Did Not Appear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advert Not Ordered</masterLabel>
+            <translation><!-- Advert Not Ordered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agency Discount 10%</masterLabel>
+            <translation><!-- Agency Discount 10% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agency Discount 12.5%</masterLabel>
+            <translation><!-- Agency Discount 12.5% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agency Discount 15%</masterLabel>
+            <translation><!-- Agency Discount 15% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agency Discount 17.5%</masterLabel>
+            <translation><!-- Agency Discount 17.5% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agency Incentive Discount</masterLabel>
+            <translation><!-- Agency Incentive Discount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client Discount 10% Omitted</masterLabel>
+            <translation><!-- Client Discount 10% Omitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client Discount 12.5% Omitted</masterLabel>
+            <translation><!-- Client Discount 12.5% Omitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discount Omitted</masterLabel>
+            <translation><!-- Discount Omitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Double Agency Commission Omitted</masterLabel>
+            <translation><!-- Double Agency Commission Omitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duplicate Advert (Additional Module)</masterLabel>
+            <translation><!-- Duplicate Advert (Additional Module) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duplicate Advert (Print)</masterLabel>
+            <translation><!-- Duplicate Advert (Print) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duplicate Advert (Web)</masterLabel>
+            <translation><!-- Duplicate Advert (Web) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duplicate Invoice (System Error)</masterLabel>
+            <translation><!-- Duplicate Invoice (System Error) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duplicate Primary+ Subscription</masterLabel>
+            <translation><!-- Duplicate Primary+ Subscription --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duplicate Web Gold Package</masterLabel>
+            <translation><!-- Duplicate Web Gold Package --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Error (Print &amp; Web)</masterLabel>
+            <translation><!-- Error (Print &amp; Web) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Error on Print Advert</masterLabel>
+            <translation><!-- Error on Print Advert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Error on Web Advert</masterLabel>
+            <translation><!-- Error on Web Advert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hardsell Tactics</masterLabel>
+            <translation><!-- Hardsell Tactics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HireWire Upgrade Discount</masterLabel>
+            <translation><!-- HireWire Upgrade Discount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hirewire - Duplicate Advert</masterLabel>
+            <translation><!-- Hirewire - Duplicate Advert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incorrect Invoice Date</masterLabel>
+            <translation><!-- Incorrect Invoice Date --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incorrect Rate Accepted</masterLabel>
+            <translation><!-- Incorrect Rate Accepted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incorrect Rate Charged</masterLabel>
+            <translation><!-- Incorrect Rate Charged --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incorrect School Information</masterLabel>
+            <translation><!-- Incorrect School Information --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lack of Communication</masterLabel>
+            <translation><!-- Lack of Communication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Loyalty Points Redemption Omitted</masterLabel>
+            <translation><!-- Loyalty Points Redemption Omitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mono Charged As Colour</masterLabel>
+            <translation><!-- Mono Charged As Colour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Charged As Quoted</masterLabel>
+            <translation><!-- Not Charged As Quoted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary+ FOC Bronze Package - Incorrect Billing</masterLabel>
+            <translation><!-- Primary+ FOC Bronze Package - Incorrect Billing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary+ Incorrect Rate</masterLabel>
+            <translation><!-- Primary+ Incorrect Rate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary+ Not Ordered</masterLabel>
+            <translation><!-- Primary+ Not Ordered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary+ Renewal Declined</masterLabel>
+            <translation><!-- Primary+ Renewal Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary+ Upgrade Not Applied</masterLabel>
+            <translation><!-- Primary+ Upgrade Not Applied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary+ Upgrade Not Ordered</masterLabel>
+            <translation><!-- Primary+ Upgrade Not Ordered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rate Change</masterLabel>
+            <translation><!-- Rate Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rate Change Incorrect Rate Accepted</masterLabel>
+            <translation><!-- Rate Change Incorrect Rate Accepted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reduced Commission</masterLabel>
+            <translation><!-- Reduced Commission --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Survey Doesn&apos;t Work</masterLabel>
+            <translation><!-- Survey Doesn&apos;t Work --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Survey Emailed to Wrong Address</masterLabel>
+            <translation><!-- Survey Emailed to Wrong Address --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TES/THE Support FOC Starter Package - Remove Fee</masterLabel>
+            <translation><!-- TES/THE Support FOC Starter Package - Remove Fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TES/THE Support Upgrade Not Applied</masterLabel>
+            <translation><!-- TES/THE Support Upgrade Not Applied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Too Much Communication</masterLabel>
+            <translation><!-- Too Much Communication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UAG Discount 15%</masterLabel>
+            <translation><!-- UAG Discount 15% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ULT Discount 10%</masterLabel>
+            <translation><!-- ULT Discount 10% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Can&apos;t Access Survey</masterLabel>
+            <translation><!-- User Can&apos;t Access Survey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web Additional Module Not Ordered</masterLabel>
+            <translation><!-- Web Additional Module Not Ordered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web Attachments Appeared Late</masterLabel>
+            <translation><!-- Web Attachments Appeared Late --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong Advert Size</masterLabel>
+            <translation><!-- Wrong Advert Size --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong Category</masterLabel>
+            <translation><!-- Wrong Category --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong Web Package</masterLabel>
+            <translation><!-- Wrong Web Package --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reason for Disengagement --></label>
+        <name>Reason_for_Disengagement__c</name>
+        <picklistValues>
+            <masterLabel>Not aware of competitive media usage</masterLabel>
+            <translation><!-- Not aware of competitive media usage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TES is difficult to deal with</masterLabel>
+            <translation><!-- TES is difficult to deal with --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TES is too expensive</masterLabel>
+            <translation><!-- TES is too expensive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Use TES as last resort</masterLabel>
+            <translation><!-- Use TES as last resort --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reason for Escalation --></label>
+        <name>Reason_for_Escalation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reported By (Team) --></label>
+        <name>Reported_By_Team__c</name>
+        <picklistValues>
+            <masterLabel>Agency</masterLabel>
+            <translation><!-- Agency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Services</masterLabel>
+            <translation><!-- Customer Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Success Team</masterLabel>
+            <translation><!-- Customer Success Team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FE</masterLabel>
+            <translation><!-- FE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Field Sales</masterLabel>
+            <translation><!-- Field Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HE</masterLabel>
+            <translation><!-- HE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>International</masterLabel>
+            <translation><!-- International --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online Production</masterLabel>
+            <translation><!-- Online Production --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Print</masterLabel>
+            <translation><!-- Print --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SD</masterLabel>
+            <translation><!-- SD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upsell</masterLabel>
+            <translation><!-- Upsell --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upsell Agency</masterLabel>
+            <translation><!-- Upsell Agency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upsell Digital</masterLabel>
+            <translation><!-- Upsell Digital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upsell P&amp;O</masterLabel>
+            <translation><!-- Upsell P&amp;O --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reported By --></label>
+        <name>Reported_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Care Call Resolution Time (Hrs) --></label>
+        <name>Resolution_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response time --></label>
+        <name>Response_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- SD Name --></label>
+        <name>SD_Name__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- SD Phone Number --></label>
+        <name>SD_Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- SD Post Code --></label>
+        <name>SD_Post_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Person (Txt) --></label>
+        <name>Sales_Person_Txt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Person --></label>
+        <name>Sales_Person__c</name>
+    </fields>
+    <fields>
+        <label><!-- Salutation --></label>
+        <name>Salutation__c</name>
+        <picklistValues>
+            <masterLabel>Dr.</masterLabel>
+            <translation><!-- Dr. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Miss.</masterLabel>
+            <translation><!-- Miss. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mr.</masterLabel>
+            <translation><!-- Mr. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mrs.</masterLabel>
+            <translation><!-- Mrs. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ms.</masterLabel>
+            <translation><!-- Ms. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prof.</masterLabel>
+            <translation><!-- Prof. --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- School/Institution --></label>
+        <name>School_Institution__c</name>
+    </fields>
+    <fields>
+        <label><!-- SocialMedia Additional Info --></label>
+        <name>SocialMedia_Additional_Info__c</name>
+    </fields>
+    <fields>
+        <label><!-- SocialMedia subscription End Date --></label>
+        <name>SocialMedia_subscription_End_Date__c</name>
+    </fields>
+    <fields>
+        <name>Status</name>
+        <picklistValues>
+            <masterLabel>Ambassador Contact</masterLabel>
+            <translation><!-- Ambassador Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Check In</masterLabel>
+            <translation><!-- Check In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed - No Resolution</masterLabel>
+            <translation><!-- Closed - No Resolution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed - Resolved</masterLabel>
+            <translation><!-- Closed - Resolved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Care Call</masterLabel>
+            <translation><!-- Customer Care Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engagement Contact</masterLabel>
+            <translation><!-- Engagement Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Check In</masterLabel>
+            <translation><!-- Pre-Check In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Read</masterLabel>
+            <translation><!-- Read --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solution Delivery</masterLabel>
+            <translation><!-- Solution Delivery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unread</masterLabel>
+            <translation><!-- Unread --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status_Custom__c</name>
+        <picklistValues>
+            <masterLabel>Awaiting Call</masterLabel>
+            <translation><!-- Awaiting Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Awaiting Contact</masterLabel>
+            <translation><!-- Awaiting Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Awaiting Visit</masterLabel>
+            <translation><!-- Awaiting Visit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Call Attempt 1</masterLabel>
+            <translation><!-- Call Attempt 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Call Attempt 2</masterLabel>
+            <translation><!-- Call Attempt 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Call Attempt 3</masterLabel>
+            <translation><!-- Call Attempt 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Call Attempt 4</masterLabel>
+            <translation><!-- Call Attempt 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Call Attempt 5</masterLabel>
+            <translation><!-- Call Attempt 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Call Complete</masterLabel>
+            <translation><!-- Call Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Call Scheduled</masterLabel>
+            <translation><!-- Call Scheduled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed - Not Resolved</masterLabel>
+            <translation><!-- Closed - Not Resolved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed - Resolved, Awaiting Booking</masterLabel>
+            <translation><!-- Closed - Resolved, Awaiting Booking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed - Resolved, No Booking</masterLabel>
+            <translation><!-- Closed - Resolved, No Booking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cold Call</masterLabel>
+            <translation><!-- Cold Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Declined to Engage/No Visit</masterLabel>
+            <translation><!-- Declined to Engage/No Visit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email Complete</masterLabel>
+            <translation><!-- Email Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email Scheduled</masterLabel>
+            <translation><!-- Email Scheduled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email Sent</masterLabel>
+            <translation><!-- Email Sent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Escalated</masterLabel>
+            <translation><!-- Escalated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incomplete</masterLabel>
+            <translation><!-- Incomplete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Feedback to Customer</masterLabel>
+            <translation><!-- Pending Feedback to Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Remedial Action Complete</masterLabel>
+            <translation><!-- Remedial Action Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Remedial Action Required</masterLabel>
+            <translation><!-- Remedial Action Required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TBD</masterLabel>
+            <translation><!-- TBD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unable To Contact</masterLabel>
+            <translation><!-- Unable To Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unable to Visit</masterLabel>
+            <translation><!-- Unable to Visit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unresponsive to Email</masterLabel>
+            <translation><!-- Unresponsive to Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visit Complete</masterLabel>
+            <translation><!-- Visit Complete --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sub-Reason for Disengagement --></label>
+        <name>Sub_Reason_for_Disengagement__c</name>
+        <picklistValues>
+            <masterLabel>Client Failed to recruit</masterLabel>
+            <translation><!-- Client Failed to recruit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client uses competitor media as cheaper option</masterLabel>
+            <translation><!-- Client uses competitor media as cheaper option --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Competitor can post advert faster than TES</masterLabel>
+            <translation><!-- Competitor can post advert faster than TES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Competitor offers longer advert life</masterLabel>
+            <translation><!-- Competitor offers longer advert life --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hire wire difficult to use</masterLabel>
+            <translation><!-- Hire wire difficult to use --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Only use TES for hard to fill roles</masterLabel>
+            <translation><!-- Only use TES for hard to fill roles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prefer subscription or package model</masterLabel>
+            <translation><!-- Prefer subscription or package model --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Production errors</masterLabel>
+            <translation><!-- Production errors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TES has no self service facility</masterLabel>
+            <translation><!-- TES has no self service facility --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TES has unclear pricing</masterLabel>
+            <translation><!-- TES has unclear pricing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Use competitor for easy to fill roles</masterLabel>
+            <translation><!-- Use competitor for easy to fill roles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Use free media first</masterLabel>
+            <translation><!-- Use free media first --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Subject of Enquiry --></label>
+        <name>Subject_of_Enquiry__c</name>
+        <picklistValues>
+            <masterLabel>General Enquiry</masterLabel>
+            <translation><!-- General Enquiry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online Services</masterLabel>
+            <translation><!-- Online Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Print Publication</masterLabel>
+            <translation><!-- Print Publication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specific Booking</masterLabel>
+            <translation><!-- Specific Booking --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Survey Count --></label>
+        <name>Survey_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Survey Site Main Link --></label>
+        <name>Survey_Site_Main_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Survey Source --></label>
+        <name>Survey_Source__c</name>
+        <picklistValues>
+            <masterLabel>Call</masterLabel>
+            <translation><!-- Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Team(s) Responsible --></label>
+        <name>Team_Responsible__c</name>
+        <picklistValues>
+            <masterLabel>Agency</masterLabel>
+            <translation><!-- Agency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer</masterLabel>
+            <translation><!-- Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Services</masterLabel>
+            <translation><!-- Customer Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Success Team</masterLabel>
+            <translation><!-- Customer Success Team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FE</masterLabel>
+            <translation><!-- FE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FE Sales</masterLabel>
+            <translation><!-- FE Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Field Sales</masterLabel>
+            <translation><!-- Field Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HE</masterLabel>
+            <translation><!-- HE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>International</masterLabel>
+            <translation><!-- International --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>International Sales</masterLabel>
+            <translation><!-- International Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leadership Sales</masterLabel>
+            <translation><!-- Leadership Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Business Managers</masterLabel>
+            <translation><!-- New Business Managers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Known</masterLabel>
+            <translation><!-- Not Known --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online Production</masterLabel>
+            <translation><!-- Online Production --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary Sales</masterLabel>
+            <translation><!-- Primary Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Print</masterLabel>
+            <translation><!-- Print --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SD</masterLabel>
+            <translation><!-- SD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secondary Sales</masterLabel>
+            <translation><!-- Secondary Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System</masterLabel>
+            <translation><!-- System --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TES Agency</masterLabel>
+            <translation><!-- TES Agency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TES Direct</masterLabel>
+            <translation><!-- TES Direct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THE</masterLabel>
+            <translation><!-- THE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upsell</masterLabel>
+            <translation><!-- Upsell --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upsell Agency</masterLabel>
+            <translation><!-- Upsell Agency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upsell Digital</masterLabel>
+            <translation><!-- Upsell Digital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upsell P&amp;O</masterLabel>
+            <translation><!-- Upsell P&amp;O --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Temporary Employee? --></label>
+        <name>Temporary_Employee__c</name>
+    </fields>
+    <fields>
+        <name>Type</name>
+        <picklistValues>
+            <masterLabel>Feature Request</masterLabel>
+            <translation><!-- Feature Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Problem</masterLabel>
+            <translation><!-- Problem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Question</masterLabel>
+            <translation><!-- Question --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Checked if the trigger has updated the CST Owner when Stage becomes &quot;Check In&quot; --></help>
+        <label><!-- Updated CST Owner --></label>
+        <name>Updated_CST_Owner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vacancy --></label>
+        <name>Vacancy__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- eTeach Additional Info --></label>
+        <name>eTeach_Additional_Info__c</name>
+    </fields>
+    <fields>
+        <label><!-- eTeach Subscription End Date --></label>
+        <name>eTeach_Subscription_End_Date__c</name>
+    </fields>
+    <layouts>
+        <layout>Comment/Suggestion Page Layout</layout>
+        <sections>
+            <label><!-- Booking/Advert Details --></label>
+            <section>Booking/Advert Details</section>
+        </sections>
+        <sections>
+            <label><!-- Comment/Suggestion --></label>
+            <section>Comment/Suggestion</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Contact Details --></label>
+            <section>Customer Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Details from VOC Email --></label>
+            <section>Details from VOC Email</section>
+        </sections>
+        <sections>
+            <label><!-- Reporter Details --></label>
+            <section>Reporter Details</section>
+        </sections>
+        <sections>
+            <label><!-- Responsible Team/Individual --></label>
+            <section>Responsible Team/Individual</section>
+        </sections>
+        <sections>
+            <label><!-- Status and Priority --></label>
+            <section>Status and Priority</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Complaints Page Layout</layout>
+        <sections>
+            <label><!-- Booking/Advert Details --></label>
+            <section>Booking/Advert Details</section>
+        </sections>
+        <sections>
+            <label><!-- Complaint --></label>
+            <section>Complaint</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Contact Details --></label>
+            <section>Customer Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Details from VOC Email --></label>
+            <section>Details from VOC Email</section>
+        </sections>
+        <sections>
+            <label><!-- Reporter Details --></label>
+            <section>Reporter Details</section>
+        </sections>
+        <sections>
+            <label><!-- Responsible Team/Individual --></label>
+            <section>Responsible Team/Individual</section>
+        </sections>
+        <sections>
+            <label><!-- Status and Priority --></label>
+            <section>Status and Priority</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Success Case Layout</layout>
+        <sections>
+            <label><!-- Ad Web Performance Metrics --></label>
+            <section>Ad Web Performance Metrics</section>
+        </sections>
+        <sections>
+            <label><!-- Booking Details --></label>
+            <section>Booking Details</section>
+        </sections>
+        <sections>
+            <label><!-- Call Attempt Information --></label>
+            <section>Call Attempt Information</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Dates --></label>
+            <section>Contact Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Recruitment Owner Contact Details --></label>
+            <section>Recruitment Owner Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Related Calls - Last Week and This Week --></label>
+            <section>Related Calls - Last Week and This Week</section>
+        </sections>
+        <sections>
+            <label><!-- Status and Priority --></label>
+            <section>Status and Priority</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Email Case Page Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Email Case Details --></label>
+            <section>Email Case Details</section>
+        </sections>
+        <sections>
+            <label><!-- Email Subject and Body --></label>
+            <section>Email Subject and Body</section>
+        </sections>
+        <sections>
+            <label><!-- Status and Priority --></label>
+            <section>Status and Priority</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Market Share Case Layout</layout>
+        <sections>
+            <label><!-- Call Back Dates --></label>
+            <section>Call Back Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Competitor Information (If Any) --></label>
+            <section>Competitor Information (If Any)</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- SD Details --></label>
+            <section>SD Details</section>
+        </sections>
+        <sections>
+            <label><!-- Status and Priority --></label>
+            <section>Status and Priority</section>
+        </sections>
+        <sections>
+            <label><!-- Subject of Visit --></label>
+            <section>Subject of Visit</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Query Page Layout</layout>
+        <sections>
+            <label><!-- Booking/Advert Details --></label>
+            <section>Booking/Advert Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Contact Details --></label>
+            <section>Customer Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Details from VOC Email --></label>
+            <section>Details from VOC Email</section>
+        </sections>
+        <sections>
+            <label><!-- Query Details --></label>
+            <section>Query Details</section>
+        </sections>
+        <sections>
+            <label><!-- Reporter Details --></label>
+            <section>Reporter Details</section>
+        </sections>
+        <sections>
+            <label><!-- Responsible Team/Individual --></label>
+            <section>Responsible Team/Individual</section>
+        </sections>
+        <sections>
+            <label><!-- Status and Priority --></label>
+            <section>Status and Priority</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- NewChildCase --></label>
+        <name>NewChildCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Case Email --></label>
+        <name>Case_Email</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Comments/Suggestions --></label>
+        <name>Comments_Suggestions</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Complaints --></label>
+        <name>Complaints</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Customer Success Case - Surveys --></label>
+        <name>Customer_Success_Case_Surveys</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Market Share Case --></label>
+        <name>Market_Share_Case</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Queries --></label>
+        <name>Queries</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Please select a Check In Call Date and/or Customer Care Call Date that falls on a weekday. --></errorMessage>
+        <name>Call_Date_Only_on_Weekdays</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out all the required fields: Salutation, Last Name, Phone and Email in order to submit this case. --></errorMessage>
+        <name>CaseContactFields_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If the contact exists, please fill out the Lookup Existing Contact Field. Otherwise, please fill out either the Existing School/Institution or New School/Institution, as well as the required fields for a new contact. --></errorMessage>
+        <name>CaseContact_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out the Comment or Suggestion you want to submit. --></errorMessage>
+        <name>Comments_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out the Reason for Complaint and Description of Complaint. --></errorMessage>
+        <name>Complaints_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out the Subject of Enquiry and Question you want to submit. --></errorMessage>
+        <name>Query_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please input a reason for why this case is being escalated. --></errorMessage>
+        <name>Reason_Required_for_Escalation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out all fields in the Case Reporter Details including the Reported By Name, Reported By Team and Case Origin. --></errorMessage>
+        <name>Reporter_Details_Required</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- New_QMS_Form --></label>
+        <name>New_QMS_Form</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Survey --></label>
+        <name>New_Survey</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Submit_a_Case --></label>
+        <name>Submit_a_Case</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Update_Call_Dates --></label>
+        <name>Update_Call_Dates</name>
+    </webLinks>
+</CustomObjectTranslation>

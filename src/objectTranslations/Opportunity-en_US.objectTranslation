@@ -1,0 +1,1617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Booking</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Bookings</value>
+    </caseValues>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Access</value>
+        </caseValues>
+        <name>opportunity_access</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Access Level</value>
+        </caseValues>
+        <name>opportunity_access_level</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Alert</value>
+        </caseValues>
+        <name>opportunity_alert</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Amount</value>
+        </caseValues>
+        <name>opportunity_amount</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking-based Briefcase</value>
+        </caseValues>
+        <name>opportunity_based_briefcase</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Close Date</value>
+        </caseValues>
+        <name>opportunity_close_date</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Closed</value>
+        </caseValues>
+        <name>opportunity_closed</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Competitor</value>
+        </caseValues>
+        <name>opportunity_competitor</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Competitor Report</value>
+        </caseValues>
+        <name>opportunity_competitor_report</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Contact</value>
+        </caseValues>
+        <name>opportunity_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Contact Report</value>
+        </caseValues>
+        <name>opportunity_contact_report</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Contact Role</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Booking Contact Roles</value>
+        </caseValues>
+        <name>opportunity_contact_role</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Creator</value>
+        </caseValues>
+        <name>opportunity_creator</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Currency</value>
+        </caseValues>
+        <name>opportunity_currency</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Description</value>
+        </caseValues>
+        <name>opportunity_description</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Detail Page</value>
+        </caseValues>
+        <name>opportunity_detail_page</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Division</value>
+        </caseValues>
+        <name>opportunity_division</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Edit</value>
+        </caseValues>
+        <name>opportunity_edit</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Field</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Booking Fields</value>
+        </caseValues>
+        <name>opportunity_field</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Field History</value>
+        </caseValues>
+        <name>opportunity_field_history</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Field History ID</value>
+        </caseValues>
+        <name>opportunity_field_history_id</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Field History Report</value>
+        </caseValues>
+        <name>opportunity_field_history_report</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Forecast</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Booking Forecasts</value>
+        </caseValues>
+        <name>opportunity_forecast</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Forecast Category</value>
+        </caseValues>
+        <name>opportunity_forecast_category</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Forecast Edit</value>
+        </caseValues>
+        <name>opportunity_forecast_edit</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking History</value>
+        </caseValues>
+        <name>opportunity_history</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking History ID</value>
+        </caseValues>
+        <name>opportunity_history_id</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking History Information</value>
+        </caseValues>
+        <name>opportunity_history_information</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking History Report</value>
+        </caseValues>
+        <name>opportunity_history_report</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking ID</value>
+        </caseValues>
+        <name>opportunity_id</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Info</value>
+        </caseValues>
+        <name>opportunity_info</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Information</value>
+        </caseValues>
+        <name>opportunity_information</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Lead Source</value>
+        </caseValues>
+        <name>opportunity_lead_source</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Line Item</value>
+        </caseValues>
+        <name>opportunity_line_item</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Line Item Field</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Booking Line Item Fields</value>
+        </caseValues>
+        <name>opportunity_line_item_field</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Line Item ID</value>
+        </caseValues>
+        <name>opportunity_line_item_id</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Name</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Booking Names</value>
+        </caseValues>
+        <name>opportunity_name</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Owner</value>
+        </caseValues>
+        <name>opportunity_owner</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Owner Alias</value>
+        </caseValues>
+        <name>opportunity_owner_alias</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Owner Email</value>
+        </caseValues>
+        <name>opportunity_owner_email</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Partner Report</value>
+        </caseValues>
+        <name>opportunity_partner_report</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Picklists</value>
+        </caseValues>
+        <name>opportunity_picklists</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Pipeline</value>
+        </caseValues>
+        <name>opportunity_pipeline</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Pipeline Trend</value>
+        </caseValues>
+        <name>opportunity_pipeline_trend</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Product Name</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Booking Product Names</value>
+        </caseValues>
+        <name>opportunity_product_name</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Quantity</value>
+        </caseValues>
+        <name>opportunity_quantity</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Record Type</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Booking Record Types</value>
+        </caseValues>
+        <name>opportunity_record_type</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Report</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Booking Reports</value>
+        </caseValues>
+        <name>opportunity_report</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Schedule Report</value>
+        </caseValues>
+        <name>opportunity_schedule_report</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Source</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Booking Sources</value>
+        </caseValues>
+        <name>opportunity_source</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Stage</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Booking Stages</value>
+        </caseValues>
+        <name>opportunity_stage</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Stage Duration Report</value>
+        </caseValues>
+        <name>opportunity_stage_duration_report</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Stage ID</value>
+        </caseValues>
+        <name>opportunity_stage_id</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Stage Name</value>
+        </caseValues>
+        <name>opportunity_stage_name</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking stage picklist value</value>
+        </caseValues>
+        <name>opportunity_stage_picklist_value</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Stage Status</value>
+        </caseValues>
+        <name>opportunity_stage_status</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Status</value>
+        </caseValues>
+        <name>opportunity_status</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Team</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Opportunity Booking</value>
+        </caseValues>
+        <name>opportunity_team</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Team Member</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Booking Team Members</value>
+        </caseValues>
+        <name>opportunity_team_member</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Team Member Field</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Booking Team Member Fields</value>
+        </caseValues>
+        <name>opportunity_team_member_field</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Team Member ID</value>
+        </caseValues>
+        <name>opportunity_team_member_id</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking with Booking Teams and Products Report</value>
+        </caseValues>
+        <name>opportunity_team_product_report</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Team Report</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Booking Team Reports</value>
+        </caseValues>
+        <name>opportunity_team_report</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Territory</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Booking Territories</value>
+        </caseValues>
+        <name>opportunity_territory</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Territory</value>
+        </caseValues>
+        <name>opportunity_territory_report</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Trend</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Booking Trends</value>
+        </caseValues>
+        <name>opportunity_trend</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Trend Information</value>
+        </caseValues>
+        <name>opportunity_trend_information</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Trend Report</value>
+        </caseValues>
+        <name>opportunity_trend_report</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Type</value>
+        </caseValues>
+        <name>opportunity_type</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking View</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Booking Views</value>
+        </caseValues>
+        <name>opportunity_view</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Name</value>
+        </caseValues>
+        <name>stage_name_opportunity</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Stage</value>
+        </caseValues>
+        <name>stage_opportunity</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Booking Type</value>
+        </caseValues>
+        <name>type_opportunity</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <label><!-- Ad Number --></label>
+        <name>Ad_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency Account Number --></label>
+        <name>Agency_Account_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency Phone Number --></label>
+        <name>Agency_Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency Post Code --></label>
+        <name>Agency_Post_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency --></label>
+        <name>Agency__c</name>
+        <relationshipLabel><!-- Opportunities (Agency) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Awaiting Upsell --></label>
+        <name>Awaiting_Upsell__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bill To --></label>
+        <name>Bill_To__c</name>
+        <relationshipLabel><!-- Opportunities (Bill To) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Client Account Number --></label>
+        <name>Client_Account_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Postcode --></label>
+        <name>Client_Postcode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copied --></label>
+        <name>Copied__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created Date/Time --></label>
+        <name>Created_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Creator --></label>
+        <name>Creator__c</name>
+    </fields>
+    <fields>
+        <label><!-- Am I the Current Salesperson? --></label>
+        <name>Current_Salesperson__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delete --></label>
+        <name>Delete__c</name>
+    </fields>
+    <fields>
+        <help><!-- Time elapsed since the email was received (in minutes), but business hours are not taken into account. --></help>
+        <label><!-- Elapsed Time (Min) --></label>
+        <name>Elapsed_Time_No_Bus_Hrs__c</name>
+    </fields>
+    <fields>
+        <help><!-- Time elapsed in minutes since the email was received, which takes into account business hours (Mon to Fri, 9 - 5). --></help>
+        <label><!-- Elapsed Time (Min) --></label>
+        <name>Elapsed_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Status --></label>
+        <name>Email_Status__c</name>
+        <picklistValues>
+            <masterLabel>Account on Stop</masterLabel>
+            <translation><!-- Account on Stop --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Awaiting Booking</masterLabel>
+            <translation><!-- Awaiting Booking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Booked</masterLabel>
+            <translation><!-- Booked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Query</masterLabel>
+            <translation><!-- Query --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unread</masterLabel>
+            <translation><!-- Unread --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Flag color corresponding to each Priority. --></help>
+        <label><!-- Flag --></label>
+        <name>Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Folder --></label>
+        <name>Folder_Picklist__c</name>
+        <picklistValues>
+            <masterLabel>1. Gold - Agency</masterLabel>
+            <translation><!-- 1. Gold - Agency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1. Gold - Direct</masterLabel>
+            <translation><!-- 1. Gold - Direct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1. Leadership/FE</masterLabel>
+            <translation><!-- 1. Leadership/FE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1. Leadership/FE - Space Bookings</masterLabel>
+            <translation><!-- 1. Leadership/FE - Space Bookings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1. Print</masterLabel>
+            <translation><!-- 1. Print --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Leadership/FE - Mac Ads</masterLabel>
+            <translation><!-- 2. Leadership/FE - Mac Ads --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Mac Ads A</masterLabel>
+            <translation><!-- 2. Mac Ads A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Online Only</masterLabel>
+            <translation><!-- 2. Online Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Silver - Agency</masterLabel>
+            <translation><!-- 2. Silver - Agency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Silver - Direct</masterLabel>
+            <translation><!-- 2. Silver - Direct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Bronze and Starter - Agency</masterLabel>
+            <translation><!-- 3. Bronze and Starter - Agency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Bronze and Starter - Direct</masterLabel>
+            <translation><!-- 3. Bronze and Starter - Direct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Mac Ads B</masterLabel>
+            <translation><!-- 3. Mac Ads B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Space Bookings</masterLabel>
+            <translation><!-- 3. Space Bookings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Account on Stop</masterLabel>
+            <translation><!-- 4. Account on Stop --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Done</masterLabel>
+            <translation><!-- 4. Done --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Mac Ads</masterLabel>
+            <translation><!-- 4. Mac Ads --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Mac Logos</masterLabel>
+            <translation><!-- 4. Mac Logos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Web Amends</masterLabel>
+            <translation><!-- 4. Web Amends --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. Account Queries</masterLabel>
+            <translation><!-- 5. Account Queries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. Account on Stop</masterLabel>
+            <translation><!-- 5. Account on Stop --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. Amendments - Leadership/FE</masterLabel>
+            <translation><!-- 5. Amendments - Leadership/FE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. Amendments - Leadership/FE - Mac Ads</masterLabel>
+            <translation><!-- 5. Amendments - Leadership/FE - Mac Ads --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. Manchester Primary +</masterLabel>
+            <translation><!-- 5. Manchester Primary + --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. Amendments - Mac Ads - Agency</masterLabel>
+            <translation><!-- 6. Amendments - Mac Ads - Agency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. Amendments - Mac Ads - Direct</masterLabel>
+            <translation><!-- 6. Amendments - Mac Ads - Direct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. Awaiting PO</masterLabel>
+            <translation><!-- 6. Awaiting PO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. Feedback</masterLabel>
+            <translation><!-- 6. Feedback --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. Done</masterLabel>
+            <translation><!-- 7. Done --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. Further Education</masterLabel>
+            <translation><!-- 7. Further Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. Sent to Artwork</masterLabel>
+            <translation><!-- 7. Sent to Artwork --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. Space Bookings - DONE</masterLabel>
+            <translation><!-- 7. Space Bookings - DONE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8. Future Adverts</masterLabel>
+            <translation><!-- 8. Future Adverts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8. Mac Ads - DONE</masterLabel>
+            <translation><!-- 8. Mac Ads - DONE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Amendments - DONE</masterLabel>
+            <translation><!-- 9. Amendments - DONE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Downsells</masterLabel>
+            <translation><!-- 9. Downsells --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account on Stop - Agency</masterLabel>
+            <translation><!-- Account on Stop - Agency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account on Stop - Direct</masterLabel>
+            <translation><!-- Account on Stop - Direct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FILEMAKER Replacement Text</masterLabel>
+            <translation><!-- FILEMAKER Replacement Text --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queries - Agency Online Only</masterLabel>
+            <translation><!-- Queries - Agency Online Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queries - Agency Print</masterLabel>
+            <translation><!-- Queries - Agency Print --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queries - Direct Online Only</masterLabel>
+            <translation><!-- Queries - Direct Online Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queries - Direct Recruitment</masterLabel>
+            <translation><!-- Queries - Direct Recruitment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upsell Quotes - UK BOOKED</masterLabel>
+            <translation><!-- Upsell Quotes - UK BOOKED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>X Amendments - DONE</masterLabel>
+            <translation><!-- X Amendments - DONE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>X Cancellations - DONE</masterLabel>
+            <translation><!-- X Cancellations - DONE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>X Downsells - DONE</masterLabel>
+            <translation><!-- X Downsells - DONE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>X Mac Ads - DONE</masterLabel>
+            <translation><!-- X Mac Ads - DONE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Z - Completed</masterLabel>
+            <translation><!-- Z - Completed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Folder --></label>
+        <name>Folder__c</name>
+        <relationshipLabel><!-- Bookings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- HD Est Postcode --></label>
+        <name>HD_Est_Postcode__c</name>
+    </fields>
+    <fields>
+        <label><!-- HD Est --></label>
+        <name>HD_Est__c</name>
+        <relationshipLabel><!-- Opportunities (HD Est) --></relationshipLabel>
+    </fields>
+    <fields>
+        <name>LeadSource</name>
+        <picklistValues>
+            <masterLabel>Advertisement</masterLabel>
+            <translation><!-- Advertisement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conference</masterLabel>
+            <translation><!-- Conference --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee Referral</masterLabel>
+            <translation><!-- Employee Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>External Referral</masterLabel>
+            <translation><!-- External Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation><!-- Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Relations</masterLabel>
+            <translation><!-- Public Relations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Internal</masterLabel>
+            <translation><!-- Seminar - Internal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Partner</masterLabel>
+            <translation><!-- Seminar - Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Show</masterLabel>
+            <translation><!-- Trade Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Word of mouth</masterLabel>
+            <translation><!-- Word of mouth --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- For print ads only. Tick if the booking has a print advert for Leadership/FE publication. --></help>
+        <label><!-- Leadership/FE --></label>
+        <name>Leadership_FE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ln --></label>
+        <name>Ln__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mac User --></label>
+        <name>Mac_User__c</name>
+        <relationshipLabel><!-- Bookings (Mac User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Mailbox --></label>
+        <name>Mailbox_Picklist__c</name>
+        <picklistValues>
+            <masterLabel>Agency - Online Only</masterLabel>
+            <translation><!-- Agency - Online Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agency - Print Ads</masterLabel>
+            <translation><!-- Agency - Print Ads --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agency Web Amends</masterLabel>
+            <translation><!-- Agency Web Amends --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Artwork</masterLabel>
+            <translation><!-- Artwork --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct - Online Only</masterLabel>
+            <translation><!-- Direct - Online Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct - Recruitment</masterLabel>
+            <translation><!-- Direct - Recruitment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Web Amends</masterLabel>
+            <translation><!-- Direct Web Amends --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation><!-- Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hirewire TES</masterLabel>
+            <translation><!-- Hirewire TES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online School Groups</masterLabel>
+            <translation><!-- Online School Groups --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary Plus</masterLabel>
+            <translation><!-- Primary Plus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver</masterLabel>
+            <translation><!-- Silver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TES Australia</masterLabel>
+            <translation><!-- TES Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TES International</masterLabel>
+            <translation><!-- TES International --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TES Internet Jobs</masterLabel>
+            <translation><!-- TES Internet Jobs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TES Support</masterLabel>
+            <translation><!-- TES Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TES Wales</masterLabel>
+            <translation><!-- TES Wales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THE Artwork</masterLabel>
+            <translation><!-- THE Artwork --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THE Recruitment</masterLabel>
+            <translation><!-- THE Recruitment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THE Support</masterLabel>
+            <translation><!-- THE Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THE Web Amends</masterLabel>
+            <translation><!-- THE Web Amends --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Mailbox --></label>
+        <name>Mailbox__c</name>
+        <relationshipLabel><!-- Bookings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Material --></label>
+        <name>Material__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Chat --></label>
+        <name>New_Chatter_Post__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Email --></label>
+        <name>New_Response__c</name>
+    </fields>
+    <fields>
+        <help><!-- For online ads only. The highest job type for an online booking. --></help>
+        <label><!-- Online Job Type --></label>
+        <name>Online_Job_Type__c</name>
+        <picklistValues>
+            <masterLabel>Admin</masterLabel>
+            <translation><!-- Admin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bronze</masterLabel>
+            <translation><!-- Bronze --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation><!-- Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver</masterLabel>
+            <translation><!-- Silver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Starter</masterLabel>
+            <translation><!-- Starter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Starter Addition</masterLabel>
+            <translation><!-- Starter Addition --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Order By Email --></label>
+        <name>Order_By_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order By --></label>
+        <name>Order_By__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Order Number --></label>
+        <name>Order_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Package Id --></label>
+        <name>Package_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Package Price --></label>
+        <name>Package_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Package --></label>
+        <name>Package__c</name>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prod Sub --></label>
+        <name>Prod_Sub__c</name>
+        <picklistValues>
+            <masterLabel>1 CP</masterLabel>
+            <translation><!-- 1 CP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 MP</masterLabel>
+            <translation><!-- 1 MP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 CP</masterLabel>
+            <translation><!-- 2 CP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 P</masterLabel>
+            <translation><!-- 2 P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AA</masterLabel>
+            <translation><!-- AA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AR</masterLabel>
+            <translation><!-- AR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CB</masterLabel>
+            <translation><!-- CB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Display</masterLabel>
+            <translation><!-- Display --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NC</masterLabel>
+            <translation><!-- NC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OTP</masterLabel>
+            <translation><!-- OTP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SA</masterLabel>
+            <translation><!-- SA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SC</masterLabel>
+            <translation><!-- SC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard</masterLabel>
+            <translation><!-- Standard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WK2</masterLabel>
+            <translation><!-- WK2 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Prod Type --></label>
+        <name>Prod_Type__c</name>
+        <picklistValues>
+            <masterLabel>Admin</masterLabel>
+            <translation><!-- Admin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Linage</masterLabel>
+            <translation><!-- Linage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mac Make-up</masterLabel>
+            <translation><!-- Mac Make-up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mac Proof</masterLabel>
+            <translation><!-- Mac Proof --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online Only</masterLabel>
+            <translation><!-- Online Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PDF</masterLabel>
+            <translation><!-- PDF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quick Cut</masterLabel>
+            <translation><!-- Quick Cut --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Production Notes --></label>
+        <name>Production_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Promo --></label>
+        <name>Promo__c</name>
+        <picklistValues>
+            <masterLabel>10% Colour &amp; Gold</masterLabel>
+            <translation><!-- 10% Colour &amp; Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10% Leadership</masterLabel>
+            <translation><!-- 10% Leadership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12.5% Colour &amp; Gold</masterLabel>
+            <translation><!-- 12.5% Colour &amp; Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15% Colour &amp; Gold In</masterLabel>
+            <translation><!-- 15% Colour &amp; Gold In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15% Colour, Gold &amp;</masterLabel>
+            <translation><!-- 15% Colour, Gold &amp; --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Free Schools 10%</masterLabel>
+            <translation><!-- Free Schools 10% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Free Schools 15%</masterLabel>
+            <translation><!-- Free Schools 15% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Run til Fill 100%</masterLabel>
+            <translation><!-- Run til Fill 100% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Run til Fill 15%</masterLabel>
+            <translation><!-- Run til Fill 15% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Starter</masterLabel>
+            <translation><!-- Starter --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Promotion --></label>
+        <name>Promotion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Proof Sent --></label>
+        <name>Proof_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Read --></label>
+        <name>Read__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason --></label>
+        <name>Reason__c</name>
+        <picklistValues>
+            <masterLabel>Australia Free Ad</masterLabel>
+            <translation><!-- Australia Free Ad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled Ad - Customer Cancelled</masterLabel>
+            <translation><!-- Cancelled Ad - Customer Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled Ad - Customer Duplicate</masterLabel>
+            <translation><!-- Cancelled Ad - Customer Duplicate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled Ad - Now Online Only</masterLabel>
+            <translation><!-- Cancelled Ad - Now Online Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled Ad - TSL Duplicate</masterLabel>
+            <translation><!-- Cancelled Ad - TSL Duplicate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled Ad - TSL Error</masterLabel>
+            <translation><!-- Cancelled Ad - TSL Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled Ad - Upsold to Print</masterLabel>
+            <translation><!-- Cancelled Ad - Upsold to Print --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Free Ad</masterLabel>
+            <translation><!-- Free Ad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Free Ad - Production Error</masterLabel>
+            <translation><!-- Free Ad - Production Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Free Linage</masterLabel>
+            <translation><!-- Free Linage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RTF 100</masterLabel>
+            <translation><!-- RTF 100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TES Primary*</masterLabel>
+            <translation><!-- TES Primary* --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TES Support</masterLabel>
+            <translation><!-- TES Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THE Professional Support Service</masterLabel>
+            <translation><!-- THE Professional Support Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>sns ad</masterLabel>
+            <translation><!-- sns ad --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Replied --></label>
+        <name>Replied__c</name>
+    </fields>
+    <fields>
+        <help><!-- Time since the email was received until it is booked in the system, which takes into account business hours (Mon - Fri, 9-5). --></help>
+        <label><!-- Resolution Time (Min) --></label>
+        <name>Resolution_Time_Min__c</name>
+    </fields>
+    <fields>
+        <label><!-- SD Est Post Code --></label>
+        <name>SD_Est_Post_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- SD Est --></label>
+        <name>SD_Est__c</name>
+        <relationshipLabel><!-- Opportunities (SD Est) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- SNS --></label>
+        <name>SNS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Rep --></label>
+        <name>Sales_Rep__c</name>
+        <relationshipLabel><!-- Bookings (Sales Rep) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Salesperson --></label>
+        <name>Salesperson__c</name>
+    </fields>
+    <fields>
+        <label><!-- School Establishment --></label>
+        <name>School_Establishment__c</name>
+        <relationshipLabel><!-- Opportunities (School Establishment) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- For print ads only. A &quot;space booking&quot; is a booking that has a ready-made PDF. A &quot;Mac ad&quot; is a booking that is copy only and needs an artwork to be produced by the Mac team. --></help>
+        <label><!-- Space Booking or Mac Ad? --></label>
+        <name>Space_Booking_or_Mac_Ad__c</name>
+        <picklistValues>
+            <masterLabel>Mac Ad</masterLabel>
+            <translation><!-- Mac Ad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Space Booking</masterLabel>
+            <translation><!-- Space Booking --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>StageName</name>
+        <picklistValues>
+            <masterLabel>Closed Lost</masterLabel>
+            <translation><!-- Closed Lost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed Won</masterLabel>
+            <translation><!-- Closed Won --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Id. Decision Makers</masterLabel>
+            <translation><!-- Id. Decision Makers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Needs Analysis</masterLabel>
+            <translation><!-- Needs Analysis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Negotiation/Review</masterLabel>
+            <translation><!-- Negotiation/Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perception Analysis</masterLabel>
+            <translation><!-- Perception Analysis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposal/Price Quote</masterLabel>
+            <translation><!-- Proposal/Price Quote --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospecting</masterLabel>
+            <translation><!-- Prospecting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Qualification</masterLabel>
+            <translation><!-- Qualification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Value Proposition</masterLabel>
+            <translation><!-- Value Proposition --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Style --></label>
+        <name>Style__c</name>
+        <picklistValues>
+            <masterLabel>tesinput</masterLabel>
+            <translation><!-- tesinput --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>Type</name>
+        <picklistValues>
+            <masterLabel>Online Only</masterLabel>
+            <translation><!-- Online Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online Only + Print &amp; Online</masterLabel>
+            <translation><!-- Online Only + Print &amp; Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Print and Online</masterLabel>
+            <translation><!-- Print and Online --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Batch Process --></label>
+        <name>c2g__BatchProcess__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Unit of Work --></label>
+        <name>c2g__CODAUnitOfWork__c</name>
+    </fields>
+    <layouts>
+        <layout>Booking Page Layout</layout>
+        <sections>
+            <label><!-- Booking Type --></label>
+            <section>Booking Type</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Information --></label>
+            <section>Customer Information</section>
+        </sections>
+        <sections>
+            <label><!-- Email Flags --></label>
+            <section>Email Flags</section>
+        </sections>
+        <sections>
+            <label><!-- Internal Team --></label>
+            <section>Internal Team</section>
+        </sections>
+        <sections>
+            <label><!-- Outlook Emails --></label>
+            <section>Outlook Emails</section>
+        </sections>
+        <sections>
+            <label><!-- Status and Priority --></label>
+            <section>Status and Priority</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Success Booking Page Layout</layout>
+        <sections>
+            <label><!-- Customer Information --></label>
+            <section>Customer Information</section>
+        </sections>
+        <sections>
+            <label><!-- Package and Promotion --></label>
+            <section>Package and Promotion</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Rep --></label>
+            <section>Sales Rep</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- MSL Booking --></label>
+        <name>Agency_Booking</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- SFDC Booking --></label>
+        <name>Direct_Booking</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Change_Owner --></label>
+        <name>Change_Owner</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CreateInvoice --></label>
+        <name>c2g__CreateInvoice</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CreateInvoices --></label>
+        <name>c2g__CreateInvoices</name>
+    </webLinks>
+</CustomObjectTranslation>

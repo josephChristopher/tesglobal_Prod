@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Survey__c$Name</field>
+    </columns>
+    <columns>
+        <field>Survey__c.Survey_Number__r$Name</field>
+    </columns>
+    <description>List of responses in the free text box of both check in and care call surveys</description>
+    <filter>
+        <criteriaItems>
+            <column>Survey__c.Survey_Number__r$Metrics__c</column>
+            <operator>equals</operator>
+            <value>M-0000000007,M-0000000011,M-0000000012</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Survey__c.Survey_Number__r$Metrics__c.Question__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Survey__c.Survey_Number__r$Response__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>C.Comments Last week-Check in/Care call</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Surveys_with_metrics_and_metrics_data__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Survey__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_LAST7</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Case$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Case.Surveys__r$Name</field>
+    </columns>
+    <columns>
+        <field>Case.Surveys__r.Survey_Number__r$Response__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Case.Surveys__r$Survey_Template__c</column>
+            <operator>contains</operator>
+            <value>Customer Care Call</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Surveys__r.Survey_Number__r$Metrics__c.Question_Format__c</column>
+            <operator>equals</operator>
+            <value>Free Textbox</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case.Surveys__r.Survey_Number__r$Metrics__c.Question__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Customer Care Call Survey Text Responses</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cases_with_Surveys_with_Metrics_Data__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Case$Check_In_Call_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

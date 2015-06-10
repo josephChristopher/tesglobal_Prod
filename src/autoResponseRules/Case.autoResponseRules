@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoResponseRule>
+        <fullName>TES %26 THE Membership Auto Response</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Customer Services (Email - TES)</value>
+            </criteriaItems>
+            <replyToEmail>voc.noreply@tesglobal.com</replyToEmail>
+            <senderEmail>voc.noreply@tesglobal.com</senderEmail>
+            <senderName>TES Membership Team</senderName>
+            <template>unfiled$public/Email_to_Case_TES_Auto_response_Update</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Customer Services (Email - THE)</value>
+            </criteriaItems>
+            <senderEmail>voc.noreply@tesglobal.com</senderEmail>
+            <senderName>THE Membership Team</senderName>
+            <template>unfiled$public/Email_to_Case_THE_Auto_response_Update</template>
+        </ruleEntry>
+    </autoResponseRule>
+</AutoResponseRules>

@@ -1551,6 +1551,43 @@
         <label><!-- Unit of Work --></label>
         <name>c2g__CODAUnitOfWork__c</name>
     </fields>
+    <fields>
+        <label><!-- Current Generator(s) --></label>
+        <name>zqu__CurrentGenerators__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery/Installation Status --></label>
+        <name>zqu__DeliveryInstallationStatus__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In progress</masterLabel>
+            <translation><!-- In progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yet to begin</masterLabel>
+            <translation><!-- Yet to begin --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Main Competitor(s) --></label>
+        <name>zqu__MainCompetitors__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Number --></label>
+        <name>zqu__OrderNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tracking Number --></label>
+        <name>zqu__TrackingNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zuora Config --></label>
+        <name>zqu__ZuoraConfig__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
     <layouts>
         <layout>Booking Page Layout</layout>
         <sections>
@@ -1613,5 +1650,13 @@
     <webLinks>
         <label><!-- CreateInvoices --></label>
         <name>c2g__CreateInvoices</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- NewQuoteTest --></label>
+        <name>zqu__NewQuoteTest</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- QuoteNew --></label>
+        <name>zqu__QuoteNew</name>
     </webLinks>
 </CustomObjectTranslation>

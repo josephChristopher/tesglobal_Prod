@@ -1,5 +1,5 @@
 global with sharing class CCEmailArchiveService {
-	public static String listEndpoint = 'https://cloudreach-connect-shared.herokuapp.com/ccsvc/tes/email/list';
+	/*public static String listEndpoint = 'https://cloudreach-connect-shared.herokuapp.com/ccsvc/tes/email/list';
 	public static String authKey = '2203ef9c-8c3f-44dd-bfcc-4ba67ae64406';
 	
 	public String lastJsonResponse { get; set; }
@@ -167,5 +167,5 @@ global with sharing class CCEmailArchiveService {
 		}
 		
 		return new List<EmailAttachment>();
-	}
+	}*/
 }

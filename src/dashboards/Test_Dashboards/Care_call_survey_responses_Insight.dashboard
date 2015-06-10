@@ -22,7 +22,7 @@
             <showPicturesOnCharts>false</showPicturesOnCharts>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>% Response off total -Monthly</title>
+            <title>% off total response -Monthly</title>
             <useReportChart>true</useReportChart>
         </components>
         <components>
@@ -41,7 +41,7 @@
             <showPicturesOnCharts>false</showPicturesOnCharts>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>% off Total Response-Monthly</title>
+            <title>% off total response -Monthly</title>
             <useReportChart>true</useReportChart>
         </components>
         <components>
@@ -82,7 +82,7 @@
             <showPicturesOnCharts>false</showPicturesOnCharts>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>% off Total Response- Monthly</title>
+            <title>% off total response -Monthly</title>
             <useReportChart>true</useReportChart>
         </components>
         <components>
@@ -101,7 +101,7 @@
             <showPicturesOnCharts>false</showPicturesOnCharts>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>% off total responses-Monthly</title>
+            <title>% off total response -Monthly</title>
             <useReportChart>true</useReportChart>
         </components>
         <components>
@@ -142,7 +142,7 @@
             <showPicturesOnCharts>false</showPicturesOnCharts>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>% off Total Response-Monthly</title>
+            <title>% off total response -Monthly</title>
             <useReportChart>true</useReportChart>
         </components>
         <components>
@@ -180,7 +180,7 @@
             <showPicturesOnCharts>false</showPicturesOnCharts>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>Advertised with competitors</title>
+            <title>Advertised with competitors-Monthly</title>
             <useReportChart>true</useReportChart>
         </components>
     </rightSection>

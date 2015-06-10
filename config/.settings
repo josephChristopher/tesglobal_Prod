@@ -1,12 +1,12 @@
 {
     "username": "jchristopher@tesglobal.com", 
+    "environment": "production", 
     "project_name": "tesglobal_Production", 
+    "workspace": "/Users/josephchristopher/Documents/Mavensmate", 
     "org_url": "", 
     "namespace": "", 
-    "metadata_container": "1dcw0000000UEskAAG", 
-    "environment": "production", 
-    "workspace": "/Users/josephchristopher/Documents/Mavensmate", 
     "id": "1UD3I9OWFY1KF0HMUDMWGK68V9SRPHAH", 
+    "metadata_container": "1dcw0000000UFP6AAO", 
     "subscription": [
         "AccountSharingRules", 
         "AnalyticSnapshot", 

@@ -18,6 +18,61 @@
         <masterLabel>Fill Rate %</masterLabel>
         <scale>2</scale>
     </aggregates>
+    <aggregates>
+        <calculatedFormula>IF(B0#RowCount ==  0,0, (B4#RowCount/ B0#RowCount))</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA3</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>true</isCrossBlock>
+        <masterLabel>Excellent&amp;Satisfactory Candidates %</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <block>
+        <blockInfo>
+            <aggregateReferences>
+                <aggregate>FORMULA2</aggregate>
+            </aggregateReferences>
+            <aggregateReferences>
+                <aggregate>FORMULA1</aggregate>
+            </aggregateReferences>
+            <aggregateReferences>
+                <aggregate>FORMULA3</aggregate>
+            </aggregateReferences>
+            <blockId>B3</blockId>
+            <joinTable>Metrics__c</joinTable>
+        </blockInfo>
+        <columns>
+            <field>Metrics__c$Name</field>
+        </columns>
+        <columns>
+            <field>Metrics__c.Metrics_Data__r$Name</field>
+        </columns>
+        <filter>
+            <criteriaItems>
+                <column>Metrics__c$Name</column>
+                <operator>equals</operator>
+                <value>M-0000000006</value>
+            </criteriaItems>
+            <criteriaItems>
+                <column>Metrics__c.Metrics_Data__r$Response__c</column>
+                <operator>notEqual</operator>
+                <value></value>
+            </criteriaItems>
+        </filter>
+        <format>Summary</format>
+        <name>Excellent Vs Satisfactory Vs Fill Rate</name>
+        <params>
+            <name>co</name>
+            <value>0</value>
+        </params>
+        <reportType>Metrics_with_metrics_data_4__c</reportType>
+        <scope>organization</scope>
+        <timeFrameFilter>
+            <dateColumn>Metrics__c.Metrics_Data__r$Case__c.Ad_Start_Date_Time__c</dateColumn>
+            <interval>INTERVAL_CUSTOM</interval>
+            <startDate>2014-12-15</startDate>
+        </timeFrameFilter>
+    </block>
     <block>
         <blockInfo>
             <blockId>B1</blockId>
@@ -45,7 +100,7 @@
         <name>Metrics with Metrics data 2 block 1</name>
         <params>
             <name>co</name>
-            <value>1</value>
+            <value>0</value>
         </params>
         <reportType>Metrics_with_Metrics_data_2__c</reportType>
         <scope>organization</scope>
@@ -57,9 +112,40 @@
     </block>
     <block>
         <blockInfo>
-            <aggregateReferences>
-                <aggregate>FORMULA1</aggregate>
-            </aggregateReferences>
+            <blockId>B4</blockId>
+            <joinTable>Metrics_Data__c.Metrics__c</joinTable>
+        </blockInfo>
+        <columns>
+            <field>Metrics_Data__c$Name</field>
+        </columns>
+        <filter>
+            <criteriaItems>
+                <column>Metrics_Data__c$Metrics__c</column>
+                <operator>equals</operator>
+                <value>M-0000000017</value>
+            </criteriaItems>
+            <criteriaItems>
+                <column>Metrics_Data__c$Response__c</column>
+                <operator>contains</operator>
+                <value>excellent,satisfactory</value>
+            </criteriaItems>
+        </filter>
+        <format>Summary</format>
+        <name>Metrics data 3 block 6</name>
+        <params>
+            <name>co</name>
+            <value>0</value>
+        </params>
+        <reportType>Metrics_data_3__c</reportType>
+        <scope>organization</scope>
+        <timeFrameFilter>
+            <dateColumn>Metrics_Data__c$Case__c.Ad_Start_Date_Time__c</dateColumn>
+            <interval>INTERVAL_CUSTOM</interval>
+            <startDate>2014-12-15</startDate>
+        </timeFrameFilter>
+    </block>
+    <block>
+        <blockInfo>
             <blockId>B0</blockId>
             <joinTable>Metrics__c</joinTable>
         </blockInfo>
@@ -85,7 +171,7 @@
         <name>Metrics with Metrics data 3 block 2</name>
         <params>
             <name>co</name>
-            <value>1</value>
+            <value>0</value>
         </params>
         <reportType>Metrics_with_Metrics_data_3__c</reportType>
         <scope>organization</scope>
@@ -122,49 +208,9 @@
         <name>Metrics with metrics data block 3</name>
         <params>
             <name>co</name>
-            <value>1</value>
+            <value>0</value>
         </params>
         <reportType>Metrics_with_metrics_data__c</reportType>
-        <scope>organization</scope>
-        <timeFrameFilter>
-            <dateColumn>Metrics__c.Metrics_Data__r$Case__c.Ad_Start_Date_Time__c</dateColumn>
-            <interval>INTERVAL_CUSTOM</interval>
-            <startDate>2014-12-15</startDate>
-        </timeFrameFilter>
-    </block>
-    <block>
-        <blockInfo>
-            <aggregateReferences>
-                <aggregate>FORMULA2</aggregate>
-            </aggregateReferences>
-            <blockId>B3</blockId>
-            <joinTable>Metrics__c</joinTable>
-        </blockInfo>
-        <columns>
-            <field>Metrics__c$Name</field>
-        </columns>
-        <columns>
-            <field>Metrics__c.Metrics_Data__r$Name</field>
-        </columns>
-        <filter>
-            <criteriaItems>
-                <column>Metrics__c$Name</column>
-                <operator>equals</operator>
-                <value>M-0000000006</value>
-            </criteriaItems>
-            <criteriaItems>
-                <column>Metrics__c.Metrics_Data__r$Response__c</column>
-                <operator>notEqual</operator>
-                <value></value>
-            </criteriaItems>
-        </filter>
-        <format>Summary</format>
-        <name>Metrics with metrics data 4 block 4</name>
-        <params>
-            <name>co</name>
-            <value>1</value>
-        </params>
-        <reportType>Metrics_with_metrics_data_4__c</reportType>
         <scope>organization</scope>
         <timeFrameFilter>
             <dateColumn>Metrics__c.Metrics_Data__r$Case__c.Ad_Start_Date_Time__c</dateColumn>
@@ -182,17 +228,21 @@
         <backgroundFadeDir>Diagonal</backgroundFadeDir>
         <chartSummaries>
             <axisBinding>y</axisBinding>
-            <column>B0#FORMULA1</column>
+            <column>B3#FORMULA2</column>
         </chartSummaries>
         <chartSummaries>
             <axisBinding>y</axisBinding>
-            <column>B3#FORMULA2</column>
+            <column>B3#FORMULA1</column>
         </chartSummaries>
-        <chartType>Line</chartType>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>B3#FORMULA3</column>
+        </chartSummaries>
+        <chartType>HorizontalBar</chartType>
         <enableHoverLabels>true</enableHoverLabels>
         <expandOthers>true</expandOthers>
         <groupingColumn>Metrics__c.Metrics_Data__r$Case__c.Ad_Start_Date_Time__c</groupingColumn>
-        <legendPosition>Right</legendPosition>
+        <legendPosition>Bottom</legendPosition>
         <location>CHART_BOTTOM</location>
         <showAxisLabels>true</showAxisLabels>
         <showPercentage>false</showPercentage>
@@ -202,7 +252,7 @@
         <summaryAxisRange>Auto</summaryAxisRange>
         <textColor>#000000</textColor>
         <textSize>12</textSize>
-        <title>Excellent candidates vs Fill rate</title>
+        <title>Excellent,Satisfactory Cand vs Fill rate</title>
         <titleColor>#000000</titleColor>
         <titleSize>18</titleSize>
     </chart>
@@ -213,7 +263,7 @@
         <field>Metrics__c.Metrics_Data__r$Case__c.Ad_Start_Date_Time__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>% Excellent candidates Vs % Role filled</name>
+    <name>% Excellent,Satisfactory % Role filled</name>
     <reportType>Metrics_with_Metrics_data_2__c</reportType>
     <showDetails>false</showDetails>
 </Report>

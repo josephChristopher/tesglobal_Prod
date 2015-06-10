@@ -22,6 +22,88 @@
             <showPicturesOnCharts>false</showPicturesOnCharts>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
+            <title>EXCELLENT,SATISFACTORY &amp; FILL RATE</title>
+            <useReportChart>true</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Bar</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <header>Total NPS of the company split by months from 12,Dec 2014</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Test_reports/NPS_Monthly_Analysis</report>
+            <showPercentage>false</showPercentage>
+            <showPicturesOnCharts>false</showPicturesOnCharts>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>OVER ALL NPS-MONTHLY</title>
+            <useReportChart>true</useReportChart>
+        </components>
+    </leftSection>
+    <middleSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Bar</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <header>Chart showing the excellent&amp;satisfactory candidates compared to the fill rate</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Customer_insights_Test/Excellent_Satisfactory_Vs_Role_fill</report>
+            <showPercentage>false</showPercentage>
+            <showPicturesOnCharts>false</showPicturesOnCharts>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>EXCELLENT &amp; SATISFACTORY Vs FILL RATE</title>
+            <useReportChart>true</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Bar</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <header>NPS-Monthly based on the number of responses split by care call and Check in</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Test_reports/NPS_Based_on_Responses</report>
+            <showPercentage>false</showPercentage>
+            <showPicturesOnCharts>false</showPicturesOnCharts>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>NPS-Check in Vs Care call-MONTHLY</title>
+            <useReportChart>true</useReportChart>
+        </components>
+    </middleSection>
+    <rightSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Bar</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <header>Chart showing the excellent candidates compared to the fill rate</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Customer_insights_Test/Excellent_Candidates_Vs_Fill_Rate</report>
+            <showPercentage>false</showPercentage>
+            <showPicturesOnCharts>false</showPicturesOnCharts>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
             <title>EXCELLENT CANDIDATES Vs FILL RATE</title>
             <useReportChart>true</useReportChart>
         </components>
@@ -42,50 +124,6 @@
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
             <title>% Detractors Vs % Promoters-MONTHLY</title>
-            <useReportChart>true</useReportChart>
-        </components>
-    </leftSection>
-    <middleSection>
-        <columnSize>Wide</columnSize>
-        <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <chartAxisRange>Auto</chartAxisRange>
-            <componentType>Bar</componentType>
-            <displayUnits>Integer</displayUnits>
-            <drillEnabled>false</drillEnabled>
-            <drillToDetailEnabled>false</drillToDetailEnabled>
-            <enableHover>true</enableHover>
-            <expandOthers>false</expandOthers>
-            <header>Total NPS of the company split by months from 12,Dec 2014</header>
-            <legendPosition>Bottom</legendPosition>
-            <report>Test_reports/NPS_Monthly_Analysis</report>
-            <showPercentage>false</showPercentage>
-            <showPicturesOnCharts>false</showPicturesOnCharts>
-            <showValues>false</showValues>
-            <sortBy>RowLabelAscending</sortBy>
-            <title>OVER ALL NPS-MONTHLY</title>
-            <useReportChart>true</useReportChart>
-        </components>
-    </middleSection>
-    <rightSection>
-        <columnSize>Wide</columnSize>
-        <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <chartAxisRange>Auto</chartAxisRange>
-            <componentType>Bar</componentType>
-            <displayUnits>Auto</displayUnits>
-            <drillEnabled>false</drillEnabled>
-            <drillToDetailEnabled>false</drillToDetailEnabled>
-            <enableHover>true</enableHover>
-            <expandOthers>false</expandOthers>
-            <header>NPS-Monthly based on the number of responses split by care call and Check in</header>
-            <legendPosition>Bottom</legendPosition>
-            <report>Test_reports/NPS_Based_on_Responses</report>
-            <showPercentage>false</showPercentage>
-            <showPicturesOnCharts>false</showPicturesOnCharts>
-            <showValues>false</showValues>
-            <sortBy>RowLabelAscending</sortBy>
-            <title>NPS-Check in Vs Care call-MONTHLY</title>
             <useReportChart>true</useReportChart>
         </components>
     </rightSection>

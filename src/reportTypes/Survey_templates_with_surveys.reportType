@@ -198,6 +198,21 @@
             <field>CreatedBy.UserRole</field>
             <table>Survey_Template__c.Surveys__r</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Case__c.Ad_Number__c</field>
+            <table>Survey_Template__c.Surveys__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Case__c.Ad_Insert_Id__c</field>
+            <table>Survey_Template__c.Surveys__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Case__c.Vacancy__c.Ad_Number__c</field>
+            <table>Survey_Template__c.Surveys__r</table>
+        </columns>
         <masterLabel>Surveys</masterLabel>
     </sections>
 </ReportType>

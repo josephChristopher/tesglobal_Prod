@@ -80,13 +80,18 @@ IF(local_authority__r.Region__c = &quot;North West&quot;, &quot;North West&quot;
 IF(local_authority__r.Region__c = &quot;South East&quot;, &quot;South East&quot;,
 IF(local_authority__r.Region__c = &quot;South West&quot;, &quot;South West&quot;,
 IF(local_authority__r.Region__c = &quot;West Midlands&quot;, &quot;West Midlands&quot;,
-
+IF(local_authority__r.Region__c = &quot;Wales&quot;, &quot;Wales&quot;,
+IF(local_authority__r.Region__c = &quot;East Scotland&quot; || local_authority__r.Region__c = &quot;West Scotland&quot;
+, &quot;Scotland&quot;,
+IF(local_authority__r.Region__c = &quot;Northern Ireland&quot;, &quot;Northern Ireland&quot;,
+IF(local_authority__r.Region__c = &quot;Isle Of Man&quot;, &quot;Isle Of Man&quot;,
+IF(local_authority__r.Region__c = &quot;Channel Islands&quot;, &quot;Channel Islands&quot;,
 IF(OR(local_authority__r.Region__c = &quot;North East&quot;, 
       local_authority__r.Region__c = &quot;Yorkshire And The Humber&quot;
       ),
    &apos;NE, Yorkshire And The Humber&apos;,
 
-&quot;&quot;))))))))))))</formula>
+&quot;&quot;)))))))))))))))))</formula>
         <name>Update Allocated Region for Market Share</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>

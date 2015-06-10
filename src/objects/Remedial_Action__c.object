@@ -109,6 +109,18 @@
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Remedial Actions</relationshipLabel>
+        <relationshipName>Remedial_Actions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Discount__c</fullName>
         <externalId>false</externalId>
         <label>% Discount</label>
@@ -186,6 +198,18 @@
             </picklistValues>
             <picklistValues>
                 <fullName>Other (Pre-Approval Required)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Free extension of subscription</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complimentary copy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vouchers</fullName>
                 <default>false</default>
             </picklistValues>
             <sorted>false</sorted>
@@ -334,7 +358,6 @@
         <label>All Remedial Actions</label>
         <sharedTo>
             <group>Customer_Success_Team</group>
-            <roleAndSubordinates>Customer_Services_Manager</roleAndSubordinates>
         </sharedTo>
     </listViews>
     <listViews>
@@ -355,7 +378,7 @@
         <filters>
             <field>RECORDTYPE</field>
             <operation>equals</operation>
-            <value>Remedial_Action__c.Classified_Credit</value>
+            <value>Remedial_Action__c.Subscription_Refund</value>
         </filters>
         <label>Classified Credits - All</label>
         <sharedTo>
@@ -380,7 +403,7 @@
         <filters>
             <field>RECORDTYPE</field>
             <operation>equals</operation>
-            <value>Remedial_Action__c.Classified_Credit</value>
+            <value>Remedial_Action__c.Subscription_Refund</value>
         </filters>
         <filters>
             <field>Status__c</field>
@@ -410,7 +433,7 @@
         <filters>
             <field>RECORDTYPE</field>
             <operation>equals</operation>
-            <value>Remedial_Action__c.Classified_Credit</value>
+            <value>Remedial_Action__c.Subscription_Refund</value>
         </filters>
         <filters>
             <field>Status__c</field>
@@ -439,7 +462,7 @@
         <filters>
             <field>RECORDTYPE</field>
             <operation>equals</operation>
-            <value>Remedial_Action__c.Goodwill_Offer</value>
+            <value>Remedial_Action__c.Subscription_Goodwill_Offer</value>
         </filters>
         <label>Goodwill Offers - All</label>
         <sharedTo>
@@ -463,7 +486,7 @@
         <filters>
             <field>RECORDTYPE</field>
             <operation>equals</operation>
-            <value>Remedial_Action__c.Goodwill_Offer</value>
+            <value>Remedial_Action__c.Subscription_Goodwill_Offer</value>
         </filters>
         <filters>
             <field>Status__c</field>
@@ -492,7 +515,7 @@
         <filters>
             <field>RECORDTYPE</field>
             <operation>equals</operation>
-            <value>Remedial_Action__c.Goodwill_Offer</value>
+            <value>Remedial_Action__c.Subscription_Goodwill_Offer</value>
         </filters>
         <filters>
             <field>Status__c</field>
@@ -502,6 +525,45 @@
         <label>Goodwill Offers - Open</label>
         <sharedTo>
             <group>Customer_Success_Team</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Subscriptions_Goodwill_All</fullName>
+        <columns>NAME</columns>
+        <columns>Contact__c</columns>
+        <columns>Case__c</columns>
+        <columns>Reason_for_Credit__c</columns>
+        <columns>Value_of_Credit__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Remedial_Action__c.Subscription_Goodwill_Offer</value>
+        </filters>
+        <label>Subscriptions Goodwill - All</label>
+        <sharedTo>
+            <group>Customer_Services_Subscriptions</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Subscriptions_Refund_All</fullName>
+        <columns>NAME</columns>
+        <columns>Contact__c</columns>
+        <columns>Case__c</columns>
+        <columns>Offer_Resolution_Description__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Remedial_Action__c.Subscription_Refund</value>
+        </filters>
+        <label>Subscriptions Refund - All</label>
+        <sharedTo>
+            <group>Customer_Services_Subscriptions</group>
         </sharedTo>
     </listViews>
     <nameField>
@@ -742,6 +804,218 @@
             </values>
             <values>
                 <fullName>Offer Given</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TBD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Subscription_Goodwill_Offer</fullName>
+        <active>true</active>
+        <description>Remedial Action given to a customer that is more of a &quot;goodwill&quot; gesture</description>
+        <label>Subscription Goodwill Offer</label>
+        <picklistValues>
+            <picklist>Approver_Name__c</picklist>
+            <values>
+                <fullName>Becky Simpson</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gareth Thyer-Jones</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gavin Power</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Julia Rontree</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Michelle Reid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offer_Resolution__c</picklist>
+            <values>
+                <fullName>Complimentary copy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Free extension of subscription</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vouchers</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>1 - Very High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Medium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 - Very Low</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Offer Given</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TBD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Subscription_Refund</fullName>
+        <active>true</active>
+        <description>Remedial Action that requires a credit to be given to the customer</description>
+        <label>Subscription Refund</label>
+        <picklistValues>
+            <picklist>Approver_Name__c</picklist>
+            <values>
+                <fullName>Becky Simpson</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gareth Thyer-Jones</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gavin Power</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Julia Rontree</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Michelle Reid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offer_Resolution__c</picklist>
+            <values>
+                <fullName>Extend Closure Date</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FOC Additional Classification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FOC Daily or Weekly Alert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FOC Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FOC Rerun Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FOC Rerun Print</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FOC Silver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Free Upgrade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %28Pre-Approval Required%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>1 - Very High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Medium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 - Very Low</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Given</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
                 <default>false</default>
             </values>
             <values>

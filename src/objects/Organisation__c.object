@@ -908,6 +908,18 @@ INCLUDES(Phase__c, &quot;Multi-Phase&quot;),
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>School_Id_Text__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( School_Id__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>School Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>School_Id__c</fullName>
         <externalId>true</externalId>
         <label>School Id</label>

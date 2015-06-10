@@ -1,11 +1,11 @@
 public with sharing class CaseTriggerHandler extends Reach.TriggerHandlerFactory {
-    private final static RecordType CUSTOMER_SUCCESS_RECORD_TYPE = [SELECT Id FROM RecordType WHERE Name = 'Customer Success Case - Surveys' LIMIT 1];
-    private final static RecordType MARKET_SHARE_RECORD_TYPE = [SELECT Id FROM RecordType WHERE Name = 'Market Share Case' LIMIT 1];
-    private final static List<UserRole> AMBASSADOR_ROLES = [SELECT Id FROM UserRole WHERE Name = 'Ambassador'];
-    private final static List<UserRole> SALES_MANAGER_ROLES = [SELECT Id FROM UserRole WHERE Name = 'Sales Manager'];
+	private final static Profile AMBASSADOR_PROFILE = [SELECT Id FROM Profile WHERE Name = 'Ambassador' LIMIT 1];
+    private final static List<UserRole> SALES_MANAGER_ROLES = [SELECT Id FROM UserRole WHERE Name = 'Sales Manager' LIMIT 1];
     private final static User DEFAULT_OWNER_CUSTOMER_SUCCESS_CASE = [SELECT Id FROM User WHERE Name = 'Anthony Canning' LIMIT 1];
-    private final static RecordType MSL_BOOKING_RECORD_TYPE = [SELECT Id FROM RecordType WHERE sObjectType = 'Opportunity' AND Name = 'MSL Booking'];
-       
+    private Id CUSTOMER_SUCCESS_RECORD_TYPE = Case.SObjectType.getDescribe().getRecordTypeInfosByName().get('Customer Success Case - Surveys').getRecordTypeId();
+    private Id MARKET_SHARE_RECORD_TYPE = Case.SObjectType.getDescribe().getRecordTypeInfosByName().get('Market Share Case').getRecordTypeId();
+    private Id MSL_BOOKING_RECORD_TYPE = Opportunity.SObjectType.getDescribe().getRecordTypeInfosByName().get('MSL Booking').getRecordTypeId();
+    
     private Map<String, User> ambassadorsByRegion = new Map<String, User>();
     private Map<String, User> ambassadorSupervisorsByRegion = new Map<String, User>();
     private List<Case> mostRecentCaseWithSameAdNumber = new List<Case>();
@@ -44,6 +44,7 @@ public with sharing class CaseTriggerHandler extends Reach.TriggerHandlerFactory
         newCaseCallLog((Map<Id, Case>)Trigger.oldmap, (Map<Id, Case>)Trigger.newmap);
         updateAssignmentCountofCaseOwners(Trigger.Old, Trigger.New);
         
+        createNewCaseTeamforMarketShareCase(Trigger.New, (Map<Id, Case>)Trigger.newmap);
     }
     
     
@@ -234,7 +235,7 @@ public with sharing class CaseTriggerHandler extends Reach.TriggerHandlerFactory
     }
    
     private Boolean isCustomerSuccessCase(Case aCase) {
-        return aCase.RecordTypeId == CUSTOMER_SUCCESS_RECORD_TYPE.Id;
+        return aCase.RecordTypeId == CUSTOMER_SUCCESS_RECORD_TYPE;
     }
     
     //updates the Case Owner of the Market Share Case on a Round Robin Basis
@@ -438,7 +439,7 @@ public with sharing class CaseTriggerHandler extends Reach.TriggerHandlerFactory
     }
     
     private Boolean isMarketShareCase(Case newRecord) {
-        return newRecord.RecordTypeId == MARKET_SHARE_RECORD_TYPE.Id;
+        return newRecord.RecordTypeId == MARKET_SHARE_RECORD_TYPE;
     }
     
     
@@ -508,7 +509,7 @@ public with sharing class CaseTriggerHandler extends Reach.TriggerHandlerFactory
     private List<regionUser> ambassadorUserList(){
         ambassadorUserList = new List<regionUser>();
         ambassadorUsers = new List<User>();
-        List<User> ambassadorUsers = [SELECT Id, UserRoleId, Allocated_Region_Mkt_Share__c FROM User WHERE Allocated_Region_Mkt_Share__c != null AND UserRoleId =: AmbassadorRoles(AMBASSADOR_ROLES)];
+        List<User> ambassadorUsers = [SELECT Id, UserRoleId, Allocated_Region_Mkt_Share__c FROM User WHERE Allocated_Region_Mkt_Share__c != null AND ProfileId =: AMBASSADOR_PROFILE.Id];
         
         for(User u: ambassadorUsers ){
             ambassadorUserList.add(new regionUser(u));
@@ -593,18 +594,6 @@ public with sharing class CaseTriggerHandler extends Reach.TriggerHandlerFactory
     }
     
     
-    private Set<Id> AmbassadorRoles(List<UserRole> ambassadorRoles){
-        
-        Set<Id> ambassadorRoleIds = new Set<Id>();
-        
-        for(UserRole ambassadorRole: ambassadorRoles) {
-            ambassadorRoleIds.add(ambassadorRole.id);
-        }
-        
-        return ambassadorRoleIds;
-        
-    }
-    
     private Set<Id> AmbassadorSupervisorRoles(List<UserRole> ambassadorSupervisorRoles){
         
         Set<Id> ambassadorSupervisorRoleIds = new Set<Id>();
@@ -615,11 +604,6 @@ public with sharing class CaseTriggerHandler extends Reach.TriggerHandlerFactory
         
         return ambassadorSupervisorRoleIds;
         
-    }
-    
-    private Boolean isAmbassador(User aUser, Set<Id> roleIds){
-        
-        return roleIds.contains(aUser.UserRoleId);
     }
     
     private Boolean isAmbassadorSupervisor(User aUser, Set<Id> roleIds){
@@ -672,7 +656,7 @@ public with sharing class CaseTriggerHandler extends Reach.TriggerHandlerFactory
             }
         }
         
-        List<Vacancy__c> vacancies = [SELECT Id, Ad_Insert_MSL_ID__c FROM Vacancy__c WHERE Ad_Insert_MSL_ID__c IN :allAdInsertsNeeded];
+        List<Vacancy__c> vacancies = [SELECT Id, Ad_Insert_MSL_ID__c FROM Vacancy__c WHERE Ad_Insert_MSL_ID__c != null AND Ad_Insert_MSL_ID__c IN :allAdInsertsNeeded];
         
         Map<String, Vacancy__c> vacanciesByAdInsert = getMapByAdInsert(vacancies);
         
@@ -727,7 +711,7 @@ public with sharing class CaseTriggerHandler extends Reach.TriggerHandlerFactory
         }
         
          
-        List<Opportunity> bookings = [SELECT Id, Ad_Number__c FROM Opportunity WHERE Ad_Number__c IN :allAdNumbersNeeded AND RecordTypeId =: MSL_BOOKING_RECORD_TYPE.Id AND Ad_Number__c != null  LIMIT 1];
+        List<Opportunity> bookings = [SELECT Id, Ad_Number__c FROM Opportunity WHERE Ad_Number__c IN :allAdNumbersNeeded AND RecordTypeId =: MSL_BOOKING_RECORD_TYPE AND Ad_Number__c != null  LIMIT 1];
         
         system.debug('check bookings size' + bookings.size());
         

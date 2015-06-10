@@ -46,6 +46,11 @@
         <relationshipLabel><!-- Remedial Actions --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Remedial Actions --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- % Discount --></label>
         <name>Discount__c</name>
     </fields>
@@ -64,6 +69,10 @@
     <fields>
         <label><!-- Offer/Resolution Type --></label>
         <name>Offer_Resolution__c</name>
+        <picklistValues>
+            <masterLabel>Complimentary copy</masterLabel>
+            <translation><!-- Complimentary copy --></translation>
+        </picklistValues>
         <picklistValues>
             <masterLabel>Extend Closure Date</masterLabel>
             <translation><!-- Extend Closure Date --></translation>
@@ -97,12 +106,20 @@
             <translation><!-- Free Upgrade --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Free extension of subscription</masterLabel>
+            <translation><!-- Free extension of subscription --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>None</masterLabel>
             <translation><!-- None --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Other (Pre-Approval Required)</masterLabel>
             <translation><!-- Other (Pre-Approval Required) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vouchers</masterLabel>
+            <translation><!-- Vouchers --></translation>
         </picklistValues>
     </fields>
     <fields>
@@ -184,10 +201,6 @@
     <layouts>
         <layout>Classified Credit Layout</layout>
         <sections>
-            <label><!-- Approval Details --></label>
-            <section>Approval Details</section>
-        </sections>
-        <sections>
             <label><!-- Credit Details --></label>
             <section>Credit Details</section>
         </sections>
@@ -199,16 +212,23 @@
     <layouts>
         <layout>Goodwill Offer Page Layout</layout>
         <sections>
-            <label><!-- Approval Details --></label>
-            <section>Approval Details</section>
-        </sections>
-        <sections>
             <label><!-- Custom Links --></label>
             <section>Custom Links</section>
         </sections>
         <sections>
             <label><!-- Offer Details --></label>
             <section>Offer Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Remedial Action Layout</layout>
+        <sections>
+            <label><!-- Credit details --></label>
+            <section>Credit details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
         </sections>
     </layouts>
     <recordTypes>
@@ -218,6 +238,14 @@
     <recordTypes>
         <label><!-- Goodwill Offer --></label>
         <name>Goodwill_Offer</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Subscription Goodwill Offer --></label>
+        <name>Subscription_Goodwill_Offer</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Subscription Refund --></label>
+        <name>Subscription_Refund</name>
     </recordTypes>
     <startsWith>Consonant</startsWith>
     <validationRules>

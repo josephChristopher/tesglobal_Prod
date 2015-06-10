@@ -440,6 +440,10 @@
     </fields>
     <fields>
         <label><!-- School Id --></label>
+        <name>School_Id_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- School Id --></label>
         <name>School_Id__c</name>
     </fields>
     <fields>

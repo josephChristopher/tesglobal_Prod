@@ -166,8 +166,8 @@ Call_Log__c.IsCall__c:SUM /Call_Log__c.IsSurvey__c:SUM)</calculatedFormula>
         <enableHoverLabels>true</enableHoverLabels>
         <expandOthers>true</expandOthers>
         <groupingColumn>OWNER</groupingColumn>
-        <legendPosition>Right</legendPosition>
-        <location>CHART_TOP</location>
+        <legendPosition>Bottom</legendPosition>
+        <location>CHART_BOTTOM</location>
         <showAxisLabels>true</showAxisLabels>
         <showPercentage>false</showPercentage>
         <showTotal>false</showTotal>

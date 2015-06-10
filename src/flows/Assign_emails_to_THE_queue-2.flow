@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <constants>
+        <description>THE queue ID for prod</description>
+        <name>THEQueueID</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>00Gw0000002NlfZEAS</stringValue>
+        </value>
+    </constants>
+    <label>Assign emails to THE queue FINAL</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Assign_to_THE_queue</name>
+        <label>Assign emails to THE queue</label>
+        <locationX>71</locationX>
+        <locationY>23</locationY>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>CaseId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>THEQueueID</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <startElementReference>Assign_to_THE_queue</startElementReference>
+    <variables>
+        <name>CaseId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

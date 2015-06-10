@@ -208,6 +208,11 @@
             <field>Survey_Template__c.Name</field>
             <table>Metrics__c.Metrics_Data__r</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Survey_Number__c.Case__c.Vacancy__c.Job_Role_Classification__c</field>
+            <table>Metrics__c.Metrics_Data__r</table>
+        </columns>
         <masterLabel>Metrics Data</masterLabel>
     </sections>
 </ReportType>

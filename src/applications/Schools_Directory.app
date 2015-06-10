@@ -144,6 +144,7 @@
         </pushNotification>
     </pushNotifications>
     <saveUserSessions>true</saveUserSessions>
+    <tab>standard-Chatter</tab>
     <tab>Organisation__c</tab>
     <tab>standard-Contact</tab>
     <tab>Local_Authority__c</tab>
@@ -178,6 +179,9 @@
         </mapping>
         <mapping>
             <tab>standard-Contact</tab>
+        </mapping>
+        <mapping>
+            <tab>standard-Chatter</tab>
         </mapping>
         <mapping>
             <tab>standard-Dashboard</tab>

@@ -1,0 +1,6 @@
+<apex:page showHeader="true" sidebar="true" StandardController="zqu__Quote__c" extensions="Zuora_PaymentPageController" action="{!onload}">
+    <!-- Render the payment page component, using the url parameters as attribute values -->
+    <!-- title="Title" subtitle="Subtitle" -->
+    <apex:sectionHeader />
+    <zqu:PaymentPage zuoraPageId="{!pageId}" submitEnabled="true" style="inline"/>
+</apex:page>

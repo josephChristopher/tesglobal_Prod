@@ -4,6 +4,24 @@
         <fullName>Update Case Owners</fullName>
         <active>true</active>
         <ruleEntry>
+            <assignedTo>TES_Membership_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Customer Services (Email - TES)</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>THE_Membership</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Customer Services (Email - THE)</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
             <assignedTo>Customer_Success_Team</assignedTo>
             <assignedToType>Queue</assignedToType>
             <criteriaItems>
@@ -18,6 +36,15 @@
                 <field>Case.RecordTypeId</field>
                 <operation>notEqual</operation>
                 <value>Case Email</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Subscriptions_Web_to_Case</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Customer Services (Web)</value>
             </criteriaItems>
         </ruleEntry>
     </assignmentRule>

@@ -1,24 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CaseSettings xmlns="http://soap.sforce.com/2006/04/metadata">
     <closeCaseThroughStatusChange>true</closeCaseThroughStatusChange>
-    <defaultCaseOwner>drecto@tesglobal.com</defaultCaseOwner>
+    <defaultCaseOwner>jchristopher@tesglobal.com</defaultCaseOwner>
     <defaultCaseOwnerType>User</defaultCaseOwnerType>
-    <defaultCaseUser>drecto@tesglobal.com</defaultCaseUser>
+    <defaultCaseUser>jchristopher@tesglobal.com</defaultCaseUser>
     <emailToCase>
         <enableEmailToCase>true</enableEmailToCase>
         <enableHtmlEmail>false</enableHtmlEmail>
         <enableOnDemandEmailToCase>true</enableOnDemandEmailToCase>
         <enableThreadIDInBody>true</enableThreadIDInBody>
-        <enableThreadIDInSubject>true</enableThreadIDInSubject>
+        <enableThreadIDInSubject>false</enableThreadIDInSubject>
         <notifyOwnerOnNewCaseEmail>false</notifyOwnerOnNewCaseEmail>
         <overEmailLimitAction>Bounce</overEmailLimitAction>
         <routingAddresses>
             <addressType>EmailToCase</addressType>
             <caseOrigin>Email</caseOrigin>
-            <casePriority>3 - Medium</casePriority>
+            <casePriority>Medium</casePriority>
             <createTask>false</createTask>
             <emailAddress>voc@tesglobal.com</emailAddress>
             <routingName>TES - Voice of Customer</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>membership@tes.co.uk</emailAddress>
+            <routingName>TES Membership Case Routing</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>membership@timeshighereducation.co.uk</emailAddress>
+            <routingName>THE Membership Case Routing</routingName>
             <saveEmailHeaders>false</saveEmailHeaders>
         </routingAddresses>
         <unauthorizedSenderAction>Discard</unauthorizedSenderAction>
@@ -34,6 +52,7 @@
     <showFewerCloseActions>true</showFewerCloseActions>
     <useSystemEmailAddress>true</useSystemEmailAddress>
     <webToCase>
-        <enableWebToCase>false</enableWebToCase>
+        <caseOrigin>Web Form</caseOrigin>
+        <enableWebToCase>true</enableWebToCase>
     </webToCase>
 </CaseSettings>

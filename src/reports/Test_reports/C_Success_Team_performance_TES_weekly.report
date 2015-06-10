@@ -208,19 +208,19 @@ Call_Log__c.IsCall__c:SUM /Call_Log__c.IsSurvey__c:SUM)</calculatedFormula>
     </chart>
     <colorRanges>
         <columnName>FORMULA4</columnName>
-        <highBreakpoint>3.0</highBreakpoint>
+        <highBreakpoint>2.1</highBreakpoint>
         <highColor>#C25454</highColor>
-        <lowBreakpoint>2.0</lowBreakpoint>
-        <lowColor>#54C254</lowColor>
-        <midColor>#C2C254</midColor>
+        <lowBreakpoint>0.1</lowBreakpoint>
+        <lowColor>#FFFFFF</lowColor>
+        <midColor>#54C254</midColor>
     </colorRanges>
     <colorRanges>
         <columnName>FORMULA5</columnName>
-        <highBreakpoint>3.0</highBreakpoint>
+        <highBreakpoint>2.1</highBreakpoint>
         <highColor>#C25454</highColor>
-        <lowBreakpoint>2.0</lowBreakpoint>
-        <lowColor>#54C254</lowColor>
-        <midColor>#C2C254</midColor>
+        <lowBreakpoint>0.1</lowBreakpoint>
+        <lowColor>#FFFFFF</lowColor>
+        <midColor>#54C254</midColor>
     </colorRanges>
     <columns>
         <field>Call_Log__c.IsSurvey__c</field>

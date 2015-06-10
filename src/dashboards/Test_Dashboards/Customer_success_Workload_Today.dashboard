@@ -21,7 +21,7 @@
             <expandOthers>false</expandOthers>
             <groupingColumn>STATUS</groupingColumn>
             <legendPosition>Bottom</legendPosition>
-            <report>Test_reports/Check_in_Work_Pending_Today</report>
+            <report>Customer_success_Operational_reports/Check_in_Work_Pending_Today</report>
             <showPercentage>false</showPercentage>
             <showPicturesOnCharts>false</showPicturesOnCharts>
             <showValues>false</showValues>
@@ -44,7 +44,7 @@
             <expandOthers>false</expandOthers>
             <groupingColumn>STATUS</groupingColumn>
             <legendPosition>Bottom</legendPosition>
-            <report>Test_reports/Care_call_Work_pending_Today</report>
+            <report>Customer_success_Operational_reports/Care_call_Work_pending_Today</report>
             <showPercentage>true</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
@@ -69,7 +69,7 @@
             <expandOthers>false</expandOthers>
             <groupingColumn>Case.Status_Custom__c</groupingColumn>
             <legendPosition>Bottom</legendPosition>
-            <report>Test_reports/Check_in_Work_Pending_Today</report>
+            <report>Customer_success_Operational_reports/Check_in_Work_Pending_Today</report>
             <showPercentage>false</showPercentage>
             <showTotal>false</showTotal>
             <showValues>true</showValues>
@@ -93,7 +93,7 @@
             <groupingColumn>Case.Status_Custom__c</groupingColumn>
             <groupingColumn>STATUS</groupingColumn>
             <legendPosition>Bottom</legendPosition>
-            <report>Test_reports/Care_call_Work_pending_Today</report>
+            <report>Customer_success_Operational_reports/Care_call_Work_pending_Today</report>
             <showPercentage>false</showPercentage>
             <showValues>false</showValues>
             <sortBy>RowLabelAscending</sortBy>
@@ -118,7 +118,7 @@
             <expandOthers>false</expandOthers>
             <groupingColumn>OWNER</groupingColumn>
             <legendPosition>Bottom</legendPosition>
-            <report>Test_reports/Check_in_Work_Pending_Today</report>
+            <report>Customer_success_Operational_reports/Check_in_Work_Pending_Today</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
@@ -140,7 +140,7 @@
             <expandOthers>false</expandOthers>
             <groupingColumn>OWNER</groupingColumn>
             <legendPosition>Bottom</legendPosition>
-            <report>Test_reports/Care_call_Work_pending_Today</report>
+            <report>Customer_success_Operational_reports/Care_call_Work_pending_Today</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>

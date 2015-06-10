@@ -221,6 +221,21 @@
             <field>Case__c.Vacancy__c.Name</field>
             <table>Survey__c</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Case__c.Ad_Number__c</field>
+            <table>Survey__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Case__c.Ad_Insert_Id__c</field>
+            <table>Survey__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Case__c.Vacancy__c.Ad_Number__c</field>
+            <table>Survey__c</table>
+        </columns>
         <masterLabel>Surveys</masterLabel>
     </sections>
 </ReportType>

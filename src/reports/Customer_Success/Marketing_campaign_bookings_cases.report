@@ -13,10 +13,19 @@
         <field>Opportunity.Vacancies__r.Cases__r$Status_Custom__c</field>
     </columns>
     <columns>
+        <field>Opportunity.Vacancies__r$Job_Role_Classification__c</field>
+    </columns>
+    <columns>
         <field>Opportunity.Vacancies__r$Ad_Number__c</field>
     </columns>
     <columns>
+        <field>Opportunity.Vacancies__r$Price__c</field>
+    </columns>
+    <columns>
         <field>Opportunity.Vacancies__r$Publication__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$CreatedDate</field>
     </columns>
     <columns>
         <field>Opportunity.Vacancies__r$Date_of_Ad_Publication_on_TES_Site__c</field>
@@ -32,36 +41,16 @@
     </columns>
     <description>Marketing campaign bookings to be dealt with priority by customer success consultants</description>
     <filter>
-        <booleanFilter>((( 1 OR 4 OR 5 OR 6) AND 2 AND 3))</booleanFilter>
+        <booleanFilter>((1 OR 2))</booleanFilter>
         <criteriaItems>
             <column>Opportunity.Vacancies__r$Ad_Number__c</column>
             <operator>contains</operator>
-            <value>52357,0521F1,053h96,053hg4,0544H1,54471,0543FF,0543F9,05418F,05410D,05408E,053H44,053H0B,053G2E,053F55,053AFA,053A58,053A51,053A3C,0539HH,0539HA,53918,05389B,0537DA,53653,05302d,53488,0533CH,05333E,53331,0532C2,052HE0,05333D,052HF6,052GG6,052GF4,052G4C,052g49,052C5B,052fb4,052G2A,052F69,052EH7,0530BA,052C9C,052BHG,052BHF,052AH2,052AHC,0529A2,0529CD,05298C,52959,05294F,05285F,0528CB,0528AF,52803,0527BF,052HE9,05275E,05274F,0525G2,0526D1,05271G,0521B5,52629,052 8D0,052A7B,52540,52518,0523BA,0524FE,0524F9,0522g9,52324,52338,05235B,05211A,052BA9,52263,05220H,0521B9,52184,0521H8,52264,051HB7,051H89,051H12,051H01,051GGE,051GHC,051GHA,051GF4,051GBH,051G98,051G50,051H0A,051H40,051H59,051G13,051F35,051F01,05267G,051ECG,051EB6,051D45,051E27,051CH8,0524BB,051D13,51880,051cb9,051a63,051B0H,52488,05242E,051EH2</value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>Opportunity.Vacancies__r$Classification__c</column>
-            <operator>contains</operator>
-            <value>secondary</value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>Opportunity.Vacancies__r.Cases__r$Ad_Start_Date_Time__c</column>
-            <operator>greaterThan</operator>
-            <value>3/15/2015 12:00 AM</value>
+            <value>055E21,051B0H,051a63,051cb9,51880,051D13,0524BB,051CH8,051E27,051D45,051EB6,051ECG,051EH2,05267G,051F01,0549B1,051F35,051G13,051G50,051G98,051GBH,0561A3,051GF4,051GHA,051GHC,051GGE,051H0A,051H01,051H12,051H40,0528AF,051H59,051H89,051HB7,052BA9,0521F1,05211A,0521B9,52184,0521H8,05220H,52263,52264,0522g9,52357,52324,52338,05235B,053A56,52488,05242E,0524F9,0529A2,0524FE,0523BA,52518,52540,052A7B,0528D0,52629,0521B5,05271G,0526D1,0525G2,05274F,052HE9,05275E,0527BF,52803,05570B,0528CB,05285F,05294F,052959,05298C,0529CD,052AHC,052AH2,052BHF,052BHG,052C9C,0530BA,052EH7,052F69,052G2A,052fb4,052C5B,052g49,052G4C,052GF4,052GG6,052HF6,05333D,052HE0,0532C2,53331,05333E,0533CH,53488,05302d,53653,0537DA,05389B,53918,0539HA,0539HH,053A3C,053A51,053A58,053AFA,053C5H,053F55,053G2E,053H0B,053H44,05408E,05410D,05418F,0543F9,0543FF,54471,0544DF,0544DH</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity$Ad_Number__c</column>
             <operator>contains</operator>
-            <value>054D3C,054BGA,054C2A,053GFD,054BF8,054ABB,0548B8,0549H1,0549E0,0548F8,0548D9,54871,54870,54788,0547D9,0547AB,054A98,0544A5,053h96,053HF0,0545FD,0545DF,54704,053hg4,0544H1,0544DH,0544DF,54471,0543FF,0543F9</value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>Opportunity$Ad_Number__c</column>
-            <operator>contains</operator>
-            <value>054GGC,054G06,054FGH,054FGF,054G8C,054EH0,054E21,054DHH,054DH8,054DGC,054DA1,054D5C,054D3C,054CB3,054BGA,054C2A,054BF5,053GFD,054BF8,054ABB,0548B8,0549H1,0549E0,0548F8,0548D9,54871,54870,54788,0547D9,0547AB,054A98,0544A5,053h96,053HF0,0545FD,0545DF,54704,053hg4,0544H1,0544DH,0544DF,54471,0543FF,0543F9</value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>Opportunity$Ad_Number__c</column>
-            <operator>contains</operator>
-            <value>054EH0,054G8C,054FGF,054FGH,054G06,054GGC,054FGD,054HDG,0550B2,0550AH,05511H,0551D5,054G8B,0551F4,05524D,055386,0553AG,0553EE,05542G,55473,055499,0554AC,05549B,0554C7,0556FC,0554GF,55506,05550H,0555DB,0555E0,055B78,055781,05580E,05584H,0558F7,0558GE,55901,55887,0558H5,0559H2,0559CC,055B9D,055AE6,055C0C,055C43,055C44,055CFB</value>
+            <value>0544H1,053HF0,053hg4,54704,0545DF,0545FD,053h96,0544A5,054A98,0547AB,0547D9,54788,54870,54871,0548D9,0548F8,0549E0,0549H1,05540E,0548B8,054ABB,054C2A,054BF8,053GFD,054BF5,054BGA,054CB3,054D3C,054DA1,054DGC,054DH8,054DHH,054E21,054EH0,054G8C,054FGF,054FGH,054G06,054GGC,054FGD,054HDG,0550AH,05511H,0551D5,054G8B,0551F4,05524D,055386,055HB5,0553AG,0553EE,05542G,55473,055499,0554AC,05549B,0554C7,0556FC,0554GF,55506,05550H,0555DB,0555E0,056H50,055B78,05580E,05584H,0558F7,0558GE,55901,55887,0558H5,0559H2,0559CC,055B9D,055AE6,055C0C,055C43,055C44,055CFB,055FA4,055FA5,055G63,055G85,055H37,055A90,05604D,055H3B,05608B,0560BF,56070,0561BC,05632B,055H4F,56479,05652G,0561BB,0565B8,56704,0565d3,56678,0569A8,0569CF,056AEA,056AG6,056B86,056D99,056E4C,056EHF,056FE0,056FGD,056E08,056H5C,57471,057A80</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
@@ -79,8 +68,7 @@
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>
-        <dateColumn>Opportunity$CreatedDate</dateColumn>
-        <endDate>2015-04-21</endDate>
+        <dateColumn>Opportunity.Vacancies__r.Cases__r$Ad_Start_Date_Time__c</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>
         <startDate>2015-03-15</startDate>
     </timeFrameFilter>

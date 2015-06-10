@@ -406,6 +406,21 @@
             <field>Sales_Form__c.Salesperson_Name__c</field>
             <table>Vacancy__c</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Booking__c.Account.Country__c</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Booking__c.Bill_To__c.Name</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Booking__c.Agency__c</field>
+            <table>Vacancy__c</table>
+        </columns>
         <masterLabel>Vacancies</masterLabel>
     </sections>
 </ReportType>

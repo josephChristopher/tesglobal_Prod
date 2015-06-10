@@ -131,6 +131,6 @@
     <showDetails>false</showDetails>
     <timeFrameFilter>
         <dateColumn>Call_Log__c.Call_Date_Time__c</dateColumn>
-        <interval>INTERVAL_THISWEEK</interval>
+        <interval>INTERVAL_LASTWEEK</interval>
     </timeFrameFilter>
 </Report>

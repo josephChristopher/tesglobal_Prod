@@ -4,9 +4,12 @@ public class TestUpdateCustCallDate {
     
     static testMethod void testUpdateCustCallDate() {
         
-        
-        Test.startTest();
-       
+        Id AccountLocked = Account.SObjectType.getDescribe().getRecordTypeInfosByName().get('Account Edit Locked').getRecordTypeId();
+        Id cRecType = Contact.SObjectType.getDescribe().getRecordTypeInfosByName().get('Customer Success').getRecordTypeId();
+        Id oppRecType = Opportunity.SObjectType.getDescribe().getRecordTypeInfosByName().get('MSL Booking').getRecordTypeId();
+        Id vacancyLocked = Vacancy__c.SObjectType.getDescribe().getRecordTypeInfosByName().get('Vacancy Locked').getRecordTypeId();
+        Id custSuccessCase = Case.SObjectType.getDescribe().getRecordTypeInfosByName().get('Customer Success Case - Surveys').getRecordTypeId();
+ 
         //create account
         Account acc = new Account(Name='Test Account',
                                   Client_Type__c = 'To Be Analysed',
@@ -19,20 +22,19 @@ public class TestUpdateCustCallDate {
                                   Main_Email__c = 'dsadsa@dsadsa.com',
                                   Region_1__c = 'Classified',
                                   Region_2__c = 'United Kingdom',
-                                  Not_Approved_by_Finance__c = false);
+                                  Not_Approved_by_Finance__c = false,
+                                  RecordTypeId = AccountLocked);
         
         insert acc;
-        
-        RecordType cRecType = [SELECT Id FROM RecordType WHERE sObjectType = 'Contact' AND Name = 'Customer Success'];
         
         //create new contact
         Contact c = new Contact();
         c.LastName = 'smith';
-        c.RecordTypeId = cRecType.Id;
         c.Phone = '12312312321';
         c.Email = 'asdsa@dadsa.com';
         c.AccountId = acc.Id;
-           c.Salutation = 'Ms.';
+        c.Salutation = 'Ms.';
+        c.RecordTypeId = cRecType;
         
         insert c;
         
@@ -45,15 +47,13 @@ public class TestUpdateCustCallDate {
         
         insert sf;
         
-        RecordType oppRecType = [SELECT Id FROM RecordType WHERE SObjectType = 'Opportunity' AND Name = 'MSL Booking' LIMIT 1];
-        
         //Insert booking.
         Opportunity opp = new Opportunity();
         opp.Name='Test Booking';
         opp.StageName='TBD';
         opp.CloseDate=Date.today();
-        opp.RecordTypeId = oppRecType.Id;
         opp.Email_Status__c = 'Unread';
+        opp.RecordTypeId = oppRecType;
         
         insert opp;
     
@@ -75,11 +75,10 @@ public class TestUpdateCustCallDate {
         v.Booking__c = opp.Id;
         v.Vacancy_Position_and_Subject__c = '789';
         v.Sub_Class_Text__c = 'TEST';
+        v.RecordTypeId = vacancyLocked;
 
     insert v;
-    
-        
-        
+
         //insert Metrics
         Metrics__c m = new Metrics__c();
         m.Metrics_Question__c = 'Test';
@@ -87,7 +86,7 @@ public class TestUpdateCustCallDate {
         
         insert m;
         
-        Case cs = [SELECT Id, Vacancy__c FROM Case WHERE Vacancy__c=:v.Id LIMIT 1];
+        Case cs = [SELECT Id, Vacancy__c FROM Case WHERE Vacancy__c=:v.Id AND RecordTypeId =: custSuccessCase LIMIT 1];
           
         //insert survey
         Survey__c s = new Survey__c();
@@ -96,6 +95,7 @@ public class TestUpdateCustCallDate {
         
         insert s;
         
+        Test.startTest();
         //insert Metrics Data
         Metrics_Data__c md = new Metrics_Data__c();
         md.Case__c = cs.Id;
@@ -109,7 +109,7 @@ public class TestUpdateCustCallDate {
         Test.stopTest();
         
         //verify customer care call and checkbox are update in case
-        Case updatedCase = [SELECT Id, Care_Call_Date_Chosen_By_Contact__c, Customer_Care_Call_Date__c FROM Case Where Id =: cs.Id];
+        Case updatedCase = [SELECT Id, Care_Call_Date_Chosen_By_Contact__c, Customer_Care_Call_Date__c FROM Case Where Id =: cs.Id LIMIT 1];
 
         system.assertEquals(true, updatedCase.Care_Call_Date_Chosen_By_Contact__c);
         system.assertEquals(date.valueOf('2015-01-01'), updatedCase.Customer_Care_Call_Date__c);

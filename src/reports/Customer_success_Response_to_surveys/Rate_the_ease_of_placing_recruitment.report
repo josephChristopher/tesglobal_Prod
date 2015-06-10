@@ -58,7 +58,7 @@
         <summaryAxisRange>Auto</summaryAxisRange>
         <textColor>#000000</textColor>
         <textSize>9</textSize>
-        <title>Rate the ease of placing recruitment ?</title>
+        <title>Rate the ease of placing advert?</title>
         <titleColor>#000000</titleColor>
         <titleSize>18</titleSize>
     </chart>
@@ -79,7 +79,7 @@
         <field>Metrics_Data__c$Response__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Rate the ease of placing recruitment?</name>
+    <name>Rate the ease of placing Advert?</name>
     <params>
         <name>co</name>
         <value>1</value>

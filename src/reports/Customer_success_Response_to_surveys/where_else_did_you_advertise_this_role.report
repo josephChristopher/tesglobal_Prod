@@ -6,7 +6,7 @@
         <developerName>FORMULA1</developerName>
         <isActive>true</isActive>
         <isCrossBlock>true</isCrossBlock>
-        <masterLabel>% School website</masterLabel>
+        <masterLabel>% Local Authority</masterLabel>
         <scale>2</scale>
     </aggregates>
     <aggregates>
@@ -33,7 +33,7 @@
         <developerName>FORMULA4</developerName>
         <isActive>true</isActive>
         <isCrossBlock>true</isCrossBlock>
-        <masterLabel>% Other &amp; LA</masterLabel>
+        <masterLabel>% Other</masterLabel>
         <scale>2</scale>
     </aggregates>
     <block>
@@ -56,7 +56,7 @@
             <criteriaItems>
                 <column>Metrics_Data__c$Response__c</column>
                 <operator>contains</operator>
-                <value>School</value>
+                <value>Local</value>
             </criteriaItems>
         </filter>
         <format>Summary</format>
@@ -173,7 +173,7 @@
             <criteriaItems>
                 <column>Metrics__c.Metrics_Data__r$Response__c</column>
                 <operator>contains</operator>
-                <value>Other,local</value>
+                <value>Other</value>
             </criteriaItems>
         </filter>
         <format>Summary</format>

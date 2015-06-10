@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <constants>
+        <description>The TES queue id as a constant from the prod org</description>
+        <name>ConstantTESQueueId</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>00Gw0000002NlfYEAS</stringValue>
+        </value>
+    </constants>
+    <description>This flow assigns the case ID variable to the TES membership queue ID</description>
+    <label>Assign to TES queuev2</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Assign_to_TES_queue</name>
+        <label>Assign to TES queue</label>
+        <locationX>140</locationX>
+        <locationY>45</locationY>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>CaseId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>ConstantTESQueueId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <startElementReference>Assign_to_TES_queue</startElementReference>
+    <variables>
+        <name>CaseId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>TESqueueID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue>00Gw0000002NlfYEAS</stringValue>
+        </value>
+    </variables>
+</Flow>

@@ -121,12 +121,12 @@ public class TestCaseTriggerHandler {
     
     public static testMethod void TestCaseTeamCreation() {
         
-        UserRole AMBASSADOR_ROLE = [SELECT Id FROM UserRole WHERE Name = 'Ambassador - North West'];
-        UserRole EE_ROLE = [SELECT Id FROM UserRole WHERE Name = 'Engagement Executive'];
-        UserRole AMBASSADOR_SUPERVISOR_ROLE = [SELECT Id FROM UserRole WHERE Name = 'Sales Manager - North'];
-        Profile AMBASSADOR_PROFILE = [SELECT Id FROM Profile WHERE Name = 'Ambassador'];
-        Profile EE_PROFILE = [SELECT Id FROM Profile WHERE Name = 'Engagement Executive'];
-        RecordType MARKETSHARECASE = [SELECT Id FROM RecordType WHERE Name = 'Market Share Case'];
+        UserRole AMBASSADOR_ROLE = [SELECT Id FROM UserRole WHERE Name = 'Ambassador' LIMIT 1];
+        UserRole EE_ROLE = [SELECT Id FROM UserRole WHERE Name = 'Engagement Executive' LIMIT 1];
+        UserRole AMBASSADOR_SUPERVISOR_ROLE = [SELECT Id FROM UserRole WHERE Name = 'Sales Manager' LIMIT 1];
+        Profile AMBASSADOR_PROFILE = [SELECT Id FROM Profile WHERE Name = 'Ambassador' LIMIT 1];
+        Profile EE_PROFILE = [SELECT Id FROM Profile WHERE Name = 'Engagement Executive' LIMIT 1];
+        RecordType MARKETSHARECASE = [SELECT Id FROM RecordType WHERE Name = 'Market Share Case' LIMIT 1];
         
         User thisUser = [SELECT Id FROM User WHERE Profile.Name = 'System Administrator' and IsActive = true limit 1];
         

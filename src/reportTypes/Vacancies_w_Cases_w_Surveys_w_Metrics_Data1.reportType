@@ -588,6 +588,111 @@
             <field>Subscription_Lookup__c</field>
             <table>Vacancy__c</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Client_Name__c.Client_Type__c</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Booking__c.Bill_To__c.Agency__c</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.City_Town__c</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.BillingPostalCode</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.BillingState</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.BillingCountry</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.BillingCity</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.Address_2__c</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.Address_1__c</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.County_State__c</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.Country__c</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.Post_Code__c</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Booking__c.Account</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.Name</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.Region__c</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.Region_1__c</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.Region_2__c</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.Region_3__c</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.Region_4__c</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.Region_5__c</field>
+            <table>Vacancy__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.c2g__CODAReportingCode__c</field>
+            <table>Vacancy__c</table>
+        </columns>
         <masterLabel>Vacancies</masterLabel>
     </sections>
     <sections>
@@ -898,6 +1003,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Agency_Name_txt__c</field>
+            <table>Vacancy__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Asset.Product2.Name</field>
             <table>Vacancy__c.Cases__r</table>
         </columns>
@@ -909,6 +1019,21 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Asset.Product2.Family</field>
+            <table>Vacancy__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Agency_CustSuccess__c</field>
+            <table>Vacancy__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Bill_To_Name_txt__c</field>
+            <table>Vacancy__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Job_Type__c</field>
             <table>Vacancy__c.Cases__r</table>
         </columns>
         <masterLabel>Cases</masterLabel>

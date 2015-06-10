@@ -1,6 +1,6 @@
 global with sharing class CCEmailListController {
 	
-	private ApexPages.StandardController stdController = null;
+	/*private ApexPages.StandardController stdController = null;
 	public List<TESMessage> messages { get; set; } 
 	public Opportunity opp = null;
 	public String lastJSON { get; set; }
@@ -61,5 +61,5 @@ global with sharing class CCEmailListController {
   	return [Select Contact.Id,Contact.FirstName,Contact.LastName,Contact.Email,Contact.AccountId from OpportunityContactRole 
   					where OpportunityId = :bookingId
   					Order by Contact.FirstName,Contact.LastName];
-  }
+  }*/
 }

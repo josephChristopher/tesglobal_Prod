@@ -207,9 +207,9 @@
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
             <expandOthers>true</expandOthers>
-            <groupingColumn>Call_Log__c.Main_Status__c</groupingColumn>
+            <groupingColumn>BucketField_38904518</groupingColumn>
             <legendPosition>Right</legendPosition>
-            <report>Test_reports/Customer_success_team_performance_Daily</report>
+            <report>Customer_success_Operational_reports/Customer_success_team_performance_Daily</report>
             <showPercentage>false</showPercentage>
             <showTotal>false</showTotal>
             <showValues>true</showValues>

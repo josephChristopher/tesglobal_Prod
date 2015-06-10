@@ -13,4 +13,5 @@
     <tab>standard-Dashboard</tab>
     <tab>standard-Product2</tab>
     <tab>standard-Forecasting3</tab>
+    <tab>Zuora__Subscription__c</tab>
 </CustomApplication>

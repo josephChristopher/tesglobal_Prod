@@ -3,7 +3,7 @@
     <baseObject>Opportunity</baseObject>
     <category>other</category>
     <deployed>true</deployed>
-    <description>Cases</description>
+    <description>Bookings with vacancies with cases</description>
     <join>
         <join>
             <outerJoin>false</outerJoin>
@@ -12,7 +12,7 @@
         <outerJoin>false</outerJoin>
         <relationship>Vacancies__r</relationship>
     </join>
-    <label>Case</label>
+    <label>Bookings with vacancies with cases</label>
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>

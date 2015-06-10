@@ -34,7 +34,7 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>School_Id__c</field>
+                <field>School_Id_Text__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

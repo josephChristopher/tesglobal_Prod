@@ -27,6 +27,10 @@
                 <behavior>Readonly</behavior>
                 <field>Campus__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>AccountNumber</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -330,6 +334,10 @@
                 <field>Not_Approved_by_Finance__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Block_Ads__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Block_Reason__c</field>
             </layoutItems>
@@ -380,6 +388,7 @@
     </relatedContent>
     <relatedLists>
         <fields>FULL_NAME</fields>
+        <fields>Type__c</fields>
         <fields>CONTACT.TITLE</fields>
         <fields>CONTACT.EMAIL</fields>
         <fields>CONTACT.PHONE1</fields>

@@ -4,6 +4,12 @@ public class TestUpdateAdWebMetricsonCase {
     
     static testMethod void testUpdateAdWebMetricsonCase(){
         
+        Id AccountLocked = Account.SObjectType.getDescribe().getRecordTypeInfosByName().get('Account Edit Locked').getRecordTypeId();
+        Id cRecType = Contact.SObjectType.getDescribe().getRecordTypeInfosByName().get('Customer Success').getRecordTypeId();
+        Id oppRecType = Opportunity.SObjectType.getDescribe().getRecordTypeInfosByName().get('MSL Booking').getRecordTypeId();
+        Id vacancyLocked = Vacancy__c.SObjectType.getDescribe().getRecordTypeInfosByName().get('Vacancy Locked').getRecordTypeId();
+        Id custSuccessCase = Case.SObjectType.getDescribe().getRecordTypeInfosByName().get('Customer Success Case - Surveys').getRecordTypeId();
+  
         //create survey template
         Survey_Template__c sTemp = new Survey_Template__c();
         sTemp.Name = 'TES Recruitment Two Minute Survey';
@@ -12,6 +18,7 @@ public class TestUpdateAdWebMetricsonCase {
         
         //create account
         Account acc = new Account(Name='Test Account',
+                                  RecordTypeId = AccountLocked,
                                   Client_Type__c = 'To Be Analysed',
                                   Customer_Group__c = 'Academy',
                                   Street__c = '29 Darling',
@@ -25,13 +32,11 @@ public class TestUpdateAdWebMetricsonCase {
                                   Not_Approved_by_Finance__c = false);
         
         insert acc;
-        
-        RecordType cRecType = [SELECT Id FROM RecordType WHERE sObjectType = 'Contact' AND Name = 'Customer Success'];
-        
+
         //create new contact
         Contact c = new Contact();
         c.LastName = 'smith';
-        c.RecordTypeId = cRecType.Id;
+        c.RecordTypeId = cRecType;
         c.Phone = '12312312321';
         c.Email = 'asdsa@dadsa.com';
         c.AccountId = acc.Id;
@@ -48,20 +53,16 @@ public class TestUpdateAdWebMetricsonCase {
         
         insert sf;
         
-        RecordType oppRecType = [SELECT Id FROM RecordType WHERE SObjectType = 'Opportunity' AND Name = 'MSL Booking' LIMIT 1];
-        
         //Insert booking.
         Opportunity opp = new Opportunity();
         opp.Name='Test Booking';
         opp.StageName='TBD';
         opp.CloseDate=Date.today();
-        opp.RecordTypeId = oppRecType.Id;
+        opp.RecordTypeId = oppRecType;
         opp.Email_Status__c = 'Unread';
         
         insert opp;
-    
-    
-    
+
     //create vacancy
    
         Vacancy__c v = new Vacancy__c();
@@ -73,9 +74,11 @@ public class TestUpdateAdWebMetricsonCase {
         v.Booking__c = opp.Id;
         v.Vacancy_Position_and_Subject__c = '789';
         v.Sub_Class_Text__c = 'TEST';
+        v.RecordTypeId = vacancyLocked;
 
     insert v;
     
+    test.startTest();
     //insert Ad Web Metrics
         Ad_Web_Performance__c a = new Ad_Web_Performance__c();
         a.Vacancy__c = v.Id;
@@ -86,9 +89,10 @@ public class TestUpdateAdWebMetricsonCase {
         
         insert a;
         
+    test.stopTest();
         
         //verify that ad metrics on case are updated
-        Case cs = [SELECT Id, Vacancy__c, Date__c, Job_Apply_Clicks__c,Job_Views__c FROM Case WHERE Vacancy__c =:v.Id LIMIT 1];
+        Case cs = [SELECT Id, Vacancy__c, Date__c, Job_Apply_Clicks__c,Job_Views__c FROM Case WHERE Vacancy__c =:v.Id AND RecordTypeId =:custSuccessCase LIMIT 1];
         
         system.assertEquals(25, cs.Job_Apply_Clicks__c);
         system.assertEquals(30, cs.Job_Views__c);

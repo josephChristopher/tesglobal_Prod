@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <constants>
+        <name>THEQueueDEVSandbox</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>03gm00000009uZOAAY</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>THEQueueID</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>00Gm0000000aVnKEAU</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>THESubscriptionsQueueId</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>00Gm0000000aVnJEAU</stringValue>
+        </value>
+    </constants>
+    <label>Assign Case Back to THE Subscriptions QueueFINAL</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Assign_Case_to_TES_Membership_Queue</name>
+        <label>Assign Case to TES Membership Queue</label>
+        <locationX>40</locationX>
+        <locationY>47</locationY>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>CaseId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>THEQueueID</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <startElementReference>Assign_Case_to_TES_Membership_Queue</startElementReference>
+    <variables>
+        <name>CaseId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

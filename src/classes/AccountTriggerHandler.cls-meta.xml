@@ -3,7 +3,7 @@
     <apiVersion>30.0</apiVersion>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>0</minorNumber>
+        <minorNumber>2</minorNumber>
         <namespace>Reach</namespace>
     </packageVersions>
     <status>Active</status>

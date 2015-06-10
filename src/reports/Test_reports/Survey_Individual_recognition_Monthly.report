@@ -7,6 +7,12 @@
         <field>Case.Surveys__r$Name</field>
     </columns>
     <columns>
+        <field>Case$Account</field>
+    </columns>
+    <columns>
+        <field>Case$Vacancy__c.Account__c</field>
+    </columns>
+    <columns>
         <field>Case$Owner</field>
     </columns>
     <columns>

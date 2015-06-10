@@ -72,6 +72,17 @@ IF(AND(ISBLANK(TEXT(Region_5__c)),
         <operation>LookupValue</operation>
         <protected>false</protected>
     </fieldUpdates>
+    <outboundMessages>
+        <fullName>Send_B2C_account_address_update_message</fullName>
+        <apiVersion>33.0</apiVersion>
+        <endpointUrl>http://cloudreach-connect-shared.herokuapp.com/ccsvc/tes/entitlement/addrcontactupdate?key=2379d0c6-7438-4ab5-ab5b-893f5ea721cd&amp;ENV=PRODUCTION</endpointUrl>
+        <fields>Id</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>jciccarelli@tesglobal.com</integrationUser>
+        <name>Send B2C account address update message</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
     <rules>
         <fullName>Check Not Approved in Account After Creation</fullName>
         <actions>
@@ -86,6 +97,16 @@ IF(AND(ISBLANK(TEXT(Region_5__c)),
         </criteriaItems>
         <description>Check the Not Approved checkbox automatically after the account is created</description>
         <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>TES B2C Account Address Update Notification</fullName>
+        <actions>
+            <name>Send_B2C_account_address_update_message</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(RecordType.Name = &apos;B2C Account&apos;,   OR( ISCHANGED(Billing_First_Name__c),  ISCHANGED(Billing_Last_Name__c),  ISCHANGED(Billing_Title__c),  ISCHANGED(Billing_Email_Address__c),  ISCHANGED(BillingPostalCode), ISCHANGED(BillingCity),  ISCHANGED(BillingState), ISCHANGED(BillingCountry),  ISCHANGED(BillingPostalCode), ISCHANGED(BillingStreet), ISCHANGED(Billing_Phone__c), ISCHANGED(Shipping_First_Name__c),  ISCHANGED(Shipping_Last_Name__c),  ISCHANGED(Shipping_Title__c),  ISCHANGED(Shipping_Email_Address__c),  ISCHANGED(ShippingPostalCode), ISCHANGED(ShippingCity),  ISCHANGED(ShippingState), ISCHANGED(ShippingCountry),  ISCHANGED(ShippingPostalCode), ISCHANGED(ShippingStreet), ISCHANGED(Shipping_Phone__c) )  )</formula>
+        <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
         <fullName>Update Account Creation to Account Edit Locked</fullName>

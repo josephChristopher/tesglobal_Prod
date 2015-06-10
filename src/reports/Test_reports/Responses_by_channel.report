@@ -95,6 +95,12 @@
             <sourceValues>
                 <sourceValue>Traci Law</sourceValue>
             </sourceValues>
+            <sourceValues>
+                <sourceValue>Holly Brooks</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Shazia Ahmad</sourceValue>
+            </sourceValues>
             <value>Call</value>
         </values>
         <values>
@@ -102,6 +108,12 @@
                 <sourceValue>Chris Stura</sourceValue>
             </sourceValues>
             <value>Email</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Nelly Riam</sourceValue>
+            </sourceValues>
+            <value>Call2</value>
         </values>
     </buckets>
     <colorRanges>

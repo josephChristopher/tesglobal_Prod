@@ -131,6 +131,11 @@
             <field>Metrics__c.Question__c</field>
             <table>Metrics_Data__c</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Survey_Number__c.Case__c.Vacancy__c.Job_Role_Classification__c</field>
+            <table>Metrics_Data__c</table>
+        </columns>
         <masterLabel>Metrics Data</masterLabel>
     </sections>
 </ReportType>

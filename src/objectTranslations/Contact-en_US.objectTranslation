@@ -22,6 +22,11 @@
         <name>Agency__c</name>
     </fields>
     <fields>
+        <help><!-- Is the billing contact linked to an agent? --></help>
+        <label><!-- Agent? --></label>
+        <name>Agent__c</name>
+    </fields>
+    <fields>
         <label><!-- Comments --></label>
         <name>Comments__c</name>
     </fields>
@@ -32,6 +37,215 @@
     <fields>
         <label><!-- Created From Booking --></label>
         <name>Created_From_Booking__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the date the delivery option changed. --></help>
+        <label><!-- Delivery Option Date Changed --></label>
+        <name>Delivery_Option_Date_Changed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery Option --></label>
+        <name>Delivery_Option__c</name>
+        <picklistValues>
+            <masterLabel>CM</masterLabel>
+            <translation><!-- CM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CP</masterLabel>
+            <translation><!-- CP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DX</masterLabel>
+            <translation><!-- DX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NS</masterLabel>
+            <translation><!-- NS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Overseas</masterLabel>
+            <translation><!-- Overseas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RG</masterLabel>
+            <translation><!-- RG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Royal Mail</masterLabel>
+            <translation><!-- Royal Mail --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Delivery Route --></label>
+        <name>Delivery_Route__c</name>
+        <picklistValues>
+            <masterLabel>101</masterLabel>
+            <translation><!-- 101 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>102</masterLabel>
+            <translation><!-- 102 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>103</masterLabel>
+            <translation><!-- 103 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105</masterLabel>
+            <translation><!-- 105 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>106</masterLabel>
+            <translation><!-- 106 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>107</masterLabel>
+            <translation><!-- 107 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>108</masterLabel>
+            <translation><!-- 108 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>110</masterLabel>
+            <translation><!-- 110 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>111</masterLabel>
+            <translation><!-- 111 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>112</masterLabel>
+            <translation><!-- 112 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>113</masterLabel>
+            <translation><!-- 113 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>117</masterLabel>
+            <translation><!-- 117 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>122</masterLabel>
+            <translation><!-- 122 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>123</masterLabel>
+            <translation><!-- 123 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>124</masterLabel>
+            <translation><!-- 124 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>125</masterLabel>
+            <translation><!-- 125 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>127</masterLabel>
+            <translation><!-- 127 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>128</masterLabel>
+            <translation><!-- 128 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>129</masterLabel>
+            <translation><!-- 129 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>130</masterLabel>
+            <translation><!-- 130 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>131</masterLabel>
+            <translation><!-- 131 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>13158</masterLabel>
+            <translation><!-- 13158 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>136</masterLabel>
+            <translation><!-- 136 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>137</masterLabel>
+            <translation><!-- 137 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>143</masterLabel>
+            <translation><!-- 143 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>144</masterLabel>
+            <translation><!-- 144 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>145</masterLabel>
+            <translation><!-- 145 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>146</masterLabel>
+            <translation><!-- 146 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>148</masterLabel>
+            <translation><!-- 148 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>149</masterLabel>
+            <translation><!-- 149 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>25000</masterLabel>
+            <translation><!-- 25000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>25075</masterLabel>
+            <translation><!-- 25075 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>32654</masterLabel>
+            <translation><!-- 32654 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bibi</masterLabel>
+            <translation><!-- Bibi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brown</masterLabel>
+            <translation><!-- Brown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CR</masterLabel>
+            <translation><!-- CR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Elif</masterLabel>
+            <translation><!-- Elif --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jilan</masterLabel>
+            <translation><!-- Jilan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moon 2</masterLabel>
+            <translation><!-- Moon 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RLS</masterLabel>
+            <translation><!-- RLS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Serta</masterLabel>
+            <translation><!-- Serta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Usman</masterLabel>
+            <translation><!-- Usman --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <label><!-- Do Not Mail --></label>
@@ -112,6 +326,10 @@
     <fields>
         <label><!-- MSL Contact Id --></label>
         <name>MSL_Contact_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing Address Changed Date --></label>
+        <name>Mailing_Address_Changed_Date__c</name>
     </fields>
     <fields>
         <label><!-- Primary Contact --></label>
@@ -215,10 +433,6 @@
         <picklistValues>
             <masterLabel>Chancellor</masterLabel>
             <translation><!-- Chancellor --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Chief Executive</masterLabel>
-            <translation><!-- Chief Executive --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Chief Sci. Lab. Tech</masterLabel>
@@ -669,6 +883,57 @@
             <translation><!-- Vice Principal --></translation>
         </picklistValues>
     </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary</masterLabel>
+            <translation><!-- Primary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secondary</masterLabel>
+            <translation><!-- Secondary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shipping</masterLabel>
+            <translation><!-- Shipping --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- County --></label>
+        <name>zqu__County__c</name>
+    </fields>
+    <layouts>
+        <layout>B2C Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing Preferences --></label>
+            <section>Marketing Preferences</section>
+        </sections>
+    </layouts>
     <layouts>
         <layout>Contact Layout</layout>
         <sections>
@@ -735,6 +1000,10 @@
         </sections>
     </layouts>
     <recordTypes>
+        <label><!-- B2C --></label>
+        <name>B2C</name>
+    </recordTypes>
+    <recordTypes>
         <label><!-- Customer Success --></label>
         <name>Customer_Success</name>
     </recordTypes>
@@ -746,6 +1015,18 @@
         <label><!-- Standard Contact --></label>
         <name>Standard_Contact</name>
     </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Please update the Delivery Option Changed Date Field. --></errorMessage>
+        <name>Delivery_Option_Change_Date_Capture</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The type can not be changed --></errorMessage>
+        <name>Do_not_allow_changing_type</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter today&apos;s date in the Mailing Address Changed Date field. --></errorMessage>
+        <name>Ensure_Mail_Address_changes_are_captured</name>
+    </validationRules>
     <validationRules>
         <errorMessage><!-- You are missing at least one of the following required fields: Employer Name, Salutation, Last Name, Email and Phone. Please complete all required fields. --></errorMessage>
         <name>Phone_LastName_Account_Required</name>

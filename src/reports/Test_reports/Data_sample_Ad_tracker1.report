@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Report xmlns="http://soap.sforce.com/2006/04/metadata">
     <columns>
-        <field>Vacancy__c$Id</field>
+        <field>Vacancy__c$Ad_Insert_MSL_ID__c</field>
     </columns>
     <columns>
         <field>Vacancy__c$Vacancy_Employer__c</field>
     </columns>
     <columns>
+        <field>Vacancy__c$Account__c.Msl_Id__c</field>
+    </columns>
+    <columns>
         <field>Vacancy__c$Account__c</field>
     </columns>
     <columns>
+        <field>Vacancy__c$Account__c.Address_1__c</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c$Account__c.Address_2__c</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c$Account__c.County_State__c</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c$Account__c.Country__c</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c$Account__c.Post_Code__c</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c$Account__c.Region__c</field>
+    </columns>
+    <columns>
         <field>Vacancy__c$Account__c.Not_England__c</field>
-    </columns>
-    <columns>
-        <field>Vacancy__c$Booking__c.Account.Country__c</field>
-    </columns>
-    <columns>
-        <field>Vacancy__c$Hard_to_Fill__c</field>
-    </columns>
-    <columns>
-        <field>Vacancy__c$Booking__c.Account.County_State__c</field>
-    </columns>
-    <columns>
-        <field>Vacancy__c$Booking__c.Account.Post_Code__c</field>
-    </columns>
-    <columns>
-        <field>Vacancy__c$Name</field>
-    </columns>
-    <columns>
-        <field>Vacancy__c.Cases__r$CaseNumber</field>
     </columns>
     <columns>
         <field>Vacancy__c$Account__c.Client_Type__c</field>
@@ -37,16 +40,40 @@
         <field>Vacancy__c$Account__c.Customer_Group__c</field>
     </columns>
     <columns>
-        <field>Vacancy__c.Cases__r.Surveys__r.Survey_Number__r$Metrics__c</field>
-    </columns>
-    <columns>
-        <field>Vacancy__c.Cases__r.Surveys__r$Survey_Taker__c</field>
-    </columns>
-    <columns>
-        <field>Vacancy__c.Cases__r.Surveys__r$Survey_Template__c</field>
-    </columns>
-    <columns>
         <field>Vacancy__c$Booking__c</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c$Booking__c.Account</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c$Booking__c.Account.County_State__c</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c$Booking__c.Account.Post_Code__c</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c$Booking__c.Account.Country__c</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c$Client_Type__c</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c$Ad_Number__c</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c$Name</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c$Vacancy_Job_Title__c</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c$Vacancy_Contract_Type__c</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c$Hard_to_Fill__c</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c$Job_Role_Classification__c</field>
     </columns>
     <columns>
         <field>Vacancy__c$Classification__c</field>
@@ -64,31 +91,7 @@
         <field>Vacancy__c$Job_Type__c</field>
     </columns>
     <columns>
-        <field>Vacancy__c$Color_Type__c</field>
-    </columns>
-    <columns>
-        <field>Vacancy__c$Vacancy_Job_Title__c</field>
-    </columns>
-    <columns>
-        <field>Vacancy__c$Account__c.Msl_Id__c</field>
-    </columns>
-    <columns>
-        <field>Vacancy__c$Ad_Number__c</field>
-    </columns>
-    <columns>
-        <field>Vacancy__c$Ad_Insert_MSL_ID__c</field>
-    </columns>
-    <columns>
-        <field>Vacancy__c$Job_Status__c</field>
-    </columns>
-    <columns>
-        <field>Vacancy__c.Cases__r.Surveys__r.Survey_Number__r$Name</field>
-    </columns>
-    <columns>
-        <field>Vacancy__c$Job_Role_Classification__c</field>
-    </columns>
-    <columns>
-        <field>Vacancy__c.Cases__r.Surveys__r$Name</field>
+        <field>Vacancy__c$Invoice_Date__c</field>
     </columns>
     <columns>
         <field>Vacancy__c$Date_of_Ad_Publication_on_TES_Site__c</field>
@@ -97,14 +100,39 @@
         <field>Vacancy__c$Date_of_Ad_Expiry_on_TES_Global_Site__c</field>
     </columns>
     <columns>
+        <field>Vacancy__c$Publication__c</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c.Cases__r.Surveys__r$Survey_Template__c</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c.Cases__r.Surveys__r$Survey_Taker__c</field>
+    </columns>
+    <columns>
         <field>Vacancy__c.Cases__r.Surveys__r.Survey_Number__r$Metrics__c.Question__c</field>
     </columns>
     <columns>
         <field>Vacancy__c.Cases__r.Surveys__r.Survey_Number__r$Response__c</field>
     </columns>
     <columns>
-        <field>Vacancy__c.Cases__r$Product__c</field>
+        <field>Vacancy__c.Cases__r$CaseNumber</field>
     </columns>
+    <columns>
+        <field>Vacancy__c.Cases__r.Surveys__r.Survey_Number__r$Metrics__c</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c.Cases__r.Surveys__r.Survey_Number__r$Name</field>
+    </columns>
+    <columns>
+        <field>Vacancy__c.Cases__r.Surveys__r$Name</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Vacancy__c.Cases__r.Surveys__r.Survey_Number__r$CreatedDate</column>
+            <operator>greaterThan</operator>
+            <value>5/26/2015 12:00 AM</value>
+        </criteriaItems>
+    </filter>
     <format>Tabular</format>
     <name>Data sample-Ad tracker</name>
     <params>
@@ -115,7 +143,9 @@
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>
-        <dateColumn>Vacancy__c.Cases__r.Surveys__r$CreatedDate</dateColumn>
+        <dateColumn>Vacancy__c.Cases__r$Ad_Start_Date_Time__c</dateColumn>
+        <endDate>2015-03-31</endDate>
         <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-03-01</startDate>
     </timeFrameFilter>
 </Report>

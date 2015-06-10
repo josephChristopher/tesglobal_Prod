@@ -1,6 +1,6 @@
 public class OpportunityEmailPageController {
     
-    public Opportunity opportunity;
+    /*public Opportunity opportunity;
 
     public TESMessage firstEmail {set; get;}
     public Contact contact {set; get;}
@@ -21,7 +21,7 @@ public class OpportunityEmailPageController {
         
         if (tasks != null && !tasks.isEmpty()) {
             firstEmail = tasks.get(0);
-        }*/
+        }
         fakeTask = new Task(WhatId = this.opportunity.Id);
         firstEmail = new CCEmailArchiveService().getFirstMessage(this.opportunity.Id);
         if(firstEmail != null) {
@@ -55,6 +55,6 @@ public class OpportunityEmailPageController {
 	         BookingPage.setRedirect(true);
 	         return BookingPage;
          }
-     }
+     }*/
     
 }
